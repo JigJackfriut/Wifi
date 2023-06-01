@@ -1,0 +1,72 @@
+
+
+<%= form_with(model: owner) do |form| %>
+  <% if owner.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(owner.errors.count, "error") %> prohibited this owner from being saved:</h2>
+
+      <ul>
+        <% owner.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br>
+
+  <div class="form-group mb-3">
+  	<label>First Name</label>
+    <%= form.text_field :first_name, class: "form-control" %>
+    </div>
+    
+<div class="form-group mb-3">
+  	<label>Last Name</label>
+    <%= form.text_field :last_name, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>Email</label>
+    <%= form.text_field :email, class: "form-control"%>
+  </div>
+  
+ <div class="form-group mb-3">
+  	<label>Phone</label>
+    <%= form.text_field :phone, class: "form-control"%>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>Address 1</label>
+    <%= form.text_field :address1, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>Address 2</label>
+    <%= form.text_field :address2, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>City</label>
+    <%= form.text_field :city, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>State</label>
+    <%= form.text_field :state, class: "form-control"%>
+ </div>
+
+<div class="form-group mb-3">
+  	<label>Zip</label>
+    <%= form.text_field :zip, class: "form-control"%>
+  </div>
+  
+ <div class="form-group mb-3"> 
+  	<label>Owner Type</label>
+    <%= form.text_field :ownertype, class: "form-control" %>
+  </div>
+
+  <div class="input-group mb-3">
+  <%= form.submit(class: "btn btn-primary") %>
+  </div>
+<% end %>
+
+

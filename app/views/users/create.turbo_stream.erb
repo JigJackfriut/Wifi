@@ -1,0 +1,6 @@
+<%= turbo_stream.prepend "users" do %>
+  <%= render "user", user: @user %>
+<% end %>
+<%= turbo_stream.replace "#{dom_id(User.new)}_form" do %>
+  <%= render "form", user: User.new %>
+<% end %>

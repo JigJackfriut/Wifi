@@ -1,0 +1,38 @@
+<%= form_with(model: user, id: "#{dom_id(user)}_form") do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="flex items-stretch flex-grow">
+    <%= form.label :first, style: "display: block" %>
+    <%= form.text_field :first %>
+    <%= form.label :last, style: "display: block" %>
+    <%= form.text_field :last %>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+    <%= form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone %>
+    <%= form.label :address1, style: "display: block" %>
+    <%= form.text_field :address1 %>
+    <%= form.label :address2, style: "display: block" %>
+    <%= form.text_field :address2 %>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+    <%= form.label :state, style: "display: block" %>
+    <%= form.text_field :state %>
+    <%= form.label :zip, style: "display: block" %>
+    <%= form.text_field :zip %>
+    <%= form.label :usertype, style: "display: block" %>
+    <%= form.text_field :usertype %>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
