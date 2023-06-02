@@ -62,10 +62,13 @@
     <%= form.text_field :accounttype, class: "form-control" %>
   </div>
   
-  <div class="form-group mb-3">
-  <label>Admin</label>
-  <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
-	</div>
+  <!--<div class="form-group mb-3"> 
+  <label>Admin</label> -->
+  <div class="field">
+  <%= form.label :admin %>
+  <%= form.check_box :admin %>
+</div>
+  <!--<input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">  -->
 	
 	<!--<div class="form-group mb-3">
     <label>Admin</label>

@@ -31,7 +31,7 @@
           <td><%= account.state %></td>
           <td><%= account.zip %></td>
           <td><%= account.accounttype %></td>
-          <td><%= account.admin %></td>
+          <td> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value= account.admin aria-label="..."></td>
           <td class="d-flex justify-content-around">
   			<%= link_to account, style: "text-decoration:none" do %>
   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
