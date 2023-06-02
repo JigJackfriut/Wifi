@@ -1,0 +1,78 @@
+<%= form_with(model: account) do |form| %>
+  <% if account.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+        <% account.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br> 
+
+ <div class="form-group mb-3">
+  	<label>First Name</label>
+    <%= form.text_field :first_name, class: "form-control" %>
+    </div>
+    
+<div class="form-group mb-3">
+  	<label>Last Name</label>
+    <%= form.text_field :last_name, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>Email</label>
+    <%= form.text_field :email, class: "form-control"%>
+  </div>
+  
+ <div class="form-group mb-3">
+  	<label>Phone</label>
+    <%= form.text_field :phone, class: "form-control"%>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>Address 1</label>
+    <%= form.text_field :address1, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>Address 2</label>
+    <%= form.text_field :address2, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>City</label>
+    <%= form.text_field :city, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>State</label>
+    <%= form.text_field :state, class: "form-control"%>
+ </div>
+
+<div class="form-group mb-3">
+  	<label>Zip</label>
+    <%= form.text_field :zip, class: "form-control"%>
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Account Type</label>
+    <%= form.text_field :accounttype, class: "form-control" %>
+  </div>
+  
+  <div class="form-group mb-3">
+  <label>Admin</label>
+  <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+	</div>
+	
+	<!--<div class="form-group mb-3">
+    <label>Admin</label>
+    <%= form.text_field :account, class: "form-control" %>
+  </div> -->
+
+  <div class="form-group mb-3">
+    <%= form.submit(class: "btn btn-primary") %>
+  </div>
+<% end %>
