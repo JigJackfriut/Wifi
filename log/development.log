@@ -1,0 +1,1839 @@
+Started GET "/owners" for 138.28.151.182 at 2023-06-01 14:29:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT `owners`.* FROM `owners`[0m
+  ↳ app/views/owners/index.html.erb:23
+  Rendered owners/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 10549)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 350)
+  Rendered layout layouts/application.html.erb (Duration: 65.4ms | Allocations: 43953)
+Completed 200 OK in 75ms (Views: 66.4ms | ActiveRecord: 1.8ms | Allocations: 47789)
+
+
+Started GET "/owners" for 138.28.151.182 at 2023-06-01 14:34:34 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT `owners`.* FROM `owners`[0m
+  ↳ app/views/owners/index.html.erb:23
+  Rendered owners/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1236)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3527)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 3805)
+
+
+Started GET "/owners" for 138.28.151.182 at 2023-06-01 14:34:45 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT `owners`.* FROM `owners`[0m
+  ↳ app/views/owners/index.html.erb:23
+  Rendered owners/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1244)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3535)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 3812)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-01 18:48:53 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 440)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 264.3ms | Allocations: 88494)
+Completed 200 OK in 280ms (Views: 268.7ms | ActiveRecord: 0.0ms | Allocations: 95324)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-01 18:48:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2506)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2768)
+
+
+Started GET "/owners" for 138.28.72.178 at 2023-06-01 18:48:58 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT `owners`.* FROM `owners`[0m
+  ↳ app/views/owners/index.html.erb:23
+  Rendered owners/index.html.erb within layouts/application (Duration: 28.7ms | Allocations: 10247)
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 12645)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 1.7ms | Allocations: 13987)
+
+
+Started GET "/owners/new" for 138.28.72.178 at 2023-06-01 18:49:02 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/new.html.erb within layouts/application
+  Rendered owners/_form.html.erb (Duration: 7.9ms | Allocations: 2418)
+  Rendered owners/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2730)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5046)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 5423)
+
+
+Started POST "/owners" for 138.28.72.178 at 2023-06-01 18:50:06 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "owner"=>{"first_name"=>"Doug", "last_name"=>"Karl", "email"=>"doug@dougkarl.com", "phone"=>"614-571-5701", "address1"=>"clpperway", "address2"=>"", "city"=>"Columbus", "state"=>"Ohio", "zip"=>"43221", "ownertype"=>"CPU Freak"}, "commit"=>"Create Owner"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/owners_controller.rb:27:in `block in create'
+  [1m[36mOwner Create (0.4ms)[0m  [1m[32mINSERT INTO `owners` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `ownertype`, `created_at`, `updated_at`) VALUES ('Doug', 'Karl', 'doug@dougkarl.com', '614-571-5701', 'clpperway', '', 'Columbus', 'Ohio', '43221', 'CPU Freak', '2023-06-01 18:50:06.606057', '2023-06-01 18:50:06.606057')[0m
+  ↳ app/controllers/owners_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/owners_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/owners/21
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms | Allocations: 3825)
+
+
+Started GET "/owners/21" for 138.28.72.178 at 2023-06-01 18:50:06 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#show as TURBO_STREAM
+  Parameters: {"id"=>"21"}
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT `owners`.* FROM `owners` WHERE `owners`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/owners_controller.rb:70:in `set_owner'
+  Rendering layout layouts/application.html.erb
+  Rendering owners/show.html.erb within layouts/application
+  Rendered owners/_owner.html.erb (Duration: 0.7ms | Allocations: 370)
+  Rendered owners/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1229)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3776)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 6809)
+
+
+Started GET "/owners" for 138.28.72.178 at 2023-06-01 18:50:08 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT `owners`.* FROM `owners`[0m
+  ↳ app/views/owners/index.html.erb:23
+  Rendered owners/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1422)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3716)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 3991)
+
+
+Started GET "/owners" for 138.28.151.182 at 2023-06-01 18:57:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT `owners`.* FROM `owners`[0m
+  ↳ app/views/owners/index.html.erb:23
+  Rendered owners/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1553)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3848)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.6ms | Allocations: 4119)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateAccounts (20230601191256)
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE TABLE `accounts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `address1` varchar(255), `address2` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `accounttype` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230601191256')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/accounts" for 138.28.151.182 at 2023-06-01 19:31:54 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1947)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 350)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 35384)
+Completed 200 OK in 62ms (Views: 54.6ms | ActiveRecord: 0.3ms | Allocations: 40030)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-01 19:49:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1420)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4401)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.7ms | Allocations: 5260)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-01 19:49:01 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 812)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3144)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 3417)
+
+
+Started GET "/home/about" for 138.28.151.182 at 2023-06-01 19:49:02 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 105)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 200)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2757)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 3441)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-01 19:49:10 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 819)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 3186)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.4ms | Allocations: 3465)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-01 19:49:11 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 4.2ms | Allocations: 2350)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2665)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5026)
+Completed 200 OK in 25ms (Views: 9.1ms | ActiveRecord: 1.7ms | Allocations: 13434)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-01 19:49:21 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>""}, "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.5ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`) VALUES ('Irina', 'Beshentseva', 'beshentseva2@kenyon.edu', '', '106 College Park Dr.', '', 'Gambier', 'Ohio', '43022', '', '2023-06-01 19:49:21.380608', '2023-06-01 19:49:21.380608')[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/1
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms | Allocations: 3872)
+
+
+Started GET "/accounts/1" for 138.28.151.182 at 2023-06-01 19:49:21 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.5ms | Allocations: 383)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1158)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3731)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 6397)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-01 19:49:23 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2932)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3019)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms | Allocations: 3291)
+
+
+  
+ActionView::Template::Error (undefined method `account_owner_path' for #<ActionView::Base:0x0000000000c1e8>):
+    38: 			</svg>
+    39:   			<% end %>
+    40:          	
+    41:          	<%= link_to account_owner_path(account), style: "text-decoration:none" do %> 
+    42:   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+    43:   			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
+    44:   			0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 
+  
+app/views/accounts/index.html.erb:41
+app/views/accounts/index.html.erb:22
+Started GET "/accounts" for 138.28.151.182 at 2023-06-01 19:50:40 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1562)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 403)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4575)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 5426)
+
+
+Started GET "/accounts/1" for 138.28.151.182 at 2023-06-01 19:50:44 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.6ms | Allocations: 352)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 885)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3208)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 4075)
+
+
+Started GET "/accounts/1/edit" for 138.28.151.182 at 2023-06-01 19:50:50 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/edit.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.2ms | Allocations: 1986)
+  Rendered accounts/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2333)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4664)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 5506)
+
+
+Started PATCH "/accounts/1" for 138.28.151.182 at 2023-06-01 19:50:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>""}, "commit"=>"Update Account", "id"=>"1"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+Redirected to http://138.28.72.137:3000/accounts/1
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1299)
+
+
+Started GET "/accounts/1" for 138.28.151.182 at 2023-06-01 19:50:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 390)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 158)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2956)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 3790)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-01 19:50:54 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1048)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3380)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 3650)
+
+
+Started DELETE "/accounts/1" for 138.28.151.182 at 2023-06-01 19:50:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mAccount Destroy (0.4ms)[0m  [1m[31mDELETE FROM `accounts` WHERE `accounts`.`id` = 1[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+Redirected to http://138.28.72.137:3000/accounts
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms | Allocations: 2677)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-01 19:50:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 816)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3222)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 3495)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-01 19:52:34 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 109)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2787)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3352)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddAdmintoAccounts (20230602130739)
+  [1m[35m (7.7ms)[0m  [1m[35mALTER TABLE `accounts` ADD `admin` tinyint(1)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230602130739')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 138.28.151.182 at 2023-06-02 13:15:54 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 296)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 488)
+  Rendered layout layouts/application.html.erb (Duration: 73.0ms | Allocations: 34312)
+Completed 200 OK in 86ms (Views: 76.5ms | ActiveRecord: 0.0ms | Allocations: 38952)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:16:01 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1455)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3896)
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 5266)
+
+
+Started GET "/owners" for 138.28.151.182 at 2023-06-02 13:16:06 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.4ms)[0m  [1m[34mSELECT `owners`.* FROM `owners`[0m
+  ↳ app/views/owners/index.html.erb:23
+  Rendered owners/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 10208)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 12683)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 1.9ms | Allocations: 13776)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:16:14 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 814)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 159)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3148)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 3424)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:17:24 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1325)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4292)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 5176)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:20:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1307)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 404)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4289)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 5164)
+
+
+Started GET "/accounts_path" for 138.28.151.182 at 2023-06-02 13:20:31 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/accounts_path"):
+  
+Started GET "/accounts_path" for 138.28.151.182 at 2023-06-02 13:20:57 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/accounts_path"):
+  
+Started GET "/" for 138.28.151.182 at 2023-06-02 13:21:03 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 105)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 356)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3239)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4031)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:21:06 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1324)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3709)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 4340)
+
+
+Started GET "/owners" for 138.28.151.182 at 2023-06-02 13:21:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.3ms)[0m  [1m[34mSELECT `owners`.* FROM `owners`[0m
+  ↳ app/views/owners/index.html.erb:23
+  Rendered owners/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1954)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4339)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 4959)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:21:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 802)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3098)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 3373)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:22:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 808)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3104)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 3377)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:22:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 808)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3104)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 3377)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:30:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:22
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 935)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3231)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.6ms | Allocations: 3502)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:31:12 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1327)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4239)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms | Allocations: 5112)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:34:39 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1322)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4234)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 5108)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:34:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.9ms | Allocations: 2443)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2755)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 5058)
+Completed 200 OK in 16ms (Views: 7.1ms | ActiveRecord: 1.1ms | Allocations: 10038)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 13:34:57 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"Student"}, "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.3ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('Irina', 'Beshentseva', 'beshentseva2@kenyon.edu', '', '106 College Park Dr.', '', 'Gambier', 'Ohio', '43022', 'Student', '2023-06-02 13:34:57.420353', '2023-06-02 13:34:57.420353', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/2
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms | Allocations: 4278)
+
+
+Started GET "/accounts/2" for 138.28.151.182 at 2023-06-02 13:34:57 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 1.1ms | Allocations: 381)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1167)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3737)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.5ms | Allocations: 6405)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:35:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1042)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3338)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 3612)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:36:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1569)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4482)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 5359)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:36:54 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.2ms | Allocations: 1903)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2208)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4511)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4852)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:38:50 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.3ms | Allocations: 1931)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2247)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5161)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 6021)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:41:19 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.5ms | Allocations: 1924)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2240)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 5154)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 6015)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:41:36 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.2ms | Allocations: 1923)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2239)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5153)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 6014)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:41:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.3ms | Allocations: 1930)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2246)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5160)
+Completed 200 OK in 10ms (Views: 9.5ms | Allocations: 6044)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 13:42:03 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>""}, "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.4ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('Irina', 'Beshentseva', 'beshentseva2@kenyon.edu', '', '106 College Park Dr.', '', 'Gambier', 'Ohio', '43022', '', '2023-06-02 13:42:03.490364', '2023-06-02 13:42:03.490364', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/3
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms | Allocations: 2613)
+
+
+Started GET "/accounts/3" for 138.28.151.182 at 2023-06-02 13:42:03 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.6ms | Allocations: 350)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 940)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3470)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 4390)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:42:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1727)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4023)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 4377)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:42:21 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1219)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3549)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 3823)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:42:23 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 1.4ms | Allocations: 1356)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1456)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3789)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4075)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 13:42:29 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>""}, "commit"=>"Create Account"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.4ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('Irina', 'Beshentseva', 'beshentseva2@kenyon.edu', '', '106 College Park Dr.', '', 'Gambier', 'Ohio', '43022', '', '2023-06-02 13:42:29.263013', '2023-06-02 13:42:29.263013', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/4
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms | Allocations: 2496)
+
+
+Started GET "/accounts/4" for 138.28.151.182 at 2023-06-02 13:42:29 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 360)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2719)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 3517)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:42:30 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1444)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3741)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 4015)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:42:48 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.2ms | Allocations: 1932)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2251)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 5165)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 6030)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:51:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.3ms | Allocations: 2542)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2816)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2904)
+Completed 500 Internal Server Error in 6ms (Allocations: 3761)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Hash):
+    64:   
+    65:   <div class="form-group mb-3">
+    66:   <label>Admin</label>
+    67:   <%= form.check_box "tag_ids[]", "Admin", false, id:"1"%>
+    68:   <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+    69: 	</div>
+    70: 	
+  
+app/views/accounts/_form.html.erb:67
+app/views/accounts/_form.html.erb:1
+app/views/accounts/new.html.erb:3
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:52:25 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 1.5ms | Allocations: 1632)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1996)
+Completed 500 Internal Server Error in 5ms (Allocations: 2842)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: account) do |form| %>
+  <% if account.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+        <% account.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<br> 
+
+ <div class="form-group mb-3">
+  	<label>First Name</label>
+    <%= form.text_field :first_name, class: "form-control" %>
+    </div>
+    
+<div class="form-group mb-3">
+  	<label>Last Name</label>
+    <%= form.text_field :last_name, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>Email</label>
+    <%= form.text_field :email, class: "form-control"%>
+  </div>
+  
+ <div class="form-group mb-3">
+  	<label>Phone</label>
+    <%= form.text_field :phone, class: "form-control"%>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>Address 1</label>
+    <%= form.text_field :address1, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>Address 2</label>
+    <%= form.text_field :address2, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>City</label>
+    <%= form.text_field :city, class: "form-control" %>
+ </div>
+ 
+<div class="form-group mb-3">
+  	<label>State</label>
+    <%= form.text_field :state, class: "form-control"%>
+ </div>
+
+<div class="form-group mb-3">
+  	<label>Zip</label>
+    <%= form.text_field :zip, class: "form-control"%>
+  </div>
+
+  <div class="form-group mb-3">
+    <label>Account Type</label>
+    <%= form.text_field :accounttype, class: "form-control" %>
+  </div>
+  
+  <div class="form-group mb-3">
+  <label>Admin</label>
+  <%= form.check_box : admin, "Admin", false, id:"1"%>
+  <!--<input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">  -->
+	</div>
+	
+	<!--<div class="form-group mb-3">
+    <label>Admin</label>
+    <%= form.text_field :account, class: "form-control" %>
+  </div> -->
+
+  <div class="form-group mb-3">
+    <%= form.submit(class: "btn btn-primary") %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: account) do |form| %>
+2:      <% if account.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% account.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    <br> 
+14:    
+15:     <div class="form-group mb-3">
+16:      	<label>First Name</label>
+17:        <%= form.text_field :first_name, class: "form-control" %>
+18:        </div>
+19:        
+20:    <div class="form-group mb-3">
+21:      	<label>Last Name</label>
+22:        <%= form.text_field :last_name, class: "form-control" %>
+23:     </div>
+24:     
+25:    <div class="form-group mb-3">
+26:      	<label>Email</label>
+27:        <%= form.text_field :email, class: "form-control"%>
+28:      </div>
+29:      
+30:     <div class="form-group mb-3">
+31:      	<label>Phone</label>
+32:        <%= form.text_field :phone, class: "form-control"%>
+33:     </div>
+34:     
+35:    <div class="form-group mb-3">
+36:      	<label>Address 1</label>
+37:        <%= form.text_field :address1, class: "form-control" %>
+38:     </div>
+39:     
+40:    <div class="form-group mb-3">
+41:      	<label>Address 2</label>
+42:        <%= form.text_field :address2, class: "form-control" %>
+43:     </div>
+44:     
+45:    <div class="form-group mb-3">
+46:      	<label>City</label>
+47:        <%= form.text_field :city, class: "form-control" %>
+48:     </div>
+49:     
+50:    <div class="form-group mb-3">
+51:      	<label>State</label>
+52:        <%= form.text_field :state, class: "form-control"%>
+53:     </div>
+54:    
+55:    <div class="form-group mb-3">
+56:      	<label>Zip</label>
+57:        <%= form.text_field :zip, class: "form-control"%>
+58:      </div>
+59:    
+60:      <div class="form-group mb-3">
+61:        <label>Account Type</label>
+62:        <%= form.text_field :accounttype, class: "form-control" %>
+63:      </div>
+64:      
+65:      <div class="form-group mb-3">
+66:      <label>Admin</label>
+67:      <%= form.check_box : admin, "Admin", false, id:"1"%>
+68:      <!--<input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">  -->
+69:    	</div>
+70:    	
+71:    	<!--<div class="form-group mb-3">
+72:        <label>Admin</label>
+73:        <%= form.text_field :account, class: "form-control" %>
+74:      </div> -->
+75:    
+76:      <div class="form-group mb-3">
+77:        <%= form.submit(class: "btn btn-primary") %>
+78:      </div>
+79:    <% end %>
+  
+app/views/accounts/_form.html.erb:67: syntax error, unexpected ':'
+app/views/accounts/_form.html.erb:67: syntax error, unexpected ':'
+app/views/accounts/_form.html.erb:67: syntax error, unexpected ':'
+app/views/accounts/_form.html.erb:67: syntax error, unexpected ':'
+app/views/accounts/_form.html.erb:67: syntax error, unexpected ':'
+app/views/accounts/_form.html.erb:67: syntax error, unexpected ':'
+app/views/accounts/new.html.erb:3
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:55:20 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 16.2ms | Allocations: 12504)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 17.2ms | Allocations: 12820)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 15768)
+Completed 200 OK in 23ms (Views: 22.6ms | Allocations: 16631)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 13:55:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "phone"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account"}
+[31mUnpermitted parameter: :admin. Context: { controller: AccountsController, action: create, request: #<ActionDispatch::Request:0x00007fac0ac3aa10>, params: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "phone"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account", "controller"=>"accounts", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.7ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('', '', '', '', '', '', '', '', '', '', '2023-06-02 13:55:26.886017', '2023-06-02 13:55:26.886017', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/5
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms | Allocations: 2758)
+
+
+Started GET "/accounts/5" for 138.28.151.182 at 2023-06-02 13:55:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.6ms | Allocations: 348)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 942)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.5ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3472)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 4391)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:55:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2131)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4427)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 4780)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:55:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2168)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5080)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 5953)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:55:57 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 3.7ms | Allocations: 2204)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2509)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4812)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 5152)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 13:56:01 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "phone"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account"}
+[31mUnpermitted parameter: :admin. Context: { controller: AccountsController, action: create, request: #<ActionDispatch::Request:0x00007fac0b108ad8>, params: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "phone"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account", "controller"=>"accounts", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.4ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('', '', '', '', '', '', '', '', '', '', '2023-06-02 13:56:01.370315', '2023-06-02 13:56:01.370315', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/6
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms | Allocations: 2617)
+
+
+Started GET "/accounts/6" for 138.28.151.182 at 2023-06-02 13:56:01 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.7ms | Allocations: 348)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 971)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.5ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3501)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 4420)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:56:02 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1825)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4121)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 4394)
+
+
+Started DELETE "/accounts/5" for 138.28.151.182 at 2023-06-02 13:56:06 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mAccount Destroy (0.4ms)[0m  [1m[31mDELETE FROM `accounts` WHERE `accounts`.`id` = 5[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+Redirected to http://138.28.72.137:3000/accounts
+Completed 302 Found in 11ms (ActiveRecord: 2.0ms | Allocations: 2697)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:56:06 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1656)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4060)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 4338)
+
+
+Started DELETE "/accounts/6" for 138.28.151.182 at 2023-06-02 13:56:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mAccount Destroy (0.4ms)[0m  [1m[31mDELETE FROM `accounts` WHERE `accounts`.`id` = 6[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+Redirected to http://138.28.72.137:3000/accounts
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms | Allocations: 2599)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:56:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1449)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3849)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 4126)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:57:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1965)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4878)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 5755)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 13:57:11 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.8ms | Allocations: 2181)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2486)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4789)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 5130)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 13:57:16 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1429)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3725)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 3999)
+
+
+Started GET "/accounts/3" for 138.28.151.182 at 2023-06-02 13:57:18 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.7ms | Allocations: 371)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 880)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3167)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.5ms | Allocations: 4040)
+
+
+Started GET "/accounts/4" for 138.28.151.182 at 2023-06-02 13:57:23 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 330)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2617)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 3410)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:05:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2055)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4967)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.5ms | Allocations: 5841)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 14:05:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.7ms | Allocations: 2185)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2490)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4793)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 5134)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 14:06:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account"}
+[31mUnpermitted parameter: :admin. Context: { controller: AccountsController, action: create, request: #<ActionDispatch::Request:0x00007fac293539a0>, params: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account", "controller"=>"accounts", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.4ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('Irina', 'Beshentseva', 'beshentseva2@kenyon.edu', '', '106 College Park Dr.', '', 'Gambier', 'Ohio', '43022', '', '2023-06-02 14:06:04.701845', '2023-06-02 14:06:04.701845', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/7
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms | Allocations: 2617)
+
+
+Started GET "/accounts/7" for 138.28.151.182 at 2023-06-02 14:06:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.7ms | Allocations: 370)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 976)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3506)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 4425)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:06:06 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1634)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3964)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 4239)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 14:06:22 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 3.0ms | Allocations: 2197)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2517)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 333)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5462)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 6328)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 14:06:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account"}
+[31mUnpermitted parameter: :admin. Context: { controller: AccountsController, action: create, request: #<ActionDispatch::Request:0x00007fac0ab58de0>, params: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account", "controller"=>"accounts", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.3ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('Irina', 'Beshentseva', 'beshentseva2@kenyon.edu', '', '106 College Park Dr.', '', 'Gambier', 'Ohio', '43022', '', '2023-06-02 14:06:26.689093', '2023-06-02 14:06:26.689093', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/8
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms | Allocations: 2627)
+
+
+Started GET "/accounts/8" for 138.28.151.182 at 2023-06-02 14:06:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.8ms | Allocations: 370)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 970)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.5ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3501)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 4421)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:06:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2334)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4630)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 4984)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 14:06:42 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.7ms | Allocations: 2213)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2529)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5443)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 6307)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 14:06:46 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account"}
+[31mUnpermitted parameter: :admin. Context: { controller: AccountsController, action: create, request: #<ActionDispatch::Request:0x00007fac0afd7b28>, params: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account", "controller"=>"accounts", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.4ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('Irina', 'Beshentseva', 'beshentseva2@kenyon.edu', '', '106 College Park Dr.', '', 'Gambier', 'Ohio', '43022', '', '2023-06-02 14:06:46.693664', '2023-06-02 14:06:46.693664', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/9
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms | Allocations: 2617)
+
+
+Started GET "/accounts/9" for 138.28.151.182 at 2023-06-02 14:06:46 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"9"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.7ms | Allocations: 370)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 963)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3493)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 4413)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:06:47 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2520)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4816)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.5ms | Allocations: 5170)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:06:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2030)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4349)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.4ms | Allocations: 4621)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:07:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2027)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4323)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 4595)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:10:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2027)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4323)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 4596)
+
+
+Started DELETE "/accounts/9" for 138.28.151.182 at 2023-06-02 14:10:30 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"9"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mAccount Destroy (0.4ms)[0m  [1m[31mDELETE FROM `accounts` WHERE `accounts`.`id` = 9[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+Redirected to http://138.28.72.137:3000/accounts
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms | Allocations: 2612)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:10:30 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1844)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4247)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 4524)
+
+
+Started DELETE "/accounts/7" for 138.28.151.182 at 2023-06-02 14:10:31 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mAccount Destroy (0.4ms)[0m  [1m[31mDELETE FROM `accounts` WHERE `accounts`.`id` = 7[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+Redirected to http://138.28.72.137:3000/accounts
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms | Allocations: 2612)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:10:31 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1639)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4009)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 4286)
+
+
+Started DELETE "/accounts/4" for 138.28.151.182 at 2023-06-02 14:10:31 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mAccount Destroy (0.4ms)[0m  [1m[31mDELETE FROM `accounts` WHERE `accounts`.`id` = 4[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+Redirected to http://138.28.72.137:3000/accounts
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms | Allocations: 2605)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:10:32 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1447)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3818)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 4095)
+
+
+Started DELETE "/accounts/3" for 138.28.151.182 at 2023-06-02 14:10:33 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mAccount Destroy (0.4ms)[0m  [1m[31mDELETE FROM `accounts` WHERE `accounts`.`id` = 3[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:52:in `destroy'
+Redirected to http://138.28.72.137:3000/accounts
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms | Allocations: 2605)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:10:33 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1230)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3600)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 3877)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 14:10:35 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 1.5ms | Allocations: 1597)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1697)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4000)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 4285)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 14:10:39 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"0"}, "commit"=>"Create Account"}
+[31mUnpermitted parameter: :admin. Context: { controller: AccountsController, action: create, request: #<ActionDispatch::Request:0x00007fac291ba5a8>, params: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"0"}, "commit"=>"Create Account", "controller"=>"accounts", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.4ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('Irina', 'Beshentseva', 'beshentseva2@kenyon.edu', '', '106 College Park Dr.', '', 'Gambier', 'Ohio', '43022', '', '2023-06-02 14:10:39.449169', '2023-06-02 14:10:39.449169', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/10
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms | Allocations: 2632)
+
+
+Started GET "/accounts/10" for 138.28.151.182 at 2023-06-02 14:10:39 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"10"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 350)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2708)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.4ms | Allocations: 3504)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:10:44 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1450)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3746)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 4020)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:22:53 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4978)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 334)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 18567)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.3ms | Allocations: 20112)
+
+
+Started GET "/accounts/new" for 138.28.151.182 at 2023-06-02 14:22:54 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 2.6ms | Allocations: 2321)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2626)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4929)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 5280)
+
+
+Started POST "/accounts" for 138.28.151.182 at 2023-06-02 14:22:58 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account"}
+[31mUnpermitted parameter: :admin. Context: { controller: AccountsController, action: create, request: #<ActionDispatch::Request:0x00007fac0aec2bc0>, params: {"authenticity_token"=>"[FILTERED]", "account"=>{"first_name"=>"Irina", "last_name"=>"Beshentseva", "email"=>"beshentseva2@kenyon.edu", "phone"=>"", "address1"=>"106 College Park Dr.", "address2"=>"", "city"=>"Gambier", "state"=>"Ohio", "zip"=>"43022", "accounttype"=>"", "admin"=>"1"}, "commit"=>"Create Account", "controller"=>"accounts", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mAccount Create (0.4ms)[0m  [1m[32mINSERT INTO `accounts` (`first_name`, `last_name`, `email`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `accounttype`, `created_at`, `updated_at`, `admin`) VALUES ('Irina', 'Beshentseva', 'beshentseva2@kenyon.edu', '', '106 College Park Dr.', '', 'Gambier', 'Ohio', '43022', '', '2023-06-02 14:22:58.533369', '2023-06-02 14:22:58.533369', NULL)[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/accounts_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/accounts/11
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms | Allocations: 2754)
+
+
+Started GET "/accounts/11" for 138.28.151.182 at 2023-06-02 14:22:58 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as TURBO_STREAM
+  Parameters: {"id"=>"11"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.8ms | Allocations: 372)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1000)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered layouts/_alerts.html.erb (Duration: 0.5ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3530)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 5065)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:22:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1613)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3943)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 4218)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:23:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1637)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3964)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 4236)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-02 14:27:16 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 4.3ms | Allocations: 3722)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:12
+  Rendered collection of templates [0 times] (Duration: 0.0ms | Allocations: 25)
+  Rendered users/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 9463)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 11855)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 1.6ms | Allocations: 12962)
+
+
+Started GET "/accounts" for 138.28.151.182 at 2023-06-02 14:27:29 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:23
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1627)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3924)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 4200)
+
+
