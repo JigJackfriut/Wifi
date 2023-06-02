@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_31_150222) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_02_130739) do
+  create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone"
+    t.string "address1"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "accounttype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "admin"
+  end
+
   create_table "owners", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"

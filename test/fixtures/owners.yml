@@ -10,7 +10,7 @@ one:
   city: MyString
   state: MyString
   zip: MyString
-  type: 
+  type: MyString
 
 two:
   first_name: MyString
@@ -22,4 +22,4 @@ two:
   city: MyString
   state: MyString
   zip: MyString
-  type: 
+  type: MyString

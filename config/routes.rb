@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :accounts
   resources :owners
   #get 'home/index'
   get 'home/about'
