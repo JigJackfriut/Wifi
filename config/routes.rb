@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :managers
   resources :wlanclients
   resources :accounts
   resources :owners

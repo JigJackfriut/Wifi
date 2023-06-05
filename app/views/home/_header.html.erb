@@ -9,15 +9,31 @@
         <li class="nav-item">
         	<%= link_to 'About Us', home_about_path, class: "nav-link"%> 
         </li>
-        <li class="nav-item">
-        	<%= link_to 'Owners', owners_path, class: "nav-link"%> 
-        </li>
+       
+        <% if manager_signed_in?%>
+        
+        	<li class="nav-item">
+        		<%= link_to 'Sign Out', destroy_manager_session_path, data: {turbo_method: :delete }, class: "nav-link"%> 
+        	</li>
+        	<li class="nav-item">
+        		<%= link_to 'Edit Profile', edit_manager_registration_path, class: "nav-link"%> 
+        	</li>
+        
+        <% else %>
+        	<li class="nav-item">
+        		<%= link_to 'Sign Up', new_manager_registration_path, class: "nav-link"%> 
+        	</li>
+        	<li class="nav-item">
+        		<%= link_to 'Log In', new_manager_session_path, class: "nav-link"%> 
+        	</li>
+        <% end %>
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             System
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href= "accounts">Account Manager</a></li>
+            <li><a class="dropdown-item" href= "account">Wifi Manager</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
