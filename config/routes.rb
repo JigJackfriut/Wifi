@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :wlanclients
   resources :accounts
   resources :owners
   #get 'home/index'
