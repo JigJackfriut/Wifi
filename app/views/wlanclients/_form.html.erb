@@ -10,73 +10,85 @@
       </ul>
     </div>
   <% end %>
+  <br>
 
-  <div>
-    <%= form.label :location, style: "display: block" %>
-    <%= form.text_field :location %>
+  <div class="form-group mb-3">
+	<label>Location</label>
+    <%= form.text_field :location, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>IP Address</label>
+    <%= form.text_field :ipaddress, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>Client Version</label>
+    <%= form.text_field :clientversion, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :ipaddress, style: "display: block" %>
-    <%= form.text_field :ipaddress %>
+  <div class="form-group mb-3">
+	<label>OS Version</label>
+    <%= form.text_field :osversion, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :clientversion, style: "display: block" %>
-    <%= form.text_field :clientversion %>
+  <div class="form-group mb-3">
+	<label>HW Model</label>
+    <%= form.text_field :hwmodel, class: "form-control" %>
   </div>
-
-  <div>
-    <%= form.label :osversion, style: "display: block" %>
-    <%= form.text_field :osversion %>
+	
+  <div class="form-group mb-3">
+  	<label>Status</label>
+    <%= form.text_field :status, class: "form-control" %>
   </div>
-
-  <div>
-    <%= form.label :hwmodel, style: "display: block" %>
-    <%= form.text_field :hwmodel %>
+    
+  <div class="form-group mb-3">
+  	<label>Poll Rate</label>
+    <%= form.text_field :pollrate, class: "form-control" %>
   </div>
-
-  <div>
-    <%= form.label :status, style: "display: block" %>
-    <%= form.text_field :status %>
-  </div>
-
-  <div>
-    <%= form.label :pollrate, style: "display: block" %>
-    <%= form.text_field :pollrate %>
-  </div>
-
-  <div>
+    
+  <div class="form-group mb-3">
+  	<label>Last Seen</label>
+   <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
+	<%= form.datetime_field :lastseen, style: "display: block" %>
+   </div>
+    
+  <!--<div>
     <%= form.label :lastseen, style: "display: block" %>
     <%= form.datetime_field :lastseen %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Note</label>
+    <%= form.text_field :note, class: "form-control" %>
+  </div>
+  
+  <div class="form-group mb-3">
+  	<label>Name</label>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :note, style: "display: block" %>
-    <%= form.text_field :note %>
-  </div>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
+  <!--<div>
     <%= form.label :dateadded, style: "display: block" %>
     <%= form.datetime_field :dateadded %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Date Added</label>
+	<%= form.datetime_field :dateadded, style: "display: block" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Config Hash</label>
+    <%= form.text_field :confighash, class: "form-control" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Owner ID</label>
+    <%= form.text_field :ownerid, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :confighash, style: "display: block" %>
-    <%= form.text_field :confighash %>
-  </div>
-
-  <div>
-    <%= form.label :ownerid, style: "display: block" %>
-    <%= form.text_field :ownerid %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+  <div class="form-group mb-3">
+    <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
   </div>
 <% end %>
