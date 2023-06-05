@@ -1,2 +1,12 @@
 <h1>Home index</h1>
-<p>The first page created by Irina Beshentseva</p>
+
+<div class="actions form-group mb-3">
+<% if manager_signed_in?%>
+    <%= link_to 'Sign Out', destroy_manager_session_path, data: {turbo_method: :delete }, class:"btn btn-primary"%> 
+    <%= link_to 'Edit Profile', edit_manager_registration_path,  class:"btn btn-primary"%> 
+<% else %>
+	<%= link_to 'Sign Up', new_manager_registration_path, class:"btn btn-primary"%> 
+    <%= link_to 'Log In', new_manager_session_path, class:"btn btn-primary"%> 
+        <% end %>
+  </div>
+  
