@@ -1,2 +1,0 @@
-class Wlanclient < ApplicationRecord
-end

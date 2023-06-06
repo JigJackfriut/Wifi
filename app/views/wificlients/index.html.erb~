@@ -1,44 +1,55 @@
-<h1>Accounts</h1>
+<h1>Wificlients</h1>
 
 <table class="table table-striped table-bordered table-hover">
   <thead class="table-dark">
     <tr>
+      <th scope="col">Location</th>
+      <th scope="col">IP Address</th>
+      <th scope="col">Client Version</th>
+      <th scope="col">OS Version</th>
+      <th scope="col">HW Model</th>
+      <th scope="col">Status</th>
+      <th scope="col">Poll Rate</th>
+      <th scope="col">Last Seen</th>
+      <th scope="col">Note</th>
       <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Address 1</th>
-      <th scope="col">Address 2</th>
-      <th scope="col">City</th>
-      <th scope="col">State</th>
-      <th scope="col">Zip</th>
-      <th scope="col">Account Type</th>
-      <th scope="col">Admin</th>
-      <th scope="col">Actions</th>
+      <th scope="col">Date Added</th>
+	  <th scope="col">Config Hash</th>
+	  <th scope="col">Owner ID</th>
+	  <th scope="col">Enabled</th>
+	  <th scope="col">Actions</th>
     </tr>
   </thead>
 
   <tbody>
-  <% @accounts.each do |account| %>
+  <% @wificlients.each do |wificlient| %>
    <tr>
-          <td><%= account.first_name + ' ' + account.last_name %></td>  
-          <td><%= account.email %></td>
-          <td><%= account.phone %></td>
-          <td><%= account.address1 %></td>
-          <td><%= account.address2 %></td>
-          <td><%= account.city %></td>
-          <td><%= account.state %></td>
-          <td><%= account.zip %></td>
-          <td><%= account.accounttype %></td>
-          <td> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value= account.admin aria-label="..."></td>
-          <td class="justify-content-around">
-  			<%= link_to account, style: "text-decoration:none" do %>
+          <td><%= wificlient.location %></td>  
+          <td><%= wificlient.ipaddress %></td> 
+          <td><%= wificlient.clientversion %></td>
+          <td><%= wificlient.osversion %></td>
+          <td><%= wificlient.hwmodel %></td>
+          <td><%= wificlient.status %></td>
+          <td><%= wificlient.pollrate %></td>
+		  <td><%= wificlient.lastseen %></td>
+		  <td><%= wificlient.note %></td>
+		  <td><%= wificlient.name %></td>
+		  <td><%= wificlient.dateadded %></td>
+		  <td><%= wificlient.confighash %></td>
+		  <td><%= wificlient.ownerid %></td>
+		  <td><%= wificlient.enabled %></td>
+			
+		   
+          
+          <td class="d-flex justify-content-around">
+  			<%= link_to wificlient, style: "text-decoration:none" do %>
   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
   			<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
   			<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
 			</svg>
   			<% end %>
          	
-         	<%= link_to edit_account_path(account), style: "text-decoration:none" do %> 
+         	<%= link_to edit_wificlient_path(wificlient), style: "text-decoration:none" do %> 
   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
   			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
   			0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 
@@ -49,7 +60,7 @@
 			</svg>
   			<% end %> 
   			
-  			<%= link_to account_path(account), data: {turbo_method: :delete, }, style: "text-decoration:none" do %>
+  			<%= link_to wificlient_path(wificlient), data: {turbo_method: :delete, }, style: "text-decoration:none" do %>
   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
   			<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
 			</svg>
@@ -63,4 +74,7 @@
 </table>
 
 <br>
-<%= link_to "New account", new_account_path, class: "btn btn-primary" %>
+<%= link_to "New WLAN client", new_wificlient_path, class: "btn btn-primary" %>
+
+
+

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @wificlient %>
+
+<div>
+  <%= link_to "Edit this wificlient", edit_wificlient_path(@wificlient) %> |
+  <%= link_to "Back to wificlients", wificlients_path %>
+
+  <%= button_to "Destroy this wificlient", @wificlient, method: :delete %>
+</div>

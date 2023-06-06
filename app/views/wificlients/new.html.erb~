@@ -1,0 +1,9 @@
+<h1>New wificlient</h1>
+
+<%= render "form", wificlient: @wificlient %>
+
+<br>
+
+<div>
+  <%= link_to "Back to wificlients", wificlients_path %>
+</div>

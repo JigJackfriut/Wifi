@@ -8688,3 +8688,488 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 3333)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateAccounts (20230601191256)
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE `accounts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `phone` varchar(255), `address1` varchar(255), `address2` varchar(255), `city` varchar(255), `state` varchar(255), `zip` varchar(255), `accounttype` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230601191256')[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAdmintoAccounts (20230602130739)
+  [1m[35m (10.0ms)[0m  [1m[35mALTER TABLE `accounts` ADD `admin` tinyint(1) DEFAULT FALSE[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230602130739')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateWlanclients (20230605121852)
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE `wlanclients` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `location` varchar(255), `ipaddress` varchar(255), `clientversion` varchar(255), `osversion` varchar(255), `hwmodel` varchar(255), `status` varchar(255), `pollrate` decimal, `lastseen` datetime(6), `note` varchar(255), `name` varchar(255), `dateadded` datetime(6), `confighash` varchar(255), `ownerid` decimal, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230605121852')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddEnabledToWlanclients (20230605132026)
+  [1m[35m (6.0ms)[0m  [1m[35mALTER TABLE `wlanclients` ADD `enabled` tinyint(1)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230605132026')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateManagers (20230605134633)
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE `managers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime(6), `remember_created_at` datetime(6), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_managers_on_email` ON `managers` (`email`)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_managers_on_reset_password_token` ON `managers` (`reset_password_token`)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230605134633')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 138.28.72.178 at 2023-06-06 15:59:15 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1380)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 712)
+  Rendered layout layouts/application.html.erb (Duration: 250.5ms | Allocations: 89682)
+Completed 200 OK in 270ms (Views: 255.2ms | ActiveRecord: 0.0ms | Allocations: 97703)
+
+
+Started GET "/managers/sign_up" for 138.28.72.178 at 2023-06-06 15:59:21 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 239)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 621)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 4544)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 329)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 7154)
+Completed 200 OK in 29ms (Views: 16.0ms | ActiveRecord: 1.8ms | Allocations: 14307)
+
+
+Started POST "/managers" for 138.28.72.178 at 2023-06-06 15:59:40 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"email"=>"jimskopn@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `managers` WHERE `managers`.`email` = BINARY 'jimskopn@hotmail.com' LIMIT 1[0m
+  [1m[36mManager Create (0.4ms)[0m  [1m[32mINSERT INTO `managers` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('jimskopn@hotmail.com', '$2a$12$DoxQp8ZczCL.Jfd7P3A8I.5.3o2texZ5m2SreXpUSzuTmHqJhIl4O', NULL, NULL, NULL, '2023-06-06 15:59:41.184102', '2023-06-06 15:59:41.184102')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://138.28.72.140:3000/
+Completed 303 See Other in 252ms (ActiveRecord: 1.9ms | Allocations: 12174)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-06 15:59:41 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1403)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3869)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 4133)
+
+
+Started GET "/managers/edit" for 138.28.72.178 at 2023-06-06 15:59:45 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2278)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 278)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4743)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 6479)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-06 15:59:50 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1112)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3571)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.4ms | Allocations: 3831)
+
+
+Started GET "/managers/sign_out" for 138.28.72.178 at 2023-06-06 15:59:55 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/managers/sign_out"):
+  
+Started GET "/" for 138.28.72.178 at 2023-06-06 16:00:05 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1145)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3621)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 3882)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-06 16:00:06 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1109)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3568)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 3828)
+
+
+Started GET "/accounts" for 138.28.72.178 at 2023-06-06 16:00:12 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1224)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4840)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.6ms | Allocations: 5960)
+
+
+Started GET "/wlanclients" for 138.28.72.178 at 2023-06-06 16:00:18 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlanclientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wlanclients/index.html.erb within layouts/application
+  [1m[36mWlanclient Load (0.4ms)[0m  [1m[34mSELECT `wlanclients`.* FROM `wlanclients`[0m
+  ↳ app/views/wlanclients/index.html.erb:25
+  Rendered wlanclients/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1288)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4895)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.7ms | Allocations: 6010)
+
+
+Started GET "/accounts" for 138.28.72.178 at 2023-06-06 16:00:26 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 645)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1073)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4112)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.7ms | Allocations: 4392)
+
+
+Started GET "/accounts" for 138.28.72.178 at 2023-06-06 16:00:29 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 641)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1073)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4120)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.8ms | Allocations: 4392)
+
+
+Started GET "/managers/edit" for 138.28.72.178 at 2023-06-06 16:00:32 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1690)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4148)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 5841)
+
+
+Started GET "/accounts" for 138.28.72.178 at 2023-06-06 16:00:35 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 641)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1073)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4135)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.8ms | Allocations: 4407)
+
+
+Started GET "/home/about" for 138.28.72.178 at 2023-06-06 16:00:36 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 102)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1083)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3595)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 3912)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-06 16:00:38 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1130)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3589)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 3849)
+
+
+Started GET "/accounts" for 138.28.72.178 at 2023-06-06 16:00:42 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 641)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1073)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4138)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.8ms | Allocations: 4411)
+
+
+Started GET "/wlanclients" for 138.28.72.178 at 2023-06-06 16:00:46 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlanclientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wlanclients/index.html.erb within layouts/application
+  [1m[36mWlanclient Load (0.3ms)[0m  [1m[34mSELECT `wlanclients`.* FROM `wlanclients`[0m
+  ↳ app/views/wlanclients/index.html.erb:25
+  Rendered wlanclients/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 652)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 1073)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4140)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.7ms | Allocations: 4413)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-06 16:43:10 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230606163000_create_wificlients.rb
+
+
+):
+  
+activerecord (7.0.5) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.5) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.5) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.5) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.5) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.5) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateWificlients (20230606163000)
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE `wificlients` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `location` varchar(255), `ipaddress` varchar(255), `clientversion` varchar(255), `osversion` varchar(255), `hwmodel` varchar(255), `status` varchar(255), `pollrate` decimal, `lastseen` datetime(6), `note` varchar(255), `name` varchar(255), `dateadded` datetime(6), `confighash` varchar(255), `ownerid` decimal, `enabled` tinyint(1), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230606163000')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 138.28.72.178 at 2023-06-06 16:43:34 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 9653)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1928)
+  Rendered layout layouts/application.html.erb (Duration: 86.8ms | Allocations: 50889)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 2.1ms | Allocations: 55100)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `wlanclients_path' for #<ActionView::Base:0x0000000000d908>):
+    34:           </a>
+    35:           <ul class="dropdown-menu">
+    36:             <li class="dropdown-item"> <%= link_to 'Wifi Manager', accounts_path,  style: "text-decoration:none", class: "text-dark"%></li>
+    37:         	<li class="dropdown-item"><%= link_to "WLAN Client", wlanclients_path, style: "text-decoration:none", class: "text-dark" %></li>
+    38:             <li><hr class="dropdown-divider"></li>
+    39:             <li><a class="dropdown-item" href="#">Something else here</a></li>
+    40:           </ul>
+  
+app/views/home/_header.html.erb:37
+app/views/layouts/application.html.erb:17
+Started GET "/" for 138.28.72.178 at 2023-06-06 16:44:19 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 9652)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 702)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | Allocations: 43469)
+Completed 200 OK in 76ms (Views: 66.3ms | ActiveRecord: 2.0ms | Allocations: 47734)
+
+
+Started GET "/wificlients" for 138.28.72.178 at 2023-06-06 16:44:25 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1316)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4927)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.6ms | Allocations: 6083)
+
+
+Started GET "/wificlients/new" for 138.28.72.178 at 2023-06-06 16:44:28 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/new.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 6.3ms | Allocations: 3896)
+  Rendered wificlients/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4233)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1072)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 7492)
+Completed 200 OK in 27ms (Views: 13.0ms | ActiveRecord: 1.5ms | Allocations: 16270)
+
+
+Started POST "/wificlients" for 138.28.72.178 at 2023-06-06 16:45:29 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "wificlient"=>{"location"=>"outside", "ipaddress"=>"23.45.67.89", "clientversion"=>"1.9", "osversion"=>"Raspian", "hwmodel"=>"Pi4", "status"=>"none", "pollrate"=>"3", "lastseen"=>"2023-06-04T12:45", "note"=>"Wow!", "name"=>"My favorite AP", "dateadded"=>"2023-06-02T12:45", "confighash"=>"", "ownerid"=>""}, "commit"=>"Create WLAN Client"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wificlients_controller.rb:27:in `block in create'
+  [1m[36mWificlient Create (0.5ms)[0m  [1m[32mINSERT INTO `wificlients` (`location`, `ipaddress`, `clientversion`, `osversion`, `hwmodel`, `status`, `pollrate`, `lastseen`, `note`, `name`, `dateadded`, `confighash`, `ownerid`, `enabled`, `created_at`, `updated_at`) VALUES ('outside', '23.45.67.89', '1.9', 'Raspian', 'Pi4', 'none', 3, '2023-06-04 12:45:00', 'Wow!', 'My favorite AP', '2023-06-02 12:45:00', '', NULL, NULL, '2023-06-06 16:45:29.585377', '2023-06-06 16:45:29.585377')[0m
+  ↳ app/controllers/wificlients_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wificlients_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.140:3000/wificlients/1
+Completed 302 Found in 11ms (ActiveRecord: 2.6ms | Allocations: 4571)
+
+
+Started GET "/wificlients/1" for 138.28.72.178 at 2023-06-06 16:45:29 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:63:in `set_wificlient'
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/show.html.erb within layouts/application
+  Rendered wificlients/_wificlient.html.erb (Duration: 0.9ms | Allocations: 499)
+  Rendered wificlients/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1158)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1072)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4692)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.8ms | Allocations: 6344)
+
+
+Started GET "/wificlients" for 138.28.72.178 at 2023-06-06 16:45:42 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 904)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1073)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4384)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.8ms | Allocations: 4664)
+
+
+Started GET "/wificlients" for 138.28.72.178 at 2023-06-06 16:48:03 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 12181)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 12.9ms | Allocations: 7554)
+  Rendered layout layouts/application.html.erb (Duration: 79.8ms | Allocations: 53203)
+Completed 200 OK in 91ms (Views: 78.9ms | ActiveRecord: 3.4ms | Allocations: 57944)
+
+

@@ -8,12 +8,13 @@ one:
   hwmodel: MyString
   status: MyString
   pollrate: 9.99
-  lastseen: 2023-06-05 12:18:52
+  lastseen: 2023-06-06 16:30:00
   note: MyString
   name: MyString
-  dateadded: 2023-06-05 12:18:52
+  dateadded: 2023-06-06 16:30:00
   confighash: MyString
   ownerid: 9.99
+  enabled: false
 
 two:
   location: MyString
@@ -23,9 +24,10 @@ two:
   hwmodel: MyString
   status: MyString
   pollrate: 9.99
-  lastseen: 2023-06-05 12:18:52
+  lastseen: 2023-06-06 16:30:00
   note: MyString
   name: MyString
-  dateadded: 2023-06-05 12:18:52
+  dateadded: 2023-06-06 16:30:00
   confighash: MyString
   ownerid: 9.99
+  enabled: false

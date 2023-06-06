@@ -1,6 +1,6 @@
-class CreateWlanclients < ActiveRecord::Migration[7.0]
+class CreateWificlients < ActiveRecord::Migration[7.0]
   def change
-    create_table :wlanclients do |t|
+    create_table :wificlients do |t|
       t.string :location
       t.string :ipaddress
       t.string :clientversion
@@ -14,6 +14,7 @@ class CreateWlanclients < ActiveRecord::Migration[7.0]
       t.datetime :dateadded
       t.string :confighash
       t.decimal :ownerid
+      t.boolean :enabled
 
       t.timestamps
     end

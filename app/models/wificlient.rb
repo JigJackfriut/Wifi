@@ -1,0 +1,2 @@
+class Wificlient < ApplicationRecord
+end

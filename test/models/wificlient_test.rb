@@ -1,6 +1,6 @@
 require "test_helper"
 
-class WlanclientTest < ActiveSupport::TestCase
+class WificlientTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

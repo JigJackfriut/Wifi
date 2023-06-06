@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  resources :wificlients
   devise_for :managers
-  resources :wlanclients
   resources :accounts
   resources :owners
   #get 'home/index'

@@ -1,10 +1,10 @@
-<%= form_with(model: wlanclient) do |form| %>
-  <% if wlanclient.errors.any? %>
+<%= form_with(model: wificlient) do |form| %>
+  <% if wificlient.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(wlanclient.errors.count, "error") %> prohibited this wlanclient from being saved:</h2>
+      <h2><%= pluralize(wificlient.errors.count, "error") %> prohibited this wificlient from being saved:</h2>
 
       <ul>
-        <% wlanclient.errors.each do |error| %>
+        <% wificlient.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -92,3 +92,5 @@
     <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
   </div>
 <% end %>
+
+
