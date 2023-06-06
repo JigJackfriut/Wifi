@@ -9173,3 +9173,936 @@ Processing by WificlientsController#index as HTML
 Completed 200 OK in 91ms (Views: 78.9ms | ActiveRecord: 3.4ms | Allocations: 57944)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateWificlients (20230606163000)
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE `wificlients` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `location` varchar(255), `ipaddress` varchar(255), `clientversion` varchar(255), `osversion` varchar(255), `hwmodel` varchar(255), `status` varchar(255), `pollrate` decimal, `lastseen` datetime(6), `note` varchar(255), `name` varchar(255), `dateadded` datetime(6), `confighash` varchar(255), `ownerid` decimal, `enabled` tinyint(1), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230606163000')[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/managers/sign_in" for 138.28.171.140 at 2023-06-06 18:24:44 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 747)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4099)
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 784)
+  Rendered layout layouts/application.html.erb (Duration: 65.2ms | Allocations: 38341)
+Completed 200 OK in 93ms (Views: 72.0ms | ActiveRecord: 1.7ms | Allocations: 49493)
+
+
+Started GET "/" for 138.28.171.140 at 2023-06-06 18:24:49 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 590)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3159)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3873)
+
+
+Started GET "/" for 138.28.171.140 at 2023-06-06 18:51:40 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1194)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 711)
+  Rendered layout layouts/application.html.erb (Duration: 64.3ms | Allocations: 35000)
+Completed 200 OK in 75ms (Views: 67.2ms | ActiveRecord: 0.0ms | Allocations: 39266)
+
+
+Started GET "/managers/sign_in" for 138.28.171.140 at 2023-06-06 18:51:43 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 736)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3739)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 329)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6329)
+Completed 200 OK in 28ms (Views: 13.8ms | ActiveRecord: 1.9ms | Allocations: 13674)
+
+
+Started POST "/managers/sign_in" for 138.28.171.140 at 2023-06-06 18:51:51 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"email"=>"polak2@kenyon.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`email` = 'polak2@kenyon.edu' ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.190:3000/
+Completed 303 See Other in 236ms (ActiveRecord: 0.4ms | Allocations: 5417)
+
+
+Started GET "/" for 138.28.171.140 at 2023-06-06 18:51:51 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1107)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3623)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 3934)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:52:02 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 8329)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1103)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 11865)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 2.1ms | Allocations: 12971)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:52:13 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1058)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.8ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4478)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.9ms | Allocations: 4757)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:52:55 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1573)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:14
+  Rendered home/_header.html.erb (Duration: 2.8ms | Allocations: 1488)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 5846)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.7ms | Allocations: 6727)
+
+
+Started GET "/home/about" for 138.28.171.140 at 2023-06-06 18:52:58 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 105)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:14
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 1121)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3672)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 4259)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:53:02 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1056)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:14
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4475)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.9ms | Allocations: 4751)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:53:03 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:14
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4495)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.9ms | Allocations: 4769)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:53:05 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1303)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:14
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1103)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4838)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.7ms | Allocations: 5977)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:56:01 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1222)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1485)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5443)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.7ms | Allocations: 6345)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:56:04 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1575)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5119)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.9ms | Allocations: 5749)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:56:57 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1570)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1485)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 18910)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.7ms | Allocations: 19789)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:00 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4484)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.9ms | Allocations: 4757)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:57:01 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1231)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4760)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 5410)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:03 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1056)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4508)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.9ms | Allocations: 4783)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:57:04 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 654)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4119)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 4394)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:57:06 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 644)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4078)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.7ms | Allocations: 4350)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:08 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4489)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.8ms | Allocations: 4761)
+
+
+Started GET "/home/about" for 138.28.171.140 at 2023-06-06 18:57:09 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 108)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 1121)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3657)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 4242)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:11 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1056)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4481)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.8ms | Allocations: 4754)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:57:13 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 644)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4069)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.9ms | Allocations: 4342)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:14 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4478)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.7ms | Allocations: 4750)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:57:16 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 654)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4085)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.7ms | Allocations: 4357)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:17 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 4.1ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4486)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.8ms | Allocations: 4759)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:57:18 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 654)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4105)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.7ms | Allocations: 4379)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:19 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4489)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.7ms | Allocations: 4762)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:20 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1055)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4483)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.9ms | Allocations: 4755)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:57:21 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 654)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4085)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.7ms | Allocations: 4357)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:22 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4495)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.8ms | Allocations: 4767)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 18:57:23 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 644)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4078)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.7ms | Allocations: 4350)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:24 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4462)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.7ms | Allocations: 4734)
+
+
+Started GET "/accounts/2" for 138.28.171.140 at 2023-06-06 18:57:27 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.7ms | Allocations: 403)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 9102)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1076)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 12522)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 1.0ms | Allocations: 14097)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:57:28 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4495)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.8ms | Allocations: 4768)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:58:58 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1573)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1492)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 16468)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.8ms | Allocations: 17348)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 18:59:02 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4471)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 4746)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:02:08 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1570)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1484)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 17442)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.7ms | Allocations: 18317)
+
+
+Started GET "/" for 138.28.171.140 at 2023-06-06 19:02:08 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1363)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 289)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3937)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 4523)
+
+
+Started GET "/home/about" for 138.28.171.140 at 2023-06-06 19:02:11 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 100)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1087)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3524)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 3841)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:02:14 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1056)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4478)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.8ms | Allocations: 4752)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 19:02:17 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1231)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4760)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 5409)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:02:18 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1056)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4502)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.7ms | Allocations: 4775)
+
+
+Started GET "/accounts/2" for 138.28.171.140 at 2023-06-06 19:02:19 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.7ms | Allocations: 372)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 723)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 1076)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4139)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 5011)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:02:22 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4499)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.7ms | Allocations: 4772)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:06:08 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1573)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1485)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 16469)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.7ms | Allocations: 17348)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:06:11 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1055)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4480)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.7ms | Allocations: 4756)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:06:38 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1570)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 1485)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5793)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.7ms | Allocations: 6668)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:06:42 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1055)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4520)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 4797)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:07:57 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1575)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 3.0ms | Allocations: 1484)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 17634)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.6ms | Allocations: 18512)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:08:00 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4486)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.7ms | Allocations: 4760)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 19:08:02 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1231)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4742)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.8ms | Allocations: 5392)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:08:03 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1056)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4460)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 4733)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 19:08:06 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 644)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 4079)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.7ms | Allocations: 4352)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:08:07 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 4517)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.8ms | Allocations: 4791)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 19:08:08 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 654)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4109)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.7ms | Allocations: 4383)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:08:09 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4495)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.7ms | Allocations: 4767)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-06 19:08:10 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:25
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 644)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4075)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.7ms | Allocations: 4348)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:08:11 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4480)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.8ms | Allocations: 4752)
+
+
+Started GET "/accounts/2" for 138.28.171.140 at 2023-06-06 19:08:13 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/accounts_controller.rb:63:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/_account.html.erb (Duration: 0.7ms | Allocations: 372)
+  Rendered accounts/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 728)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1076)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4150)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.8ms | Allocations: 5022)
+
+
+Started GET "/accounts" for 138.28.171.140 at 2023-06-06 19:08:14 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1055)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4498)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.8ms | Allocations: 4771)
+
+
