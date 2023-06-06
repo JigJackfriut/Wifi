@@ -1,0 +1,9 @@
+module API
+  module V1
+    class Hello < Grape::API
+      include API::V1::Defaults
+      result = { status:"unapproved"}
+      result
+    end
+  end
+end

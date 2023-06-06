@@ -1,0 +1,3 @@
+class WificlientSerializer < ActiveModel::Serializer
+  attributes :location
+end

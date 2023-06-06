@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount API::Base, at: "/"
   resources :wificlients
   devise_for :managers
   resources :accounts
