@@ -1,6 +1,8 @@
-<h1>Home index</h1>
-
-<div class="actions form-group mb-3">
+<body style="background-color: LightSkyBlue">
+<center>
+<h1 style="font-family: Aqua Grotesque">Welcome to Wifi Control</h1>
+</br>
+<div class=" actions form-group mb-3">
 <% if manager_signed_in?%>
     <%= link_to 'Sign Out', destroy_manager_session_path, data: {turbo_method: :delete }, class:"btn btn-primary"%> 
     <%= link_to 'Edit Profile', edit_manager_registration_path,  class:"btn btn-primary"%> 
@@ -9,4 +11,6 @@
     <%= link_to 'Log In', new_manager_session_path, class:"btn btn-primary"%> 
         <% end %>
   </div>
-  
+ </center> 
+</body>
+   
