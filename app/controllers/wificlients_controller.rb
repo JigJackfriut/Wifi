@@ -1,6 +1,5 @@
 class WificlientsController < ApplicationController
   before_action :set_wificlient, only: %i[ show edit update destroy ]
-
   # GET /wificlients or /wificlients.json
   def index
     @wificlients = Wificlient.all
@@ -67,4 +66,6 @@ class WificlientsController < ApplicationController
     def wificlient_params
       params.require(:wificlient).permit(:location, :ipaddress, :clientversion, :osversion, :hwmodel, :status, :pollrate, :lastseen, :note, :name, :dateadded, :confighash, :ownerid, :enabled)
     end
+	
+	
 end

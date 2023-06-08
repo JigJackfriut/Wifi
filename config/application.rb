@@ -16,7 +16,7 @@ module Wifi
         resource '*', headers: :any, methods: [:get, :post, :put, :delete, :options]
       end
     end
-    
+    #config.active_record.raise_in_transactional_callbacks = true
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

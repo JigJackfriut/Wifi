@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_163000) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_181402) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -72,9 +72,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_163000) do
   create_table "wificlients", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "location"
     t.string "ipaddress"
-    t.string "clientversion"
-    t.string "osversion"
-    t.string "hwmodel"
+    t.string "version"
+    t.string "os"
+    t.string "model"
     t.string "status"
     t.decimal "pollrate", precision: 10
     t.datetime "lastseen"
@@ -86,6 +86,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_163000) do
     t.boolean "enabled"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "mac"
+    t.string "serial"
   end
 
   create_table "wlanclients", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|

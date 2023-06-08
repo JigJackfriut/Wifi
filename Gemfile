@@ -17,7 +17,7 @@ gem "puma", "~> 5.0"
 
 # Added by Skon
 gem "grape"
-gem "rack-cors"
+gem "rack-cors", :require => 'rack/cors'
 gem "grape-active_model_serializers"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]

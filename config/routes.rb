@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :managers
   resources :accounts
   resources :owners
+  
   #get 'home/index'
   get 'home/about'
   root 'home#index'
