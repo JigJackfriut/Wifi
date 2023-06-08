@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @wlan %>
+
+<div>
+  <%= link_to "Edit this wlan", edit_wlan_path(@wlan) %> |
+  <%= link_to "Back to wlans", wlans_path %>
+
+  <%= button_to "Destroy this wlan", @wlan, method: :delete %>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Wlans</h1>
+
+<div id="wlans">
+  <% @wlans.each do |wlan| %>
+    <%= render wlan %>
+    <p>
+      <%= link_to "Show this wlan", wlan %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New wlan", new_wlan_path %>

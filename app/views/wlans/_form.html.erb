@@ -1,0 +1,87 @@
+<%= form_with(model: wlan) do |form| %>
+  <% if wlan.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(wlan.errors.count, "error") %> prohibited this wlan from being saved:</h2>
+
+      <ul>
+        <% wlan.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :mac, style: "display: block" %>
+    <%= form.text_field :mac %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :wlan, style: "display: block" %>
+    <%= form.text_field :wlan %>
+  </div>
+
+  <div>
+    <%= form.label :phy, style: "display: block" %>
+    <%= form.text_field :phy %>
+  </div>
+
+  <div>
+    <%= form.label :txpower, style: "display: block" %>
+    <%= form.text_field :txpower %>
+  </div>
+
+  <div>
+    <%= form.label :a, style: "display: block" %>
+    <%= form.text_field :a %>
+  </div>
+
+  <div>
+    <%= form.label :g, style: "display: block" %>
+    <%= form.text_field :g %>
+  </div>
+
+  <div>
+    <%= form.label :lastseen, style: "display: block" %>
+    <%= form.datetime_field :lastseen %>
+  </div>
+
+  <div>
+    <%= form.label :dateadded, style: "display: block" %>
+    <%= form.datetime_field :dateadded %>
+  </div>
+
+  <div>
+    <%= form.label :autochannel, style: "display: block" %>
+    <%= form.check_box :autochannel %>
+  </div>
+
+  <div>
+    <%= form.label :channel, style: "display: block" %>
+    <%= form.number_field :channel %>
+  </div>
+
+  <div>
+    <%= form.label :client_id, style: "display: block" %>
+    <%= form.number_field :client_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

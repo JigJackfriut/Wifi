@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_08_181402) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_193052) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -107,6 +107,26 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_181402) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "enabled"
+  end
+
+  create_table "wlans", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.string "mac"
+    t.string "name"
+    t.string "description"
+    t.string "status"
+    t.string "wlan"
+    t.string "phy"
+    t.string "txpower"
+    t.string "a"
+    t.string "g"
+    t.datetime "lastseen"
+    t.datetime "dateadded"
+    t.boolean "autochannel"
+    t.integer "channel"
+    t.integer "client_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_wlans_on_client_id"
   end
 
 end
