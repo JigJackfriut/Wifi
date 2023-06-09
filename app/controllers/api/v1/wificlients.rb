@@ -48,9 +48,10 @@ end
 def process_hello(params) 
 	# Look up wifi device
 	client = Wificlient.find_by(mac:params[:mac])
-	puts "Clients Changed!!!"
+	
 	if client
 		if client.ipaddress != params[:ipaddress] or client.version != params[:version] or client.os != params[:os] or client.model != params[:model]
+			puts "Client Changed!!!"
 			# Update record
 			client.update(ipaddress:  params[:ipaddress], version:  params[:version], os: params[:os], model: params[:model])
 		end

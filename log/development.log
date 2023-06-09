@@ -10754,3 +10754,308 @@ Migrating to CreateWlans (20230608193052)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddMacToWificlients (20230608161924)
+  [1m[35m (13.5ms)[0m  [1m[35mALTER TABLE `wificlients` ADD `mac` varchar(255)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230608161924')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddSerialToWificlients (20230608174256)
+  [1m[35m (8.0ms)[0m  [1m[35mALTER TABLE `wificlients` ADD `serial` varchar(255)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230608174256')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameClientversionToVersion (20230608181104)
+  [1m[35m (8.9ms)[0m  [1m[35mALTER TABLE `wificlients` RENAME COLUMN `clientversion` TO `version`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230608181104')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameHwmodelToModel (20230608181252)
+  [1m[35m (8.6ms)[0m  [1m[35mALTER TABLE `wificlients` RENAME COLUMN `hwmodel` TO `model`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230608181252')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RenameOsversionToOs (20230608181402)
+  [1m[35m (7.5ms)[0m  [1m[35mALTER TABLE `wificlients` RENAME COLUMN `osversion` TO `os`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230608181402')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateWlans (20230608193052)
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE `wlans` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `mac` varchar(255), `name` varchar(255), `description` varchar(255), `status` varchar(255), `wlan` varchar(255), `phy` varchar(255), `txpower` varchar(255), `a` varchar(255), `g` varchar(255), `lastseen` datetime(6), `dateadded` datetime(6), `autochannel` tinyint(1), `channel` int, `client_id` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE INDEX `index_wlans_on_client_id` ON `wlans` (`client_id`)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230608193052')[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/pifi/hello.json" for 192.168.100.224 at 2023-06-09 12:53:52 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/pifi/hello.json"):
+  
+Started POST "/pifi/hello.json" for 192.168.100.224 at 2023-06-09 12:53:53 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/pifi/hello.json"):
+  
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/wificlients/hello" for 192.168.100.79 at 2023-06-09 12:59:29 +0000
+Cannot render console from 192.168.100.79! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:58:in `process_hello'
+  [1m[36mWificlient Create (0.4ms)[0m  [1m[32mINSERT INTO `wificlients` (`location`, `ipaddress`, `version`, `os`, `model`, `status`, `pollrate`, `lastseen`, `note`, `name`, `dateadded`, `confighash`, `ownerid`, `enabled`, `created_at`, `updated_at`, `mac`, `serial`) VALUES (NULL, NULL, '1.0.22', 'Skon\'s OS superb', 'Raspberry Pi 12 Super', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-06-09 12:59:29.474354', '2023-06-09 12:59:29.474354', 'e4:5f:01:02:22:33', '2222222')[0m
+  ↳ app/controllers/api/v1/wificlients.rb:58:in `process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:58:in `process_hello'
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/pifi/hello.json" for 192.168.100.224 at 2023-06-09 13:00:41 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/pifi/hello.json"):
+  
+Started POST "/pifi/hello.json" for 192.168.100.224 at 2023-06-09 13:00:42 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/pifi/hello.json"):
+  
+Started POST "/pifi/hello.json" for 192.168.100.224 at 2023-06-09 13:01:12 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/pifi/hello.json"):
+  
+Started POST "/api/v1/wificlient/hello/hello.json" for 192.168.100.224 at 2023-06-09 13:22:55 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/wificlient/hello/hello.json"):
+  
+Started POST "/api/v1/wificlient/hello/hello.json" for 192.168.100.224 at 2023-06-09 13:22:56 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/wificlient/hello/hello.json"):
+  
+Started POST "/api/v1/wificlient/hello/hello.json" for 192.168.100.224 at 2023-06-09 13:23:26 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/wificlient/hello/hello.json"):
+  
+Started POST "/api/v1/wificlient/hello/hello" for 192.168.100.224 at 2023-06-09 13:36:12 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/wificlient/hello/hello"):
+  
+Started POST "/api/v1/wificlient/hello/hello" for 192.168.100.224 at 2023-06-09 13:36:13 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/wificlient/hello/hello"):
+  
+Started POST "/api/v1/wificlient/hello/hello" for 192.168.100.224 at 2023-06-09 13:36:43 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/wificlient/hello/hello"):
+  
+Started POST "/api/v1/wificlient/hello" for 192.168.100.224 at 2023-06-09 13:39:49 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/wificlient/hello"):
+  
+Started POST "/api/v1/wificlient/hello" for 192.168.100.224 at 2023-06-09 13:39:50 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/wificlient/hello"):
+  
+Started POST "/api/v1/wificlient/hello" for 192.168.100.224 at 2023-06-09 13:40:20 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/wificlient/hello"):
+  
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:42:27 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:58:in `process_hello'
+  [1m[36mWificlient Create (0.4ms)[0m  [1m[32mINSERT INTO `wificlients` (`location`, `ipaddress`, `version`, `os`, `model`, `status`, `pollrate`, `lastseen`, `note`, `name`, `dateadded`, `confighash`, `ownerid`, `enabled`, `created_at`, `updated_at`, `mac`, `serial`) VALUES (NULL, NULL, '1.0.9', '6.1.21-v8+', 'Raspberry Pi 4 Model B Rev 1.2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-06-09 13:42:27.081377', '2023-06-09 13:42:27.081377', 'dc:a6:32:ab:0e:9b', '10000000786df4ff')[0m
+  ↳ app/controllers/api/v1/wificlients.rb:58:in `process_hello'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:58:in `process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:42:27 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:42:58 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:43:28 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:43:58 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:44:28 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:44:58 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:45:28 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:45:58 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:46:28 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:46:58 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:47:28 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:47:58 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:48:28 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:48:58 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:49:28 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.79 at 2023-06-09 13:49:35 +0000
+Cannot render console from 192.168.100.79! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 13:49:58 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.79 at 2023-06-09 13:52:06 +0000
+Cannot render console from 192.168.100.79! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.79 at 2023-06-09 13:52:08 +0000
+Cannot render console from 192.168.100.79! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.79 at 2023-06-09 13:52:09 +0000
+Cannot render console from 192.168.100.79! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.79 at 2023-06-09 13:52:10 +0000
+Cannot render console from 192.168.100.79! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.79 at 2023-06-09 13:52:15 +0000
+Cannot render console from 192.168.100.79! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.6ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:22:33' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 14:07:52 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.2ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 14:07:53 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 14:08:23 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 14:10:03 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 14:10:04 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 192.168.100.224 at 2023-06-09 14:10:34 +0000
+Cannot render console from 192.168.100.224! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:50:in `process_hello'
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
