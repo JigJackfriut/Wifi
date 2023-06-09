@@ -47,15 +47,13 @@ end
 # 4. For each radio, if in wlan table, update clientid if differnt
 def process_hello(params) 
 	client = Wificlient.find_by(mac:params[:mac]) 
-	puts "Clients Changed!!!"
 	if client
 		if client.ipaddress != params[:ipaddress] or client.version != params[:version] or client.os != params[:os] or client.model != params[:model]
 			client.update(ipaddress:  params[:ipaddress], version:  params[:version], os: params[:os], model: params[:model])
 		end
 	else 
-		Wificlient.create(mac:params[:mac],os:params[:os],version:params[:version],serial:params[:serial],model:params[:model])
+		client = Wificlient.create(mac:params[:mac],os:params[:os],version:params[:version],serial:params[:serial],model:params[:model])
 	end
-	# Add or update wlans
 	wlans = params[:wlans]
 	wlans.each do |wlan|
 		wlan = Wlan.find_by(mac:wlans[0]['mac'])
@@ -64,7 +62,8 @@ def process_hello(params)
 				wlan.update(wlan: wlans[0]["wlan"], phy: wlans[0]["phy"], txpower: wlans[0]["txpower"] , g: wlans[0]["g"], a: wlans[0]["a"])
 			end
 		else 
-			Wlan.create( mac: wlans[0]["mac"],wlan:	wlans[0]["wlan"],phy:wlans[0]["phy"],txpower:wlans[0]["txpower"],g:wlans[0]["g"],a:wlans[0]["a"])
+			Wlan.create(mac: wlans[0]["mac"],wlan:	wlans[0]["wlan"],phy:wlans[0]["phy"],txpower:wlans[0]["txpower"],g:wlans[0]["g"],a:wlans[0]["a"], client_id: client.id)
 		end
 	end
 end
+

@@ -42,8 +42,7 @@
 		  <td><%= wificlient.ownerid %></td>
 		  <td><%= wificlient.enabled %></td>
 		  <td><%= wificlient.serial %></td>
-			
-		   
+		 
           
           <td class="justify-content-around">
   			<%= link_to wificlient, style: "text-decoration:none" do %>
@@ -52,7 +51,7 @@
   			<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
 			</svg>
   			<% end %>
-         	
+  			
          	<%= link_to edit_wificlient_path(wificlient), style: "text-decoration:none" do %> 
   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
   			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
@@ -78,7 +77,7 @@
 </table>
 
 <br>
-<%= link_to "New WLAN client", new_wificlient_path, class: "btn btn-primary" %>
+<%= link_to "New Wifi client", new_wificlient_path, class: "btn btn-primary" %>
 
 
 

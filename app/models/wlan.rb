@@ -1,3 +1,3 @@
 class Wlan < ApplicationRecord
-	belongs_to :user
+	belongs_to :wificlient, optional: true
 end

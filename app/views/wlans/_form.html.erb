@@ -80,6 +80,11 @@
     <%= form.label :client_id, style: "display: block" %>
     <%= form.number_field :client_id %>
   </div>
+  
+  <div class="form-group mb-3">
+  	<label>Client ID</label>
+    <%= form.number_field :client_id, id: :wificlient_wlan_id, value:current_user.id class: "form-control", type: :hidden %>
+  </div>
 
   <div>
     <%= form.submit %>
