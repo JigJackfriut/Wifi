@@ -58,12 +58,17 @@ def process_hello(params)
 	wlans.each do |wlan|
 		puts "WLAN: #{wlan[:mac]}"
 		thiswlan = Wlan.find_by(mac:wlan['mac'])
+		puts "WLAN BAND CHANNEL TEST: #{wlan["band1"]["channels"]}"
+		wlang = wlan["band1"]["channels"]
+		#wlana = wlan["band2"]["channels"]
+		
 		if thiswlan 
-			if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["g"] or thiswlan.a != wlan["a"]
-				thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["g"], a: wlan["a"])
+			thiswlan.update(lastseen: Time.new) 
+			if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.a != wlan["band2"]["channels"]
+				thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"]) 
 			end
 		else 
-			Wlan.create(mac: wlan["mac"],wlan:	wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlan["g"],a:wlan["a"], client_id: client.id)
+			Wlan.create(mac: wlan["mac"],wlan:	wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlang, client_id: client.id, lastseen:Time.new, dateadded:Time.new)
 		end
 	end
 end

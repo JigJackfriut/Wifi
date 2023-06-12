@@ -48,8 +48,17 @@ class WificlientsController < ApplicationController
 
   # DELETE /wificlients/1 or /wificlients/1.json
   def destroy
+	#grab client_id prior to deleting 
+	idReset = @wificlient.id 
     @wificlient.destroy
-
+	
+	#set associated wlans to null  
+	Wlan.find_each do |wlan|
+		wlan.update(client_id: nil) 
+	end
+		
+	
+	
     respond_to do |format|
       format.html { redirect_to wificlients_url, notice: "Wificlient was successfully destroyed." }
       format.json { head :no_content }
