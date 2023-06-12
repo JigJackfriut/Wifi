@@ -11478,3 +11478,77 @@ Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.2
   ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
   [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'e4:5f:01:02:27:f91' LIMIT 1[0m
   ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to RemoveAutochannelFromWlans (20230612184946)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230612184946')[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to RemoveAutochannelFromWlans (20230612185417)
+  [1m[35m (9.4ms)[0m  [1m[35mALTER TABLE `wlans` DROP COLUMN `autochannel`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230612185417')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/wificlients/hello" for 138.28.151.182 at 2023-06-12 18:56:19 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:93' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-12 18:56:19.568869', `wlans`.`updated_at` = '2023-06-12 18:56:19.569677' WHERE `wlans`.`id` = 31[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:68:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`g` = '[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]', `wlans`.`updated_at` = '2023-06-12 18:56:19.574866' WHERE `wlans`.`id` = 31[0m
+  ↳ app/controllers/api/v1/wificlients.rb:68:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:68:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:ab:0e:9c' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-12 18:56:19.580726', `wlans`.`updated_at` = '2023-06-12 18:56:19.581115' WHERE `wlans`.`id` = 32[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:68:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`g` = '[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]', `wlans`.`updated_at` = '2023-06-12 18:56:19.585365' WHERE `wlans`.`id` = 32[0m
+  ↳ app/controllers/api/v1/wificlients.rb:68:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:68:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:93' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddSelectedAToWlans (20230612190117)
+  [1m[35m (11.7ms)[0m  [1m[35mALTER TABLE `wlans` ADD `selected_a` varchar(255)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230612190117')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddSelectedGToWlans (20230612190233)
+  [1m[35m (9.1ms)[0m  [1m[35mALTER TABLE `wlans` ADD `selected_g` varchar(255)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230612190233')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m

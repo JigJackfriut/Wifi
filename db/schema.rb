@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_08_193052) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_12_190233) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -121,11 +121,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_193052) do
     t.string "g"
     t.datetime "lastseen"
     t.datetime "dateadded"
-    t.boolean "autochannel"
     t.integer "channel"
     t.integer "client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "selected_a"
+    t.string "selected_g"
     t.index ["client_id"], name: "index_wlans_on_client_id"
   end
 
