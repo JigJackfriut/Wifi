@@ -56,13 +56,14 @@ def process_hello(params)
 	end
 	wlans = params[:wlans]
 	wlans.each do |wlan|
-		wlan = Wlan.find_by(mac:wlans[0]['mac'])
-		if wlan 
-			if wlan.wlan != wlans[0]["wlan"] or wlan.phy != wlans[0]["phy"] or wlan.txpower != wlans[0]["txpower"] or wlan.g != wlans[0]["g"] or wlan.a != wlans[0]["a"]
-				wlan.update(wlan: wlans[0]["wlan"], phy: wlans[0]["phy"], txpower: wlans[0]["txpower"] , g: wlans[0]["g"], a: wlans[0]["a"])
+		puts "WLAN: #{wlan[:mac]}"
+		thiswlan = Wlan.find_by(mac:wlan['mac'])
+		if thiswlan 
+			if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["g"] or thiswlan.a != wlan["a"]
+				thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["g"], a: wlan["a"])
 			end
 		else 
-			Wlan.create(mac: wlans[0]["mac"],wlan:	wlans[0]["wlan"],phy:wlans[0]["phy"],txpower:wlans[0]["txpower"],g:wlans[0]["g"],a:wlans[0]["a"], client_id: client.id)
+			Wlan.create(mac: wlan["mac"],wlan:	wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlan["g"],a:wlan["a"], client_id: client.id)
 		end
 	end
 end
