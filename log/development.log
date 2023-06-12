@@ -11552,3 +11552,164 @@ Migrating to AddSelectedGToWlans (20230612190233)
   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/wificlients/hello" for 138.28.151.182 at 2023-06-12 19:09:20 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:93' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-12 19:09:20.594395', `wlans`.`updated_at` = '2023-06-12 19:09:20.595376' WHERE `wlans`.`id` = 31[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:ab:0e:9c' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-12 19:09:20.603620', `wlans`.`updated_at` = '2023-06-12 19:09:20.603922' WHERE `wlans`.`id` = 32[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:66:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:93' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/wlans" for 138.28.151.182 at 2023-06-12 19:09:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:28
+  Rendered wlans/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2049)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 13.9ms | Allocations: 5999)
+  Rendered layout layouts/application.html.erb (Duration: 67.6ms | Allocations: 41136)
+Completed 200 OK in 78ms (Views: 68.1ms | ActiveRecord: 2.1ms | Allocations: 45617)
+
+
+Started POST "/api/v1/wificlients/hello" for 138.28.151.182 at 2023-06-12 19:10:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:93' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:55:in `process_hello'
+  [1m[36mWificlient Create (0.3ms)[0m  [1m[32mINSERT INTO `wificlients` (`location`, `ipaddress`, `version`, `os`, `model`, `status`, `pollrate`, `lastseen`, `note`, `name`, `dateadded`, `confighash`, `ownerid`, `enabled`, `created_at`, `updated_at`, `mac`, `serial`) VALUES (NULL, NULL, '1.0.9', '6.1.21-v8+', 'Raspberry Pi 4 Model B Rev 1.2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-06-12 19:10:04.960197', '2023-06-12 19:10:04.960197', 'dc:a6:32:ab:0e:93', '10000000786df4ff')[0m
+  ↳ app/controllers/api/v1/wificlients.rb:55:in `process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:55:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'selcted_g' for Wlan.):
+  
+app/controllers/api/v1/wificlients.rb:71:in `block in process_hello'
+app/controllers/api/v1/wificlients.rb:58:in `each'
+app/controllers/api/v1/wificlients.rb:58:in `process_hello'
+app/controllers/api/v1/wificlients.rb:9:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.151.182 at 2023-06-12 19:11:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:93' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:55:in `process_hello'
+  [1m[36mWificlient Create (0.3ms)[0m  [1m[32mINSERT INTO `wificlients` (`location`, `ipaddress`, `version`, `os`, `model`, `status`, `pollrate`, `lastseen`, `note`, `name`, `dateadded`, `confighash`, `ownerid`, `enabled`, `created_at`, `updated_at`, `mac`, `serial`) VALUES (NULL, NULL, '1.0.9', '6.1.21-v8+', 'Raspberry Pi 4 Model B Rev 1.2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-06-12 19:11:00.387955', '2023-06-12 19:11:00.387955', 'dc:a6:32:ab:0e:93', '10000000786df4ff')[0m
+  ↳ app/controllers/api/v1/wificlients.rb:55:in `process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:55:in `process_hello'
+  [1m[36mWlan Load (0.5ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'selcted_g' for Wlan.):
+  
+app/controllers/api/v1/wificlients.rb:71:in `block in process_hello'
+app/controllers/api/v1/wificlients.rb:58:in `each'
+app/controllers/api/v1/wificlients.rb:58:in `process_hello'
+app/controllers/api/v1/wificlients.rb:9:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.151.182 at 2023-06-12 19:11:13 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:93' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:71:in `block in process_hello'
+  [1m[36mWlan Create (0.3ms)[0m  [1m[32mINSERT INTO `wlans` (`mac`, `name`, `description`, `status`, `wlan`, `phy`, `txpower`, `a`, `g`, `lastseen`, `dateadded`, `channel`, `client_id`, `created_at`, `updated_at`, `selected_a`, `selected_g`) VALUES ('c0:1c:30:06:ce:ca', NULL, NULL, NULL, 'wlan1', 'phy1', '20.00', NULL, '[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]', '2023-06-12 19:11:14.112527', '2023-06-12 19:11:14.112528', NULL, 30, '2023-06-12 19:11:14.117701', '2023-06-12 19:11:14.117701', NULL, '[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]')[0m
+  ↳ app/controllers/api/v1/wificlients.rb:71:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:71:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:ab:0e:9c' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:71:in `block in process_hello'
+  [1m[36mWlan Create (0.3ms)[0m  [1m[32mINSERT INTO `wlans` (`mac`, `name`, `description`, `status`, `wlan`, `phy`, `txpower`, `a`, `g`, `lastseen`, `dateadded`, `channel`, `client_id`, `created_at`, `updated_at`, `selected_a`, `selected_g`) VALUES ('dc:a6:32:ab:0e:9c', NULL, NULL, NULL, 'wlan0', 'phy0', '20.00', NULL, '[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]', '2023-06-12 19:11:14.123658', '2023-06-12 19:11:14.123659', NULL, 30, '2023-06-12 19:11:14.123918', '2023-06-12 19:11:14.123918', NULL, '[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]')[0m
+  ↳ app/controllers/api/v1/wificlients.rb:71:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:71:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:93' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/wlans" for 138.28.151.182 at 2023-06-12 19:13:53 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:29
+  Rendered wlans/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 7182)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 7271)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.8ms | Allocations: 8924)
+
+
+  
+ActionView::Template::Error (undefined method `model' for #<Wlan id: 35, mac: "c0:1c:30:06:ce:ca", name: nil, description: nil, status: nil, wlan: "wlan1", phy: "phy1", txpower: "20.00", a: nil, g: "[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\"...", lastseen: "2023-06-12 19:11:14.112527000 +0000", dateadded: "2023-06-12 19:11:14.112528000 +0000", channel: nil, client_id: 30, created_at: "2023-06-12 19:11:14.117701000 +0000", updated_at: "2023-06-12 19:11:14.117701000 +0000", selected_a: nil, selected_g: "[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\"...">):
+    33:           <td><%= wlan.description %></td> 
+    34:           <td><%= wlan.status %></td>
+    35:           <td><%= wlan.wlan %></td>
+    36:           <td><%= wlan.model %></td>
+    37:           <td><%= wlan.phy %></td>
+    38:           <td><%= wlan.txpower %></td>
+    39: 		  <td><%= wlan.a %></td>
+  
+app/views/wlans/index.html.erb:36
+app/views/wlans/index.html.erb:29
+Started GET "/wlans" for 138.28.151.182 at 2023-06-12 19:14:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:29
+  Rendered wlans/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2784)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2872)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3719)
+
+
+  
+ActionView::Template::Error (undefined method `user' for #<Wlan id: 35, mac: "c0:1c:30:06:ce:ca", name: nil, description: nil, status: nil, wlan: "wlan1", phy: "phy1", txpower: "20.00", a: nil, g: "[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\"...", lastseen: "2023-06-12 19:11:14.112527000 +0000", dateadded: "2023-06-12 19:11:14.112528000 +0000", channel: nil, client_id: 30, created_at: "2023-06-12 19:11:14.117701000 +0000", updated_at: "2023-06-12 19:11:14.117701000 +0000", selected_a: nil, selected_g: "[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\"...">):
+    51: 			</svg>
+    52:   			<% end %>
+    53:   			
+    54:   		<% if wlan.user == current_user%>
+    55:          	<%= link_to edit_wlan_path(wlan), style: "text-decoration:none" do %> 
+    56:   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+    57:   			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
+  
+app/views/wlans/index.html.erb:54
+app/views/wlans/index.html.erb:29
+Started GET "/wlans" for 138.28.151.182 at 2023-06-12 19:14:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:29
+  Rendered wlans/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1877)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 10.0ms | Allocations: 4004)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 19118)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 2.2ms | Allocations: 20008)
+
+

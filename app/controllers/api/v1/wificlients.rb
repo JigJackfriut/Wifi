@@ -68,7 +68,7 @@ def process_hello(params)
 				thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"]) 
 			end
 		else 
-			Wlan.create(mac: wlan["mac"],wlan:	wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlang, client_id: client.id, lastseen:Time.new, dateadded:Time.new)
+			Wlan.create(mac: wlan["mac"],wlan:	wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlang, client_id: client.id, lastseen:Time.new, selected_g:wlang, dateadded:Time.new)
 		end
 	end
 end

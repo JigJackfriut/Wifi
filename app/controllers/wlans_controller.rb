@@ -67,6 +67,6 @@ class WlansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wlan_params
-      params.require(:wlan).permit(:mac, :name, :description, :status, :wlan, :phy, :txpower, :a, :g, :lastseen, :dateadded, :autochannel, :channel, :client_id)
+      params.require(:wlan).permit(:mac, :name, :description, :status, :wlan, :phy, :txpower, :a, :g, :lastseen, :dateadded, :selected_a, :selected_g, :channel, :client_id)
     end
 end
