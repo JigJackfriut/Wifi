@@ -67,12 +67,12 @@
   </div>
 
   <div>
-    <%= form.label :selcted_a %>
-    <%= form.check_box :selcted_a %>
+    <%= form.label :selected_a, style: "display: block" %>
+    <%= form.text_field :selected_a %>
   </div>
   <div>
-    <%= form.label :selcted_g %>
-    <%= form.check_box :selcted_g %>
+    <%= form.label :selected_g, style: "display: block" %>
+    <%= form.text_field :selected_g %>
   </div>
 
   <div>
@@ -86,8 +86,7 @@
   </div>
   
   <div class="form-group mb-3">
-  	<label>Client ID</label>
-    <%= form.number_field :client_id, id: :wificlient_wlan_id, value:current_user.id class: "form-control", type: :hidden %>
+    <%= form.number_field :client_id, id: :wificlient_wlan_id, type: :hidden %>
   </div>
 
   <div>

@@ -12,9 +12,9 @@ module API
 			puts "MAC address: #{mac}"
 			client = Wificlient.find_by(mac:mac)
 			if client 
-				render json: {status:"found"}
+				render json: {status:"registered"}
 			else
-				render json: {status:"new"}
+				render json: {status:"registered"}
 			end
 		end
        # desc "Return all wificlients"
@@ -56,19 +56,24 @@ def process_hello(params)
 	end
 	wlans = params[:wlans]
 	wlans.each do |wlan|
-		puts "WLAN: #{wlan[:mac]}"
-		thiswlan = Wlan.find_by(mac:wlan['mac'])
-		puts "WLAN BAND CHANNEL TEST: #{wlan["band1"]["channels"]}"
-		wlang = wlan["band1"]["channels"]
-		#wlana = wlan["band2"]["channels"]
 		
+		thiswlan = Wlan.find_by(mac:wlan['mac'])
+		wlang = wlan["band1"]["channels"]
+		band2 = wlan["band2"]
+		puts band2
 		if thiswlan 
 			thiswlan.update(lastseen: Time.new) 
-			if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.a != wlan["band2"]["channels"]
-				thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"]) 
+			if !band2.nil?
+				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.a != wlan["band2"]["channels"]
+					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: wlan["band2"]["channels"]) 
+				end
+			else 
+				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"]
+					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"]) 
+				end
 			end
 		else 
-			Wlan.create(mac: wlan["mac"],wlan:	wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlang, client_id: client.id, lastseen:Time.new, selected_g:wlang, dateadded:Time.new)
+			Wlan.create(mac: wlan["mac"],wlan:	wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlan["band1"]["channels"], a:wlan["band2"]["channels"],client_id: client.id, lastseen:Time.new, selected_g:wlan["band1"]["channels"], selected_a:wlan["band2"]["channels"], dateadded:Time.new)
 		end
 	end
 end

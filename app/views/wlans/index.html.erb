@@ -2,8 +2,6 @@
 
 <h1>Wlans</h1>
 
-<h1>wlans</h1>
-
 <table class="table table-striped table-bordered table-hover">
   <thead class="table-dark">
     <tr>
@@ -39,8 +37,8 @@
 		  <td><%= wlan.g %></td>
 		  <td><%= wlan.lastseen %></td>
 		  <td><%= wlan.dateadded %></td>
-		  <td><%= wlan.selected_a %></td>
-		  <td><%= wlan.selected_g %></td>
+		  <td><%= parseArray(wlan.selected_a) %></td>
+		  <td><%= parseArray(wlan.selected_g) %></td>
 		  <td><%= wlan.client_id %></td>
 		 
           <td class="justify-content-around">

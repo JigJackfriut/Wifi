@@ -11713,3 +11713,1942 @@ Processing by WlansController#index as HTML
 Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 2.2ms | Allocations: 20008)
 
 
+Started GET "/wlans" for 138.28.151.182 at 2023-06-14 20:08:08 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by WlansController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:27
+  Rendered wlans/index.html.erb within layouts/application (Duration: 24.2ms | Allocations: 14034)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 14136)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.7ms | Allocations: 19955)
+
+
+  
+ActionView::Template::Error (unexpected token at ''):
+    37: 		  <td><%= wlan.g %></td>
+    38: 		  <td><%= wlan.lastseen %></td>
+    39: 		  <td><%= wlan.dateadded %></td>
+    40: 		  <td><%= parseArray(wlan.selected_a) %></td>
+    41: 		  <td><%= parseArray(wlan.selected_g) %></td>
+    42: 		  <td><%= wlan.client_id %></td>
+    43: 		 
+  
+app/helpers/wlans_helper.rb:8:in `parseArray'
+app/views/wlans/index.html.erb:40
+app/views/wlans/index.html.erb:27
+Started GET "/" for 138.28.72.178 at 2023-06-14 20:08:11 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 709)
+  Rendered home/_header.html.erb (Duration: 1.2ms | Allocations: 702)
+  Rendered layout layouts/application.html.erb (Duration: 57.0ms | Allocations: 34457)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms | Allocations: 35201)
+
+
+Started GET "/wlans" for 138.28.151.182 at 2023-06-14 20:08:12 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:27
+  Rendered wlans/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2166)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2254)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 2510)
+
+
+  
+ActionView::Template::Error (unexpected token at ''):
+    37: 		  <td><%= wlan.g %></td>
+    38: 		  <td><%= wlan.lastseen %></td>
+    39: 		  <td><%= wlan.dateadded %></td>
+    40: 		  <td><%= parseArray(wlan.selected_a) %></td>
+    41: 		  <td><%= parseArray(wlan.selected_g) %></td>
+    42: 		  <td><%= wlan.client_id %></td>
+    43: 		 
+  
+app/helpers/wlans_helper.rb:8:in `parseArray'
+app/views/wlans/index.html.erb:40
+app/views/wlans/index.html.erb:27
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:08:14 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:08:14.996765', `wlans`.`updated_at` = '2023-06-14 20:08:14.997528' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:08:15.005083', `wlans`.`updated_at` = '2023-06-14 20:08:15.005460' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:08:15.014910', `wlans`.`updated_at` = '2023-06-14 20:08:15.015262' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/managers/sign_in" for 138.28.72.178 at 2023-06-14 20:08:15 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 736)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3705)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 330)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6311)
+Completed 200 OK in 24ms (Views: 12.9ms | ActiveRecord: 1.6ms | Allocations: 11957)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-14 20:08:17 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1337)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3799)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.5ms | Allocations: 4065)
+
+
+Started GET "/managers/sign_up" for 138.28.72.178 at 2023-06-14 20:08:19 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 234)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 170)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2119)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 329)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4712)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 5752)
+
+
+Started DELETE "/managers/sign_out" for 138.28.151.182 at 2023-06-14 20:08:22 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 15ms (ActiveRecord: 0.4ms | Allocations: 10125)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-14 20:08:22 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 321)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 279)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2846)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 3155)
+
+
+Started GET "/managers/sign_up" for 138.28.151.182 at 2023-06-14 20:08:24 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1217)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3702)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4230)
+
+
+Started GET "/managers/sign_in" for 138.28.151.182 at 2023-06-14 20:08:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 144)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1230)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3707)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4303)
+
+
+Started POST "/managers/sign_in" for 138.28.151.182 at 2023-06-14 20:08:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"email"=>"beshentseva2@kenyon.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`email` = 'beshentseva2@kenyon.edu' ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 235ms (ActiveRecord: 0.4ms | Allocations: 3394)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-14 20:08:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 1 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1079)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3546)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 3811)
+
+
+Started POST "/managers" for 138.28.72.178 at 2023-06-14 20:08:43 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"email"=>"skonjp@kenyon.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `managers` WHERE `managers`.`email` = BINARY 'skonjp@kenyon.edu' LIMIT 1[0m
+  [1m[36mManager Create (0.4ms)[0m  [1m[32mINSERT INTO `managers` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`) VALUES ('skonjp@kenyon.edu', '$2a$12$eausO4eatCxPg.1UCVuYLe0ZkprVfk23NwtK9UoxyB0M7nEYTrDu.', NULL, NULL, NULL, '2023-06-14 20:08:43.456857', '2023-06-14 20:08:43.456857')[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 240ms (ActiveRecord: 2.4ms | Allocations: 6909)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-14 20:08:43 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1104)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3586)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 3851)
+
+
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:08:44 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:08:44.985007', `wlans`.`updated_at` = '2023-06-14 20:08:44.985546' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:08:44.992110', `wlans`.`updated_at` = '2023-06-14 20:08:44.992499' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:08:44.998358', `wlans`.`updated_at` = '2023-06-14 20:08:44.998797' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/managers/edit" for 138.28.72.178 at 2023-06-14 20:08:47 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2271)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 278)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4741)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 6440)
+
+
+Started GET "/managers/edit" for 138.28.72.178 at 2023-06-14 20:08:52 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1690)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4148)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 5785)
+
+
+Started GET "/home/about" for 138.28.72.178 at 2023-06-14 20:08:54 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 102)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 3.0ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3538)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 3856)
+
+
+Started DELETE "/managers/sign_out" for 138.28.72.178 at 2023-06-14 20:09:00 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.4ms | Allocations: 1769)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-14 20:09:00 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 311)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 279)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2784)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3049)
+
+
+Started GET "/managers/sign_in" for 138.28.72.178 at 2023-06-14 20:09:02 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 144)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1230)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3726)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 4338)
+
+
+Started POST "/managers/sign_in" for 138.28.72.178 at 2023-06-14 20:09:09 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"email"=>"skonjp@kenyon.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`email` = 'skonjp@kenyon.edu' ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 233ms (ActiveRecord: 0.4ms | Allocations: 2344)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-14 20:09:10 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1094)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3581)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.5ms | Allocations: 3846)
+
+
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:09:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:09:15.040045', `wlans`.`updated_at` = '2023-06-14 20:09:15.040470' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:09:15.046996', `wlans`.`updated_at` = '2023-06-14 20:09:15.047305' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:09:15.053787', `wlans`.`updated_at` = '2023-06-14 20:09:15.054127' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/accounts" for 138.28.72.178 at 2023-06-14 20:09:16 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1224)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1101)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4797)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 5895)
+
+
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:09:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:09:45.048544', `wlans`.`updated_at` = '2023-06-14 20:09:45.048941' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:09:45.054854', `wlans`.`updated_at` = '2023-06-14 20:09:45.055219' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:09:45.061209', `wlans`.`updated_at` = '2023-06-14 20:09:45.061618' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:10:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:10:15.090989', `wlans`.`updated_at` = '2023-06-14 20:10:15.091431' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:10:15.097968', `wlans`.`updated_at` = '2023-06-14 20:10:15.098313' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:10:15.104215', `wlans`.`updated_at` = '2023-06-14 20:10:15.104576' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:10:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:10:45.102835', `wlans`.`updated_at` = '2023-06-14 20:10:45.103284' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:10:45.109576', `wlans`.`updated_at` = '2023-06-14 20:10:45.109897' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:10:45.115596', `wlans`.`updated_at` = '2023-06-14 20:10:45.115917' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:11:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:11:15.143101', `wlans`.`updated_at` = '2023-06-14 20:11:15.143541' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:11:15.149043', `wlans`.`updated_at` = '2023-06-14 20:11:15.149432' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:11:15.154588', `wlans`.`updated_at` = '2023-06-14 20:11:15.154992' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:11:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:11:45.149092', `wlans`.`updated_at` = '2023-06-14 20:11:45.149524' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.5ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:11:45.158080', `wlans`.`updated_at` = '2023-06-14 20:11:45.158473' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:11:45.166082', `wlans`.`updated_at` = '2023-06-14 20:11:45.166428' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:12:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:12:15.203375', `wlans`.`updated_at` = '2023-06-14 20:12:15.203787' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:12:15.210524', `wlans`.`updated_at` = '2023-06-14 20:12:15.210839' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:12:15.216440', `wlans`.`updated_at` = '2023-06-14 20:12:15.216783' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:12:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:12:45.223421', `wlans`.`updated_at` = '2023-06-14 20:12:45.224066' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:12:45.231954', `wlans`.`updated_at` = '2023-06-14 20:12:45.232348' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:12:45.238787', `wlans`.`updated_at` = '2023-06-14 20:12:45.239124' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:13:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:13:15.264413', `wlans`.`updated_at` = '2023-06-14 20:13:15.264838' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:13:15.271036', `wlans`.`updated_at` = '2023-06-14 20:13:15.271347' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:13:15.279086', `wlans`.`updated_at` = '2023-06-14 20:13:15.279404' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:13:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:13:45.273984', `wlans`.`updated_at` = '2023-06-14 20:13:45.274423' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:13:45.281012', `wlans`.`updated_at` = '2023-06-14 20:13:45.281444' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:13:45.287364', `wlans`.`updated_at` = '2023-06-14 20:13:45.287684' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:14:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:14:15.322454', `wlans`.`updated_at` = '2023-06-14 20:14:15.322866' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:14:15.328283', `wlans`.`updated_at` = '2023-06-14 20:14:15.328593' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:14:15.334145', `wlans`.`updated_at` = '2023-06-14 20:14:15.334524' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:14:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:14:45.325115', `wlans`.`updated_at` = '2023-06-14 20:14:45.325570' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:14:45.332021', `wlans`.`updated_at` = '2023-06-14 20:14:45.332500' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:14:45.339109', `wlans`.`updated_at` = '2023-06-14 20:14:45.339469' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/managers/edit" for 138.28.72.178 at 2023-06-14 20:14:54 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1690)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4167)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 5801)
+
+
+Started GET "/accounts" for 138.28.72.178 at 2023-06-14 20:14:59 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 651)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1075)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4100)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.7ms | Allocations: 4374)
+
+
+Started GET "/wificlients" for 138.28.72.178 at 2023-06-14 20:15:01 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1731)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1099)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5266)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.7ms | Allocations: 6053)
+
+
+Started GET "/managers/edit" for 138.28.72.178 at 2023-06-14 20:15:06 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1690)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 272)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4148)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 5783)
+
+
+Started DELETE "/managers/sign_out" for 138.28.72.178 at 2023-06-14 20:15:08 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.4ms | Allocations: 1739)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-14 20:15:08 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 336)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 279)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2809)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3075)
+
+
+Started GET "/managers/sign_in" for 138.28.72.178 at 2023-06-14 20:15:10 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 144)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1230)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3707)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4300)
+
+
+Started POST "/managers/sign_in" for 138.28.72.178 at 2023-06-14 20:15:13 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"email"=>"skonjp@kenyon.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`email` = 'skonjp@kenyon.edu' ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 230ms (ActiveRecord: 0.3ms | Allocations: 2362)
+
+
+Started GET "/" for 138.28.72.178 at 2023-06-14 20:15:14 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1064)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 273)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3531)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 3796)
+
+
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:15:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:15:15.386749', `wlans`.`updated_at` = '2023-06-14 20:15:15.387139' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:15:15.392880', `wlans`.`updated_at` = '2023-06-14 20:15:15.393199' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:15:15.399612', `wlans`.`updated_at` = '2023-06-14 20:15:15.399953' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:15:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:15:45.393706', `wlans`.`updated_at` = '2023-06-14 20:15:45.394057' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:15:45.400010', `wlans`.`updated_at` = '2023-06-14 20:15:45.400343' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:15:45.406351', `wlans`.`updated_at` = '2023-06-14 20:15:45.406654' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/accounts" for 138.28.72.178 at 2023-06-14 20:15:47 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 651)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1075)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4101)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.1ms | Allocations: 4377)
+
+
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:16:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:16:15.434596', `wlans`.`updated_at` = '2023-06-14 20:16:15.434937' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:16:15.440977', `wlans`.`updated_at` = '2023-06-14 20:16:15.441279' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:16:15.446771', `wlans`.`updated_at` = '2023-06-14 20:16:15.447092' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:16:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.5ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:16:45.476537', `wlans`.`updated_at` = '2023-06-14 20:16:45.476945' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:16:45.482706', `wlans`.`updated_at` = '2023-06-14 20:16:45.483691' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:16:45.489341', `wlans`.`updated_at` = '2023-06-14 20:16:45.489729' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:17:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:17:15.491438', `wlans`.`updated_at` = '2023-06-14 20:17:15.491803' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:17:15.498058', `wlans`.`updated_at` = '2023-06-14 20:17:15.498369' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:17:15.504316', `wlans`.`updated_at` = '2023-06-14 20:17:15.504621' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:17:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:17:45.522149', `wlans`.`updated_at` = '2023-06-14 20:17:45.522498' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:17:45.527940', `wlans`.`updated_at` = '2023-06-14 20:17:45.528266' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:17:45.533973', `wlans`.`updated_at` = '2023-06-14 20:17:45.534267' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:18:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:18:15.519574', `wlans`.`updated_at` = '2023-06-14 20:18:15.520033' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:18:15.526668', `wlans`.`updated_at` = '2023-06-14 20:18:15.527061' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:18:15.534337', `wlans`.`updated_at` = '2023-06-14 20:18:15.534734' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:18:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:18:45.581232', `wlans`.`updated_at` = '2023-06-14 20:18:45.581669' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:18:45.587290', `wlans`.`updated_at` = '2023-06-14 20:18:45.587587' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:18:45.593787', `wlans`.`updated_at` = '2023-06-14 20:18:45.594080' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:19:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:19:15.588443', `wlans`.`updated_at` = '2023-06-14 20:19:15.588795' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:19:15.594698', `wlans`.`updated_at` = '2023-06-14 20:19:15.594997' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:19:15.600869', `wlans`.`updated_at` = '2023-06-14 20:19:15.601178' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:19:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:19:45.611710', `wlans`.`updated_at` = '2023-06-14 20:19:45.612058' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:19:45.617873', `wlans`.`updated_at` = '2023-06-14 20:19:45.618154' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:19:45.624253', `wlans`.`updated_at` = '2023-06-14 20:19:45.624552' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:20:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:20:15.652218', `wlans`.`updated_at` = '2023-06-14 20:20:15.652609' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:20:15.659684', `wlans`.`updated_at` = '2023-06-14 20:20:15.660014' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:20:15.666375', `wlans`.`updated_at` = '2023-06-14 20:20:15.666765' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:20:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:20:45.698148', `wlans`.`updated_at` = '2023-06-14 20:20:45.698509' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:20:45.704239', `wlans`.`updated_at` = '2023-06-14 20:20:45.704542' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:20:45.710235', `wlans`.`updated_at` = '2023-06-14 20:20:45.710528' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.7ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:21:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.2ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:21:15.717362', `wlans`.`updated_at` = '2023-06-14 20:21:15.717807' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:21:15.723584', `wlans`.`updated_at` = '2023-06-14 20:21:15.723922' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:21:15.729488', `wlans`.`updated_at` = '2023-06-14 20:21:15.729850' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:21:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:21:45.744677', `wlans`.`updated_at` = '2023-06-14 20:21:45.745041' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:21:45.750771', `wlans`.`updated_at` = '2023-06-14 20:21:45.751223' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:21:45.757017', `wlans`.`updated_at` = '2023-06-14 20:21:45.757300' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:22:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:22:15.773928', `wlans`.`updated_at` = '2023-06-14 20:22:15.774266' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:22:15.780694', `wlans`.`updated_at` = '2023-06-14 20:22:15.781011' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:22:15.786623', `wlans`.`updated_at` = '2023-06-14 20:22:15.786938' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:22:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:22:45.795668', `wlans`.`updated_at` = '2023-06-14 20:22:45.796346' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:22:45.802213', `wlans`.`updated_at` = '2023-06-14 20:22:45.802552' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:22:45.808274', `wlans`.`updated_at` = '2023-06-14 20:22:45.808609' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:23:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:23:15.839506', `wlans`.`updated_at` = '2023-06-14 20:23:15.839902' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:23:15.845709', `wlans`.`updated_at` = '2023-06-14 20:23:15.846021' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:23:15.851771', `wlans`.`updated_at` = '2023-06-14 20:23:15.852126' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:23:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:23:45.857966', `wlans`.`updated_at` = '2023-06-14 20:23:45.858317' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:23:45.863561', `wlans`.`updated_at` = '2023-06-14 20:23:45.863880' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:23:45.870955', `wlans`.`updated_at` = '2023-06-14 20:23:45.871291' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:24:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:24:15.894580', `wlans`.`updated_at` = '2023-06-14 20:24:15.894921' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:24:15.901052', `wlans`.`updated_at` = '2023-06-14 20:24:15.901371' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:24:15.907214', `wlans`.`updated_at` = '2023-06-14 20:24:15.907515' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:24:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:24:45.910558', `wlans`.`updated_at` = '2023-06-14 20:24:45.910939' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:24:45.916404', `wlans`.`updated_at` = '2023-06-14 20:24:45.916700' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:24:45.922231', `wlans`.`updated_at` = '2023-06-14 20:24:45.922547' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:25:15 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:25:15.949345', `wlans`.`updated_at` = '2023-06-14 20:25:15.949740' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.2ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:25:15.955028', `wlans`.`updated_at` = '2023-06-14 20:25:15.955344' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:25:15.961126', `wlans`.`updated_at` = '2023-06-14 20:25:15.961477' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:25:45 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:25:45.964724', `wlans`.`updated_at` = '2023-06-14 20:25:45.965108' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:25:45.971245', `wlans`.`updated_at` = '2023-06-14 20:25:45.971545' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:25:45.977663', `wlans`.`updated_at` = '2023-06-14 20:25:45.977974' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/accounts" for 138.28.72.178 at 2023-06-14 20:26:00 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by AccountsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:21
+  Rendered accounts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 651)
+  [1m[36mManager Load (0.7ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1075)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4122)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 1.0ms | Allocations: 4396)
+
+
+Started GET "/wificlients" for 138.28.72.178 at 2023-06-14 20:26:02 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1034)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1075)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4489)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.7ms | Allocations: 4763)
+
+
+Started GET "/wificlients/41/edit" for 138.28.72.178 at 2023-06-14 20:26:07 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 41 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:71:in `set_wificlient'
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 13.9ms | Allocations: 13664)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 14.9ms | Allocations: 14046)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1074)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 17298)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.9ms | Allocations: 18775)
+
+
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:26:16 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:26:16.009166', `wlans`.`updated_at` = '2023-06-14 20:26:16.009558' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.6ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:26:16.015326', `wlans`.`updated_at` = '2023-06-14 20:26:16.015669' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.5ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:26:16.021227', `wlans`.`updated_at` = '2023-06-14 20:26:16.021637' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/wificlients" for 138.28.72.178 at 2023-06-14 20:26:17 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1034)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 1075)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4468)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.8ms | Allocations: 4740)
+
+
+Started GET "/wlans" for 138.28.72.178 at 2023-06-14 20:26:24 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:27
+  Rendered wlans/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2171)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2258)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 2508)
+
+
+  
+ActionView::Template::Error (unexpected token at ''):
+    37: 		  <td><%= wlan.g %></td>
+    38: 		  <td><%= wlan.lastseen %></td>
+    39: 		  <td><%= wlan.dateadded %></td>
+    40: 		  <td><%= parseArray(wlan.selected_a) %></td>
+    41: 		  <td><%= parseArray(wlan.selected_g) %></td>
+    42: 		  <td><%= wlan.client_id %></td>
+    43: 		 
+  
+app/helpers/wlans_helper.rb:8:in `parseArray'
+app/views/wlans/index.html.erb:40
+app/views/wlans/index.html.erb:27
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:26:46 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.2ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:26:46.014465', `wlans`.`updated_at` = '2023-06-14 20:26:46.014820' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:26:46.020485', `wlans`.`updated_at` = '2023-06-14 20:26:46.020782' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:26:46.028606', `wlans`.`updated_at` = '2023-06-14 20:26:46.028942' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:27:16 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:27:16.072727', `wlans`.`updated_at` = '2023-06-14 20:27:16.073105' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:27:16.079100', `wlans`.`updated_at` = '2023-06-14 20:27:16.079451' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.6ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:27:16.085193', `wlans`.`updated_at` = '2023-06-14 20:27:16.085532' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/wificlients/new" for 138.28.72.178 at 2023-06-14 20:27:27 +0000
+Cannot render console from 138.28.72.178! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/new.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.3ms | Allocations: 1967)
+  Rendered wificlients/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2220)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 2 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1075)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5515)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 5896)
+
+
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:27:46 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:27:46.091216', `wlans`.`updated_at` = '2023-06-14 20:27:46.091587' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:27:46.097414', `wlans`.`updated_at` = '2023-06-14 20:27:46.097803' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.5ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:27:46.103639', `wlans`.`updated_at` = '2023-06-14 20:27:46.103923' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:28:16 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (1.7ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:28:16.135128', `wlans`.`updated_at` = '2023-06-14 20:28:16.135459' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.5ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:28:16.150559', `wlans`.`updated_at` = '2023-06-14 20:28:16.150937' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:28:16.191725', `wlans`.`updated_at` = '2023-06-14 20:28:16.192054' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:28:46 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:28:46.149492', `wlans`.`updated_at` = '2023-06-14 20:28:46.149937' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:28:46.155876', `wlans`.`updated_at` = '2023-06-14 20:28:46.156266' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:28:46.161738', `wlans`.`updated_at` = '2023-06-14 20:28:46.162036' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:29:16 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:29:16.190032', `wlans`.`updated_at` = '2023-06-14 20:29:16.190391' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:29:16.196245', `wlans`.`updated_at` = '2023-06-14 20:29:16.196571' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:29:16.202224', `wlans`.`updated_at` = '2023-06-14 20:29:16.202560' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:29:46 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:29:46.204258', `wlans`.`updated_at` = '2023-06-14 20:29:46.204607' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:29:46.209977', `wlans`.`updated_at` = '2023-06-14 20:29:46.210320' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:29:46.216074', `wlans`.`updated_at` = '2023-06-14 20:29:46.216359' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:30:16 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:30:16.240726', `wlans`.`updated_at` = '2023-06-14 20:30:16.241094' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:30:16.246866', `wlans`.`updated_at` = '2023-06-14 20:30:16.247780' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:30:16.253319', `wlans`.`updated_at` = '2023-06-14 20:30:16.253638' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:30:46 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.6ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:30:46.251912', `wlans`.`updated_at` = '2023-06-14 20:30:46.252309' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:30:46.258110', `wlans`.`updated_at` = '2023-06-14 20:30:46.258465' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:30:46.264320', `wlans`.`updated_at` = '2023-06-14 20:30:46.264674' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/hello" for 138.28.72.139 at 2023-06-14 20:31:16 +0000
+Cannot render console from 138.28.72.139! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:49:in `process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'c0:1c:30:06:ce:ca' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:31:16.306553', `wlans`.`updated_at` = '2023-06-14 20:31:16.306932' WHERE `wlans`.`id` = 47[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.3ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = '98:48:27:db:97:ab' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.3ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:31:16.312463', `wlans`.`updated_at` = '2023-06-14 20:31:16.312988' WHERE `wlans`.`id` = 49[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`mac` = 'dc:a6:32:a8:7d:a5' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:60:in `block in process_hello'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`lastseen` = '2023-06-14 20:31:16.318546', `wlans`.`updated_at` = '2023-06-14 20:31:16.318852' WHERE `wlans`.`id` = 50[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:65:in `block in process_hello'
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:a8:7d:a4' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:13:in `block (2 levels) in <class:Wificlients>'
+Started GET "/managers" for 138.28.151.182 at 2023-06-15 13:06:50 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/managers"):
+  
