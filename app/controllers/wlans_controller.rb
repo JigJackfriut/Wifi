@@ -1,6 +1,6 @@
 class WlansController < ApplicationController
   before_action :set_wlan, only: %i[ show edit update destroy ]
-  # GET /wlans or /wlans.json
+  before_action :authenticate_manager!, except: [:index, :show]  # GET /wlans or /wlans.json
   def index
     @wlans = Wlan.all
   end
