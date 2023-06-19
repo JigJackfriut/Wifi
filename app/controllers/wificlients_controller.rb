@@ -29,17 +29,28 @@ class WificlientsController < ApplicationController
   # POST /wificlients or /wificlients.json
   def create
     #@wificlient = Wificlient.new(wificlient_params)
-	@wificlient = current_manager.wificlients.build(wificlient_params)
-	
+	#@wificlient = current_manager.wificlients.build(wificlient_params)
+	client = Wificlient.find_by(mac:wificlient_params[:mac])
+	check = true
+	if client && client.manager_id.nil?
+		client.update(manager_id: current_manager.id)
+	elsif client && !client.manager_id.nil?
+		check = false
+	end
+
     respond_to do |format|
-      if @wificlient.save
-        format.html { redirect_to wificlient_url(@wificlient), notice: "Wificlient was successfully created." }
-        format.json { render :show, status: :created, location: @wificlient }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @wificlient.errors, status: :unprocessable_entity }
-      end
-    end
+		if !client.nil? && client.save && check
+        	format.html { redirect_to wificlient_url(client), notice: "Wificlient was successfully created." }
+        	format.json { render :show, status: :created, location: client }
+ 		elsif !client.nil? && client.save && !check
+			format.html { redirect_to wificlients_url, alert: "Error: Wificlient already assigned" }
+ 		elsif client.nil?
+			format.html { redirect_to wificlients_url, alert: "Error: Wificlient is not registered" }
+      	else
+        	format.html { render :new, status: :unprocessable_entity }
+        	format.json { render json: @wificlient.errors, status: :unprocessable_entity }
+      	end
+	end
   end
 
   # PATCH/PUT /wificlients/1 or /wificlients/1.json
@@ -80,8 +91,7 @@ class WificlientsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wificlient_params
-      params.require(:wificlient).permit(:location, :ipaddress, :version, :os, :model, :status, :pollrate, :lastseen, :note, :name, :dateadded, :confighash, :manager_id, :enabled)
+      params.require(:wificlient).permit(:mac, :location, :ipaddress, :version, :os, :model, :status, :pollrate, :lastseen, :note, :name, :dateadded, :confighash, :manager_id, :enabled)
     end
-	
 	
 end

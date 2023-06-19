@@ -12,11 +12,25 @@
   <% end %>
   <br>
 <% if wificlient.manager == current_manager%>
-    
+
+<% if current_page?(controller:'wificlients', action: 'new') %> 
+
    <div class="form-group mb-3">
 	<label>Mac</label>
     <%= form.text_field :mac, class: "form-control" %>
    </div>
+   
+   <div class="form-group mb-3">
+    <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+  </div>
+
+<% else %>
+
+	<div class="form-group mb-3">
+	<label>Mac</label>
+    <%= form.text_field :mac, class: "form-control" %>
+   </div>
+
   <div class="form-group mb-3">
 	<label>Location</label>
     <%= form.text_field :location, class: "form-control" %>
@@ -96,6 +110,7 @@
   <div class="form-group mb-3">
     <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
   </div>
+  <% end%>
   <%else%> 
 
 	<h2> "You are not allowed to on this page have access to this page" </h2>
