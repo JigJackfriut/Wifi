@@ -25,6 +25,7 @@
 
   <tbody>
   <% @wificlients.each do |wificlient| %>
+  <% if wificlient.manager == current_manager%>
    <tr>
           <td><%= wificlient.mac %></td>
           <td><%= wificlient.location %></td>  
@@ -69,8 +70,8 @@
 			</svg>
   			<% end %>
   			</td>
-
-    
+  		</tr>
+  	<% end %>
   <% end %>
 
  </tbody>

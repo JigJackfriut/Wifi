@@ -19059,3 +19059,2377 @@ Processing by WificlientsController#index as HTML
 Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.7ms | Allocations: 6552)
 
 
+Started GET "/" for 138.28.151.182 at 2023-06-19 15:46:43 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1556)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4012)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.6ms | Allocations: 4723)
+
+
+Started DELETE "/managers/sign_out" for 138.28.151.182 at 2023-06-19 15:46:45 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.4ms | Allocations: 2226)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-19 15:46:45 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 335)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2604)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2913)
+
+
+Started GET "/managers/sign_in" for 138.28.151.182 at 2023-06-19 15:46:48 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 601)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2164)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4474)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 5581)
+
+
+Started GET "/managers/sign_up" for 138.28.151.182 at 2023-06-19 15:46:49 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 224)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 113)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4386)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 6731)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 7818)
+
+
+Started POST "/managers" for 138.28.151.182 at 2023-06-19 15:47:25 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"first_name"=>"Cat", "last_name"=>"Mac", "email"=>"catmac@kenyon.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"7402335367", "address1"=>"", "address2"=>"", "city"=>",jhc", "state"=>".ljc", "zip"=>"ldok", "account_type"=>".jl"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password_confirmation. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f3787d4c1d0>, params: {"authenticity_token"=>"[FILTERED]", "manager"=>{"first_name"=>"Cat", "last_name"=>"Mac", "email"=>"catmac@kenyon.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"7402335367", "address1"=>"", "address2"=>"", "city"=>",jhc", "state"=>".ljc", "zip"=>"ldok", "account_type"=>".jl"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `managers` WHERE `managers`.`email` = BINARY 'catmac@kenyon.edu' LIMIT 1[0m
+  [1m[36mManager Create (0.4ms)[0m  [1m[32mINSERT INTO `managers` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`, `first_name`, `last_name`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `account_type`, `admin`) VALUES ('catmac@kenyon.edu', '$2a$12$ZY0k5HgjalzZ1ZgTUTw4jOyzryURkeZpMihbUEKzW2N1w4xD1fLi.', NULL, NULL, NULL, '2023-06-19 15:47:25.668221', '2023-06-19 15:47:25.668221', 'Cat', 'Mac', '7402335367', '', '', ',jhc', '.ljc', 'ldok', '.jl', NULL)[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 245ms (ActiveRecord: 1.9ms | Allocations: 6782)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-19 15:47:25 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1146)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3530)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 3796)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 15:47:39 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1039)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4379)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.9ms | Allocations: 4656)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 15:47:42 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1038)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4382)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 4668)
+
+
+Started GET "/wificlients/new" for 138.28.151.182 at 2023-06-19 15:47:46 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#new as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/new.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.8ms | Allocations: 2511)
+  Rendered wificlients/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2841)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 5187)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 6636)
+
+
+Started POST "/wificlients" for 138.28.151.182 at 2023-06-19 15:47:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "wificlient"=>{"location"=>"w.dlh1", "ipaddress"=>"wwd/;ho", "clientversion"=>"wdf/", "osversion"=>";sd;'no", "hwmodel"=>"sdC;/", "status"=>"ASCL/d", "pollrate"=>"", "lastseen"=>"", "note"=>"", "name"=>"", "dateadded"=>"", "confighash"=>"", "manager_id"=>"25"}, "commit"=>"Create WLAN Client"}
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:31:in `create'
+[31mUnpermitted parameters: :clientversion, :osversion, :hwmodel. Context: { controller: WificlientsController, action: create, request: #<ActionDispatch::Request:0x00007f37bc298178>, params: {"authenticity_token"=>"[FILTERED]", "wificlient"=>{"location"=>"w.dlh1", "ipaddress"=>"wwd/;ho", "clientversion"=>"wdf/", "osversion"=>";sd;'no", "hwmodel"=>"sdC;/", "status"=>"ASCL/d", "pollrate"=>"", "lastseen"=>"", "note"=>"", "name"=>"", "dateadded"=>"", "confighash"=>"", "manager_id"=>"25"}, "commit"=>"Create WLAN Client", "controller"=>"wificlients", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wificlients_controller.rb:34:in `block in create'
+  [1m[36mWificlient Create (0.4ms)[0m  [1m[32mINSERT INTO `wificlients` (`location`, `ipaddress`, `version`, `os`, `model`, `status`, `pollrate`, `lastseen`, `note`, `name`, `dateadded`, `confighash`, `enabled`, `created_at`, `updated_at`, `mac`, `serial`, `manager_id`) VALUES ('w.dlh1', 'wwd/;ho', NULL, NULL, NULL, 'ASCL/d', NULL, NULL, '', '', NULL, '', NULL, '2023-06-19 15:47:55.943405', '2023-06-19 15:47:55.943405', NULL, NULL, 25)[0m
+  ↳ app/controllers/wificlients_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wificlients_controller.rb:34:in `block in create'
+Redirected to http://138.28.72.137:3000/wificlients/49
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms | Allocations: 3705)
+
+
+Started GET "/wificlients/49" for 138.28.151.182 at 2023-06-19 15:47:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#show as TURBO_STREAM
+  Parameters: {"id"=>"49"}
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 49 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/show.html.erb within layouts/application
+  Rendered wificlients/_wificlient.html.erb (Duration: 0.8ms | Allocations: 426)
+  Rendered wificlients/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 776)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 971)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4127)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 5024)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 15:47:58 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1229)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4560)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.8ms | Allocations: 4834)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:10:37 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1340)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 3.1ms | Allocations: 973)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 4666)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 1.6ms | Allocations: 4938)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:12:23 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1556)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1645)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2528)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Wificlients</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">MAC</th>
+      <th scope="col">Location</th>
+      <th scope="col">IP Address</th>
+      <th scope="col">Client Version</th>
+      <th scope="col">OS Version</th>
+      <th scope="col">HW Model</th>
+      <th scope="col">Status</th>
+      <th scope="col">Poll Rate</th>
+      <th scope="col">Last Seen</th>
+      <th scope="col">Note</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date Added</th>
+	  <th scope="col">Config Hash</th>
+	  <th scope="col">Manager ID</th>
+	  <th scope="col">Enabled</th>
+	  <th scope="col">Serial</th>
+	  <th scope="col">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @wificlients.each do |wificlient| %>
+  <% if wificlient.manager == current_manager%>
+   <tr>
+          <td><%= wificlient.mac %></td>
+          <td><%= wificlient.location %></td>  
+          <td><%= wificlient.ipaddress %></td> 
+          <td><%= wificlient.version %></td>
+          <td><%= wificlient.os %></td>
+          <td><%= wificlient.model %></td>
+          <td><%= wificlient.status %></td>
+          <td><%= wificlient.pollrate %></td>
+		  <td><%= wificlient.lastseen %></td>
+		  <td><%= wificlient.note %></td>
+		  <td><%= wificlient.name %></td>
+		  <td><%= wificlient.dateadded %></td>
+		  <td><%= wificlient.confighash %></td>
+		  <td><%= wificlient.manager_id %></td>
+		  <td><%= wificlient.enabled %></td>
+		  <td><%= wificlient.serial %></td>
+		 
+          
+          <td class="justify-content-around">
+  			<%= link_to wificlient, style: "text-decoration:none" do %>
+  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
+  			<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+  			<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+			</svg>
+  			<% end %>
+  			
+         	<%= link_to edit_wificlient_path(wificlient), style: "text-decoration:none" do %> 
+  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+  			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
+  			0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 
+  			0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 
+  			7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 
+  			0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 
+  			0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+			</svg>
+  			<% end %> 
+  			
+  			<%= link_to wificlient_path(wificlient), data: {turbo_method: :delete, }, style: "text-decoration:none" do %>
+  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  			<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+			</svg>
+  			<% end %>
+  			</td>
+  		</tr>
+  <% end %>
+
+ </tbody>
+</table>
+
+<br>
+<%= link_to "New Wifi client", new_wificlient_path, class: "btn btn-primary" %>
+
+
+
+
+):
+1:    <h1>Wificlients</h1>
+2:    
+3:    <table class="table table-striped table-bordered table-hover">
+4:      <thead class="table-dark">
+5:        <tr>
+6:          <th scope="col">MAC</th>
+7:          <th scope="col">Location</th>
+8:          <th scope="col">IP Address</th>
+9:          <th scope="col">Client Version</th>
+10:          <th scope="col">OS Version</th>
+11:          <th scope="col">HW Model</th>
+12:          <th scope="col">Status</th>
+13:          <th scope="col">Poll Rate</th>
+14:          <th scope="col">Last Seen</th>
+15:          <th scope="col">Note</th>
+16:          <th scope="col">Name</th>
+17:          <th scope="col">Date Added</th>
+18:    	  <th scope="col">Config Hash</th>
+19:    	  <th scope="col">Manager ID</th>
+20:    	  <th scope="col">Enabled</th>
+21:    	  <th scope="col">Serial</th>
+22:    	  <th scope="col">Actions</th>
+23:        </tr>
+24:      </thead>
+25:    
+26:      <tbody>
+27:      <% @wificlients.each do |wificlient| %>
+28:      <% if wificlient.manager == current_manager%>
+29:       <tr>
+30:              <td><%= wificlient.mac %></td>
+31:              <td><%= wificlient.location %></td>  
+32:              <td><%= wificlient.ipaddress %></td> 
+33:              <td><%= wificlient.version %></td>
+34:              <td><%= wificlient.os %></td>
+35:              <td><%= wificlient.model %></td>
+36:              <td><%= wificlient.status %></td>
+37:              <td><%= wificlient.pollrate %></td>
+38:    		  <td><%= wificlient.lastseen %></td>
+39:    		  <td><%= wificlient.note %></td>
+40:    		  <td><%= wificlient.name %></td>
+41:    		  <td><%= wificlient.dateadded %></td>
+42:    		  <td><%= wificlient.confighash %></td>
+43:    		  <td><%= wificlient.manager_id %></td>
+44:    		  <td><%= wificlient.enabled %></td>
+45:    		  <td><%= wificlient.serial %></td>
+46:    		 
+47:              
+48:              <td class="justify-content-around">
+49:      			<%= link_to wificlient, style: "text-decoration:none" do %>
+50:      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
+51:      			<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+52:      			<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+53:    			</svg>
+54:      			<% end %>
+55:      			
+56:             	<%= link_to edit_wificlient_path(wificlient), style: "text-decoration:none" do %> 
+57:      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+58:      			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
+59:      			0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 
+60:      			0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 
+61:      			7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 
+62:      			0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 
+63:      			0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+64:    			</svg>
+65:      			<% end %> 
+66:      			
+67:      			<%= link_to wificlient_path(wificlient), data: {turbo_method: :delete, }, style: "text-decoration:none" do %>
+68:      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+69:      			<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+70:    			</svg>
+71:      			<% end %>
+72:      			</td>
+73:      		</tr>
+74:      <% end %>
+75:    
+76:     </tbody>
+77:    </table>
+78:    
+79:    <br>
+80:    <%= link_to "New Wifi client", new_wificlient_path, class: "btn btn-primary" %>
+  
+app/views/wificlients/index.html.erb:86: syntax error, unexpected end-of-input
+app/views/wificlients/index.html.erb:86: syntax error, unexpected end-of-input
+app/views/wificlients/index.html.erb:86: syntax error, unexpected end-of-input
+app/views/wificlients/index.html.erb:86: syntax error, unexpected end-of-input
+app/views/wificlients/index.html.erb:86: syntax error, unexpected end-of-input
+app/views/wificlients/index.html.erb:86: syntax error, unexpected end-of-input
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:13:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2371)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2459)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3340)
+
+
+  
+ActionView::Template::Error (undefined method `manager' for #<Wificlient id: 47, location: "Kenyon", ipaddress: "12.234.5.6", version: nil, os: nil, model: nil, status: "", pollrate: nil, lastseen: nil, note: "", name: "", dateadded: nil, confighash: "", enabled: nil, created_at: "2023-06-19 15:15:23.377819000 +0000", updated_at: "2023-06-19 15:15:23.377819000 +0000", mac: nil, serial: nil, manager_id: 24>):
+    25: 
+    26:   <tbody>
+    27:   <% @wificlients.each do |wificlient| %>
+    28:   <% if wificlient.manager == current_manager%>
+    29:    <tr>
+    30:           <td><%= wificlient.mac %></td>
+    31:           <td><%= wificlient.location %></td>  
+  
+app/views/wificlients/index.html.erb:28
+app/views/wificlients/index.html.erb:27
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:14:53 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2342)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2430)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 3307)
+
+
+  
+ActionView::Template::Error (undefined method `manager' for #<Wificlient id: 47, location: "Kenyon", ipaddress: "12.234.5.6", version: nil, os: nil, model: nil, status: "", pollrate: nil, lastseen: nil, note: "", name: "", dateadded: nil, confighash: "", enabled: nil, created_at: "2023-06-19 15:15:23.377819000 +0000", updated_at: "2023-06-19 15:15:23.377819000 +0000", mac: nil, serial: nil, manager_id: 24>):
+    25: 
+    26:   <tbody>
+    27:   <% @wificlients.each do |wificlient| %>
+    28:   <% if wificlient.manager == current_manager%>
+    29:    <tr>
+    30:           <td><%= wificlient.mac %></td>
+    31:           <td><%= wificlient.location %></td>  
+  
+app/views/wificlients/index.html.erb:28
+app/views/wificlients/index.html.erb:27
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:16:19 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2317)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 403)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5324)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.8ms | Allocations: 6224)
+
+
+Started GET "/wificlients/new" for 138.28.151.182 at 2023-06-19 17:16:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#new as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:16:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/new.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 3.1ms | Allocations: 2513)
+  Rendered wificlients/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2845)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5225)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 6688)
+
+
+Started POST "/wificlients" for 138.28.151.182 at 2023-06-19 17:16:33 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "wificlient"=>{"location"=>"Kenyon", "ipaddress"=>"12.234.5.6", "clientversion"=>"", "osversion"=>"", "hwmodel"=>"143", "status"=>"", "pollrate"=>"", "lastseen"=>"", "note"=>"", "name"=>"", "dateadded"=>"", "confighash"=>"", "manager_id"=>"25"}, "commit"=>"Create WLAN Client"}
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:31:in `create'
+[31mUnpermitted parameters: :clientversion, :osversion, :hwmodel. Context: { controller: WificlientsController, action: create, request: #<ActionDispatch::Request:0x00007f3787d90fb0>, params: {"authenticity_token"=>"[FILTERED]", "wificlient"=>{"location"=>"Kenyon", "ipaddress"=>"12.234.5.6", "clientversion"=>"", "osversion"=>"", "hwmodel"=>"143", "status"=>"", "pollrate"=>"", "lastseen"=>"", "note"=>"", "name"=>"", "dateadded"=>"", "confighash"=>"", "manager_id"=>"25"}, "commit"=>"Create WLAN Client", "controller"=>"wificlients", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wificlients_controller.rb:34:in `block in create'
+  [1m[36mWificlient Create (0.4ms)[0m  [1m[32mINSERT INTO `wificlients` (`location`, `ipaddress`, `version`, `os`, `model`, `status`, `pollrate`, `lastseen`, `note`, `name`, `dateadded`, `confighash`, `enabled`, `created_at`, `updated_at`, `mac`, `serial`, `manager_id`) VALUES ('Kenyon', '12.234.5.6', NULL, NULL, NULL, '', NULL, NULL, '', '', NULL, '', NULL, '2023-06-19 17:16:33.445156', '2023-06-19 17:16:33.445156', NULL, NULL, 25)[0m
+  ↳ app/controllers/wificlients_controller.rb:34:in `block in create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wificlients_controller.rb:34:in `block in create'
+Redirected to http://138.28.72.137:3000/wificlients/50
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms | Allocations: 3696)
+
+
+Started GET "/wificlients/50" for 138.28.151.182 at 2023-06-19 17:16:33 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#show as TURBO_STREAM
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/show.html.erb within layouts/application
+  Rendered wificlients/_wificlient.html.erb (Duration: 1.0ms | Allocations: 426)
+  Rendered wificlients/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 819)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 971)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4165)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.8ms | Allocations: 5105)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:16:35 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1696)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4043)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.9ms | Allocations: 4317)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:17:46 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 16322)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 409)
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | Allocations: 29945)
+Completed 200 OK in 50ms (Views: 38.5ms | ActiveRecord: 4.6ms | Allocations: 32737)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:30:12 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 5468)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 403)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 8457)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 2.0ms | Allocations: 9361)
+
+
+Started GET "/wificlients/47" for 138.28.151.182 at 2023-06-19 17:30:40 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/show.html.erb within layouts/application
+  Rendered wificlients/_wificlient.html.erb (Duration: 0.7ms | Allocations: 429)
+  Rendered wificlients/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 821)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 971)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4143)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.8ms | Allocations: 5657)
+
+
+Started GET "/wificlients/edit/47" for 138.28.151.182 at 2023-06-19 17:31:25 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/wificlients/edit/47"):
+  
+Started GET "/wificlients/49/edit" for 138.28.151.182 at 2023-06-19 17:31:37 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 49 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 3.3ms | Allocations: 2941)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3314)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 5686)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 0.8ms | Allocations: 7899)
+
+
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:31:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.0ms | Allocations: 1899)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2024)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4362)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.8ms | Allocations: 6496)
+
+
+Started GET "/wificlients/47" for 138.28.151.182 at 2023-06-19 17:32:58 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/show.html.erb within layouts/application
+  Rendered wificlients/_wificlient.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered wificlients/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 157)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 971)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3479)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.8ms | Allocations: 4266)
+
+
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:33:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 3.0ms | Allocations: 2639)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3023)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5978)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.8ms | Allocations: 8736)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-19 17:34:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1447)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3903)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 4616)
+
+
+Started DELETE "/managers/sign_out" for 138.28.151.182 at 2023-06-19 17:34:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.4ms | Allocations: 2237)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-19 17:34:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 344)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2613)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 2920)
+
+
+Started GET "/managers/sign_in" for 138.28.151.182 at 2023-06-19 17:34:29 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 602)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2168)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4512)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 5639)
+
+
+Started POST "/managers/sign_in" for 138.28.151.182 at 2023-06-19 17:34:37 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"email"=>"beshentseva2@kenyon.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`email` = 'beshentseva2@kenyon.edu' ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 234ms (ActiveRecord: 0.4ms | Allocations: 2703)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-19 17:34:37 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.9ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1124)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3513)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.9ms | Allocations: 3779)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:35:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 5315)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7662)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 1.6ms | Allocations: 8042)
+
+
+Started GET "/wificlients/48/edit" for 138.28.151.182 at 2023-06-19 17:35:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 48 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.3ms | Allocations: 1906)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2031)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4369)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.8ms | Allocations: 6512)
+
+
+Started GET "/wificlients/50/edit" for 138.28.151.182 at 2023-06-19 17:35:22 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.4ms | Allocations: 1899)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2024)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4363)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.7ms | Allocations: 6495)
+
+
+Started GET "/wificlients/49/edit" for 138.28.151.182 at 2023-06-19 17:35:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 49 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:77:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.4ms | Allocations: 1899)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2024)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4362)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 6527)
+
+
+Started GET "/wificlients/49/edit" for 138.28.151.182 at 2023-06-19 17:36:54 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 49 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 3.0ms | Allocations: 3017)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3409)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 402)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 17033)
+Completed 200 OK in 40ms (Views: 16.9ms | ActiveRecord: 3.6ms | Allocations: 31708)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 17:37:02 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 5826)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 8173)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 1.6ms | Allocations: 9903)
+
+
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:37:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.5ms | Allocations: 1905)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2030)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4402)
+Completed 200 OK in 16ms (Views: 6.6ms | ActiveRecord: 0.7ms | Allocations: 6549)
+
+
+Started GET "/wificlients/49/edit" for 138.28.151.182 at 2023-06-19 17:37:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 49 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 1.9ms | Allocations: 1899)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2024)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4395)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 6539)
+
+
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:37:35 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 21 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.7ms | Allocations: 1932)
+
+
+Started GET "/managers/sign_in" for 138.28.171.140 at 2023-06-19 17:37:35 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 601)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2173)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4485)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 5779)
+
+
+Started GET "/managers/sign_up" for 138.28.171.140 at 2023-06-19 17:37:40 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 224)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 112)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4393)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 6704)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 7807)
+
+
+Started POST "/managers" for 138.28.171.140 at 2023-06-19 17:37:50 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"first_name"=>"hello <3 ", "last_name"=>"", "email"=>"email@email", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "account_type"=>""}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password_confirmation. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f37bc387b38>, params: {"authenticity_token"=>"[FILTERED]", "manager"=>{"first_name"=>"hello <3 ", "last_name"=>"", "email"=>"email@email", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "account_type"=>""}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `managers` WHERE `managers`.`email` = BINARY 'email@email' LIMIT 1[0m
+  [1m[36mManager Create (0.3ms)[0m  [1m[32mINSERT INTO `managers` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`, `first_name`, `last_name`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `account_type`, `admin`) VALUES ('email@email', '$2a$12$x7Av2t7TmKlPuJPxlK2X9Osb9okCCuC9iZfPUJVIVv3AobRhf1g82', NULL, NULL, NULL, '2023-06-19 17:37:50.362738', '2023-06-19 17:37:50.362738', 'hello <3 ', '', '', '', '', '', '', '', '', NULL)[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://138.28.72.137:3000/wificlients/50/edit
+Completed 303 See Other in 237ms (ActiveRecord: 2.3ms | Allocations: 6856)
+
+
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:37:50 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as TURBO_STREAM
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.2ms | Allocations: 1900)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2072)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4412)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 0.7ms | Allocations: 6625)
+
+
+Started GET "/wificlients/49/edit" for 138.28.151.182 at 2023-06-19 17:39:43 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 49 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 8.9ms | Allocations: 1803)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2114)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2203)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms | Allocations: 4955)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: wificlient) do |form| %>
+  <% if wificlient.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(wificlient.errors.count, "error") %> prohibited this wificlient from being saved:</h2>
+
+      <ul>
+        <% wificlient.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
+<% if wificlient.manager == current_manager%>
+  <% unless  root  == "wificlients#new" %>
+   <div class="form-group mb-3">
+	<label>Mac</label>
+    <%= form.text_field :mac, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>Location</label>
+    <%= form.text_field :location, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>IP Address</label>
+    <%= form.text_field :ipaddress, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>Client Version</label>
+    <%= form.text_field :clientversion, class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-3">
+	<label>OS Version</label>
+    <%= form.text_field :osversion, class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-3">
+	<label>HW Model</label>
+    <%= form.text_field :hwmodel, class: "form-control" %>
+  </div>
+	
+  <div class="form-group mb-3">
+  	<label>Status</label>
+    <%= form.text_field :status, class: "form-control" %>
+  </div>
+    
+  <div class="form-group mb-3">
+  	<label>Poll Rate</label>
+    <%= form.text_field :pollrate, class: "form-control" %>
+  </div>
+    
+  <div class="form-group mb-3">
+  	<label>Last Seen</label>
+   <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
+	<%= form.datetime_field :lastseen, style: "display: block" %>
+   </div>
+    
+  <!--<div>
+    <%= form.label :lastseen, style: "display: block" %>
+    <%= form.datetime_field :lastseen %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Note</label>
+    <%= form.text_field :note, class: "form-control" %>
+  </div>
+  
+  <div class="form-group mb-3">
+  	<label>Name</label>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <!--<div>
+    <%= form.label :dateadded, style: "display: block" %>
+    <%= form.datetime_field :dateadded %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Date Added</label>
+	<%= form.datetime_field :dateadded, style: "display: block" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Config Hash</label>
+    <%= form.text_field :confighash, class: "form-control" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Manager ID</label>
+    <%= form.number_field :manager_id, id: :wificlient_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+  </div>
+<% end %>
+<% end %>
+
+
+):
+1:    <%= form_with(model: wificlient) do |form| %>
+2:      <% if wificlient.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(wificlient.errors.count, "error") %> prohibited this wificlient from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% wificlient.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:      <br>
+14:    <% if wificlient.manager == current_manager%>
+15:      <% unless  root  == "wificlients#new" %>
+16:       <div class="form-group mb-3">
+17:    	<label>Mac</label>
+18:        <%= form.text_field :mac, class: "form-control" %>
+19:       </div>
+20:    
+21:      <div class="form-group mb-3">
+22:    	<label>Location</label>
+23:        <%= form.text_field :location, class: "form-control" %>
+24:       </div>
+25:    
+26:      <div class="form-group mb-3">
+27:    	<label>IP Address</label>
+28:        <%= form.text_field :ipaddress, class: "form-control" %>
+29:       </div>
+30:    
+31:      <div class="form-group mb-3">
+32:    	<label>Client Version</label>
+33:        <%= form.text_field :clientversion, class: "form-control" %>
+34:      </div>
+35:    
+36:      <div class="form-group mb-3">
+37:    	<label>OS Version</label>
+38:        <%= form.text_field :osversion, class: "form-control" %>
+39:      </div>
+40:    
+41:      <div class="form-group mb-3">
+42:    	<label>HW Model</label>
+43:        <%= form.text_field :hwmodel, class: "form-control" %>
+44:      </div>
+45:    	
+46:      <div class="form-group mb-3">
+47:      	<label>Status</label>
+48:        <%= form.text_field :status, class: "form-control" %>
+49:      </div>
+50:        
+51:      <div class="form-group mb-3">
+52:      	<label>Poll Rate</label>
+53:        <%= form.text_field :pollrate, class: "form-control" %>
+54:      </div>
+55:        
+56:      <div class="form-group mb-3">
+57:      	<label>Last Seen</label>
+58:       <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
+59:    	<%= form.datetime_field :lastseen, style: "display: block" %>
+60:       </div>
+61:        
+62:      <!--<div>
+63:        <%= form.label :lastseen, style: "display: block" %>
+64:        <%= form.datetime_field :lastseen %>
+65:      </div>-->
+66:      
+67:      <div class="form-group mb-3">
+68:      	<label>Note</label>
+69:        <%= form.text_field :note, class: "form-control" %>
+70:      </div>
+71:      
+72:      <div class="form-group mb-3">
+73:      	<label>Name</label>
+74:        <%= form.text_field :name, class: "form-control" %>
+75:      </div>
+76:    
+77:      <!--<div>
+78:        <%= form.label :dateadded, style: "display: block" %>
+79:        <%= form.datetime_field :dateadded %>
+80:      </div>-->
+81:      
+82:      <div class="form-group mb-3">
+83:      	<label>Date Added</label>
+84:    	<%= form.datetime_field :dateadded, style: "display: block" %>
+85:      </div>
+86:      
+87:       <div class="form-group mb-3">
+88:      	<label>Config Hash</label>
+89:        <%= form.text_field :confighash, class: "form-control" %>
+90:      </div>
+91:      
+92:       <div class="form-group mb-3">
+93:      	<label>Manager ID</label>
+94:        <%= form.number_field :manager_id, id: :wificlient_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+95:      </div>
+96:    
+97:      <div class="form-group mb-3">
+98:        <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+99:      </div>
+100:    <% end %>
+101:    <% end %>
+  
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/edit.html.erb:3
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:39:44 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.2ms | Allocations: 1792)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1862)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1950)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.3ms | Allocations: 4207)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: wificlient) do |form| %>
+  <% if wificlient.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(wificlient.errors.count, "error") %> prohibited this wificlient from being saved:</h2>
+
+      <ul>
+        <% wificlient.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
+<% if wificlient.manager == current_manager%>
+  <% unless  root  == "wificlients#new" %>
+   <div class="form-group mb-3">
+	<label>Mac</label>
+    <%= form.text_field :mac, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>Location</label>
+    <%= form.text_field :location, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>IP Address</label>
+    <%= form.text_field :ipaddress, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>Client Version</label>
+    <%= form.text_field :clientversion, class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-3">
+	<label>OS Version</label>
+    <%= form.text_field :osversion, class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-3">
+	<label>HW Model</label>
+    <%= form.text_field :hwmodel, class: "form-control" %>
+  </div>
+	
+  <div class="form-group mb-3">
+  	<label>Status</label>
+    <%= form.text_field :status, class: "form-control" %>
+  </div>
+    
+  <div class="form-group mb-3">
+  	<label>Poll Rate</label>
+    <%= form.text_field :pollrate, class: "form-control" %>
+  </div>
+    
+  <div class="form-group mb-3">
+  	<label>Last Seen</label>
+   <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
+	<%= form.datetime_field :lastseen, style: "display: block" %>
+   </div>
+    
+  <!--<div>
+    <%= form.label :lastseen, style: "display: block" %>
+    <%= form.datetime_field :lastseen %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Note</label>
+    <%= form.text_field :note, class: "form-control" %>
+  </div>
+  
+  <div class="form-group mb-3">
+  	<label>Name</label>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <!--<div>
+    <%= form.label :dateadded, style: "display: block" %>
+    <%= form.datetime_field :dateadded %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Date Added</label>
+	<%= form.datetime_field :dateadded, style: "display: block" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Config Hash</label>
+    <%= form.text_field :confighash, class: "form-control" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Manager ID</label>
+    <%= form.number_field :manager_id, id: :wificlient_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+  </div>
+<% end %>
+<% end %>
+
+
+):
+1:    <%= form_with(model: wificlient) do |form| %>
+2:      <% if wificlient.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(wificlient.errors.count, "error") %> prohibited this wificlient from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% wificlient.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:      <br>
+14:    <% if wificlient.manager == current_manager%>
+15:      <% unless  root  == "wificlients#new" %>
+16:       <div class="form-group mb-3">
+17:    	<label>Mac</label>
+18:        <%= form.text_field :mac, class: "form-control" %>
+19:       </div>
+20:    
+21:      <div class="form-group mb-3">
+22:    	<label>Location</label>
+23:        <%= form.text_field :location, class: "form-control" %>
+24:       </div>
+25:    
+26:      <div class="form-group mb-3">
+27:    	<label>IP Address</label>
+28:        <%= form.text_field :ipaddress, class: "form-control" %>
+29:       </div>
+30:    
+31:      <div class="form-group mb-3">
+32:    	<label>Client Version</label>
+33:        <%= form.text_field :clientversion, class: "form-control" %>
+34:      </div>
+35:    
+36:      <div class="form-group mb-3">
+37:    	<label>OS Version</label>
+38:        <%= form.text_field :osversion, class: "form-control" %>
+39:      </div>
+40:    
+41:      <div class="form-group mb-3">
+42:    	<label>HW Model</label>
+43:        <%= form.text_field :hwmodel, class: "form-control" %>
+44:      </div>
+45:    	
+46:      <div class="form-group mb-3">
+47:      	<label>Status</label>
+48:        <%= form.text_field :status, class: "form-control" %>
+49:      </div>
+50:        
+51:      <div class="form-group mb-3">
+52:      	<label>Poll Rate</label>
+53:        <%= form.text_field :pollrate, class: "form-control" %>
+54:      </div>
+55:        
+56:      <div class="form-group mb-3">
+57:      	<label>Last Seen</label>
+58:       <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
+59:    	<%= form.datetime_field :lastseen, style: "display: block" %>
+60:       </div>
+61:        
+62:      <!--<div>
+63:        <%= form.label :lastseen, style: "display: block" %>
+64:        <%= form.datetime_field :lastseen %>
+65:      </div>-->
+66:      
+67:      <div class="form-group mb-3">
+68:      	<label>Note</label>
+69:        <%= form.text_field :note, class: "form-control" %>
+70:      </div>
+71:      
+72:      <div class="form-group mb-3">
+73:      	<label>Name</label>
+74:        <%= form.text_field :name, class: "form-control" %>
+75:      </div>
+76:    
+77:      <!--<div>
+78:        <%= form.label :dateadded, style: "display: block" %>
+79:        <%= form.datetime_field :dateadded %>
+80:      </div>-->
+81:      
+82:      <div class="form-group mb-3">
+83:      	<label>Date Added</label>
+84:    	<%= form.datetime_field :dateadded, style: "display: block" %>
+85:      </div>
+86:      
+87:       <div class="form-group mb-3">
+88:      	<label>Config Hash</label>
+89:        <%= form.text_field :confighash, class: "form-control" %>
+90:      </div>
+91:      
+92:       <div class="form-group mb-3">
+93:      	<label>Manager ID</label>
+94:        <%= form.number_field :manager_id, id: :wificlient_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+95:      </div>
+96:    
+97:      <div class="form-group mb-3">
+98:        <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+99:      </div>
+100:    <% end %>
+101:    <% end %>
+  
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/edit.html.erb:3
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:39:46 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 1.5ms | Allocations: 1792)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1856)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1944)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms | Allocations: 4083)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: wificlient) do |form| %>
+  <% if wificlient.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(wificlient.errors.count, "error") %> prohibited this wificlient from being saved:</h2>
+
+      <ul>
+        <% wificlient.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
+<% if wificlient.manager == current_manager%>
+  <% unless  root  == "wificlients#new" %>
+   <div class="form-group mb-3">
+	<label>Mac</label>
+    <%= form.text_field :mac, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>Location</label>
+    <%= form.text_field :location, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>IP Address</label>
+    <%= form.text_field :ipaddress, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>Client Version</label>
+    <%= form.text_field :clientversion, class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-3">
+	<label>OS Version</label>
+    <%= form.text_field :osversion, class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-3">
+	<label>HW Model</label>
+    <%= form.text_field :hwmodel, class: "form-control" %>
+  </div>
+	
+  <div class="form-group mb-3">
+  	<label>Status</label>
+    <%= form.text_field :status, class: "form-control" %>
+  </div>
+    
+  <div class="form-group mb-3">
+  	<label>Poll Rate</label>
+    <%= form.text_field :pollrate, class: "form-control" %>
+  </div>
+    
+  <div class="form-group mb-3">
+  	<label>Last Seen</label>
+   <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
+	<%= form.datetime_field :lastseen, style: "display: block" %>
+   </div>
+    
+  <!--<div>
+    <%= form.label :lastseen, style: "display: block" %>
+    <%= form.datetime_field :lastseen %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Note</label>
+    <%= form.text_field :note, class: "form-control" %>
+  </div>
+  
+  <div class="form-group mb-3">
+  	<label>Name</label>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <!--<div>
+    <%= form.label :dateadded, style: "display: block" %>
+    <%= form.datetime_field :dateadded %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Date Added</label>
+	<%= form.datetime_field :dateadded, style: "display: block" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Config Hash</label>
+    <%= form.text_field :confighash, class: "form-control" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Manager ID</label>
+    <%= form.number_field :manager_id, id: :wificlient_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+  </div>
+<% end %>
+<% end %>
+
+
+):
+1:    <%= form_with(model: wificlient) do |form| %>
+2:      <% if wificlient.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(wificlient.errors.count, "error") %> prohibited this wificlient from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% wificlient.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:      <br>
+14:    <% if wificlient.manager == current_manager%>
+15:      <% unless  root  == "wificlients#new" %>
+16:       <div class="form-group mb-3">
+17:    	<label>Mac</label>
+18:        <%= form.text_field :mac, class: "form-control" %>
+19:       </div>
+20:    
+21:      <div class="form-group mb-3">
+22:    	<label>Location</label>
+23:        <%= form.text_field :location, class: "form-control" %>
+24:       </div>
+25:    
+26:      <div class="form-group mb-3">
+27:    	<label>IP Address</label>
+28:        <%= form.text_field :ipaddress, class: "form-control" %>
+29:       </div>
+30:    
+31:      <div class="form-group mb-3">
+32:    	<label>Client Version</label>
+33:        <%= form.text_field :clientversion, class: "form-control" %>
+34:      </div>
+35:    
+36:      <div class="form-group mb-3">
+37:    	<label>OS Version</label>
+38:        <%= form.text_field :osversion, class: "form-control" %>
+39:      </div>
+40:    
+41:      <div class="form-group mb-3">
+42:    	<label>HW Model</label>
+43:        <%= form.text_field :hwmodel, class: "form-control" %>
+44:      </div>
+45:    	
+46:      <div class="form-group mb-3">
+47:      	<label>Status</label>
+48:        <%= form.text_field :status, class: "form-control" %>
+49:      </div>
+50:        
+51:      <div class="form-group mb-3">
+52:      	<label>Poll Rate</label>
+53:        <%= form.text_field :pollrate, class: "form-control" %>
+54:      </div>
+55:        
+56:      <div class="form-group mb-3">
+57:      	<label>Last Seen</label>
+58:       <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
+59:    	<%= form.datetime_field :lastseen, style: "display: block" %>
+60:       </div>
+61:        
+62:      <!--<div>
+63:        <%= form.label :lastseen, style: "display: block" %>
+64:        <%= form.datetime_field :lastseen %>
+65:      </div>-->
+66:      
+67:      <div class="form-group mb-3">
+68:      	<label>Note</label>
+69:        <%= form.text_field :note, class: "form-control" %>
+70:      </div>
+71:      
+72:      <div class="form-group mb-3">
+73:      	<label>Name</label>
+74:        <%= form.text_field :name, class: "form-control" %>
+75:      </div>
+76:    
+77:      <!--<div>
+78:        <%= form.label :dateadded, style: "display: block" %>
+79:        <%= form.datetime_field :dateadded %>
+80:      </div>-->
+81:      
+82:      <div class="form-group mb-3">
+83:      	<label>Date Added</label>
+84:    	<%= form.datetime_field :dateadded, style: "display: block" %>
+85:      </div>
+86:      
+87:       <div class="form-group mb-3">
+88:      	<label>Config Hash</label>
+89:        <%= form.text_field :confighash, class: "form-control" %>
+90:      </div>
+91:      
+92:       <div class="form-group mb-3">
+93:      	<label>Manager ID</label>
+94:        <%= form.number_field :manager_id, id: :wificlient_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+95:      </div>
+96:    
+97:      <div class="form-group mb-3">
+98:        <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+99:      </div>
+100:    <% end %>
+101:    <% end %>
+  
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/_form.html.erb:104: syntax error, unexpected end-of-input
+app/views/wificlients/edit.html.erb:3
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:40:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 5.5ms | Allocations: 2695)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3006)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3094)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms | Allocations: 5840)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root' for #<ActionView::Base:0x0000000005d9f8>):
+    12:   <% end %>
+    13:   <br>
+    14: <% if wificlient.manager == current_manager%>
+    15:   <% unless  root  == "wificlients#new" %>
+    16:    <div class="form-group mb-3">
+    17: 	<label>Mac</label>
+    18:     <%= form.text_field :mac, class: "form-control" %>
+  
+app/views/wificlients/_form.html.erb:15
+app/views/wificlients/_form.html.erb:1
+app/views/wificlients/edit.html.erb:3
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:40:48 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 4.8ms | Allocations: 3514)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3898)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 6887)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 1.1ms | Allocations: 9652)
+
+
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:40:52 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 2.2ms | Allocations: 996)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1121)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3459)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 1.1ms | Allocations: 5624)
+
+
+Started GET "/wificlients/49/edit" for 138.28.151.182 at 2023-06-19 17:40:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 49 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 2.6ms | Allocations: 996)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1121)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3459)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 1.2ms | Allocations: 5614)
+
+
+Started DELETE "/wificlients/50" for 138.28.151.182 at 2023-06-19 17:51:11 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#destroy as */*
+  Parameters: {"mac"=>"dc:a6:32:ab:0e:93", "version"=>"1.0.9", "wlans"=>[{"wlan"=>"wlan1", "phy"=>"phy1", "mac"=>"c0:1c:30:06:ce:ca", "txpower"=>"20.00", "band1"=>{"channels"=>["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "freqencies"=>["2412", "2417", "2422", "2427", "2432", "2437", "2442", "2447", "2452", "2457", "2462"], "power"=>["20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0"], "capabilities"=>["HT20/HT40", "SM Power Save disabled", "RX HT20 SGI", "RX HT40 SGI", "RX STBC 1-stream", "Max AMSDU length: 3839 bytes", "DSSS/CCK HT40"]}}, {"wlan"=>"wlan0", "phy"=>"phy0", "mac"=>"dc:a6:32:ab:0e:9c", "txpower"=>"20.00", "band1"=>{"channels"=>["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "freqencies"=>["2412", "2417", "2422", "2427", "2432", "2437", "2442", "2447", "2452", "2457", "2462"], "power"=>["20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0"], "capabilities"=>["HT20/HT40", "Static SM Power Save", "RX HT20 SGI", "No RX STBC", "Max AMSDU length: 3839 bytes", "DSSS/CCK HT40"]}, "band2"=>{"channels"=>["36", "40", "44", "48", "149", "153", "157", "161", "165"], "freqencies"=>["5180", "5200", "5220", "5240", "5745", "5765", "5785", "5805", "5825"], "power"=>["20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0"], "capabilities"=>["HT20/HT40", "Static SM Power Save", "RX HT20 SGI", "RX HT40 SGI", "No RX STBC", "Max AMSDU length: 3839 bytes", "DSSS/CCK HT40"]}}], "os"=>"6.1.21-v8+", "model"=>"Raspberry Pi 4 Model B Rev 1.2", "serial"=>"10000000786df4ff", "id"=>"50", "wificlient"=>{"version"=>"1.0.9", "os"=>"6.1.21-v8+", "model"=>"Raspberry Pi 4 Model B Rev 1.2", "mac"=>"dc:a6:32:ab:0e:93", "serial"=>"10000000786df4ff"}}
+Can't verify CSRF token authenticity.
+  [1m[36mWificlient Load (0.6ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.9ms | Allocations: 5932)
+
+
+Started GET "/managers/sign_in" for 138.28.151.182 at 2023-06-19 17:51:12 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 601)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2196)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 15174)
+Completed 200 OK in 22ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 20055)
+
+
+Started GET "/wificlients/50/edit" for 138.28.151.182 at 2023-06-19 17:51:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as */*
+  Parameters: {"mac"=>"dc:a6:32:ab:0e:93", "version"=>"1.0.9", "wlans"=>[{"wlan"=>"wlan1", "phy"=>"phy1", "mac"=>"c0:1c:30:06:ce:ca", "txpower"=>"20.00", "band1"=>{"channels"=>["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "freqencies"=>["2412", "2417", "2422", "2427", "2432", "2437", "2442", "2447", "2452", "2457", "2462"], "power"=>["20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0"], "capabilities"=>["HT20/HT40", "SM Power Save disabled", "RX HT20 SGI", "RX HT40 SGI", "RX STBC 1-stream", "Max AMSDU length: 3839 bytes", "DSSS/CCK HT40"]}}, {"wlan"=>"wlan0", "phy"=>"phy0", "mac"=>"dc:a6:32:ab:0e:9c", "txpower"=>"20.00", "band1"=>{"channels"=>["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "freqencies"=>["2412", "2417", "2422", "2427", "2432", "2437", "2442", "2447", "2452", "2457", "2462"], "power"=>["20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0"], "capabilities"=>["HT20/HT40", "Static SM Power Save", "RX HT20 SGI", "No RX STBC", "Max AMSDU length: 3839 bytes", "DSSS/CCK HT40"]}, "band2"=>{"channels"=>["36", "40", "44", "48", "149", "153", "157", "161", "165"], "freqencies"=>["5180", "5200", "5220", "5240", "5745", "5765", "5785", "5805", "5825"], "power"=>["20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0"], "capabilities"=>["HT20/HT40", "Static SM Power Save", "RX HT20 SGI", "RX HT40 SGI", "No RX STBC", "Max AMSDU length: 3839 bytes", "DSSS/CCK HT40"]}}], "os"=>"6.1.21-v8+", "model"=>"Raspberry Pi 4 Model B Rev 1.2", "serial"=>"10000000786df4ff", "id"=>"50", "wificlient"=>{"version"=>"1.0.9", "os"=>"6.1.21-v8+", "model"=>"Raspberry Pi 4 Model B Rev 1.2", "mac"=>"dc:a6:32:ab:0e:93", "serial"=>"10000000786df4ff"}}
+  [1m[36mWificlient Load (0.5ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.5ms | Allocations: 789)
+
+
+Started GET "/managers/sign_in" for 138.28.151.182 at 2023-06-19 17:51:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 144)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1230)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3460)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4090)
+
+
+Started GET "/wificlients/50" for 138.28.151.182 at 2023-06-19 17:51:39 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#show as */*
+  Parameters: {"mac"=>"dc:a6:32:ab:0e:93", "version"=>"1.0.9", "wlans"=>[{"wlan"=>"wlan1", "phy"=>"phy1", "mac"=>"c0:1c:30:06:ce:ca", "txpower"=>"20.00", "band1"=>{"channels"=>["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "freqencies"=>["2412", "2417", "2422", "2427", "2432", "2437", "2442", "2447", "2452", "2457", "2462"], "power"=>["20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0"], "capabilities"=>["HT20/HT40", "SM Power Save disabled", "RX HT20 SGI", "RX HT40 SGI", "RX STBC 1-stream", "Max AMSDU length: 3839 bytes", "DSSS/CCK HT40"]}}, {"wlan"=>"wlan0", "phy"=>"phy0", "mac"=>"dc:a6:32:ab:0e:9c", "txpower"=>"20.00", "band1"=>{"channels"=>["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], "freqencies"=>["2412", "2417", "2422", "2427", "2432", "2437", "2442", "2447", "2452", "2457", "2462"], "power"=>["20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0"], "capabilities"=>["HT20/HT40", "Static SM Power Save", "RX HT20 SGI", "No RX STBC", "Max AMSDU length: 3839 bytes", "DSSS/CCK HT40"]}, "band2"=>{"channels"=>["36", "40", "44", "48", "149", "153", "157", "161", "165"], "freqencies"=>["5180", "5200", "5220", "5240", "5745", "5765", "5785", "5805", "5825"], "power"=>["20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0", "20.0"], "capabilities"=>["HT20/HT40", "Static SM Power Save", "RX HT20 SGI", "RX HT40 SGI", "No RX STBC", "Max AMSDU length: 3839 bytes", "DSSS/CCK HT40"]}}], "os"=>"6.1.21-v8+", "model"=>"Raspberry Pi 4 Model B Rev 1.2", "serial"=>"10000000786df4ff", "id"=>"50", "wificlient"=>{"version"=>"1.0.9", "os"=>"6.1.21-v8+", "model"=>"Raspberry Pi 4 Model B Rev 1.2", "mac"=>"dc:a6:32:ab:0e:93", "serial"=>"10000000786df4ff"}}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms | Allocations: 799)
+
+
+Started GET "/managers/sign_in" for 138.28.151.182 at 2023-06-19 17:51:39 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 144)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1230)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3460)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 4098)
+
+
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:51:40 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 3.5ms | Allocations: 2644)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2788)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 175)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 5221)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 1.2ms | Allocations: 7807)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-19 17:51:43 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4013)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 161)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 6360)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 1.5ms | Allocations: 8078)
+
+
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:51:47 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 2.2ms | Allocations: 996)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1121)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3459)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 1.2ms | Allocations: 5609)
+
+
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:52:43 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 2.1ms | Allocations: 996)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1121)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3493)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 1.1ms | Allocations: 5620)
+
+
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:52:45 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 2.5ms | Allocations: 996)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1121)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3493)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 1.2ms | Allocations: 5658)
+
+
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:54:53 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1180)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1268)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.8ms | Allocations: 3989)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `wificlient' for #<ActionView::Base:0x00000000064d70>):
+    1: <% if wificlient.manager == current_manager%>
+    2: <h1>Editing wificlient</h1>
+    3: 
+    4: <%= render "form", wificlient: @wificlient %>
+  
+app/views/wificlients/edit.html.erb:1
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:56:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 0.5ms | Allocations: 966)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 1053)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms | Allocations: 3163)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `wificlient' for #<ActionView::Base:0x00000000064f00>):
+    1: <% if wificlient.manager == current_manager%>
+    2: <h1>Editing wificlient</h1>
+    3: 
+    4: <%= render "form", wificlient: @wificlient %>
+  
+app/views/wificlients/edit.html.erb:1
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:56:35 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 4.7ms | Allocations: 3839)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 6.3ms | Allocations: 5158)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 5246)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.1ms | Allocations: 7957)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `wificlient' for #<ActionView::Base:0x000000000650b8>):
+    2: <h1>Editing wificlient</h1>
+    3: 
+    4: <%= render "form", wificlient: @wificlient %>
+    5: <% if wificlient.manager == current_manager%>
+    6: <br>
+    7: 
+    8: <div>
+  
+app/views/wificlients/edit.html.erb:5
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:56:48 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 2.2ms | Allocations: 996)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2017)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2104)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms | Allocations: 4228)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `wificlient' for #<ActionView::Base:0x00000000065220>):
+    2: <h1>Editing wificlient</h1>
+    3: 
+    4: <%= render "form", wificlient: @wificlient %>
+    5: <% if wificlient.manager == current_manager%>
+    6: <br>
+    7: 
+    8: <div>
+  
+app/views/wificlients/edit.html.erb:5
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:56:53 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 2.3ms | Allocations: 996)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2017)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2104)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.2ms | Allocations: 4227)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `wificlient' for #<ActionView::Base:0x00000000065360>):
+    2: <h1>Editing wificlient</h1>
+    3: 
+    4: <%= render "form", wificlient: @wificlient %>
+    5: <% if wificlient.manager == current_manager%>
+    6: <br>
+    7: 
+    8: <div>
+  
+app/views/wificlients/edit.html.erb:5
+Started GET "/wificlients/50/edit" for 138.28.171.140 at 2023-06-19 17:56:54 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 50 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 26 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 2.1ms | Allocations: 996)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2017)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2104)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.1ms | Allocations: 4227)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `wificlient' for #<ActionView::Base:0x000000000654a0>):
+    2: <h1>Editing wificlient</h1>
+    3: 
+    4: <%= render "form", wificlient: @wificlient %>
+    5: <% if wificlient.manager == current_manager%>
+    6: <br>
+    7: 
+    8: <div>
+  
+app/views/wificlients/edit.html.erb:5
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:58:32 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 1.0ms | Allocations: 1821)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2136)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2225)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 4940)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: wificlient) do |form| %>
+  <% if wificlient.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(wificlient.errors.count, "error") %> prohibited this wificlient from being saved:</h2>
+
+      <ul>
+        <% wificlient.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <br>
+<% if wificlient.manager == current_manager%>
+   <div class="form-group mb-3">
+	<label>Mac</label>
+    <%= form.text_field :mac, class: "form-control" %>
+   </div>
+   
+   
+  <div class="form-group mb-3">
+	<label>Location</label>
+    <%= form.text_field :location, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>IP Address</label>
+    <%= form.text_field :ipaddress, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>Client Version</label>
+    <%= form.text_field :clientversion, class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-3">
+	<label>OS Version</label>
+    <%= form.text_field :osversion, class: "form-control" %>
+  </div>
+
+  <div class="form-group mb-3">
+	<label>HW Model</label>
+    <%= form.text_field :hwmodel, class: "form-control" %>
+  </div>
+	
+  <div class="form-group mb-3">
+  	<label>Status</label>
+    <%= form.text_field :status, class: "form-control" %>
+  </div>
+    
+  <div class="form-group mb-3">
+  	<label>Poll Rate</label>
+    <%= form.text_field :pollrate, class: "form-control" %>
+  </div>
+    
+  <div class="form-group mb-3">
+  	<label>Last Seen</label>
+   <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
+	<%= form.datetime_field :lastseen, style: "display: block" %>
+   </div>
+    
+  <!--<div>
+    <%= form.label :lastseen, style: "display: block" %>
+    <%= form.datetime_field :lastseen %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Note</label>
+    <%= form.text_field :note, class: "form-control" %>
+  </div>
+  
+  <div class="form-group mb-3">
+  	<label>Name</label>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <!--<div>
+    <%= form.label :dateadded, style: "display: block" %>
+    <%= form.datetime_field :dateadded %>
+  </div>-->
+  
+  <div class="form-group mb-3">
+  	<label>Date Added</label>
+	<%= form.datetime_field :dateadded, style: "display: block" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Config Hash</label>
+    <%= form.text_field :confighash, class: "form-control" %>
+  </div>
+  
+   <div class="form-group mb-3">
+  	<label>Manager ID</label>
+    <%= form.number_field :manager_id, id: :wificlient_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+
+  <div class="form-group mb-3">
+    <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+  </div>
+  <%else%> 
+
+	<h2> "You are not allowed to on this page have access to this page" </h2>
+
+<% end%>
+<% end %>
+<% end %>
+
+
+):
+1:    <%= form_with(model: wificlient) do |form| %>
+2:      <% if wificlient.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(wificlient.errors.count, "error") %> prohibited this wificlient from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% wificlient.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:      <br>
+14:    <% if wificlient.manager == current_manager%>
+15:       <div class="form-group mb-3">
+16:    	<label>Mac</label>
+17:        <%= form.text_field :mac, class: "form-control" %>
+18:       </div>
+19:       
+20:       
+21:      <div class="form-group mb-3">
+22:    	<label>Location</label>
+23:        <%= form.text_field :location, class: "form-control" %>
+24:       </div>
+25:    
+26:      <div class="form-group mb-3">
+27:    	<label>IP Address</label>
+28:        <%= form.text_field :ipaddress, class: "form-control" %>
+29:       </div>
+30:    
+31:      <div class="form-group mb-3">
+32:    	<label>Client Version</label>
+33:        <%= form.text_field :clientversion, class: "form-control" %>
+34:      </div>
+35:    
+36:      <div class="form-group mb-3">
+37:    	<label>OS Version</label>
+38:        <%= form.text_field :osversion, class: "form-control" %>
+39:      </div>
+40:    
+41:      <div class="form-group mb-3">
+42:    	<label>HW Model</label>
+43:        <%= form.text_field :hwmodel, class: "form-control" %>
+44:      </div>
+45:    	
+46:      <div class="form-group mb-3">
+47:      	<label>Status</label>
+48:        <%= form.text_field :status, class: "form-control" %>
+49:      </div>
+50:        
+51:      <div class="form-group mb-3">
+52:      	<label>Poll Rate</label>
+53:        <%= form.text_field :pollrate, class: "form-control" %>
+54:      </div>
+55:        
+56:      <div class="form-group mb-3">
+57:      	<label>Last Seen</label>
+58:       <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
+59:    	<%= form.datetime_field :lastseen, style: "display: block" %>
+60:       </div>
+61:        
+62:      <!--<div>
+63:        <%= form.label :lastseen, style: "display: block" %>
+64:        <%= form.datetime_field :lastseen %>
+65:      </div>-->
+66:      
+67:      <div class="form-group mb-3">
+68:      	<label>Note</label>
+69:        <%= form.text_field :note, class: "form-control" %>
+70:      </div>
+71:      
+72:      <div class="form-group mb-3">
+73:      	<label>Name</label>
+74:        <%= form.text_field :name, class: "form-control" %>
+75:      </div>
+76:    
+77:      <!--<div>
+78:        <%= form.label :dateadded, style: "display: block" %>
+79:        <%= form.datetime_field :dateadded %>
+80:      </div>-->
+81:      
+82:      <div class="form-group mb-3">
+83:      	<label>Date Added</label>
+84:    	<%= form.datetime_field :dateadded, style: "display: block" %>
+85:      </div>
+86:      
+87:       <div class="form-group mb-3">
+88:      	<label>Config Hash</label>
+89:        <%= form.text_field :confighash, class: "form-control" %>
+90:      </div>
+91:      
+92:       <div class="form-group mb-3">
+93:      	<label>Manager ID</label>
+94:        <%= form.number_field :manager_id, id: :wificlient_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+95:      </div>
+96:    
+97:      <div class="form-group mb-3">
+98:        <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+99:      </div>
+100:      <%else%> 
+101:    
+102:    	<h2> "You are not allowed to on this page have access to this page" </h2>
+103:    
+104:    <% end%>
+105:    <% end %>
+106:    <% end %>
+  
+app/views/wificlients/_form.html.erb:109: syntax error, unexpected `end'
+app/views/wificlients/_form.html.erb:109: syntax error, unexpected `end'
+app/views/wificlients/_form.html.erb:109: syntax error, unexpected `end'
+app/views/wificlients/_form.html.erb:109: syntax error, unexpected `end'
+app/views/wificlients/_form.html.erb:109: syntax error, unexpected `end'
+app/views/wificlients/_form.html.erb:109: syntax error, unexpected `end'
+app/views/wificlients/edit.html.erb:4
+Started GET "/wificlients/47/edit" for 138.28.151.182 at 2023-06-19 17:58:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 47 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 5.1ms | Allocations: 3537)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3922)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6911)
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 1.1ms | Allocations: 9649)
+
+
+Started GET "/wificlients/49/edit" for 138.28.151.182 at 2023-06-19 17:59:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`id` = 49 LIMIT 1[0m
+  ↳ app/controllers/wificlients_controller.rb:78:in `set_wificlient'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/_form.html.erb:14
+  Rendered wificlients/_form.html.erb (Duration: 2.3ms | Allocations: 997)
+  Rendered wificlients/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1122)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3460)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 1.1ms | Allocations: 5610)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-19 18:08:34 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 25 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:28
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4407)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 403)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 7380)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 1.6ms | Allocations: 9743)
+
+
+Started GET "/wificlients/new" for 138.28.151.182 at 2023-06-19 18:08:36 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#new as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/new.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 1.7ms | Allocations: 1926)
+  Rendered wificlients/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2224)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2311)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 4769)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root' for #<ActionView::Base:0x00000000065a40>):
+    12:   <% end %>
+    13:   <br>
+    14: <% if wificlient.manager == current_manager%>
+    15: 	<% unless root == "wificlients#new" %> 
+    16:    <div class="form-group mb-3">
+    17: 	<label>Mac</label>
+    18:     <%= form.text_field :mac, class: "form-control" %>
+  
+app/views/wificlients/_form.html.erb:15
+app/views/wificlients/_form.html.erb:1
+app/views/wificlients/new.html.erb:4
+Started GET "/wificlients/new" for 138.28.151.182 at 2023-06-19 18:09:35 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#new as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/new.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 0.9ms | Allocations: 1187)
+  Rendered wificlients/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1251)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1338)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 3144)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root' for #<ActionView::Base:0x00000000065bf8>):
+    12:   <% end %>
+    13:   <br>
+    14: <% if wificlient.manager == current_manager%>
+    15: 	<% unless root == "wificlients#new" %> 
+    16:    <div class="form-group mb-3">
+    17: 	<label>Mac</label>
+    18:     <%= form.text_field :mac, class: "form-control" %>
+  
+app/views/wificlients/_form.html.erb:15
+app/views/wificlients/_form.html.erb:1
+app/views/wificlients/new.html.erb:4
+Started GET "/wificlients/new" for 138.28.151.182 at 2023-06-19 18:09:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#new as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/new.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 1.7ms | Allocations: 2017)
+  Rendered wificlients/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2318)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2406)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms | Allocations: 4817)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `path' for #<ActionView::Base:0x00000000065db0>):
+    12:   <% end %>
+    13:   <br>
+    14: <% if wificlient.manager == current_manager%>
+    15: 	<% unless path == "edit_wificlient" %> 
+    16:    <div class="form-group mb-3">
+    17: 	<label>Mac</label>
+    18:     <%= form.text_field :mac, class: "form-control" %>
+  
+app/views/wificlients/_form.html.erb:15
+app/views/wificlients/_form.html.erb:1
+app/views/wificlients/new.html.erb:4
+Started GET "/wificlients/new" for 138.28.151.182 at 2023-06-19 18:14:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#new as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 24 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/new.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 3.1ms | Allocations: 2763)
+  Rendered wificlients/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3108)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 6104)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 8536)
+
+

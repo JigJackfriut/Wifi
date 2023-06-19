@@ -1,5 +1,6 @@
 class WificlientsController < ApplicationController
   before_action :set_wificlient, only: %i[ show edit update destroy ]
+  before_action :authenticate_manager!
   before_action :current_manager, only: [:edit, :update, :destroy]
   # GET /wificlients or /wificlients.json
   def index
