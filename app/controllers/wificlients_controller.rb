@@ -57,8 +57,6 @@ class WificlientsController < ApplicationController
 		wlan.update(client_id: nil) 
 	end
 		
-	
-	
     respond_to do |format|
       format.html { redirect_to wificlients_url, notice: "Wificlient was successfully destroyed." }
       format.json { head :no_content }
@@ -73,7 +71,7 @@ class WificlientsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wificlient_params
-      params.require(:wificlient).permit(:location, :ipaddress, :clientversion, :osversion, :hwmodel, :status, :pollrate, :lastseen, :note, :name, :dateadded, :confighash, :ownerid, :enabled)
+      params.require(:wificlient).permit(:location, :ipaddress, :version, :os, :model, :status, :pollrate, :lastseen, :note, :name, :dateadded, :confighash, :ownerid, :enabled)
     end
 	
 	

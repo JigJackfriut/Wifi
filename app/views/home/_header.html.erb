@@ -1,3 +1,4 @@
+<% if manager_signed_in?%>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
   	<%= link_to 'Wifi', root_path, class: "navbar-brand"%> 
@@ -9,36 +10,13 @@
         <li class="nav-item">
         	<%= link_to 'About Us', home_about_path, class: "nav-link"%> 
         </li>
-       
-        <% if manager_signed_in?%>
-        
-        	<li class="nav-item">
-        		<%= link_to 'Sign Out', destroy_manager_session_path, data: {turbo_method: :delete }, class: "nav-link"%> 
-        	</li>
-        	<li class="nav-item">
-        		<%= link_to 'Edit Profile', edit_manager_registration_path, class: "nav-link"%> 
-        	</li>
-        
-        <% else %>
-        	<li class="nav-item">
-        		<%= link_to 'Sign Up', new_manager_registration_path, class: "nav-link"%> 
-        	</li>
-        	<li class="nav-item">
-        		<%= link_to 'Log In', new_manager_session_path, class: "nav-link"%> 
-        	</li>
-        <% end %>
-      
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            System
-          </a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item"> <%= link_to 'Wifi Manager', accounts_path,  style: "text-decoration:none", class: "text-dark"%></li>
-        	<li class="dropdown-item"><%= link_to "WiFi Client", wificlients_path, style: "text-decoration:none", class: "text-dark" %></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <li class="nav-item">
+        	<%= link_to 'Wifi Account', accounts_path, class: "nav-link"%>
         </li>
+        <li class="nav-item">
+        	<%= link_to "WiFi Client", wificlients_path, class: "nav-link"%>
+        </li>
+      
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -47,3 +25,5 @@
     </div>
   </div>
 </nav>
+
+<% end %>
