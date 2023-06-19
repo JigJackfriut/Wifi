@@ -1,5 +1,6 @@
 class WificlientsController < ApplicationController
   before_action :set_wificlient, only: %i[ show edit update destroy ]
+  before_action :current_manager, only: [:edit, :update, :destroy]
   # GET /wificlients or /wificlients.json
   def index
     @wificlients = Wificlient.all
@@ -11,17 +12,24 @@ class WificlientsController < ApplicationController
 
   # GET /wificlients/new
   def new
-    @wificlient = Wificlient.new
+    #@wificlient = Wificlient.new
+    @wificlient = current_manager.wificlients.build
   end
 
   # GET /wificlients/1/edit
   def edit
   end
+  
+  def currect_manager
+  	@wificlient = current_manager.wificlients.find_by(id: params[:id])
+  	redirect_to friends_path, notice: "Not Authorized To Edit This Friend" if @wificlient.nil?
+  end
 
   # POST /wificlients or /wificlients.json
   def create
-    @wificlient = Wificlient.new(wificlient_params)
-
+    #@wificlient = Wificlient.new(wificlient_params)
+	@wificlient = current_manager.wificlients.build(wificlient_params)
+	
     respond_to do |format|
       if @wificlient.save
         format.html { redirect_to wificlient_url(@wificlient), notice: "Wificlient was successfully created." }
@@ -71,7 +79,7 @@ class WificlientsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wificlient_params
-      params.require(:wificlient).permit(:location, :ipaddress, :version, :os, :model, :status, :pollrate, :lastseen, :note, :name, :dateadded, :confighash, :ownerid, :enabled)
+      params.require(:wificlient).permit(:location, :ipaddress, :version, :os, :model, :status, :pollrate, :lastseen, :note, :name, :dateadded, :confighash, :manager_id, :enabled)
     end
 	
 	
