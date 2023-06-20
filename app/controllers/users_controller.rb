@@ -25,7 +25,6 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.turbo_stream
         format.html { redirect_to user_url(@user), notice: "User was successfully created." }
         format.json { render :show, status: :created, location: @user }
       else
@@ -66,6 +65,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:first, :last, :email, :phone, :address1, :address2, :city, :state, :zip, :usertype)
+      params.require(:user).permit(:name, :type, :passphrase, :manager_id, :zone)
     end
 end

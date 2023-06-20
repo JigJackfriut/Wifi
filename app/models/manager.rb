@@ -5,4 +5,5 @@ class Manager < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
          has_many :wificlients
+         has_many :wlans
 end

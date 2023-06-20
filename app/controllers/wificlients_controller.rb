@@ -21,9 +21,9 @@ class WificlientsController < ApplicationController
   def edit
   end
   
-  def currect_manager
+  def correct_manager
   	@wificlient = current_manager.wificlients.find_by(id: params[:id])
-  	redirect_to friends_path, notice: "Not Authorized To Edit This Friend" if @wificlient.nil?
+  	redirect_to wificlients_path, notice: "Not Authorized To Edit This Wificlient" if @wificlient.nil?
   end
 
   # POST /wificlients or /wificlients.json
@@ -34,6 +34,9 @@ class WificlientsController < ApplicationController
 	check = true
 	if client && client.manager_id.nil?
 		client.update(manager_id: current_manager.id)
+		Wlan.where(:client_id => client.id).find_each do |wlan|
+			wlan.update(manager_id: current_manager.id)
+		end
 	elsif client && !client.manager_id.nil?
 		check = false
 	end
@@ -73,7 +76,7 @@ class WificlientsController < ApplicationController
     @wificlient.destroy
 	
 	#set associated wlans to null  
-	Wlan.find_each do |wlan|
+	Wlan.where( :client_id => idReset).find_each do |wlan|
 		wlan.update(client_id: nil) 
 	end
 		

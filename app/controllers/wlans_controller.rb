@@ -1,6 +1,7 @@
 class WlansController < ApplicationController
   before_action :set_wlan, only: %i[ show edit update destroy ]
-  before_action :authenticate_manager!, except: [:index, :show]  # GET /wlans or /wlans.json
+  before_action :authenticate_manager!  # GET /wlans or /wlans.json
+  before_action :current_manager, only: [:edit, :update, :destroy]
   def index
     @wlans = Wlan.all
   end
@@ -11,18 +12,23 @@ class WlansController < ApplicationController
 
   # GET /wlans/new
   def new
-    @wlan = Wlan.new
-    #@wlan = current_user.wlans.build
+    #@wlan = Wlan.new
+    @wlan = current_manager.wlans.build
   end
 
   # GET /wlans/1/edit
   def edit
   end
+  
+  def correct_manager
+  	@wlan = current_manager.wlans.find_by(id: params[:id])
+  	redirect_to wlans_path, notice: "Not Authorized To Edit This WLAN" if @wlan.nil?
+  end
 
   # POST /wlans or /wlans.json
   def create
-    @wlan = Wlan.new(wlan_params)
-	#@wlan = current_user.wlans.build(wlan_params)
+    #@wlan = Wlan.new(wlan_params)
+	@wlan = current_manager.wlans.build(wlan_params)
     respond_to do |format|
       if @wlan.save
         format.html { redirect_to wlan_url(@wlan), notice: "Wlan was successfully created." }
@@ -65,6 +71,6 @@ class WlansController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wlan_params
-      params.require(:wlan).permit(:mac, :name, :description, :status, :wlan, :phy, :txpower, :a, :g, :lastseen, :dateadded, :selected_a, :selected_g, :channel, :client_id)
+      params.require(:wlan).permit(:mac, :name, :description, :status, :wlan, :phy, :txpower, :a, :g, :lastseen, :dateadded, :selected_a, :selected_g, :channel, :client_id, :manager_id)
     end
 end

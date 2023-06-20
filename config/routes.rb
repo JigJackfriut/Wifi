@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :wlans
   mount API::Base, at: "/"
   resources :wificlients
@@ -9,7 +10,6 @@ Rails.application.routes.draw do
   #get 'home/index'
   get 'home/about'
   root 'home#index'
-  resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

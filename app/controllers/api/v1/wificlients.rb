@@ -54,22 +54,23 @@ def process_hello(params)
 	else 
 		client = Wificlient.create(mac:params[:mac],os:params[:os],version:params[:version],serial:params[:serial],model:params[:model])
 	end
-	wlans = params[:wlans]
+	
+	wlans = params[:wlans] # we gat params from JSON
+	a = Array.new
 	wlans.each do |wlan|
-		
-		thiswlan = Wlan.find_by(mac:wlan['mac'])
+		thiswlan = Wlan.find_by(mac:wlan['mac']) 
+		a.push(wlan['mac'])
 		wlang = wlan["band1"]["channels"]
 		band2 = wlan["band2"]
-		puts band2
 		if thiswlan 
 			thiswlan.update(lastseen: Time.new) 
 			if !band2.nil?
-				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.a != wlan["band2"]["channels"]
-					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: wlan["band2"]["channels"]) 
+				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.a != wlan["band2"]["channels"] or thiswlan.client_id != client.id
+					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: wlan["band2"]["channels"], client_id: client.id) 
 				end
 			else 
-				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"]
-					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"]) 
+				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.client_id != client.id
+					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], client_id: client.id) 
 				end
 			end
 		else 
@@ -78,6 +79,11 @@ def process_hello(params)
 			else 
 				Wlan.create(mac: wlan["mac"],wlan:wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlan["band1"]["channels"],client_id: client.id, lastseen: Time.new, selected_g:wlan["band1"]["channels"],  dateadded:Time.new)
 			end
+		end
+		
+		Wlan.where(:client_id => client.id).find_each do |wlan|
+		if !a.include?(wlan.mac)
+			wlan.update(client_id: nil)
 		end
 	end
 end
