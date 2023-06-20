@@ -87,4 +87,5 @@ def process_hello(params)
 		end
 	end
 end
+end
 

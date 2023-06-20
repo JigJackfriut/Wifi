@@ -24642,3 +24642,50 @@ Migrating to CreateUsers (20230620184434)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users" for 138.28.151.182 at 2023-06-20 19:23:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/home/irina/cloudwifi/app/controllers/api/v1/wificlients.rb:90: syntax error, unexpected end-of-input):
+  
+app/controllers/api/v1/wificlients.rb:90: syntax error, unexpected end-of-input
+app/controllers/api/v1/wificlients.rb:90: syntax error, unexpected end-of-input
+app/controllers/api/v1/wificlients.rb:90: syntax error, unexpected end-of-input
+app/controllers/api/v1/base.rb:4:in `<class:Base>'
+app/controllers/api/v1/base.rb:3:in `<module:V1>'
+app/controllers/api/v1/base.rb:2:in `<module:API>'
+app/controllers/api/v1/base.rb:1:in `<main>'
+app/controllers/api/base.rb:3:in `<class:Base>'
+app/controllers/api/base.rb:2:in `<module:API>'
+app/controllers/api/base.rb:1:in `<main>'
+config/routes.rb:4:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users" for 138.28.151.182 at 2023-06-20 19:24:11 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1143)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 28 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 8.3ms | Allocations: 5237)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 19620)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 0.8ms | Allocations: 21649)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-20 19:24:16 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.6ms | Allocations: 2416)
+  Rendered users/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2711)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 28 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 971)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5868)
+Completed 200 OK in 19ms (Views: 10.0ms | ActiveRecord: 1.5ms | Allocations: 9646)
+
+
