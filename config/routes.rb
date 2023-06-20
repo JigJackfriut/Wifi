@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :zones
   resources :users
   resources :wlans
   mount API::Base, at: "/"
