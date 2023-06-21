@@ -29073,3 +29073,2945 @@ Processing by ZonesController#index as HTML
 Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.7ms | Allocations: 20988)
 
 
+Started GET "/zones/new" for 138.28.151.182 at 2023-06-21 17:15:03 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/new.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/zones/_form.html.erb:35
+  Rendered zones/_form.html.erb (Duration: 6.0ms | Allocations: 2977)
+  Rendered zones/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3266)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 5688)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.7ms | Allocations: 6036)
+
+
+Started POST "/zones" for 138.28.151.182 at 2023-06-21 17:15:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zone"=>{"name"=>"Irina", "description"=>"yoyoyo", "ssid"=>"ahah", "open_ap"=>"", "manager_id"=>"29"}, "commit"=>"Create Zone"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 902)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'open_ap' for Zone.):
+  
+app/controllers/zones_controller.rb:23:in `create'
+Started GET "/zones/new" for 138.28.151.182 at 2023-06-21 17:16:03 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/new.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/zones/_form.html.erb:35
+  Rendered zones/_form.html.erb (Duration: 11.4ms | Allocations: 7161)
+  Rendered zones/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 7265)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 258)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 20452)
+Completed 200 OK in 35ms (Views: 21.2ms | ActiveRecord: 3.2ms | Allocations: 25636)
+
+
+Started POST "/zones" for 138.28.151.182 at 2023-06-21 17:16:10 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zone"=>{"name"=>"Irina", "description"=>"yoyoyo", "ssid"=>"", "open_ap"=>"", "manager_id"=>"29"}, "commit"=>"Create Zone"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/zones_controller.rb:26:in `block in create'
+  [1m[36mZone Create (0.4ms)[0m  [1m[32mINSERT INTO `zones` (`name`, `description`, `ssid`, `open_ap`, `manager_id`, `created_at`, `updated_at`, `user_id`) VALUES ('Irina', 'yoyoyo', '', NULL, 29, '2023-06-21 17:16:10.650035', '2023-06-21 17:16:10.650035', NULL)[0m
+  ↳ app/controllers/zones_controller.rb:26:in `block in create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/zones_controller.rb:26:in `block in create'
+Redirected to http://138.28.72.137:3000/zones/7
+Completed 302 Found in 14ms (ActiveRecord: 3.5ms | Allocations: 2604)
+
+
+Started GET "/zones/7" for 138.28.151.182 at 2023-06-21 17:16:10 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones` WHERE `zones`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/zones_controller.rb:63:in `set_zone'
+  Rendering layout layouts/application.html.erb
+  Rendering zones/show.html.erb within layouts/application
+  Rendered zones/_zone.html.erb (Duration: 1.3ms | Allocations: 1365)
+  Rendered zones/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2022)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2109)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms | Allocations: 3689)
+
+
+  
+ActionView::Template::Error (private method `open' called for #<Zone id: 7, name: "Irina", description: "yoyoyo", ssid: "", open_ap: nil, manager_id: 29, created_at: "2023-06-21 17:16:10.650035000 +0000", updated_at: "2023-06-21 17:16:10.650035000 +0000", user_id: nil>):
+    16: 
+    17:   <p>
+    18:     <strong>Open:</strong>
+    19:     <%= zone.open %>
+    20:   </p>
+    21: 
+    22:   <p>
+  
+app/views/zones/_zone.html.erb:19
+app/views/zones/show.html.erb:3
+Started GET "/zones/new" for 138.28.151.182 at 2023-06-21 17:17:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/new.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/zones/_form.html.erb:35
+  Rendered zones/_form.html.erb (Duration: 5.1ms | Allocations: 2789)
+  Rendered zones/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3091)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6216)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 7068)
+
+
+Started POST "/zones" for 138.28.151.182 at 2023-06-21 17:17:23 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "zone"=>{"name"=>"Irina", "description"=>"yoyoyo", "ssid"=>"", "open_ap"=>"", "manager_id"=>"29"}, "commit"=>"Create Zone"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/zones_controller.rb:26:in `block in create'
+  [1m[36mZone Create (0.3ms)[0m  [1m[32mINSERT INTO `zones` (`name`, `description`, `ssid`, `open_ap`, `manager_id`, `created_at`, `updated_at`, `user_id`) VALUES ('Irina', 'yoyoyo', '', NULL, 29, '2023-06-21 17:17:23.760249', '2023-06-21 17:17:23.760249', NULL)[0m
+  ↳ app/controllers/zones_controller.rb:26:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/zones_controller.rb:26:in `block in create'
+Redirected to http://138.28.72.137:3000/zones/8
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms | Allocations: 2437)
+
+
+Started GET "/zones/8" for 138.28.151.182 at 2023-06-21 17:17:23 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones` WHERE `zones`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/zones_controller.rb:63:in `set_zone'
+  Rendering layout layouts/application.html.erb
+  Rendering zones/show.html.erb within layouts/application
+  Rendered zones/_zone.html.erb (Duration: 0.9ms | Allocations: 248)
+  Rendered zones/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1155)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4373)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.8ms | Allocations: 5286)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 17:17:25 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1826)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5052)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.8ms | Allocations: 5407)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 17:17:29 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4021)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1074)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 7593)
+Completed 200 OK in 21ms (Views: 15.6ms | ActiveRecord: 1.9ms | Allocations: 9364)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:17:32 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  Rendered users/_form.html.erb (Duration: 7.2ms | Allocations: 3598)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3890)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 6345)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.7ms | Allocations: 6706)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 17:17:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1184)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4570)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.8ms | Allocations: 4859)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 17:19:46 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1623)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.8ms | Allocations: 1341)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5702)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.8ms | Allocations: 6591)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:19:48 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 8.0ms | Allocations: 4434)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4723)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 7145)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.7ms | Allocations: 7495)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 17:19:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina", "Irina"]}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :zone. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7a8d304ee0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina", "Irina"]}, "commit"=>"Create User", "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `user_type`, `passphrase`, `manager_id`, `zone`, `created_at`, `updated_at`, `zone_id`) VALUES ('', '', '', 29, NULL, '2023-06-21 17:19:59.291919', '2023-06-21 17:19:59.291919', NULL)[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+Redirected to http://138.28.72.137:3000/users/15
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms | Allocations: 2820)
+
+
+Started GET "/users/15" for 138.28.151.182 at 2023-06-21 17:19:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 244)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1159)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4377)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.8ms | Allocations: 5923)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 17:20:03 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1362)
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4751)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.0ms | Allocations: 5039)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:20:06 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 6.9ms | Allocations: 3921)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4010)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6442)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.8ms | Allocations: 6737)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 17:20:11 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina", "Irina"]}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :zone. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7a8d27cf90>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina", "Irina"]}, "commit"=>"Create User", "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `user_type`, `passphrase`, `manager_id`, `zone`, `created_at`, `updated_at`, `zone_id`) VALUES ('', '', '', 29, NULL, '2023-06-21 17:20:11.384744', '2023-06-21 17:20:11.384744', NULL)[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+Redirected to http://138.28.72.137:3000/users/16
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms | Allocations: 2604)
+
+
+Started GET "/users/16" for 138.28.151.182 at 2023-06-21 17:20:11 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 599)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3851)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.8ms | Allocations: 4655)
+
+
+Started GET "/users/16" for 138.28.151.182 at 2023-06-21 17:20:45 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 246)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1113)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5005)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.8ms | Allocations: 6407)
+
+
+Started DELETE "/users/16" for 138.28.151.182 at 2023-06-21 17:20:48 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"16"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 16 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 16[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+Redirected to http://138.28.72.137:3000/users
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms | Allocations: 2664)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 17:20:48 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1772)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5243)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.8ms | Allocations: 5658)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:20:50 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 7.7ms | Allocations: 4427)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4716)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 7138)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.9ms | Allocations: 7487)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 17:20:56 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina", "Irina"]}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :zone. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007f7a8d4abeb0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina", "Irina"]}, "commit"=>"Create User", "controller"=>"users", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `user_type`, `passphrase`, `manager_id`, `zone`, `created_at`, `updated_at`, `zone_id`) VALUES ('', '', '', 29, NULL, '2023-06-21 17:20:56.714358', '2023-06-21 17:20:56.714358', NULL)[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+Redirected to http://138.28.72.137:3000/users/17
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms | Allocations: 2590)
+
+
+Started GET "/users/17" for 138.28.151.182 at 2023-06-21 17:20:56 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 575)
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3793)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.9ms | Allocations: 4597)
+
+
+Started GET "/users/17/edit" for 138.28.151.182 at 2023-06-21 17:25:34 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 9.4ms | Allocations: 3995)
+  Rendered users/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4280)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 6728)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 1.2ms | Allocations: 7585)
+
+
+Started PATCH "/users/17" for 138.28.151.182 at 2023-06-21 17:25:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle"]}, "commit"=>"Update User", "id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+[31mUnpermitted parameter: :zone. Context: { controller: UsersController, action: update, request: #<ActionDispatch::Request:0x00007f7a8c332260>, params: {"_method"=>"patch", "authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle"]}, "commit"=>"Update User", "controller"=>"users", "action"=>"update", "id"=>"17"} }[0m
+Redirected to http://138.28.72.137:3000/users/17
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1300)
+
+
+Started GET "/users/17" for 138.28.151.182 at 2023-06-21 17:25:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 608)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3860)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.8ms | Allocations: 4666)
+
+
+Started GET "/users/17" for 138.28.151.182 at 2023-06-21 17:30:16 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 17 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 246)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1104)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4985)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.8ms | Allocations: 6387)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 17:30:21 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1949)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5357)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.8ms | Allocations: 5727)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:30:22 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.0ms | Allocations: 1561)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1825)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1913)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2244)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :user_type, style: "display: block" %>
+    <%= form.text_field :user_type %>
+  </div>
+
+  <div>
+    <%= form.label :passphrase, style: "display: block" %>
+    <%= form.text_field :passphrase %>
+  </div>
+
+  <div>
+    <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+  
+  <div class="field">
+  <%= form.label :zone, style: "display: block" %>
+  <!-- <%= form.collection_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}) %>  -->
+  <%= form.select_tag(:zone, options_for_select([:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}), class:"select") %>
+ <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+<br />
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :name, style: "display: block" %>
+16:        <%= form.text_field :name %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :user_type, style: "display: block" %>
+21:        <%= form.text_field :user_type %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :passphrase, style: "display: block" %>
+26:        <%= form.text_field :passphrase %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+31:      </div>
+32:      
+33:      <div class="field">
+34:      <%= form.label :zone, style: "display: block" %>
+35:      <!-- <%= form.collection_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}) %>  -->
+36:      <%= form.select_tag(:zone, options_for_select([:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}), class:"select") %>
+37:     <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+38:    <br />
+39:      <div>
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/users/_form.html.erb:36: syntax error, unexpected ')', expecting ']'
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected ')', expecting ']'
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected ')', expecting ']'
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected ')', expecting ']'
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected ')', expecting ']'
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected ')', expecting ']'
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/new.html.erb:3
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:31:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.7ms | Allocations: 1560)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1829)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1918)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2765)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :user_type, style: "display: block" %>
+    <%= form.text_field :user_type %>
+  </div>
+
+  <div>
+    <%= form.label :passphrase, style: "display: block" %>
+    <%= form.text_field :passphrase %>
+  </div>
+
+  <div>
+    <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+  
+  <div class="field">
+  <%= form.label :zone, style: "display: block" %>
+  <!-- <%= form.collection_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}) %>  -->
+  <%= form.select_tag(:zone, options_for_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}), class = "select") %>
+ <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+<br />
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :name, style: "display: block" %>
+16:        <%= form.text_field :name %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :user_type, style: "display: block" %>
+21:        <%= form.text_field :user_type %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :passphrase, style: "display: block" %>
+26:        <%= form.text_field :passphrase %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+31:      </div>
+32:      
+33:      <div class="field">
+34:      <%= form.label :zone, style: "display: block" %>
+35:      <!-- <%= form.collection_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}) %>  -->
+36:      <%= form.select_tag(:zone, options_for_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}), class = "select") %>
+37:     <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+38:    <br />
+39:      <div>
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/new.html.erb:3
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:31:24 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.1ms | Allocations: 1558)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1827)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1916)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2764)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :user_type, style: "display: block" %>
+    <%= form.text_field :user_type %>
+  </div>
+
+  <div>
+    <%= form.label :passphrase, style: "display: block" %>
+    <%= form.text_field :passphrase %>
+  </div>
+
+  <div>
+    <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+  
+  <div class="field">
+  <%= form.label :zone, style: "display: block" %>
+  <!-- <%= form.collection_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}) %>  -->
+  <%= form.select_tag(:zone, options_for_select(:zone, Zone.all, :name, :id, {:multiple => true}), class = "select") %>
+ <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+<br />
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :name, style: "display: block" %>
+16:        <%= form.text_field :name %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :user_type, style: "display: block" %>
+21:        <%= form.text_field :user_type %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :passphrase, style: "display: block" %>
+26:        <%= form.text_field :passphrase %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+31:      </div>
+32:      
+33:      <div class="field">
+34:      <%= form.label :zone, style: "display: block" %>
+35:      <!-- <%= form.collection_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}) %>  -->
+36:      <%= form.select_tag(:zone, options_for_select(:zone, Zone.all, :name, :id, {:multiple => true}), class = "select") %>
+37:     <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+38:    <br />
+39:      <div>
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/new.html.erb:3
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:31:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.4ms | Allocations: 1558)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1827)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1916)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2765)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :user_type, style: "display: block" %>
+    <%= form.text_field :user_type %>
+  </div>
+
+  <div>
+    <%= form.label :passphrase, style: "display: block" %>
+    <%= form.text_field :passphrase %>
+  </div>
+
+  <div>
+    <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+  
+  <div class="field">
+  <%= form.label :zone, style: "display: block" %>
+  <!-- <%= form.collection_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}) %>  -->
+  <%= select_tag(:zone, options_for_select(:zone, Zone.all, :name, :id, {:multiple => true}), class = "select") %>
+ <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+<br />
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :name, style: "display: block" %>
+16:        <%= form.text_field :name %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :user_type, style: "display: block" %>
+21:        <%= form.text_field :user_type %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :passphrase, style: "display: block" %>
+26:        <%= form.text_field :passphrase %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+31:      </div>
+32:      
+33:      <div class="field">
+34:      <%= form.label :zone, style: "display: block" %>
+35:      <!-- <%= form.collection_select(:zone, Zone.all, :name, :id, {:include_blank => "Please Select a Zone"}, {:multiple => true}) %>  -->
+36:      <%= select_tag(:zone, options_for_select(:zone, Zone.all, :name, :id, {:multiple => true}), class = "select") %>
+37:     <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+38:    <br />
+39:      <div>
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:36: syntax error, unexpected '='
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/new.html.erb:3
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:34:16 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/home/irina/cloudwifi/app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+...ager_id, :zone => [], :zone_id)
+...                              ^
+):
+  
+app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:34:56 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 24.1ms | Allocations: 11580)
+  Rendered users/new.html.erb within layouts/application (Duration: 25.0ms | Allocations: 11885)
+  Rendered home/_header.html.erb (Duration: 1.5ms | Allocations: 529)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 25648)
+Completed 200 OK in 52ms (Views: 37.5ms | ActiveRecord: 4.9ms | Allocations: 31274)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 17:35:08 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Michelle", "user_type"=>"", "passphrase"=>";fbe;", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina", "Irina"]}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 752)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/users_controller.rb:73:in `[]'
+app/controllers/users_controller.rb:73:in `user_params'
+app/controllers/users_controller.rb:25:in `create'
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:37:16 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/home/irina/cloudwifi/app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+...manager_id, zone: [], :zone_id)
+...                              ^
+):
+  
+app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:38:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/home/irina/cloudwifi/app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+..._id, :zone, zone: [], :zone_id)
+...                              ^
+):
+  
+app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:73: syntax error, unexpected ')', expecting =>
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:40:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 22.8ms | Allocations: 11152)
+  Rendered users/new.html.erb within layouts/application (Duration: 23.2ms | Allocations: 11256)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 258)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 24443)
+Completed 200 OK in 48ms (Views: 33.6ms | ActiveRecord: 4.3ms | Allocations: 29720)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 17:40:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Michelle", "user_type"=>"Student", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina", "Irina"]}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `user_type`, `passphrase`, `manager_id`, `zone`, `created_at`, `updated_at`, `zone_id`) VALUES ('Michelle', 'Student', '', 29, '[\"\", \"Michelle\", \"Irina\", \"Irina\"]', '2023-06-21 17:40:09.137854', '2023-06-21 17:40:09.137854', NULL)[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+Redirected to http://138.28.72.137:3000/users/18
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms | Allocations: 2814)
+
+
+Started GET "/users/18" for 138.28.151.182 at 2023-06-21 17:40:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"18"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 18 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 253)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1214)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4432)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.8ms | Allocations: 6048)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 17:40:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2148)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5549)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.7ms | Allocations: 5919)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:40:36 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 7.0ms | Allocations: 3915)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4004)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 6426)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.8ms | Allocations: 6720)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 17:40:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle"]}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`name`, `user_type`, `passphrase`, `manager_id`, `zone`, `created_at`, `updated_at`, `zone_id`) VALUES ('', '', '', 29, '[\"\", \"Michelle\"]', '2023-06-21 17:40:41.222432', '2023-06-21 17:40:41.222432', NULL)[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+Redirected to http://138.28.72.137:3000/users/19
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms | Allocations: 2540)
+
+
+Started GET "/users/19" for 138.28.151.182 at 2023-06-21 17:40:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 596)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3814)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.8ms | Allocations: 4619)
+
+
+Started DELETE "/users/19" for 138.28.151.182 at 2023-06-21 17:40:47 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"19"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 19 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 19[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+Redirected to http://138.28.72.137:3000/users
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms | Allocations: 2658)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 17:40:47 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1720)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.0ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5162)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.8ms | Allocations: 5453)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:41:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 7.7ms | Allocations: 4364)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4666)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7756)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.8ms | Allocations: 8628)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:41:46 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 7.7ms | Allocations: 4413)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4715)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7805)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.7ms | Allocations: 8673)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 17:41:53 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina"]}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO `users` (`name`, `user_type`, `passphrase`, `manager_id`, `zone`, `created_at`, `updated_at`, `zone_id`) VALUES ('', '', '', 29, '[\"\", \"Michelle\", \"Irina\"]', '2023-06-21 17:41:53.637028', '2023-06-21 17:41:53.637028', NULL)[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+Redirected to http://138.28.72.137:3000/users/20
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms | Allocations: 2545)
+
+
+Started GET "/users/20" for 138.28.151.182 at 2023-06-21 17:41:53 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 246)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1153)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4405)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.9ms | Allocations: 5334)
+
+
+Started GET "/users/20" for 138.28.151.182 at 2023-06-21 17:43:12 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.5ms | Allocations: 249)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1116)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 3.1ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5008)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.7ms | Allocations: 6412)
+
+
+Started GET "/users/20/edit" for 138.28.151.182 at 2023-06-21 17:43:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 8.5ms | Allocations: 4487)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4830)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 7244)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 1.1ms | Allocations: 8102)
+
+
+Started GET "/users/20/edit" for 138.28.151.182 at 2023-06-21 17:45:11 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 7.9ms | Allocations: 4518)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4877)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 7959)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 1.0ms | Allocations: 9337)
+
+
+Started GET "/users/20/edit" for 138.28.151.182 at 2023-06-21 17:45:14 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 7.1ms | Allocations: 3975)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4100)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6514)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.1ms | Allocations: 7315)
+
+
+Started PATCH "/users/20" for 138.28.151.182 at 2023-06-21 17:45:19 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina"]}, "commit"=>"Update User", "id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+Redirected to http://138.28.72.137:3000/users/20
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1252)
+
+
+Started GET "/users/20" for 138.28.151.182 at 2023-06-21 17:45:19 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.7ms | Allocations: 246)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1150)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4368)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 5298)
+
+
+Started GET "/users/20" for 138.28.151.182 at 2023-06-21 17:49:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 249)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1119)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5000)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.7ms | Allocations: 6400)
+
+
+Started GET "/users/20/edit" for 138.28.151.182 at 2023-06-21 17:49:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (1.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 8.0ms | Allocations: 4464)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4806)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 7220)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 1.8ms | Allocations: 8078)
+
+
+Started PATCH "/users/20" for 138.28.151.182 at 2023-06-21 17:49:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina"]}, "commit"=>"Update User", "id"=>"20"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+Redirected to http://138.28.72.137:3000/users/20
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1202)
+
+
+Started GET "/users/20" for 138.28.151.182 at 2023-06-21 17:49:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"20"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 660)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 5.0ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3878)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.8ms | Allocations: 4729)
+
+
+Started DELETE "/users/20" for 138.28.151.182 at 2023-06-21 17:49:19 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"20"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 20 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 20[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+Redirected to http://138.28.72.137:3000/users
+Completed 302 Found in 11ms (ActiveRecord: 6.3ms | Allocations: 2637)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 17:49:19 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2130)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5583)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.8ms | Allocations: 5954)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 17:49:22 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 7.0ms | Allocations: 3890)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4122)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6548)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.7ms | Allocations: 6898)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 17:49:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Michelle", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Irina", "Irina"]}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `user_type`, `passphrase`, `manager_id`, `zone`, `created_at`, `updated_at`, `zone_id`) VALUES ('Michelle', '', '', 29, '[\"\", \"Irina\", \"Irina\"]', '2023-06-21 17:49:27.981944', '2023-06-21 17:49:27.981944', NULL)[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+Redirected to http://138.28.72.137:3000/users/21
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms | Allocations: 2532)
+
+
+Started GET "/users/21" for 138.28.151.182 at 2023-06-21 17:49:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 614)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3832)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.8ms | Allocations: 4637)
+
+
+Started GET "/users/21" for 138.28.151.182 at 2023-06-21 17:49:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.9ms | Allocations: 249)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1105)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4986)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.8ms | Allocations: 6390)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 17:49:57 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  Rendered users/_form.html.erb (Duration: 8.5ms | Allocations: 4410)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4752)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7166)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 1.1ms | Allocations: 8024)
+
+
+Started PATCH "/users/21" for 138.28.151.182 at 2023-06-21 17:50:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Michelle", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["Michelle", "Irina", "Irina"]}, "commit"=>"Update User", "id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:42:in `block in update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`zone` = '[\"Michelle\", \"Irina\", \"Irina\"]', `users`.`updated_at` = '2023-06-21 17:50:00.396285' WHERE `users`.`id` = 21[0m
+  ↳ app/controllers/users_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:42:in `block in update'
+Redirected to http://138.28.72.137:3000/users/21
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms | Allocations: 3153)
+
+
+Started GET "/users/21" for 138.28.151.182 at 2023-06-21 17:50:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 630)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3848)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.8ms | Allocations: 4696)
+
+
+Started GET "/users/21" for 138.28.151.182 at 2023-06-21 17:54:22 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 249)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1116)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4997)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.8ms | Allocations: 6397)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 17:54:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 10.3ms | Allocations: 4433)
+  Rendered users/edit.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4775)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 7223)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 1.2ms | Allocations: 8082)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 17:54:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 8.2ms | Allocations: 4455)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4819)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 7934)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 1.1ms | Allocations: 9312)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 17:55:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.9ms | Allocations: 4457)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4816)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7910)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 1.1ms | Allocations: 9288)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 17:56:54 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.9ms | Allocations: 4435)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4794)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 7876)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 1.2ms | Allocations: 9254)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 17:57:18 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.6ms | Allocations: 4460)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4819)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7901)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 1.1ms | Allocations: 9278)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 17:57:33 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.6ms | Allocations: 4538)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4897)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7979)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 1.1ms | Allocations: 9355)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 17:58:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.8ms | Allocations: 4505)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4864)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7946)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 1.0ms | Allocations: 9322)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 17:58:19 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.5ms | Allocations: 4461)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4820)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 7902)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 1.2ms | Allocations: 9278)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:00:02 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.4ms | Allocations: 1542)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1831)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1920)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms | Allocations: 3283)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :user_type, style: "display: block" %>
+    <%= form.text_field :user_type %>
+  </div>
+
+  <div>
+    <%= form.label :passphrase, style: "display: block" %>
+    <%= form.text_field :passphrase %>
+  </div>
+
+  <div>
+    <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+  
+  <div class="field">
+  <%= form.label :zone, style: "display: block" %>
+ <%= form.collection_select(:zone, Zone.all, :name, :name, {:include_hidden => false} , {:multiple => true, {:class =>  "dropdown"}}) %>  <br/>
+  <em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
+ <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+<br/>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :name, style: "display: block" %>
+16:        <%= form.text_field :name %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :user_type, style: "display: block" %>
+21:        <%= form.text_field :user_type %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :passphrase, style: "display: block" %>
+26:        <%= form.text_field :passphrase %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+31:      </div>
+32:      
+33:      <div class="field">
+34:      <%= form.label :zone, style: "display: block" %>
+35:     <%= form.collection_select(:zone, Zone.all, :name, :name, {:include_hidden => false} , {:multiple => true, {:class =>  "dropdown"}}) %>  <br/>
+36:      <em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
+37:     <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+38:    <br/>
+39:      <div>
+40:        <%= form.submit %>
+41:      </div>
+42:    <% end %>
+  
+app/views/users/_form.html.erb:35: syntax error, unexpected '}', expecting =>
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected '}', expecting =>
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected '}', expecting =>
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected '}', expecting =>
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected '}', expecting =>
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected '}', expecting =>
+app/views/users/_form.html.erb:44: syntax error, unexpected `end'
+app/views/users/edit.html.erb:3
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:00:22 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 8.0ms | Allocations: 4464)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4823)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 7939)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 1.1ms | Allocations: 9317)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:01:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.7ms | Allocations: 4451)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4810)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 7892)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 1.1ms | Allocations: 9267)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:02:33 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.7ms | Allocations: 4506)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4865)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7948)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 1.2ms | Allocations: 9323)
+
+
+Started PATCH "/users/21" for 138.28.151.182 at 2023-06-21 18:02:40 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Michelle", "user_type"=>"", "passphrase"=>"", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina", "Irina"]}, "commit"=>"Update User", "id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:42:in `block in update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`zone` = '[\"\", \"Michelle\", \"Irina\", \"Irina\"]', `users`.`updated_at` = '2023-06-21 18:02:40.917268' WHERE `users`.`id` = 21[0m
+  ↳ app/controllers/users_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:42:in `block in update'
+Redirected to http://138.28.72.137:3000/users/21
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms | Allocations: 3163)
+
+
+Started GET "/users/21" for 138.28.151.182 at 2023-06-21 18:02:40 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.5ms | Allocations: 246)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1147)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 3.3ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4365)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.8ms | Allocations: 5293)
+
+
+Started GET "/users/21" for 138.28.151.182 at 2023-06-21 18:04:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 249)
+  Rendered users/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1125)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 3.4ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5040)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.9ms | Allocations: 6444)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:04:11 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.6ms | Allocations: 1561)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1842)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1930)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 2763)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :user_type, style: "display: block" %>
+    <%= form.text_field :user_type %>
+  </div>
+
+  <div>
+    <%= form.label :passphrase, style: "display: block" %>
+    <%= form.text_field :passphrase %>
+  </div>
+
+  <div>
+    <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+  </div>
+  
+  <div class="field">
+  <%= form.label :zone, style: "display: block" %>
+ <%= form.collection_select(:zone, Zone.all, :name, :name, {:include_hidden => false} , {:multiple => true, {:class   "dropdown"}}) %>
+  <%= form.collection_select(:zone, Zone.all, :name, :name, options = {include_hidden: false, include_blank: false }, html_options = {multiple: "true",class: "dropdown"}) %>  <br/>
+  <em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
+ <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+<br/>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:    
+14:      <div>
+15:        <%= form.label :name, style: "display: block" %>
+16:        <%= form.text_field :name %>
+17:      </div>
+18:    
+19:      <div>
+20:        <%= form.label :user_type, style: "display: block" %>
+21:        <%= form.text_field :user_type %>
+22:      </div>
+23:    
+24:      <div>
+25:        <%= form.label :passphrase, style: "display: block" %>
+26:        <%= form.text_field :passphrase %>
+27:      </div>
+28:    
+29:      <div>
+30:        <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
+31:      </div>
+32:      
+33:      <div class="field">
+34:      <%= form.label :zone, style: "display: block" %>
+35:     <%= form.collection_select(:zone, Zone.all, :name, :name, {:include_hidden => false} , {:multiple => true, {:class   "dropdown"}}) %>
+36:      <%= form.collection_select(:zone, Zone.all, :name, :name, options = {include_hidden: false, include_blank: false }, html_options = {multiple: "true",class: "dropdown"}) %>  <br/>
+37:      <em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
+38:     <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+39:    <br/>
+40:      <div>
+41:        <%= form.submit %>
+42:      </div>
+43:    <% end %>
+  
+app/views/users/_form.html.erb:35: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:45: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:45: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:45: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:45: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:45: syntax error, unexpected `end'
+app/views/users/_form.html.erb:35: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:45: syntax error, unexpected `end'
+app/views/users/edit.html.erb:3
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:04:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:36
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:38
+  Rendered users/_form.html.erb (Duration: 8.0ms | Allocations: 4471)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4830)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7946)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 1.2ms | Allocations: 9324)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:05:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.4ms | Allocations: 4549)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4908)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 7990)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 1.1ms | Allocations: 9365)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:05:30 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 10.5ms | Allocations: 4503)
+  Rendered users/edit.html.erb within layouts/application (Duration: 11.6ms | Allocations: 4862)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 7981)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 1.2ms | Allocations: 9358)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:08:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 8.1ms | Allocations: 4515)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4874)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 7967)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 1.1ms | Allocations: 9346)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:08:06 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 8.4ms | Allocations: 3984)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4109)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 6523)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 1.1ms | Allocations: 7324)
+
+
+Started GET "/users/21/edit" for 138.28.151.182 at 2023-06-21 18:08:20 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 8.2ms | Allocations: 4546)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4906)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 7996)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 1.2ms | Allocations: 9374)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:13:48 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2339)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1341)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6454)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.8ms | Allocations: 7343)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 18:13:53 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.4ms | Allocations: 4385)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4674)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7096)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.7ms | Allocations: 7446)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 18:14:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"irina", "user_type"=>"fjqeb;", "passphrase"=>"", "manager_id"=>"29", "zone"=>["Michelle", "Irina"]}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `user_type`, `passphrase`, `manager_id`, `zone`, `created_at`, `updated_at`, `zone_id`) VALUES ('irina', 'fjqeb;', '', 29, '[\"Michelle\", \"Irina\"]', '2023-06-21 18:14:27.079309', '2023-06-21 18:14:27.079309', NULL)[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+Redirected to http://138.28.72.137:3000/users/22
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms | Allocations: 2571)
+
+
+Started GET "/users/22" for 138.28.151.182 at 2023-06-21 18:14:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 246)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1141)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4359)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 5287)
+
+
+Started GET "/users/22/edit" for 138.28.151.182 at 2023-06-21 18:14:34 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 6.5ms | Allocations: 3952)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4237)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 6651)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 1.1ms | Allocations: 7508)
+
+
+Started GET "/users/22/edit" for 138.28.151.182 at 2023-06-21 18:15:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 7.3ms | Allocations: 4487)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4846)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 7928)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 1.1ms | Allocations: 9303)
+
+
+Started PATCH "/users/22" for 138.28.151.182 at 2023-06-21 18:15:17 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"irina", "user_type"=>"fjqeb;", "passphrase"=>"", "manager_id"=>"29", "zone"=>[""]}, "commit"=>"Update User", "id"=>"22"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:42:in `block in update'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`zone` = '[\"\"]', `users`.`updated_at` = '2023-06-21 18:15:17.246057' WHERE `users`.`id` = 22[0m
+  ↳ app/controllers/users_controller.rb:42:in `block in update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:42:in `block in update'
+Redirected to http://138.28.72.137:3000/users/22
+Completed 302 Found in 10ms (ActiveRecord: 3.5ms | Allocations: 3155)
+
+
+Started GET "/users/22" for 138.28.151.182 at 2023-06-21 18:15:17 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 22 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.5ms | Allocations: 245)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1118)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4336)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.8ms | Allocations: 5265)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:15:23 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2488)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5901)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.7ms | Allocations: 6269)
+
+
+Started GET "/users/21" for 138.28.151.182 at 2023-06-21 18:15:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 21 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 567)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3784)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.8ms | Allocations: 4586)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:15:49 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2081)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5522)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.9ms | Allocations: 5812)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:31:20 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2230)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2318)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 3185)
+
+
+  
+ActionView::Template::Error (unexpected token at ''):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= parseArray(user.zone) %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/helpers/wlans_helper.rb:8:in `parseArray'
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:31:53 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2519)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 3.4ms | Allocations: 1341)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 6652)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.8ms | Allocations: 7539)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:33:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2093)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2181)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 3044)
+
+
+  
+ActionView::Template::Error (undefined method `to_sentence' for "":String):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= user.zone.to_sentence %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:34:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 4517)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4605)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.8ms | Allocations: 7906)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "":String):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= displayArray(user.zone) %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/helpers/zones_helper.rb:8:in `displayArray'
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:36:39 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2545)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 9.9ms | Allocations: 6152)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 22131)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 2.4ms | Allocations: 23027)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:42:22 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2759)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2847)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms | Allocations: 3710)
+
+
+  
+ActionView::Template::Error (undefined method `split' for nil:NilClass):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= user.zone.split(" ") %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:42:45 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2646)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2734)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3597)
+
+
+  
+ActionView::Template::Error (undefined method `split' for nil:NilClass):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= (user.zone).split(" ") %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:44:03 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2571)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 3.0ms | Allocations: 1341)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6689)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.7ms | Allocations: 7575)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:44:16 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2521)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 1341)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6617)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.7ms | Allocations: 7503)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:44:32 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2090)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2178)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 3041)
+
+
+  
+ActionView::Template::Error (undefined method `to_sentence' for "":String):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= (user.zone).to_s.to_sentence %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:45:40 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4516)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 4604)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.5ms | Allocations: 7905)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "":String):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= displayArray((user.zone).to_s) %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/helpers/zones_helper.rb:8:in `displayArray'
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:46:29 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2097)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2185)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3048)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "":String):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= displayArray((user.zone).to_s) %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/helpers/zones_helper.rb:8:in `displayArray'
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:46:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2097)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2185)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 3048)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "":String):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= displayArray((user.zone).to_s) %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/helpers/zones_helper.rb:8:in `displayArray'
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:49:13 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1443)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2307)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Users</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">User Type</th>
+      <th scope="col">Passphrase</th>
+       <th scope="col">Zone</th>
+	  <th scope="col">Manager ID</th>
+	  <th scope="col">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+   <tr>
+          <td><%= user.name %></td>  
+          <td><%= user.user_type %></td>
+          <td><%= user.passphrase %></td>
+          <td><%= .string_to_array(user.zone) %></td>
+		  <td><%= user.manager_id %></td>
+		 
+          <td class="justify-content-around">
+  			<%= link_to user, style: "text-decoration:none" do %>
+  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
+  			<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+  			<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+			</svg>
+  			<% end %>
+  			
+         	<%= link_to edit_user_path(user), style: "text-decoration:none" do %> 
+  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+  			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
+  			0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 
+  			0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 
+  			7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 
+  			0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 
+  			0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+			</svg>
+  			<% end %> 
+  			
+  			<%= link_to user_path(user), data: {turbo_method: :delete, }, style: "text-decoration:none" do %>
+  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  			<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+			</svg>
+  			<% end %>
+    	</td>
+  	</tr>
+  	<% end %>
+   </tbody>
+</table>
+
+<%= link_to "New user", new_user_path %>
+):
+1:    <h1>Users</h1>
+2:    
+3:    <table class="table table-striped table-bordered table-hover">
+4:      <thead class="table-dark">
+5:        <tr>
+6:          <th scope="col">Name</th>
+7:          <th scope="col">User Type</th>
+8:          <th scope="col">Passphrase</th>
+9:           <th scope="col">Zone</th>
+10:    	  <th scope="col">Manager ID</th>
+11:    	  <th scope="col">Actions</th>
+12:        </tr>
+13:      </thead>
+14:    
+15:      <tbody>
+16:      <% @users.each do |user| %>
+17:       <tr>
+18:              <td><%= user.name %></td>  
+19:              <td><%= user.user_type %></td>
+20:              <td><%= user.passphrase %></td>
+21:              <td><%= .string_to_array(user.zone) %></td>
+22:    		  <td><%= user.manager_id %></td>
+23:    		 
+24:              <td class="justify-content-around">
+25:      			<%= link_to user, style: "text-decoration:none" do %>
+26:      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
+27:      			<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+28:      			<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+29:    			</svg>
+30:      			<% end %>
+31:      			
+32:             	<%= link_to edit_user_path(user), style: "text-decoration:none" do %> 
+33:      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+34:      			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
+35:      			0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 
+36:      			0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 
+37:      			7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 
+38:      			0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 
+39:      			0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+40:    			</svg>
+41:      			<% end %> 
+42:      			
+43:      			<%= link_to user_path(user), data: {turbo_method: :delete, }, style: "text-decoration:none" do %>
+44:      			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+45:      			<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+46:    			</svg>
+47:      			<% end %>
+48:        	</td>
+49:      	</tr>
+50:      	<% end %>
+51:       </tbody>
+52:    </table>
+53:    
+54:    <%= link_to "New user", new_user_path %>
+  
+app/views/users/index.html.erb:21: syntax error, unexpected '.'
+app/views/users/index.html.erb:56: syntax error, unexpected `end'
+app/views/users/index.html.erb:21: syntax error, unexpected '.'
+app/views/users/index.html.erb:56: syntax error, unexpected `end'
+app/views/users/index.html.erb:21: syntax error, unexpected '.'
+app/views/users/index.html.erb:56: syntax error, unexpected `end'
+app/views/users/index.html.erb:21: syntax error, unexpected '.'
+app/views/users/index.html.erb:56: syntax error, unexpected `end'
+app/views/users/index.html.erb:21: syntax error, unexpected '.'
+app/views/users/index.html.erb:56: syntax error, unexpected `end'
+app/views/users/index.html.erb:21: syntax error, unexpected '.'
+app/views/users/index.html.erb:56: syntax error, unexpected `end'
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:49:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2094)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2182)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3048)
+
+
+  
+ActionView::Template::Error (undefined method `string_to_array' for #<ActionView::Base:0x00000000141a18>):
+    18:           <td><%= user.name %></td>  
+    19:           <td><%= user.user_type %></td>
+    20:           <td><%= user.passphrase %></td>
+    21:           <td><%= string_to_array(user.zone) %></td>
+    22: 		  <td><%= user.manager_id %></td>
+    23: 		 
+    24:           <td class="justify-content-around">
+  
+app/views/users/index.html.erb:21
+app/views/users/index.html.erb:16
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:49:40 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2539)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 11.5ms | Allocations: 6152)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 22116)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 2.9ms | Allocations: 23013)
+
+
+Started GET "/users/new" for 138.28.151.182 at 2023-06-21 18:49:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/_form.html.erb:30
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:35
+  [1m[36mCACHE Zone Load (0.0ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/users/_form.html.erb:37
+  Rendered users/_form.html.erb (Duration: 14.4ms | Allocations: 6717)
+  Rendered users/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 7006)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 9428)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 2.3ms | Allocations: 9790)
+
+
+Started POST "/users" for 138.28.151.182 at 2023-06-21 18:50:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Michelle", "user_type"=>"Student", "passphrase"=>";fbe;", "manager_id"=>"29", "zone"=>["", "Michelle", "Irina"]}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`name`, `user_type`, `passphrase`, `manager_id`, `zone`, `created_at`, `updated_at`, `zone_id`) VALUES ('Michelle', 'Student', ';fbe;', 29, '[\"\", \"Michelle\", \"Irina\"]', '2023-06-21 18:50:05.899806', '2023-06-21 18:50:05.899806', NULL)[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `block in create'
+Redirected to http://138.28.72.137:3000/users/23
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms | Allocations: 2768)
+
+
+Started GET "/users/23" for 138.28.151.182 at 2023-06-21 18:50:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 247)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1169)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1047)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4387)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 5934)
+
+
+Started DELETE "/users/23" for 138.28.151.182 at 2023-06-21 18:50:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"23"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 23 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:68:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 23[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:54:in `destroy'
+Redirected to http://138.28.72.137:3000/users
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms | Allocations: 2657)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 18:50:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2081)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1048)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5529)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.9ms | Allocations: 5819)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 18:51:03 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1851)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1072)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5194)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.7ms | Allocations: 5962)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUserzones (20230621185235)
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE `userzones` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `zone_id` int, `user_id` int, `pmk` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE INDEX `index_userzones_on_zone_id` ON `userzones` (`zone_id`)[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE INDEX `index_userzones_on_user_id` ON `userzones` (`user_id`)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230621185235')[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m

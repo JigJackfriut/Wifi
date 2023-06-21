@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @userzone %>
+
+<div>
+  <%= link_to "Edit this userzone", edit_userzone_path(@userzone) %> |
+  <%= link_to "Back to userzones", userzones_path %>
+
+  <%= button_to "Destroy this userzone", @userzone, method: :delete %>
+</div>

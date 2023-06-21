@@ -1,14 +1,11 @@
 module WlansHelper
 	def parseArray(arr)
-		require 'json'
 		if arr == nil 
 			return 
 		end 
-		stringparse = arr
-		b = JSON.parse(stringparse) 
 		s=""
 		first = true
-		b.each do |n|
+		arr.each do |n|
 			if not first
 				s=s+", "
 			end 
@@ -18,6 +15,4 @@ module WlansHelper
 		puts "Result: #{s}"
 		return s 
   end
-
-
 end

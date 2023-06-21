@@ -1,0 +1,32 @@
+<%= form_with(model: userzone) do |form| %>
+  <% if userzone.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(userzone.errors.count, "error") %> prohibited this userzone from being saved:</h2>
+
+      <ul>
+        <% userzone.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :zone_id, style: "display: block" %>
+    <%= form.number_field :zone_id %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :pmk, style: "display: block" %>
+    <%= form.text_field :pmk %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

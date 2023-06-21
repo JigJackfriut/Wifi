@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Userzones</h1>
+
+<div id="userzones">
+  <% @userzones.each do |userzone| %>
+    <%= render userzone %>
+    <p>
+      <%= link_to "Show this userzone", userzone %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New userzone", new_userzone_path %>

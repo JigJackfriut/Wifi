@@ -32,8 +32,10 @@
   
   <div class="field">
   <%= form.label :zone, style: "display: block" %>
-  <%= form.collection_select(:zone, @zones, :name,:name,multiple: true ,:include_blank => "Please select a zone") %> 
-<br />
+  <%= form.collection_select(:zone, Zone.all, :name, :name, options = {include_hidden: false, include_blank: "no zone" }, html_options = {multiple: "true",class: "dropdown"}) %>  <br/>
+  <em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
+ <!-- <%= form.collection_select(:zone, @zones, :name,:name, multiple: true ,:include_blank => "Please select a zone") %> -->
+<br/>
   <div>
     <%= form.submit %>
   </div>
