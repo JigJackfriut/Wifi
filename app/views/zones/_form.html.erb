@@ -27,13 +27,12 @@
   </div>
 
   <div>
-    <%= form.label :open, style: "display: block" %>
-    <%= form.number_field :open %>
+    <%= form.label :open_ap, style: "display: block" %>
+    <%= form.number_field :open_ap %>
   </div>
 
-  <div>
-    <%= form.label :manager_id, style: "display: block" %>
-    <%= form.number_field :manager_id %>
+	<div>
+    <%= form.number_field :manager_id, id: :zone_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
   </div>
 
   <div>

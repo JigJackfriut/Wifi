@@ -1,6 +1,5 @@
 class ZonesController < ApplicationController
-  before_action :set_zone, only: %i[ show edit update destroy ]
-
+  before_action :set_zone, only: %i[ show edit update destroy ] 
   # GET /zones or /zones.json
   def index
     @zones = Zone.all
@@ -59,12 +58,13 @@ class ZonesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+
     def set_zone
       @zone = Zone.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def zone_params
-      params.require(:zone).permit(:name, :description, :ssid, :open, :manager_id)
+      params.require(:zone).permit(:name, :description, :ssid, :open_ap, :manager_id, :user_id)
     end
 end

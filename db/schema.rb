@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_20_193048) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_21_154231) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -66,13 +66,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_193048) do
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "user_type"
     t.string "passphrase"
     t.integer "manager_id"
     t.string "zone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "zone_id"
     t.index ["manager_id"], name: "index_users_on_manager_id"
+    t.index ["zone_id"], name: "index_users_on_zone_id"
   end
 
   create_table "wificlients", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
@@ -143,11 +145,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_20_193048) do
     t.string "name"
     t.string "description"
     t.string "ssid"
-    t.integer "open"
+    t.integer "open_ap"
     t.integer "manager_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["manager_id"], name: "index_zones_on_manager_id"
+    t.index ["user_id"], name: "index_zones_on_user_id"
   end
 
 end

@@ -6,4 +6,6 @@ class Manager < ApplicationRecord
          
          has_many :wificlients
          has_many :wlans
+         has_many :users
+         has_many :zones
 end

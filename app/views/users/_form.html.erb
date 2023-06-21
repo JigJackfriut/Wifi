@@ -17,8 +17,8 @@
   </div>
 
   <div>
-    <%= form.label :type, style: "display: block" %>
-    <%= form.text_field :type %>
+    <%= form.label :user_type, style: "display: block" %>
+    <%= form.text_field :user_type %>
   </div>
 
   <div>
@@ -27,15 +27,13 @@
   </div>
 
   <div>
-    <%= form.label :manager_id, style: "display: block" %>
-    <%= form.number_field :manager_id %>
+    <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
   </div>
-
-  <div>
-    <%= form.label :zone, style: "display: block" %>
-    <%= form.text_field :zone %>
-  </div>
-
+  
+  <div class="field">
+  <%= form.label :zone, style: "display: block" %>
+  <%= form.collection_select(:zone, @zones, :name,:name,multiple: true ,:include_blank => "Please select a zone") %> 
+<br />
   <div>
     <%= form.submit %>
   </div>

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :prepare_zones
 
   # GET /users or /users.json
   def index
@@ -22,6 +23,7 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
+    #@user = current_manager.users.build(user_params)
 
     respond_to do |format|
       if @user.save
@@ -58,6 +60,9 @@ class UsersController < ApplicationController
   end
 
   private
+    def prepare_zones
+  		@zones = Zone.all
+	end
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
@@ -65,6 +70,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :type, :passphrase, :manager_id, :zone)
+      params.require(:user).permit(:name, :user_type, :passphrase, :manager_id, :zone, :zone_id)
     end
 end
