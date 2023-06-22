@@ -3,9 +3,11 @@ module WlansHelper
 		if arr == nil 
 			return 
 		end 
+		stringparse = arr
+		b = JSON.parse(stringparse) 
 		s=""
 		first = true
-		arr.each do |n|
+		b.each do |n|
 			if not first
 				s=s+", "
 			end 
