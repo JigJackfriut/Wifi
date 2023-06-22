@@ -1,5 +1,7 @@
 class ZonesController < ApplicationController
   before_action :set_zone, only: %i[ show edit update destroy ] 
+  before_action :authenticate_manager!
+  before_action :current_manager, only: [:edit, :update, :destroy]
   # GET /zones or /zones.json
   def index
     @zones = Zone.all
@@ -11,17 +13,23 @@ class ZonesController < ApplicationController
 
   # GET /zones/new
   def new
-    @zone = Zone.new
+    #@zone = Zone.new
+     @zone = current_manager.zones.build
   end
 
   # GET /zones/1/edit
   def edit
   end
+  
+   def correct_manager
+  	@zone = current_manager.zones.find_by(id: params[:id])
+  	redirect_to zones_path, notice: "Not Authorized To Edit This Zone" if @zone.nil?
+  end
 
   # POST /zones or /zones.json
   def create
-    @zone = Zone.new(zone_params)
-
+    #@zone = Zone.new(zone_params)
+	@zone = current_manager.zones.build(zone_params)
     respond_to do |format|
       if @zone.save
         format.html { redirect_to zone_url(@zone), notice: "Zone was successfully created." }
@@ -65,6 +73,6 @@ class ZonesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def zone_params
-      params.require(:zone).permit(:name, :description, :ssid, :open_ap, :manager_id, :user_id)
+      params.require(:zone).permit(:name, :description, :ssid, :open_ap, :manager_id)
     end
 end

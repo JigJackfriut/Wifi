@@ -8,4 +8,5 @@ class Manager < ApplicationRecord
          has_many :wlans
          has_many :users
          has_many :zones
+         has_many :userzones
 end

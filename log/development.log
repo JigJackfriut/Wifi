@@ -32015,3 +32015,1974 @@ Migrating to CreateUserzones (20230621185235)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:22:10 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3810)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 7.7ms | Allocations: 5392)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 22231)
+Completed 200 OK in 36ms (Views: 31.0ms | ActiveRecord: 0.8ms | Allocations: 24573)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-21 19:22:11 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:6
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1112)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1115)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4506)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.7ms | Allocations: 5638)
+
+
+Started GET "/userzones/new" for 138.28.151.182 at 2023-06-21 19:22:15 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/new.html.erb within layouts/application
+  Rendered userzones/_form.html.erb (Duration: 2.6ms | Allocations: 1713)
+  Rendered userzones/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2006)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5281)
+Completed 200 OK in 17ms (Views: 8.6ms | ActiveRecord: 1.8ms | Allocations: 8113)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-21 19:22:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:6
+  Rendered userzones/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 801)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4065)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.8ms | Allocations: 4339)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:27:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1373)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4637)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.7ms | Allocations: 4913)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:29:45 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 4484)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 1115)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 8090)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.7ms | Allocations: 9853)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:29:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1375)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4639)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 4915)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-21 19:29:58 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:6
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 811)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4075)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 4351)
+
+
+Started GET "/userzones/new" for 138.28.151.182 at 2023-06-21 19:30:08 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/new.html.erb within layouts/application
+  Rendered userzones/_form.html.erb (Duration: 1.5ms | Allocations: 1160)
+  Rendered userzones/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1249)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4521)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 4798)
+
+
+Started POST "/userzones" for 138.28.151.182 at 2023-06-21 19:30:17 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "userzone"=>{"zone_id"=>"2", "user_id"=>"2", "pmk"=>"vdw;sdvuw"}, "commit"=>"Create Userzone"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/userzones_controller.rb:27:in `block in create'
+  [1m[36mUserzone Create (0.4ms)[0m  [1m[32mINSERT INTO `userzones` (`zone_id`, `user_id`, `pmk`, `created_at`, `updated_at`) VALUES (2, 2, 'vdw;sdvuw', '2023-06-21 19:30:17.898127', '2023-06-21 19:30:17.898127')[0m
+  ↳ app/controllers/userzones_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/userzones_controller.rb:27:in `block in create'
+Redirected to http://138.28.72.137:3000/userzones/1
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms | Allocations: 2528)
+
+
+Started GET "/userzones/1" for 138.28.151.182 at 2023-06-21 19:30:17 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones` WHERE `userzones`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/userzones_controller.rb:63:in `set_userzone'
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/show.html.erb within layouts/application
+  Rendered userzones/_userzone.html.erb (Duration: 0.6ms | Allocations: 207)
+  Rendered userzones/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1160)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 4416)
+Completed 200 OK in 12ms (Views: 8.3ms | ActiveRecord: 0.8ms | Allocations: 5958)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-21 19:30:21 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:6
+  Rendered userzones/_userzone.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 942)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4205)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 4479)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:30:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1377)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4641)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.9ms | Allocations: 4915)
+
+
+Started GET "/zones/6/edit" for 138.28.151.182 at 2023-06-21 19:30:34 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones` WHERE `zones`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/zones_controller.rb:63:in `set_zone'
+  Rendering layout layouts/application.html.erb
+  Rendering zones/edit.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/zones/_form.html.erb:35
+  Rendered zones/_form.html.erb (Duration: 4.5ms | Allocations: 2839)
+  Rendered zones/edit.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3181)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5633)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 7097)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:30:43 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1362)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.7ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4660)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.8ms | Allocations: 4936)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:30:54 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2081)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5556)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.8ms | Allocations: 5845)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:33:07 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1356)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4643)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.7ms | Allocations: 4918)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to RemoveUserIdFromZones (20230621193312)
+  [1m[35m (11.5ms)[0m  [1m[35mALTER TABLE `zones` DROP COLUMN `user_id`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230621193312')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:35:46 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.5ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4105)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4193)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.0ms | Allocations: 6092)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for #<Zone id: 6, name: "Michelle", description: "", ssid: "", open_ap: nil, manager_id: 29, created_at: "2023-06-21 15:31:52.243536000 +0000", updated_at: "2023-06-21 15:31:52.243536000 +0000">):
+    22:           <td><%= zone.description %></td>
+    23:           <td><%= zone.ssid %></td>
+    24:           <td><%= zone.open_ap %></td>
+    25:           <td><%= zone.user_id %></td>
+    26: 		  <td><%= zone.manager_id %></td>
+    27: 		 
+    28:           <td class="justify-content-around">
+  
+app/views/zones/index.html.erb:25
+app/views/zones/index.html.erb:19
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:37:02 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  Rendered zones/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1844)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 11.0ms | Allocations: 6216)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 21296)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 2.4ms | Allocations: 22179)
+
+
+Started GET "/zones/7" for 138.28.151.182 at 2023-06-21 19:37:06 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones` WHERE `zones`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/zones_controller.rb:63:in `set_zone'
+  Rendering layout layouts/application.html.erb
+  Rendering zones/show.html.erb within layouts/application
+  Rendered zones/_zone.html.erb (Duration: 0.7ms | Allocations: 246)
+  Rendered zones/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1118)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4400)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 0.8ms | Allocations: 5892)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:37:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.5ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  Rendered zones/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1377)
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4653)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 1.0ms | Allocations: 4927)
+
+
+Started GET "/zones/new" for 138.28.151.182 at 2023-06-21 19:37:14 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/new.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/zones/_form.html.erb:35
+  Rendered zones/_form.html.erb (Duration: 5.0ms | Allocations: 2765)
+  Rendered zones/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3057)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5520)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms | Allocations: 5866)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:37:16 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  Rendered zones/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1338)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.3ms | Allocations: 1086)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4602)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.8ms | Allocations: 4876)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:40:17 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  Rendered zones/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4371)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4459)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.7ms | Allocations: 8795)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `wificlient' for #<ActionView::Base:0x0000000015a770>):
+    16: 
+    17:   <tbody>
+    18:   <% @zones.each do |zone| %>
+    19:   <% if wificlient.manager == current_manager%>
+    20:   <tr>
+    21:           <td><%= zone.name %></td>  
+    22:           <td><%= zone.description %></td>
+  
+app/views/zones/index.html.erb:19
+app/views/zones/index.html.erb:18
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:40:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 10840)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 597)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 24673)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 2.7ms | Allocations: 25555)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:40:44 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.1ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 12247)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 14830)
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 2.3ms | Allocations: 17790)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:40:46 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 8085)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 10580)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 1.3ms | Allocations: 10868)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:44:33 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 10917)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 303)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 24165)
+Completed 200 OK in 49ms (Views: 24.7ms | ActiveRecord: 3.9ms | Allocations: 35969)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:44:34 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 7135)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 9596)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 1.2ms | Allocations: 11229)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:44:35 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 7135)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 9630)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 1.4ms | Allocations: 11266)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:44:36 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 7135)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 9607)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 1.3ms | Allocations: 11251)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:44:37 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 6670)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 9242)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 2.1ms | Allocations: 11211)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-21 19:44:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 3145)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 5598)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 1.1ms | Allocations: 7229)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:44:40 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 7135)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 9597)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 1.3ms | Allocations: 11222)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-21 19:44:42 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.1ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 7135)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 9631)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 1.4ms | Allocations: 11262)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-22 13:51:52 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 40.8ms | Allocations: 14992)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 619)
+  Rendered layout layouts/application.html.erb (Duration: 91.3ms | Allocations: 48769)
+Completed 200 OK in 141ms (Views: 92.6ms | ActiveRecord: 4.2ms | Allocations: 72279)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-22 13:51:57 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1450)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 298)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4029)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 4748)
+
+
+Started DELETE "/managers/sign_out" for 138.28.151.182 at 2023-06-22 13:51:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 7ms (ActiveRecord: 0.4ms | Allocations: 3303)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-22 13:51:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 398)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2676)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2986)
+
+
+Started GET "/managers/sign_up" for 138.28.151.182 at 2023-06-22 13:52:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 239)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 622)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 6384)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 8731)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 9974)
+
+
+Started POST "/managers" for 138.28.151.182 at 2023-06-22 13:52:37 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"first_name"=>"dasha", "last_name"=>"", "email"=>"dariabehentseva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "account_type"=>""}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password_confirmation. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f9907f9a838>, params: {"authenticity_token"=>"[FILTERED]", "manager"=>{"first_name"=>"dasha", "last_name"=>"", "email"=>"dariabehentseva@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"", "address1"=>"", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "account_type"=>""}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `managers` WHERE `managers`.`email` = BINARY 'dariabehentseva@gmail.com' LIMIT 1[0m
+  [1m[36mManager Create (0.3ms)[0m  [1m[32mINSERT INTO `managers` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`, `first_name`, `last_name`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `account_type`, `admin`) VALUES ('dariabehentseva@gmail.com', '$2a$12$MBbCf7D/s.V6ChQud.IzsegTUdO9JIBZeXqyZAAHRJ8kkZTuOwLLe', NULL, NULL, NULL, '2023-06-22 13:52:37.612559', '2023-06-22 13:52:37.612559', 'dasha', '', '', '', '', '', '', '', '', NULL)[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 255ms (ActiveRecord: 3.1ms | Allocations: 16882)
+
+
+Started GET "/" for 138.28.151.182 at 2023-06-22 13:52:37 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1132)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3598)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 3864)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-22 13:52:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 5796)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 8257)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 1.1ms | Allocations: 9892)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-22 13:52:42 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 8015)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 10587)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 2.3ms | Allocations: 12747)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 13:52:43 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.5ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:6
+  Rendered userzones/_userzone.html.erb (Duration: 0.5ms | Allocations: 228)
+  Rendered userzones/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4449)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.6ms | Allocations: 1113)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 7831)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 1.7ms | Allocations: 8939)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-22 13:52:49 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2646)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5134)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 1.2ms | Allocations: 6768)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-22 13:52:49 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 5797)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 8259)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 1.3ms | Allocations: 9913)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-22 13:52:51 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2645)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5098)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 1.2ms | Allocations: 6713)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 13:52:51 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:6
+  Rendered userzones/_userzone.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 953)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4216)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.8ms | Allocations: 4490)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-22 13:52:59 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 5796)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 8257)
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 1.3ms | Allocations: 9881)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-22 13:53:02 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2645)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5132)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 1.3ms | Allocations: 6752)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 13:53:13 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.6ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:6
+  Rendered userzones/_userzone.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 968)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4231)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 1.0ms | Allocations: 4506)
+
+
+Started GET "/" for 138.28.171.140 at 2023-06-22 13:56:52 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230622135635_remove_user_id_from_userzones.rb
+
+
+):
+  
+activerecord (7.0.5) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.5) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.5) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.5) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.5) lib/active_record/migration.rb:599:in `block in call'
+activerecord (7.0.5) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.5) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to RemoveUserIdFromUserzones (20230622135635)
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE `userzones` DROP COLUMN `owner_id`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+Started GET "/" for 138.28.171.140 at 2023-06-22 14:00:26 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230622135635_remove_user_id_from_userzones.rb
+
+
+):
+  
+activerecord (7.0.5) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.5) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.5) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.5) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.5) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.5) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.5) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.5) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.5) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.5) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.5) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.5) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to RemoveUserIdFromUserzones (20230622135635)
+  [1m[35m (12.5ms)[0m  [1m[35mALTER TABLE `userzones` DROP COLUMN `user_id`[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230622135635')[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddManagerIdToUserzones (20230622140302)
+  [1m[35m (10.5ms)[0m  [1m[35mALTER TABLE `userzones` ADD `manager_id` int[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE INDEX `index_userzones_on_manager_id` ON `userzones` (`manager_id`)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230622140302')[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/zones" for 138.28.151.182 at 2023-06-22 14:05:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 6618)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 597)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 20452)
+Completed 200 OK in 44ms (Views: 23.3ms | ActiveRecord: 3.9ms | Allocations: 30539)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 14:05:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:6
+  Rendered userzones/_userzone.html.erb (Duration: 1.4ms | Allocations: 1517)
+  Rendered userzones/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4383)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4471)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.2ms | Allocations: 5553)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for #<Userzone id: 1, zone_id: 2, pmk: "vdw;sdvuw", created_at: "2023-06-21 19:30:17.898127000 +0000", updated_at: "2023-06-21 19:30:17.898127000 +0000", manager_id: nil>):
+     6: 
+     7:   <p>
+     8:     <strong>User:</strong>
+     9:     <%= userzone.user_id %>
+    10:   </p>
+    11: 
+    12:   <p>
+  
+app/views/userzones/_userzone.html.erb:9
+app/views/userzones/index.html.erb:7
+app/views/userzones/index.html.erb:6
+Started GET "/" for 138.28.171.140 at 2023-06-22 14:06:31 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 667)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3015)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3729)
+
+
+Started GET "/managers/sign_up" for 138.28.171.140 at 2023-06-22 14:06:36 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 543)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 4903)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 7214)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 8433)
+
+
+Started POST "/managers" for 138.28.171.140 at 2023-06-22 14:07:13 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"first_name"=>"", "last_name"=>"", "email"=>"helloIrina@email", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"", "address1"=>"Irina's Database", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "account_type"=>""}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :password_confirmation. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f993c7dce40>, params: {"authenticity_token"=>"[FILTERED]", "manager"=>{"first_name"=>"", "last_name"=>"", "email"=>"helloIrina@email", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"", "address1"=>"Irina's Database", "address2"=>"", "city"=>"", "state"=>"", "zip"=>"", "account_type"=>""}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mManager Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM `managers` WHERE `managers`.`email` = BINARY 'helloirina@email' LIMIT 1[0m
+  [1m[36mManager Create (0.3ms)[0m  [1m[32mINSERT INTO `managers` (`email`, `encrypted_password`, `reset_password_token`, `reset_password_sent_at`, `remember_created_at`, `created_at`, `updated_at`, `first_name`, `last_name`, `phone`, `address1`, `address2`, `city`, `state`, `zip`, `account_type`, `admin`) VALUES ('helloirina@email', '$2a$12$QFuEBmI93qdagGQtD7fLkO574z5D7phOqzA6eojuymL1kM8fP9S2S', NULL, NULL, NULL, '2023-06-22 14:07:13.700055', '2023-06-22 14:07:13.700055', '', '', '', 'Irina\'s Database', '', '', '', '', '', NULL)[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 239ms (ActiveRecord: 2.1ms | Allocations: 6959)
+
+
+Started GET "/" for 138.28.171.140 at 2023-06-22 14:07:13 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1152)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 296)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3715)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms | Allocations: 4024)
+
+
+Started GET "/zones" for 138.28.171.140 at 2023-06-22 14:07:23 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3116)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 594)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6278)
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 1.2ms | Allocations: 8495)
+
+
+Started GET "/users" for 138.28.171.140 at 2023-06-22 14:07:26 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 9916)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 12499)
+Completed 200 OK in 28ms (Views: 17.7ms | ActiveRecord: 2.4ms | Allocations: 16787)
+
+
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:07:29 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2188)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2276)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 2883)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x000000000180d8>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:07:42 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2181)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2269)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3124)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x000000000182e0>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 14:07:44 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1775)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1862)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 2111)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000018470>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:07:51 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1847)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x000000000185b0>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:08:46 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1847)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000018718>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:08:52 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1847)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000018858>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:08:53 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1847)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000018998>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:08:59 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1847)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000018ad8>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:09:12 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2181)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2269)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3123)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000018c40>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:09:14 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1847)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 2096)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000018d80>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:09:15 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1847)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000018ec0>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:09:16 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1847)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000019000>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:09:17 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1847)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000019140>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:09:18 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1847)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000019280>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:09:19 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1847)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 2095)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x000000000193c0>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if user.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 14:13:06 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3712)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 3800)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.4ms | Allocations: 12081)
+
+
+  
+ActionView::Template::Error (undefined method `manager' for #<Userzone id: 1, zone_id: 2, pmk: "vdw;sdvuw", created_at: "2023-06-21 19:30:17.898127000 +0000", updated_at: "2023-06-21 19:30:17.898127000 +0000", manager_id: nil>):
+    14: 
+    15:   <tbody>
+    16:   <% @userzones.each do |userzone| %>
+    17: <% if userzone.manager == current_manager%>
+    18:    <tr>
+    19:           <td><%= userzone.pmk %></td>  
+    20:           <td><%= userzone.zone_id %></td>
+  
+app/views/userzones/index.html.erb:17
+app/views/userzones/index.html.erb:16
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 14:14:18 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2949)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 600)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 16821)
+Completed 200 OK in 38ms (Views: 22.3ms | ActiveRecord: 3.4ms | Allocations: 25036)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 14:14:24 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 672)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3133)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.8ms | Allocations: 4756)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-22 14:14:25 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 6660)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 9233)
+Completed 200 OK in 24ms (Views: 13.6ms | ActiveRecord: 2.3ms | Allocations: 13519)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-22 14:14:25 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 9913)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 12496)
+Completed 200 OK in 31ms (Views: 19.9ms | ActiveRecord: 2.2ms | Allocations: 16782)
+
+
+Started GET "/wlans" for 138.28.151.182 at 2023-06-22 14:14:26 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:28
+  Rendered wlans/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 10596)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 13170)
+Completed 200 OK in 26ms (Views: 18.1ms | ActiveRecord: 1.8ms | Allocations: 16229)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-22 14:14:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2646)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 5133)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.1ms | Allocations: 6762)
+
+
+Started GET "/users" for 138.28.151.182 at 2023-06-22 14:14:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/views/users/index.html.erb:16
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/users/index.html.erb:17
+  Rendered users/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 5797)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 8288)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 1.4ms | Allocations: 9932)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 14:14:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 673)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3126)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.7ms | Allocations: 4740)
+
+
+Started GET "/wlans" for 138.28.151.182 at 2023-06-22 14:14:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:28
+  Rendered wlans/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 758)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3211)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.8ms | Allocations: 4832)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-22 14:14:29 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:27
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 9902)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 12485)
+Completed 200 OK in 25ms (Views: 17.8ms | ActiveRecord: 1.7ms | Allocations: 15639)
+
+
+Started GET "/home/about" for 138.28.151.182 at 2023-06-22 14:14:29 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.5ms | Allocations: 105)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 1143)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3709)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 4427)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 14:14:31 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 673)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 3127)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 4753)
+
+
+Started GET "/zones" for 138.28.151.182 at 2023-06-22 14:14:32 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ZonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering zones/index.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/zones/index.html.erb:18
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/zones/index.html.erb:19
+  Rendered zones/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2646)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5133)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 1.2ms | Allocations: 6769)
+
+
+Started GET "/home/about" for 138.28.151.182 at 2023-06-22 14:14:33 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 1096)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3467)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 3729)
+
+
+Started GET "/userzones" for 138.28.151.182 at 2023-06-22 14:14:36 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 30 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.3ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 672)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3130)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 4752)
+
+
+Started GET "/userzones" for 138.28.171.140 at 2023-06-22 14:14:49 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserzonesController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering userzones/index.html.erb within layouts/application
+  [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones`[0m
+  ↳ app/views/userzones/index.html.erb:16
+  Rendered userzones/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 672)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3125)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.8ms | Allocations: 4741)
+
+

@@ -9,7 +9,6 @@
       <th scope="col">Description</th>
       <th scope="col">SSID</th>
        <th scope="col">Open</th>
-       <th scope="col">User ID</th>
 	  <th scope="col">Manager ID</th>
 	  <th scope="col">Actions</th>
     </tr>
@@ -17,12 +16,12 @@
 
   <tbody>
   <% @zones.each do |zone| %>
+  <% if zone.manager == current_manager%>
   <tr>
           <td><%= zone.name %></td>  
           <td><%= zone.description %></td>
           <td><%= zone.ssid %></td>
           <td><%= zone.open_ap %></td>
-          <td><%= zone.user_id %></td>
 		  <td><%= zone.manager_id %></td>
 		 
           <td class="justify-content-around">
@@ -51,6 +50,7 @@
   			<% end %>
     	</td>
   	</tr>
+  	<% end %>
   	<% end %>
    </tbody>
 </table>

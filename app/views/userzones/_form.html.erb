@@ -15,11 +15,11 @@
     <%= form.label :zone_id, style: "display: block" %>
     <%= form.number_field :zone_id %>
   </div>
-
+  
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.number_field :user_id %>
+    <%= form.number_field :manager_id, id: :userzone_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
   </div>
+
 
   <div>
     <%= form.label :pmk, style: "display: block" %>

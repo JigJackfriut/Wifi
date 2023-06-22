@@ -1,5 +1,7 @@
 class UserzonesController < ApplicationController
   before_action :set_userzone, only: %i[ show edit update destroy ]
+  before_action :authenticate_manager!
+  before_action :current_manager, only: [:edit, :update, :destroy]
 
   # GET /userzones or /userzones.json
   def index
@@ -12,16 +14,23 @@ class UserzonesController < ApplicationController
 
   # GET /userzones/new
   def new
-    @userzone = Userzone.new
+    #@userzone = Userzone.new
+    @userzone = current_manager.userzones.build
   end
 
   # GET /userzones/1/edit
   def edit
   end
+  
+  def correct_manager
+  	@userzone = current_manager.userzones.find_by(id: params[:id])
+  	redirect_to userzones_path, notice: "Not Authorized To Edit This Userzone" if @userzone.nil?
+  end
 
   # POST /userzones or /userzones.json
   def create
-    @userzone = Userzone.new(userzone_params)
+    #@userzone = Userzone.new(userzone_params)
+    @userzone = current_manager.userzones.build(userzone_params)
 
     respond_to do |format|
       if @userzone.save
@@ -65,6 +74,6 @@ class UserzonesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def userzone_params
-      params.require(:userzone).permit(:zone_id, :user_id, :pmk)
+      params.require(:userzone).permit(:zone_id, :manager_id, :pmk)
     end
 end

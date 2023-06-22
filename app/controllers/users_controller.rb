@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
   before_action :prepare_zones
-
+  before_action :authenticate_manager!
+  before_action :current_manager, only: [:edit, :update, :destroy]
   # GET /users or /users.json
   def index
     @users = User.all
@@ -13,17 +14,23 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+    #@user = User.new
+    @user = current_manager.users.build
   end
 
   # GET /users/1/edit
   def edit
   end
+  
+  def correct_manager
+  	@user = current_manager.users.find_by(id: params[:id])
+  	redirect_to users_path, notice: "Not Authorized To Edit This User" if @user.nil?
+  end
 
   # POST /users or /users.json
   def create
-    @user = User.new(user_params)
-    #@user = current_manager.users.build(user_params)
+    #@user = User.new(user_params)
+    @user = current_manager.users.build(user_params)
 
     respond_to do |format|
       if @user.save
