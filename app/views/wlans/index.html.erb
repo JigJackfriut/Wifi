@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Wlans</h1>
+<h1>WLANs</h1>
 
 <table class="table table-striped table-bordered table-hover">
   <thead class="table-dark">
@@ -18,8 +18,7 @@
       <th scope="col">Date Added</th>
       <th scope="col">Selected a</th>
       <th scope="col">Selected g</th>
-	  <th scope="col">Client ID</th>
-	  <th scope="col">Manager ID</th>
+	  <th scope="col">Associated Wi-Fi Client</th>
 	  <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -41,8 +40,7 @@
 		  <td><%= wlan.dateadded %></td>
 		  <td><%= parseArray(wlan.selected_a) %></td>
 		  <td><%= parseArray(wlan.selected_g) %></td>
-		  <td><%= wlan.client_id %></td>
-		  <td><%= wlan.manager_id %></td>
+		  <td><%= wlan.client_name %></td>
 		 
           <td class="justify-content-around">
   			<%= link_to wlan, style: "text-decoration:none" do %>
@@ -76,4 +74,3 @@
 </table>
 
 <br>
-<%= link_to "New WLAN client", new_wlan_path, class: "btn btn-primary" %>

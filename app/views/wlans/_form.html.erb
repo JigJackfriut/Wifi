@@ -1,7 +1,7 @@
 <%= form_with(model: wlan) do |form| %>
   <% if wlan.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(wlan.errors.count, "error") %> prohibited this wlan from being saved:</h2>
+      <h2><%= pluralize(wlan.errors.count, "error") %> prohibited this WLAN from being saved:</h2>
 
       <ul>
         <% wlan.errors.each do |error| %>
@@ -12,11 +12,6 @@
   <% end %>
 
   <div>
-    <%= form.label :mac, style: "display: block" %>
-    <%= form.text_field :mac %>
-  </div>
-
-  <div>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
@@ -25,78 +20,36 @@
     <%= form.label :description, style: "display: block" %>
     <%= form.text_field :description %>
   </div>
+  <br>
 
-  <div>
-    <%= form.label :status, style: "display: block" %>
-    <%= form.text_field :status %>
-  </div>
-
-  <div>
-    <%= form.label :wlan, style: "display: block" %>
-    <%= form.text_field :wlan %>
-  </div>
-
-  <div>
-    <%= form.label :phy, style: "display: block" %>
-    <%= form.text_field :phy %>
-  </div>
-
-  <div>
-    <%= form.label :txpower, style: "display: block" %>
-    <%= form.text_field :txpower %>
-  </div>
-
-  <div>
-    <%= form.label :a, style: "display: block" %>
-    <%=  parseArray(form.object.a) %>
-  </div>
   
    <div>
-    <%= form.label :selected_a,style: "display: block" %>
+    <%= form.label :selected_a, 'Selected A Channels', style: "display: block" %>
     <%= form.text_field :selected_a  %>
   </div>
-
-  <div>
-    <%= form.label :g, style: "display: block" %>
-    <%= parseArray(form.object.g) %>
+   <div>
+    <em> <%= form.label :a, "Available A Channels: #{parseArray(form.object.a)}", style: "display: block" %> </em>
   </div>
+  <br>
+  
+ 
   
   <div>
-    <%= form.label :selected_g, style: "display: block" %>
+    <%= form.label :selected_g, 'Selected G Channels', style: "display: block" %>
     <%= form.text_field :selected_g  %>
   </div>
-
-  <div>
-    <%= form.label :lastseen, style: "display: block" %>
-    <%= form.datetime_field :lastseen %>
+   <div>
+   <em> <%= form.label :g, "Available G Channels: #{parseArray(form.object.g)}", style: "display: block" %> </em>
   </div>
-
-  <div>
-    <%= form.label :dateadded, style: "display: block" %>
-    <%= form.datetime_field :dateadded %>
-  </div>
-
-  <div>
-    <%= form.label :channel, style: "display: block" %>
-    <%= form.number_field :channel %>
-  </div>
-
-  <div>
-    <%= form.label :client_id, style: "display: block" %>
-    <%= form.number_field :client_id %>
-  </div>
-  
-  <div>
-    <%= form.label :manager_id, style: "display: block" %>
-    <%= form.number_field :manager_id %>
-  </div>
+  <br>
   
   <div class="form-group mb-3">
     <%= form.number_field :client_id, id: :wificlient_wlan_id, type: :hidden %>
   </div>
 
-  <div>
-    <%= form.submit %>
+   <div class="form-group mb-3">
+    <%= form.submit "Update WLAN", class: "btn btn-primary" %>
   </div>
+  
 <% end %>
 
