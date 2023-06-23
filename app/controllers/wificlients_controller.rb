@@ -42,7 +42,7 @@ class WificlientsController < ApplicationController
 	client.update(name: wificlient_params[:name])
 	client.update(manager_id: current_manager.id)
 	Wlan.where(:client_id => client.id).find_each do |wlan|
-	wlan.update(manager_id: current_manager.id)
+	wlan.update(manager_id: current_manager.id, client_name:client.name)
 	end
 	end 
 
