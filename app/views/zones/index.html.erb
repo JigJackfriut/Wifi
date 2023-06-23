@@ -21,7 +21,8 @@
           <td><%= zone.name %></td>  
           <td><%= zone.description %></td>
           <td><%= zone.ssid %></td>
-          <td><%= zone.open_ap %></td>
+          <td><%= form_with(model: zone) do |form| %>
+          <%= form.check_box :open_ap, checked: zone.open_ap, onchange: "this.form.requestSubmit();" %><%end%></td>
 		  <td><%= zone.manager_id %></td>
 		 
           <td class="justify-content-around">

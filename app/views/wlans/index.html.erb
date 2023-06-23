@@ -1,5 +1,3 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>WLANs</h1>
 
 <table class="table table-striped table-bordered table-hover">
@@ -12,12 +10,11 @@
       <th scope="col">WLAN</th>
       <th scope="col">Phy</th>
       <th scope="col">Txpower</th>
-      <th scope="col">a</th>
-      <th scope="col">g</th>
-      <th scope="col">Last seen</th>
-      <th scope="col">Date Added</th>
       <th scope="col">Selected a</th>
       <th scope="col">Selected g</th>
+      <th scope="col">Enabled</th>
+      <th scope="col">Last seen</th>
+      <th scope="col">Date Added</th>
 	  <th scope="col">Associated Wi-Fi Client</th>
 	  <th scope="col">Actions</th>
     </tr>
@@ -34,12 +31,14 @@
           <td><%= wlan.wlan %></td>
           <td><%= wlan.phy %></td>
           <td><%= wlan.txpower %></td>
-		  <td><%= parseArray(wlan.a) %></td>
-		  <td><%= parseArray(wlan.g) %></td>
-		  <td><%= wlan.lastseen %></td>
-		  <td><%= wlan.dateadded %></td>
 		  <td><%= parseArray(wlan.selected_a) %></td>
 		  <td><%= parseArray(wlan.selected_g) %></td>
+		  <td><%= form_with(model: wlan) do |form| %>
+		  <%= form.check_box :enabled, checked: wlan.enabled, onchange: "this.form.requestSubmit();" %>
+		  <%end%>
+		  </td>
+		  <td><%= wlan.lastseen %></td>
+		  <td><%= wlan.dateadded %></td>
 		  <td><%= wlan.client_name %></td>
 		 
           <td class="justify-content-around">

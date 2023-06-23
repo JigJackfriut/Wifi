@@ -31,24 +31,31 @@ class WificlientsController < ApplicationController
     #@wificlient = Wificlient.new(wificlient_params)
 	#@wificlient = current_manager.wificlients.build(wificlient_params)
 	client = Wificlient.find_by(mac:wificlient_params[:mac])
-	check = true
+	check = false
 	if client && client.manager_id.nil?
-		client.update(manager_id: current_manager.id)
-		Wlan.where(:client_id => client.id).find_each do |wlan|
-			wlan.update(manager_id: current_manager.id)
-		end
-	elsif client && !client.manager_id.nil?
-		check = false
+		check = true
 	end
 
+	unique = false
+	if !Wificlient.find_by(name:wificlient_params[:name]) && check
+	unique = true
+	client.update(name: wificlient_params[:name])
+	client.update(manager_id: current_manager.id)
+	Wlan.where(:client_id => client.id).find_each do |wlan|
+	wlan.update(manager_id: current_manager.id)
+	end
+	end 
+
     respond_to do |format|
-		if !client.nil? && client.save && check
+		if !client.nil? && client.save && check && unique
         	format.html { redirect_to wificlient_url(client), notice: "Wificlient was successfully created." }
         	format.json { render :show, status: :created, location: client }
  		elsif !client.nil? && client.save && !check
 			format.html { redirect_to wificlients_url, alert: "Error: Wificlient already assigned" }
  		elsif client.nil?
 			format.html { redirect_to wificlients_url, alert: "Error: Wificlient is not registered" }
+		elsif !unique
+			format.html { redirect_to wificlients_url, alert: "Error: Name is already taken" }
       	else
         	format.html { render :new, status: :unprocessable_entity }
         	format.json { render json: @wificlient.errors, status: :unprocessable_entity }

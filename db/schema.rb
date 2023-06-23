@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_23_163023) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_23_182107) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -22,8 +22,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_163023) do
     t.string "state"
     t.string "zip"
     t.string "accounttype"
-    t.datetime "created_at", default: -> { "current_timestamp(6)" }, null: false
-    t.datetime "updated_at", default: -> { "current_timestamp(6)" }, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "admin", default: false
   end
 
@@ -149,6 +149,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_163023) do
     t.string "selected_g"
     t.integer "manager_id"
     t.string "client_name"
+    t.boolean "enabled"
     t.index ["client_id"], name: "index_wlans_on_client_id"
     t.index ["manager_id"], name: "index_wlans_on_manager_id"
   end
@@ -157,7 +158,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_163023) do
     t.string "name"
     t.string "description"
     t.string "ssid"
-    t.integer "open_ap"
+    t.boolean "open_ap"
     t.integer "manager_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

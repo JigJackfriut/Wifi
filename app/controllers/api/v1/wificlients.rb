@@ -58,6 +58,7 @@ def process_hello(params)
 	
 	wlans = params[:wlans] # we gat params from JSON
 	a = Array.new
+	w = Array.new
 	wlans.each do |wlan|
 		thiswlan = Wlan.find_by(mac:wlan['mac']) 
 		a.push(wlan['mac'])
@@ -84,10 +85,15 @@ def process_hello(params)
 		end
 		
 		Wlan.where(:client_id => client.id).find_each do |wlan|
-		if !a.include?(wlan.mac)
-			wlan.update(client_id: nil)
+			if !a.include?(wlan.mac)
+				wlan.update(client_id: nil)
+			end
+			if !w.include?(wlan.id)
+			w.push(wlan.id)
+			end
 		end
+
 	end
-end
+
 end
 

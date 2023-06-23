@@ -15,6 +15,12 @@
 
 <% if current_page?(controller:'wificlients', action: 'new') %> 
 
+	 <div class="form-group mb-3">
+	<label>Name</label>
+    <%= form.text_field :name, class: "form-control" %>
+    <em>The name should be unique.</em>
+   </div>
+
    <div class="form-group mb-3">
 	<label>Mac</label>
     <%= form.text_field :mac, class: "form-control" %>

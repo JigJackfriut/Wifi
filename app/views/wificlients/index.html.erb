@@ -3,21 +3,21 @@
 <table class="table table-striped table-bordered table-hover">
   <thead class="table-dark">
     <tr>
+    <th scope="col">Name</th>
       <th scope="col">MAC</th>
       <th scope="col">Location</th>
+      <th scope="col">Note</th>
       <th scope="col">IP Address</th>
       <th scope="col">Client Version</th>
       <th scope="col">OS Version</th>
-      <th scope="col">HW Model</th>
-      <th scope="col">Status</th>
+      <th scope="col">Model</th>
       <th scope="col">Poll Rate</th>
-      <th scope="col">Last Seen</th>
-      <th scope="col">Note</th>
-      <th scope="col">Name</th>
-      <th scope="col">Date Added</th>
 	  <th scope="col">Config Hash</th>
-	  <th scope="col">Enabled</th>
 	  <th scope="col">Serial</th>
+	  <th scope="col">Last Seen</th>
+      <th scope="col">Date Added</th>
+	  <th scope="col">Enabled</th>
+	  <th scope="col">Status</th>
 	  <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -26,21 +26,24 @@
   <% @wificlients.each do |wificlient| %>
   <% if wificlient.manager == current_manager%>
    <tr>
+          <td><%= wificlient.name %></td>
           <td><%= wificlient.mac %></td>
-          <td><%= wificlient.location %></td>  
+          <td><%= wificlient.location %></td>
+          <td><%= wificlient.note %></td>  
           <td><%= wificlient.ipaddress %></td> 
           <td><%= wificlient.version %></td>
           <td><%= wificlient.os %></td>
           <td><%= wificlient.model %></td>
-          <td><%= wificlient.status %></td>
           <td><%= wificlient.pollrate %></td>
+          <td><%= wificlient.confighash %></td>
+          <td><%= wificlient.serial %></td>
 		  <td><%= wificlient.lastseen %></td>
-		  <td><%= wificlient.note %></td>
-		  <td><%= wificlient.name %></td>
 		  <td><%= wificlient.dateadded %></td>
-		  <td><%= wificlient.confighash %></td>
-		  <td><%= wificlient.enabled %></td>
-		  <td><%= wificlient.serial %></td>
+		  <td><%= form_with(model: wificlient) do |form| %>
+		  <%= form.check_box :enabled, checked: wificlient.enabled, onchange: "this.form.requestSubmit();" %>
+		  <%end%>
+		  </td>
+		  <td><%= wificlient.status %></td>
 		 
           
           <td class="justify-content-around">
