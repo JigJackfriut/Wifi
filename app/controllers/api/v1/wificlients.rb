@@ -48,11 +48,12 @@ end
 def process_hello(params) 
 	client = Wificlient.find_by(mac:params[:mac]) 
 	if client
+		client.update(lastseen: Time.new)
 		if client.ipaddress != params[:ipaddress] or client.version != params[:version] or client.os != params[:os] or client.model != params[:model]
 			client.update(ipaddress:  params[:ipaddress], version:  params[:version], os: params[:os], model: params[:model])
 		end
 	else 
-		client = Wificlient.create(mac:params[:mac],os:params[:os],version:params[:version],serial:params[:serial],model:params[:model])
+		client = Wificlient.create(mac:params[:mac],os:params[:os],version:params[:version],serial:params[:serial],model:params[:model], lastseen: Time.new, dateadded:Time.new)
 	end
 	
 	wlans = params[:wlans] # we gat params from JSON
@@ -63,10 +64,11 @@ def process_hello(params)
 		wlang = wlan["band1"]["channels"]
 		band2 = wlan["band2"]
 		if thiswlan 
-			thiswlan.update(lastseen: Time.new) 
+			thiswlan.update(lastseen: Time.new)
 			if !band2.nil?
 				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.a != wlan["band2"]["channels"] or thiswlan.client_id != client.id
 					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: wlan["band2"]["channels"], client_id: client.id) 
+				
 				end
 			else 
 				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.client_id != client.id

@@ -21,62 +21,17 @@
    </div>
    
    <div class="form-group mb-3">
-    <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+    <%= form.submit "Create Wi-Fi Client", class: "btn btn-primary" %>
   </div>
 
 <% else %>
-
-	<div class="form-group mb-3">
-	<label>Mac</label>
-    <%= form.text_field :mac, class: "form-control" %>
-   </div>
 
   <div class="form-group mb-3">
 	<label>Location</label>
     <%= form.text_field :location, class: "form-control" %>
    </div>
-
-  <div class="form-group mb-3">
-	<label>IP Address</label>
-    <%= form.text_field :ipaddress, class: "form-control" %>
-   </div>
-
-  <div class="form-group mb-3">
-	<label>Client Version</label>
-    <%= form.text_field :clientversion, class: "form-control" %>
-  </div>
-
-  <div class="form-group mb-3">
-	<label>OS Version</label>
-    <%= form.text_field :osversion, class: "form-control" %>
-  </div>
-
-  <div class="form-group mb-3">
-	<label>HW Model</label>
-    <%= form.text_field :hwmodel, class: "form-control" %>
-  </div>
 	
-  <div class="form-group mb-3">
-  	<label>Status</label>
-    <%= form.text_field :status, class: "form-control" %>
-  </div>
-    
-  <div class="form-group mb-3">
-  	<label>Poll Rate</label>
-    <%= form.text_field :pollrate, class: "form-control" %>
-  </div>
-    
-  <div class="form-group mb-3">
-  	<label>Last Seen</label>
-   <!-- <%= form.text_field :lastseen, class: "form-control" %>-->
-	<%= form.datetime_field :lastseen, style: "display: block" %>
-   </div>
-    
-  <!--<div>
-    <%= form.label :lastseen, style: "display: block" %>
-    <%= form.datetime_field :lastseen %>
-  </div>-->
-  
+ 
   <div class="form-group mb-3">
   	<label>Note</label>
     <%= form.text_field :note, class: "form-control" %>
@@ -87,28 +42,12 @@
     <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <!--<div>
-    <%= form.label :dateadded, style: "display: block" %>
-    <%= form.datetime_field :dateadded %>
-  </div>-->
-  
-  <div class="form-group mb-3">
-  	<label>Date Added</label>
-	<%= form.datetime_field :dateadded, style: "display: block" %>
-  </div>
-  
    <div class="form-group mb-3">
-  	<label>Config Hash</label>
-    <%= form.text_field :confighash, class: "form-control" %>
-  </div>
-  
-   <div class="form-group mb-3">
-  	<label>Manager ID</label>
     <%= form.number_field :manager_id, id: :wificlient_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
   </div>
 
   <div class="form-group mb-3">
-    <%= form.submit "Create WLAN Client", class: "btn btn-primary" %>
+    <%= form.submit "Update Wi-Fi Client", class: "btn btn-primary" %>
   </div>
   <% end%>
   <%else%> 
