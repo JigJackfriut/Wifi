@@ -48,12 +48,22 @@
 
   <div>
     <%= form.label :a, style: "display: block" %>
-    <%= form.text_field :a %>
+    <%=  parseArray(form.object.a) %>
+  </div>
+  
+   <div>
+    <%= form.label :selected_a,style: "display: block" %>
+    <%= form.text_field :selected_a  %>
   </div>
 
   <div>
     <%= form.label :g, style: "display: block" %>
-    <%= form.text_field :g %>
+    <%= parseArray(form.object.g) %>
+  </div>
+  
+  <div>
+    <%= form.label :selected_g, style: "display: block" %>
+    <%= form.text_field :selected_g  %>
   </div>
 
   <div>
@@ -64,15 +74,6 @@
   <div>
     <%= form.label :dateadded, style: "display: block" %>
     <%= form.datetime_field :dateadded %>
-  </div>
-
-  <div>
-    <%= form.label :selected_a, style: "display: block" %>
-    <%= form.text_field :selected_a %>
-  </div>
-  <div>
-    <%= form.label :selected_g, style: "display: block" %>
-    <%= form.text_field :selected_g %>
   </div>
 
   <div>
