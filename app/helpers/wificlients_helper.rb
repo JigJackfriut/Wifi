@@ -11,7 +11,6 @@ module WificlientsHelper
 		first = true
 		b.each do |n|
 			wlan = Wlan.find_by(:id => n).name
-			puts "LOOOOOOOL"
 			puts wlan
 			n = n.to_s
 			s = s + '<%= link_to "'+ wlan +'", "http://138.28.72.190:3000/wlans/'+n+'" %> </br>' 
