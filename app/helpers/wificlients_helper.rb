@@ -10,9 +10,11 @@ module WificlientsHelper
 		s=""
 		first = true
 		b.each do |n|
-			wlan = Wlan.where(:id => n)
+			wlan = Wlan.find_by(:id => n).name
+			puts "LOOOOOOOL"
+			puts wlan
 			n = n.to_s
-			s = s + '<%= link_to "'+wlan.name+'", "http://138.28.72.190:3000/wlans/'+n+'" %>'
+			s = s + '<%= link_to "'+ wlan +'", "http://138.28.72.190:3000/wlans/'+n+'" %> </br>' 
 			#s = s + '<input type = "checkbox" id="' + n +'" name="' +n +'" value="Bike"> <label for="' + n +'">' + n +'</label><br>'
 			first=false
 		end 

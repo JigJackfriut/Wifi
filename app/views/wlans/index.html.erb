@@ -31,8 +31,8 @@
           <td><%= wlan.wlan %></td>
           <td><%= wlan.phy %></td>
           <td><%= wlan.txpower %></td>
-		  <td><%= parseArray(wlan.selected_a) %></td>
-		  <td><%= parseArray(wlan.selected_g) %></td>
+		  <td><%= wlan.selected_a %></td>
+		  <td><%= wlan.selected_g %></td>
 		  <td><%= form_with(model: wlan) do |form| %>
 		  <%= form.check_box :enabled, checked: wlan.enabled, onchange: "this.form.requestSubmit();" %>
 		  <%end%>
