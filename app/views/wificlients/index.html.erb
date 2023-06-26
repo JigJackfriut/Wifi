@@ -31,7 +31,7 @@
 		  <%end%>
 		  </td>
 		  <td><%= wificlient.status %></td>
-		   <td><%= wificlient.wlan_name %></td>
+		   <td><%= parseWLAN(wificlient.wlan_name) %></td>
           
           <td class="justify-content-around">
   			<%= link_to wificlient, style: "text-decoration:none" do %>
