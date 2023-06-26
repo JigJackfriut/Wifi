@@ -101,7 +101,7 @@ class WificlientsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wificlient_params
-      params.require(:wificlient).permit(:mac, :location, :ipaddress, :version, :os, :model, :status, :pollrate, :lastseen, :note, :name, :dateadded, :confighash, :manager_id, :enabled)
+      params.require(:wificlient).permit(:mac, :location, :ipaddress, :version, :os, :model, :status, :pollrate, :lastseen, :note, :name, :dateadded, :confighash, :manager_id, :enabled, :wlan_name)
     end
 	
 end

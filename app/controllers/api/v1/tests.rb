@@ -13,7 +13,7 @@ module API
 			#if client 
 				#render json: {status:"registered"}
 			#else
-			#	render json: {status:"registered"}
+			#render json: {status:"registered"}
 		#	end
         end #route end
 

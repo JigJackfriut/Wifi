@@ -37406,3 +37406,51 @@ Processing by WlansController#index as HTML
 Completed 200 OK in 44ms (Views: 27.6ms | ActiveRecord: 3.9ms | Allocations: 34182)
 
 
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-26 13:38:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:19
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:20
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 9300)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 11869)
+Completed 200 OK in 26ms (Views: 18.3ms | ActiveRecord: 2.2ms | Allocations: 14819)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-26 13:40:00 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:20
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:21
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 9088)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 597)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 22918)
+Completed 200 OK in 41ms (Views: 23.6ms | ActiveRecord: 3.8ms | Allocations: 31860)
+
+
+Started GET "/wificlients" for 138.28.151.182 at 2023-06-26 13:40:51 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:20
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:21
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2563)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 594)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5723)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 1.0ms | Allocations: 7972)
+
+
