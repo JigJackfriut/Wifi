@@ -31,6 +31,4 @@ module WificlientsHelper
 		
 	end
 
-
-
 end
