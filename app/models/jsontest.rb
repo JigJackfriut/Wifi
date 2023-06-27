@@ -1,0 +1,2 @@
+class Jsontest < ApplicationRecord
+end

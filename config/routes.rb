@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :jsontests
   resources :userzones
   resources :zones
   resources :users

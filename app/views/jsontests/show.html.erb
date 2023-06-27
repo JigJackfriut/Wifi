@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @jsontest %>
+
+<div>
+  <%= link_to "Edit this jsontest", edit_jsontest_path(@jsontest) %> |
+  <%= link_to "Back to jsontests", jsontests_path %>
+
+  <%= button_to "Destroy this jsontest", @jsontest, method: :delete %>
+</div>

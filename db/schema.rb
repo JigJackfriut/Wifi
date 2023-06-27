@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_27_134727) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_27_164247) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -22,9 +22,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_27_134727) do
     t.string "state"
     t.string "zip"
     t.string "accounttype"
-    t.datetime "created_at", default: -> { "current_timestamp(6)" }, null: false
-    t.datetime "updated_at", default: -> { "current_timestamp(6)" }, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "admin", default: false
+  end
+
+  create_table "jsontests", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.text "config_json"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "managers", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|

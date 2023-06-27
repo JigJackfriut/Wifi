@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Jsontests</h1>
+
+<div id="jsontests">
+  <% @jsontests.each do |jsontest| %>
+    <%= render jsontest %>
+    <p>
+      <%= link_to "Show this jsontest", jsontest %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New jsontest", new_jsontest_path %>
