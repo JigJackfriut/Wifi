@@ -13,7 +13,7 @@
 
   <tbody>
   <% @jsontests.each do |jsontest| %>
-  <!--<% if jsontest.manager == current_manager%>-->
+
   <tr>
           <td><%= jsontest.id %></td>  
           <td><%= jsontest.config_json %></td>
@@ -44,7 +44,6 @@
   			<% end %>
     	</td>
   	</tr>
-  	<% end %>
   	<% end %>
    </tbody>
 </table>
