@@ -38101,3 +38101,87 @@ Migrating to CreateJsontests (20230627164247)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateJsontests (20230627164247)
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE `jsontests` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `config_json` text, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230627164247')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/jsontests" for 138.28.171.140 at 2023-06-27 16:59:24 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by JsontestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jsontests/index.html.erb within layouts/application
+  [1m[36mJsontest Load (0.4ms)[0m  [1m[34mSELECT `jsontests`.* FROM `jsontests`[0m
+  ↳ app/views/jsontests/index.html.erb:15
+  Rendered jsontests/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1868)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 23 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 20.2ms | Allocations: 13609)
+  Rendered layout layouts/application.html.erb (Duration: 73.7ms | Allocations: 48460)
+Completed 200 OK in 89ms (Views: 73.9ms | ActiveRecord: 2.6ms | Allocations: 54192)
+
+
+Started GET "/jsontests" for 138.28.171.140 at 2023-06-27 16:59:25 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JsontestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jsontests/index.html.erb within layouts/application
+  [1m[36mJsontest Load (0.4ms)[0m  [1m[34mSELECT `jsontests`.* FROM `jsontests`[0m
+  ↳ app/views/jsontests/index.html.erb:15
+  Rendered jsontests/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 830)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 23 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1089)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4090)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.7ms | Allocations: 4370)
+
+
+Started GET "/jsontests/new" for 138.28.171.140 at 2023-06-27 16:59:28 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JsontestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jsontests/new.html.erb within layouts/application
+  Rendered jsontests/_form.html.erb (Duration: 4.7ms | Allocations: 1938)
+  Rendered jsontests/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2235)
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 23 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1088)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5502)
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 1.4ms | Allocations: 7917)
+
+
+Started GET "/jsontests" for 138.28.171.140 at 2023-06-27 16:59:31 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JsontestsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jsontests/index.html.erb within layouts/application
+  [1m[36mJsontest Load (0.3ms)[0m  [1m[34mSELECT `jsontests`.* FROM `jsontests`[0m
+  ↳ app/views/jsontests/index.html.erb:15
+  Rendered jsontests/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 802)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 23 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.1ms | Allocations: 1089)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4062)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.7ms | Allocations: 4341)
+
+
+Started GET "/jsontests/new" for 138.28.171.140 at 2023-06-27 16:59:35 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by JsontestsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering jsontests/new.html.erb within layouts/application
+  Rendered jsontests/_form.html.erb (Duration: 1.0ms | Allocations: 726)
+  Rendered jsontests/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 815)
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 23 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/_header.html.erb:1
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1092)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4120)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.4ms | Allocations: 4402)
+
+
