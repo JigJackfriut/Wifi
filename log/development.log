@@ -37474,3 +37474,620 @@ Migrating to AddZoneToWlans (20230627134727)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 138.28.171.140 at 2023-06-27 14:24:11 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 14123)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 614)
+  Rendered layout layouts/application.html.erb (Duration: 77.9ms | Allocations: 47859)
+Completed 200 OK in 102ms (Views: 78.9ms | ActiveRecord: 2.2ms | Allocations: 53107)
+
+
+Started GET "/" for 138.28.142.213 at 2023-06-27 14:24:19 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 319)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2562)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2827)
+
+
+Started GET "/wlans" for 138.28.171.140 at 2023-06-27 14:24:20 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.6ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:25
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  Rendered wlans/index.html.erb within layouts/application (Duration: 40.1ms | Allocations: 17277)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 328)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 19924)
+Completed 200 OK in 54ms (Views: 43.5ms | ActiveRecord: 2.9ms | Allocations: 23224)
+
+
+Started GET "/managers/sign_up" for 138.28.142.213 at 2023-06-27 14:24:21 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 239)
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 621)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 6537)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 8850)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 10238)
+
+
+Started GET "/wificlients" for 138.28.171.140 at 2023-06-27 14:24:23 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/index.html.erb within layouts/application
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients`[0m
+  ↳ app/views/wificlients/index.html.erb:20
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wificlients/index.html.erb:21
+  Rendered wificlients/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 11903)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 301)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 14487)
+Completed 200 OK in 31ms (Views: 22.1ms | ActiveRecord: 2.1ms | Allocations: 17658)
+
+
+Started GET "/wificlients/new" for 138.28.171.140 at 2023-06-27 14:24:25 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WificlientsController#new as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wificlients/new.html.erb within layouts/application
+  Rendered wificlients/_form.html.erb (Duration: 2.3ms | Allocations: 2085)
+  Rendered wificlients/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2426)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4886)
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 7998)
+
+
+Started GET "/managers/sign_in" for 138.28.142.213 at 2023-06-27 14:24:40 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 285)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2052)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4364)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 5569)
+
+
+Started GET "/" for 138.28.171.140 at 2023-06-27 14:24:48 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1106)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3567)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 3830)
+
+
+Started DELETE "/managers/sign_out" for 138.28.171.140 at 2023-06-27 14:24:50 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 31 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 12ms (ActiveRecord: 0.4ms | Allocations: 2817)
+
+
+Started GET "/" for 138.28.171.140 at 2023-06-27 14:24:50 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 315)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2619)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2928)
+
+
+Started GET "/managers/sign_in" for 138.28.171.140 at 2023-06-27 14:24:54 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 144)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1230)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 51)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3490)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4101)
+
+
+Started POST "/managers/sign_in" for 138.28.142.213 at 2023-06-27 14:25:01 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"email"=>"beshentseva2@kenyon.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`email` = 'beshentseva2@kenyon.edu' ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 236ms (ActiveRecord: 0.4ms | Allocations: 3748)
+
+
+Started GET "/" for 138.28.142.213 at 2023-06-27 14:25:01 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1121)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3591)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.5ms | Allocations: 3856)
+
+
+Started GET "/wlans" for 138.28.142.213 at 2023-06-27 14:25:12 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.5ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:25
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  Rendered wlans/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 8354)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 10815)
+Completed 200 OK in 24ms (Views: 19.7ms | ActiveRecord: 1.6ms | Allocations: 12437)
+
+
+Started POST "/managers/sign_in" for 138.28.171.140 at 2023-06-27 14:25:13 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "manager"=>{"email"=>"beshentseva2@kenyon.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`email` = 'beshentseva2@kenyon.edu' ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 231ms (ActiveRecord: 0.4ms | Allocations: 2370)
+
+
+Started GET "/" for 138.28.171.140 at 2023-06-27 14:25:14 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1105)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3574)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.4ms | Allocations: 3840)
+
+
+Started GET "/wlans/73/edit" for 138.28.142.213 at 2023-06-27 14:25:15 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#edit as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/edit.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/wlans/_form.html.erb:48
+  Rendered wlans/_form.html.erb (Duration: 32.0ms | Allocations: 19010)
+  Rendered wlans/edit.html.erb within layouts/application (Duration: 33.2ms | Allocations: 19392)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 21879)
+Completed 200 OK in 43ms (Views: 36.2ms | ActiveRecord: 2.1ms | Allocations: 24732)
+
+
+Started GET "/wlans" for 138.28.171.140 at 2023-06-27 14:25:16 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.5ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:25
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  Rendered wlans/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 8061)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 10553)
+Completed 200 OK in 23ms (Views: 18.8ms | ActiveRecord: 1.7ms | Allocations: 12188)
+
+
+Started GET "/wlans/73/edit" for 138.28.171.140 at 2023-06-27 14:25:22 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#edit as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/edit.html.erb within layouts/application
+  [1m[36mZone Load (0.4ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/wlans/_form.html.erb:48
+  Rendered wlans/_form.html.erb (Duration: 3.6ms | Allocations: 2296)
+  Rendered wlans/edit.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2443)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4895)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 1.1ms | Allocations: 7044)
+
+
+Started PATCH "/wlans/73" for 138.28.142.213 at 2023-06-27 14:25:23 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "wlan"=>{"name"=>"Irina", "description"=>"", "selected_a"=>"[\"36\", \"40\", \"44\", \"48\", \"149\", \"153\", \"157\", \"161\", \"165\"]", "selected_g"=>"[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]", "zone"=>"Michelle", "client_id"=>""}, "commit"=>"Update WLAN", "id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :zone. Context: { controller: WlansController, action: update, request: #<ActionDispatch::Request:0x00007fce98d1e610>, params: {"_method"=>"patch", "authenticity_token"=>"[FILTERED]", "wlan"=>{"name"=>"Irina", "description"=>"", "selected_a"=>"[\"36\", \"40\", \"44\", \"48\", \"149\", \"153\", \"157\", \"161\", \"165\"]", "selected_g"=>"[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]", "zone"=>"Michelle", "client_id"=>""}, "commit"=>"Update WLAN", "controller"=>"wlans", "action"=>"update", "id"=>"73"} }[0m
+Redirected to http://138.28.72.137:3000/wlans/73
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms | Allocations: 2777)
+
+
+Started GET "/wlans/73" for 138.28.142.213 at 2023-06-27 14:25:23 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#show as TURBO_STREAM
+  Parameters: {"id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/show.html.erb within layouts/application
+  Rendered wlans/_wlan.html.erb (Duration: 0.7ms | Allocations: 484)
+  Rendered wlans/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1321)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3783)
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.8ms | Allocations: 6027)
+
+
+Started PATCH "/wlans/73" for 138.28.171.140 at 2023-06-27 14:25:25 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "wlan"=>{"name"=>"Irina", "description"=>"", "selected_a"=>"[\"36\", \"40\", \"44\", \"48\", \"149\", \"153\", \"157\", \"161\", \"165\"]", "selected_g"=>"[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]", "zone"=>"Michelle", "client_id"=>""}, "commit"=>"Update WLAN", "id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :zone. Context: { controller: WlansController, action: update, request: #<ActionDispatch::Request:0x00007fce9aed6730>, params: {"_method"=>"patch", "authenticity_token"=>"[FILTERED]", "wlan"=>{"name"=>"Irina", "description"=>"", "selected_a"=>"[\"36\", \"40\", \"44\", \"48\", \"149\", \"153\", \"157\", \"161\", \"165\"]", "selected_g"=>"[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]", "zone"=>"Michelle", "client_id"=>""}, "commit"=>"Update WLAN", "controller"=>"wlans", "action"=>"update", "id"=>"73"} }[0m
+Redirected to http://138.28.72.137:3000/wlans/73
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms | Allocations: 2559)
+
+
+Started GET "/wlans/73" for 138.28.171.140 at 2023-06-27 14:25:25 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#show as TURBO_STREAM
+  Parameters: {"id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/show.html.erb within layouts/application
+  Rendered wlans/_wlan.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered wlans/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 466)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2928)
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 0.7ms | Allocations: 5089)
+
+
+Started GET "/wlans" for 138.28.171.140 at 2023-06-27 14:25:27 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:25
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.1ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  Rendered wlans/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 8060)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 10555)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 1.7ms | Allocations: 12175)
+
+
+Started GET "/wlans" for 138.28.142.213 at 2023-06-27 14:25:31 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:25
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  Rendered wlans/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 8055)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 10539)
+Completed 200 OK in 22ms (Views: 18.1ms | ActiveRecord: 1.6ms | Allocations: 12174)
+
+
+Started GET "/wlans" for 138.28.142.213 at 2023-06-27 14:27:42 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:25
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  Rendered wlans/index.html.erb within layouts/application (Duration: 35.2ms | Allocations: 21658)
+  Rendered home/_header.html.erb (Duration: 1.2ms | Allocations: 600)
+  Rendered layout layouts/application.html.erb (Duration: 93.7ms | Allocations: 35509)
+Completed 200 OK in 112ms (Views: 91.8ms | ActiveRecord: 5.5ms | Allocations: 44378)
+
+
+Started GET "/wlans" for 138.28.171.140 at 2023-06-27 14:27:43 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.5ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:25
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  Rendered wlans/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 8056)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 10519)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 1.7ms | Allocations: 12129)
+
+
+Started GET "/wlans/73/edit" for 138.28.171.140 at 2023-06-27 14:27:46 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#edit as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/edit.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/wlans/_form.html.erb:48
+  Rendered wlans/_form.html.erb (Duration: 14.2ms | Allocations: 7118)
+  Rendered wlans/edit.html.erb within layouts/application (Duration: 15.3ms | Allocations: 7491)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 9943)
+Completed 200 OK in 24ms (Views: 17.8ms | ActiveRecord: 2.2ms | Allocations: 12755)
+
+
+Started GET "/wlans/73/edit" for 138.28.142.213 at 2023-06-27 14:27:47 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#edit as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/edit.html.erb within layouts/application
+  [1m[36mZone Load (0.3ms)[0m  [1m[34mSELECT `zones`.* FROM `zones`[0m
+  ↳ app/views/wlans/_form.html.erb:48
+  Rendered wlans/_form.html.erb (Duration: 3.7ms | Allocations: 2296)
+  Rendered wlans/edit.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2443)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 274)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 4895)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 1.1ms | Allocations: 7050)
+
+
+Started PATCH "/wlans/73" for 138.28.171.140 at 2023-06-27 14:27:49 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "wlan"=>{"name"=>"Irina", "description"=>"", "selected_a"=>"[\"36\", \"40\", \"44\", \"48\", \"149\", \"153\", \"157\", \"161\", \"165\"]", "selected_g"=>"[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]", "zone"=>"Michelle", "client_id"=>""}, "commit"=>"Update WLAN", "id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/wlans_controller.rb:46:in `block in update'
+  [1m[36mWlan Update (0.4ms)[0m  [1m[33mUPDATE `wlans` SET `wlans`.`updated_at` = '2023-06-27 14:27:49.265109', `wlans`.`zone` = 'Michelle' WHERE `wlans`.`id` = 73[0m
+  ↳ app/controllers/wlans_controller.rb:46:in `block in update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/wlans_controller.rb:46:in `block in update'
+Redirected to http://138.28.72.137:3000/wlans/73
+Completed 302 Found in 11ms (ActiveRecord: 2.6ms | Allocations: 5299)
+
+
+Started GET "/wlans/73" for 138.28.171.140 at 2023-06-27 14:27:49 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#show as TURBO_STREAM
+  Parameters: {"id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/show.html.erb within layouts/application
+  Rendered wlans/_wlan.html.erb (Duration: 0.8ms | Allocations: 483)
+  Rendered wlans/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1238)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3701)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.8ms | Allocations: 5996)
+
+
+Started GET "/wlans" for 138.28.171.140 at 2023-06-27 14:27:50 +0000
+Cannot render console from 138.28.171.140! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:25
+  [1m[36mManager Load (0.3ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  Rendered wlans/index.html.erb within layouts/application (Duration: 19.6ms | Allocations: 8063)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 10558)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 1.7ms | Allocations: 12178)
+
+
+Started PATCH "/wlans/73" for 138.28.142.213 at 2023-06-27 14:27:51 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "wlan"=>{"name"=>"Irina", "description"=>"", "selected_a"=>"[\"36\", \"40\", \"44\", \"48\", \"149\", \"153\", \"157\", \"161\", \"165\"]", "selected_g"=>"[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\"]", "zone"=>"Michelle", "client_id"=>""}, "commit"=>"Update WLAN", "id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/wlans/73
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms | Allocations: 2485)
+
+
+Started GET "/wlans/73" for 138.28.142.213 at 2023-06-27 14:27:51 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#show as TURBO_STREAM
+  Parameters: {"id"=>"73"}
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans` WHERE `wlans`.`id` = 73 LIMIT 1[0m
+  ↳ app/controllers/wlans_controller.rb:69:in `set_wlan'
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/show.html.erb within layouts/application
+  Rendered wlans/_wlan.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered wlans/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 468)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2932)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.8ms | Allocations: 5078)
+
+
+Started GET "/wlans" for 138.28.142.213 at 2023-06-27 14:27:55 +0000
+Cannot render console from 138.28.142.213! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering wlans/index.html.erb within layouts/application
+  [1m[36mWlan Load (0.4ms)[0m  [1m[34mSELECT `wlans`.* FROM `wlans`[0m
+  ↳ app/views/wlans/index.html.erb:25
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  [1m[36mCACHE Manager Load (0.0ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 LIMIT 1[0m
+  ↳ app/views/wlans/index.html.erb:26
+  [1m[36mCACHE Wificlient Load (0.0ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`name` = 'jim' LIMIT 1[0m
+  ↳ app/helpers/wlans_helper.rb:28:in `parseWifiClient'
+  Rendered wlans/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 8057)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 275)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 10518)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 1.8ms | Allocations: 12147)
+
+
