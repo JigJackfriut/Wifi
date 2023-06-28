@@ -10,6 +10,7 @@
       <th scope="col">WLAN</th>
       <th scope="col">Phy</th>
       <th scope="col">Txpower</th>
+	  <th scope="col">Mode</th>
       <th scope="col">Selected a</th>
       <th scope="col">Selected g</th>
       <th scope="col">Enabled</th>
@@ -32,6 +33,7 @@
           <td><%= wlan.wlan %></td>
           <td><%= wlan.phy %></td>
           <td><%= wlan.txpower %></td>
+		  <td> </td>
 		  <td><%= wlan.selected_a %></td>
 		  <td><%= wlan.selected_g %></td>
 		  <td><%= form_with(model: wlan) do |form| %>
