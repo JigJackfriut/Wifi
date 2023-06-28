@@ -11,7 +11,8 @@ module API
 			requires :id, type: String, desc: "ID of the wificlient"
         end
 		get ":id", root:"jsontests" do
-			Jsontest.where(id: permitted_params[:id])
+			JSON.parse(Jsontest.find_by(id: permitted_params[:id]).config_json)
+			
         end
       end
 	  
