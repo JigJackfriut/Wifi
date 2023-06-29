@@ -43,4 +43,20 @@ module WlansHelper
 		return html.html_safe
 		
 	end
+	
+	def parseChannels(arr)
+		if arr == nil 
+			return 
+		end 
+		stringparse = arr
+		b = JSON.parse(stringparse) 
+		s= [] 
+		b.each do |n|
+			s.append(n)
+		end 
+		puts "Result: #{s}"
+		return s 
+	
+	end
+	
 end

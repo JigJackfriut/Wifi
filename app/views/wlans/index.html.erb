@@ -33,7 +33,11 @@
           <td><%= wlan.wlan %></td>
           <td><%= wlan.phy %></td>
           <td><%= wlan.txpower %></td>
-		  <td> </td>
+		  <td> <%= form_with(model: wlan) do |form| %>
+				
+				<%= form.select(:mode, options = {G: "G", A: "A" }, html_options = {class: "dropdown"}, onchange: "this.form.requestSubmit()")%>
+				<% end %> 
+		  </td>
 		  <td><%= wlan.selected_a %></td>
 		  <td><%= wlan.selected_g %></td>
 		  <td><%= form_with(model: wlan) do |form| %>

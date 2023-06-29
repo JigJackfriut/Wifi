@@ -22,25 +22,30 @@
   </div>
   <br>
   
-   <div>
-    <%= form.label :selected_a, 'Selected A Channels', style: "display: block" %>
-    <%= form.text_field :selected_a  %>
-  </div>
-   <div>
-    <em> <%= form.label :a, "Available A Channels: #{parseArray(form.object.a)}", style: "display: block" %> </em>
-  </div>
-  <br>
+  <% if wlan.mode == "A" %> 
+		<div class="field">
+			<%= form.label :selected_a, style: "display: block" %>
+			<%= form.select(:selected_a, options=parseChannels(form.object.a), html_options = {class: "dropdown"}, {:include_hidden => false, :include_blank =>false, :multiple => true} ) %>  <br/>
+				<em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
+
+	   <br/>
+			<em> <%= form.label :a, "Available A Channels: #{parseArray(form.object.a)}", style: "display: block" %> </em>
+		</div>
+		<br>
   
- 
+  <% elsif wlan.mode == "G" %>
   
-  <div>
-    <%= form.label :selected_g, 'Selected G Channels', style: "display: block" %>
-    <%= form.text_field :selected_g  %>
-  </div>
-   <div>
-   <em> <%= form.label :g, "Available G Channels: #{parseArray(form.object.g)}", style: "display: block" %> </em>
-  </div>
-  <br>
+		<div class="field">
+			<%= form.label :selected_g, style: "display: block" %>
+			<%= form.select(:selected_g, options=parseChannels(form.object.g), html_options = {class: "dropdown"}, {:include_hidden => false, :include_blank =>false, :multiple => true} ) %>  <br/>
+				<em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
+
+	   <br/>
+		<div>
+			<em> <%= form.label :g, "Available G Channels: #{parseArray(form.object.g)}", style: "display: block" %> </em>
+		</div>
+		<br>
+  <% end %>
   
   <div class="field">
   <%= form.label :zone, style: "display: block" %>
