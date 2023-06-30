@@ -14,8 +14,8 @@ module API
 		post ":id", root:"jsontests" do
 			render json: JSON.parse(Jsontest.find_by(id: permitted_params[:id]).config_json)
         end
-        puts "JSONTESTS"
-        puts "PARAMS #{params}"
+        #puts "JSONTESTS"
+        #puts "PARAMS #{params}"
 			
       end
 	  

@@ -58,5 +58,4 @@ module WlansHelper
 		return s 
 	
 	end
-	
 end
