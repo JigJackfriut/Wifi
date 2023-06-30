@@ -22,22 +22,23 @@
   </div>
   <br>
   
-  <% if wlan.mode == "A" %> 
+  <% if wlan.mode == "A" and form.object.a %> 
 		<div class="field">
 			<%= form.label :selected_a, style: "display: block" %>
-			<%= form.select(:selected_a, options=parseChannels(form.object.a), html_options = {class: "dropdown"}, {:include_hidden => false, :include_blank =>false, :multiple => true} ) %>  <br/>
+			<%= form.select(:selected_a, options=parseChannels(form.object.a), html_options = {:include_hidden => false, :include_blank => false, class: "dropdown"}, { :multiple => true} ) %>  <br/>
 				<em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
 
 	   <br/>
 			<em> <%= form.label :a, "Available A Channels: #{parseArray(form.object.a)}", style: "display: block" %> </em>
 		</div>
 		<br>
-  
+  <% elsif wlan.mode =="A" and !form.object.a %>
+		<p style="color: red"> No A channels. Please switch modes. </p>
   <% elsif wlan.mode == "G" %>
   
 		<div class="field">
 			<%= form.label :selected_g, style: "display: block" %>
-			<%= form.select(:selected_g, options=parseChannels(form.object.g), html_options = {class: "dropdown"}, {:include_hidden => false, :include_blank =>false, :multiple => true} ) %>  <br/>
+			<%= form.select(:selected_g, options=parseChannels(form.object.g), html_options = {:include_hidden => false, :include_blank => false, class: "dropdown"}, {:multiple => true} ) %>  <br/>
 				<em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
 
 	   <br/>
