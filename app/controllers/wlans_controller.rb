@@ -1,4 +1,5 @@
 class WlansController < ApplicationController
+  include WlansHelper
   before_action :set_wlan, only: %i[ show edit update destroy ]
   before_action :authenticate_manager!  # GET /wlans or /wlans.json
   before_action :current_manager, only: [:edit, :update, :destroy]
@@ -42,6 +43,9 @@ class WlansController < ApplicationController
 
   # PATCH/PUT /wlans/1 or /wlans/1.json
   def update
+
+	wlanUpdate(@wlan, wlan_params)
+	
     respond_to do |format|
       if @wlan.update(wlan_params)
         format.html { redirect_to wlan_url(@wlan), notice: "Wlan was successfully updated." }

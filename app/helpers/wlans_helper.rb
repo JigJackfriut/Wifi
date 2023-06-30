@@ -58,4 +58,17 @@ module WlansHelper
 		return s 
 	
 	end
+	
+	def wlanUpdate(wlan, wlan_params)
+	
+		if (wlan_params[:enabled] != wlan.enabled ) and wlan_params[:enabled]!=nil
+			puts "params: #{wlan_params[:enabled]} old: #{wlan.enabled}"
+			puts "wlan id! #{wlan.id} client id! #{wlan.client_id}"
+			client = Wificlient.find_by(id: wlan.client_id)
+			client.update(update_needed: true)
+			puts "update needed!" 
+		else
+			puts "update not needed!" 
+		end 
+	end 
 end
