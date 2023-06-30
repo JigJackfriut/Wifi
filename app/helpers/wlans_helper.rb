@@ -28,7 +28,7 @@ module WlansHelper
 		client = Wificlient.find_by(:name => arr).id
 		puts "SHOW: #{client}"
 		client = client.to_s
-		s = s + '<%= link_to "'+ arr +'", "http://138.28.72.190:3000/wificlients/'+client+'" %> </br>' 
+		s = s + '<%= link_to "'+ arr +'", "http://localhost:3000/wificlients/'+client+'" %> </br>' 
 			#s = s + '<input type = "checkbox" id="' + n +'" name="' +n +'" value="Bike"> <label for="' + n +'">' + n +'</label><br>'
 		puts "Result: #{s}"
 		
@@ -61,7 +61,7 @@ module WlansHelper
 	
 	def wlanUpdate(wlan, wlan_params)
 	
-		if (wlan_params[:enabled] != wlan.enabled ) and wlan_params[:enabled]!=nil
+		if (wlan_params[:enabled] != wlan.enabled and wlan_params[:enabled]!=nil)
 			puts "params: #{wlan_params[:enabled]} old: #{wlan.enabled}"
 			puts "wlan id! #{wlan.id} client id! #{wlan.client_id}"
 			client = Wificlient.find_by(id: wlan.client_id)
