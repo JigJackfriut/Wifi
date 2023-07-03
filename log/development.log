@@ -39450,3 +39450,25 @@ Processing by WlansController#index as HTML
 Completed 200 OK in 31ms (Views: 24.8ms | ActiveRecord: 2.2ms | Allocations: 15871)
 
 
+Started GET "/" for 138.28.142.221 at 2023-07-03 13:22:06 +0000
+Cannot render console from 138.28.142.221! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/irina/cloudwifi/app/helpers/zones_helper.rb:29: syntax error, unexpected end-of-input):
+  
+app/helpers/zones_helper.rb:29: syntax error, unexpected end-of-input
+app/helpers/zones_helper.rb:29: syntax error, unexpected end-of-input
+app/helpers/zones_helper.rb:29: syntax error, unexpected end-of-input
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/home_controller.rb:1:in `<main>'
+Started GET "/" for 138.28.142.221 at 2023-07-03 13:22:37 +0000
+Cannot render console from 138.28.142.221! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 737)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 348)
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 34253)
+Completed 200 OK in 65ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 37362)
+
+

@@ -24,6 +24,5 @@ module ZonesHelper
 		else
 			puts "update not needed!" 
 		end 
-	end 
-
+	end
 end
