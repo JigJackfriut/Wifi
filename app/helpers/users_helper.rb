@@ -18,6 +18,7 @@ module UsersHelper
 
 	def userUpdate(user, user_params)
 		if (user_params[:passphrase] != user.ssid)
+		puts "YPPPPPPPPPPPPPPPPHGP LOOOKKSNNSN"
 			client = Wificlient.find_by(id: user.client_id)
 			client.update(update_needed: true)
 			puts "update needed!" 
