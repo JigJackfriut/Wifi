@@ -1,4 +1,6 @@
 require 'json'
+require 'openssl'
+require 'base64'
 module API
   module V1
     class Wificlients < Grape::API
@@ -28,15 +30,26 @@ module API
       #  get ":id", root:"wificlient" do
       #    Wificlient.where(id: permitted_params[:id]).first!
       #  end
-	  route :post, 'status' do
+		route :post, 'status' do
 			mac = params[:mac]
 			puts "MAC address: #{mac}"
 			render json: {status:"success"}
 		end
-      end
+		
+		route :post, 'get_config' do 
+			process_config(params)
+			
+			pmktest = genpmk('password', '123')
+			puts "TEST PMK!!!!! #{pmktest}"
+		end 
+		
+		route :post, 'alive' do 
+		
+		end 
+      
     end
     
-
+	end 
   end
 end
 
@@ -95,3 +108,56 @@ def process_hello(params)
 	end
 end
 
+def genpmk(pass, ssid)
+
+	#pass = pass
+	#ssid = ssid
+	salt = OpenSSL::Random.random_bytes(16)
+	digest = OpenSSL::Digest::SHA256.new
+	len = digest.digest_length
+	key = OpenSSL::PKCS5.pbkdf2_hmac_sha1(pass, ssid, 4096, len)
+	atype = key.class
+	puts "Key (type:#{atype}, len:#{key.length}) #{key}"
+	chars = key.split('')
+	print "PMK Hex key: "
+	chars.each do |n|
+		print "#{n.ord.to_s(16)}"
+	end
+	puts " "
+
+	pmk = Base64.encode64(key)
+	puts "PMK Text Key: #{pmk}"
+	return pmk
+
+end 
+
+def process_config(params)
+	client = Wificlient.find_by(mac:params[:mac])
+	
+	config = config.map {|k,v| {label: k, values: v}}
+	
+	config_json = [] 
+	zone_array = [] 
+	
+	Wlan.where(client_id => client.id).find_each do |wlan|
+		zone_array.append(wlan.zone)
+		
+		if wlan.enabled
+			
+			
+		end
+	end
+	zone_array.each do |zoneID|
+		Zone.find_by(id: zoneID)
+		ssid = zone.ssid 
+		
+		
+		
+	end 
+		
+		
+	
+	#client.wlan_name 
+	
+	
+end
