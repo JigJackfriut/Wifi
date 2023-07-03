@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+include UsersHelper
   before_action :set_user, only: %i[ show edit update destroy ]
   before_action :prepare_zones
   before_action :authenticate_manager!
@@ -32,6 +33,10 @@ class UsersController < ApplicationController
     #@user = User.new(user_params)
     @user = current_manager.users.build(user_params)
 
+	zone = Zone.find_by(id: @user.zone_id)
+	puts "LOOOOOKK"
+	puts "#{zone}"
+	#client.update(update_needed: true)
     respond_to do |format|
       if @user.save
         format.html { redirect_to user_url(@user), notice: "User was successfully created." }
@@ -45,6 +50,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1 or /users/1.json
   def update
+	userUpdate(@user, user_params)
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to user_url(@user), notice: "User was successfully updated." }
@@ -58,8 +64,7 @@ class UsersController < ApplicationController
 
   # DELETE /users/1 or /users/1.json
   def destroy
-    @user.destroy
-
+	@user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: "User was successfully destroyed." }
       format.json { head :no_content }
@@ -77,6 +82,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :user_type, :passphrase, :manager_id, [:zone => []], :zone_id)
+      params.require(:user).permit(:name, :user_type, :passphrase, :manager_id, [:zone => []], :zone_id, :client_id)
     end
 end

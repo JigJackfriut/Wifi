@@ -44,6 +44,7 @@ class ZonesController < ApplicationController
 
   # PATCH/PUT /zones/1 or /zones/1.json
   def update
+  zoneUpdate(@zone, zone_params)
     respond_to do |format|
       if @zone.update(zone_params)
         format.html { redirect_to zone_url(@zone), notice: "Zone was successfully updated." }

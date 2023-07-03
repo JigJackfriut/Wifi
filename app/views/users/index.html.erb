@@ -19,9 +19,12 @@
           <td><%= user.name %></td>  
           <td><%= user.user_type %></td>
           <td><%= user.passphrase %></td>
-          <td><%= user.zone %></td>
+          <td><%  user.zone %>
+		  <%= parseZones(user.zone).each do |zone|%>
+				<%obj= Zone.find_by[id: zone]%>
+				<%puts obj.name%>
+				<%end%> </td>
 		  <td><%= user.manager_id %></td>
-		 
           <td class="justify-content-around">
   			<%= link_to user, style: "text-decoration:none" do %>
   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >

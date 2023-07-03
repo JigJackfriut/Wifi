@@ -66,6 +66,7 @@ class WificlientsController < ApplicationController
 
   # PATCH/PUT /wificlients/1 or /wificlients/1.json
   def update
+	wificlientUpdate(@wificlient, wificlient_params)
     respond_to do |format|
       if @wificlient.update(wificlient_params)
         format.html { redirect_to wificlient_url(@wificlient), notice: "Wificlient was successfully updated." }
