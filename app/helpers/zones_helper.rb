@@ -16,4 +16,14 @@ module ZonesHelper
 		return s 
   end
   
+  def zoneUpdate(zone, zone_params)
+		if (zone_params[:ssid] != zone.ssid) or (zone_params[:open] != zone.open) 
+			client = Wificlient.find_by(id: zone.client_id)
+			client.update(update_needed: true)
+			puts "update needed!" 
+		else
+			puts "update not needed!" 
+		end 
+	end 
+
 end

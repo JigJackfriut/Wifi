@@ -1,4 +1,5 @@
 class ZonesController < ApplicationController
+  include ZonesHelper
   before_action :set_zone, only: %i[ show edit update destroy ] 
   before_action :authenticate_manager!
   before_action :current_manager, only: [:edit, :update, :destroy]
