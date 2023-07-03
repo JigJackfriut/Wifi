@@ -32,15 +32,17 @@ include UsersHelper
   def create
     #@user = User.new(user_params)
     @user = current_manager.users.build(user_params)
+	
 	parseZones(@user.zone).each do |zone|
-	Wlan.where( :zone => zone).find_each do |wlan|
-		client = Wificlient.find_by(id: wlan.client_id)
-		client.update(update_needed: true)
+		puts "checkpoint! #{zone}" 
+		Wlan.where( :zone => zone).find_each do |wlan|
+			puts "checkpoint 2!" 
+			client = Wificlient.find_by(id: wlan.client_id)
+			client.update(update_needed: true)
+			puts "client ID! : #{client.id}"
 		end 
 	end
-	zone = Zone.find_by(id: @user.zone)
-	puts "LOOOOOKK"
-	puts "#{zone}"
+	
 	#client.update(update_needed: true)
     respond_to do |format|
       if @user.save
@@ -69,7 +71,19 @@ include UsersHelper
 
   # DELETE /users/1 or /users/1.json
   def destroy
+	parseZones(@user.zone).each do |zone|
+		puts "checkpoint! #{zone}" 
+		Wlan.where( :zone => zone).find_each do |wlan|
+			puts "checkpoint 2!" 
+			client = Wificlient.find_by(id: wlan.client_id)
+			client.update(update_needed: true)
+			puts "client ID! : #{client.id}"
+		end 
+	end
+	
 	@user.destroy
+	
+	
     respond_to do |format|
       format.html { redirect_to users_url, notice: "User was successfully destroyed." }
       format.json { head :no_content }
