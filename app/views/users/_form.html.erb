@@ -32,7 +32,7 @@
   
   <div class="field">
   <%= form.label :zone, style: "display: block" %>
-  <%= form.collection_select(:zone, Zone.all, :id, :name, options = {include_hidden: false, include_blank: "no zone" }, html_options = {multiple: "true",class: "dropdown"}) %>  <br/>
+  <%= form.collection_select(:zone, Zone.where(:manager_id => current_manager.id), :id, :name, options = {include_hidden: false, include_blank: "no zone" }, html_options = {multiple: "true",class: "dropdown"}) %>  <br/>
   <em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
 <br/>
   <div>

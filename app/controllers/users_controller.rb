@@ -43,6 +43,7 @@ include UsersHelper
 		end 
 	end
 	
+	
 	#client.update(update_needed: true)
     respond_to do |format|
       if @user.save
@@ -53,6 +54,7 @@ include UsersHelper
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+	userAddZone(@user, user_params)
   end
 
   # PATCH/PUT /users/1 or /users/1.json

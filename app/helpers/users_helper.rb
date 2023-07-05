@@ -26,4 +26,16 @@ module UsersHelper
 			puts "update not needed!" 
 		end 
 	end
+	
+	def userAddZone(user, user_params)
+		puts "params: #{user_params}"
+		zoneList = user_params[:zone]
+		puts "zoneList: #{zoneList}"
+		zoneList.each do |zoneID|
+			zone = Zone.find_by(id: zoneID)
+			Userzone.create(user_id: user.id, zone_id: zone.id)
+		end
+	end 
+	
+	
 end
