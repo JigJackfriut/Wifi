@@ -29,7 +29,7 @@ module UsersHelper
 	
 	def userAddZone(user, user_params)
 		puts "params: #{user_params}"
-		zoneList = user_params[:zone]
+		zoneList = user_params[:zone_list]
 		puts "zoneList: #{zoneList}"
 		zoneList.each do |zoneID|
 			zone = Zone.find_by(id: zoneID)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_05_143206) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_171715) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -118,7 +118,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_05_143206) do
     t.integer "manager_id"
     t.string "country"
     t.string "wlan_name"
-    t.boolean "update_needed"
+    t.boolean "config_change"
+    t.boolean "pmk_change"
     t.index ["manager_id"], name: "index_wificlients_on_manager_id"
   end
 

@@ -31,17 +31,17 @@ include UsersHelper
   # POST /users or /users.json
   def create
     #@user = User.new(user_params)
-    @user = current_manager.users.build(user_params)
+    @user = current_manager.users.build(user_params.except(:zone_list))
 	
-	parseZones(@user.zone).each do |zone|
-		puts "checkpoint! #{zone}" 
-		Wlan.where( :zone => zone).find_each do |wlan|
-			puts "checkpoint 2!" 
-			client = Wificlient.find_by(id: wlan.client_id)
-			client.update(update_needed: true)
-			puts "client ID! : #{client.id}"
-		end 
-	end
+	#parseZones(@user.zone).each do |zone|
+	#	puts "checkpoint! #{zone}" 
+	#	Wlan.where( :zone => zone).find_each do |wlan|
+	#		puts "checkpoint 2!" 
+	#		client = Wificlient.find_by(id: wlan.client_id)
+	#		client.update(update_needed: true)
+	#		puts "client ID! : #{client.id}"
+	#	end 
+	#end
 	
 	
 	#client.update(update_needed: true)
@@ -103,6 +103,6 @@ include UsersHelper
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :user_type, :passphrase, :manager_id, [:zone => []], :zone_id, :client_id)
+      params.require(:user).permit(:name, :user_type, :passphrase, :manager_id, [:zone_list => []], :zone_id, :client_id)
     end
 end
