@@ -59,6 +59,10 @@ class WlansController < ApplicationController
 
   # DELETE /wlans/1 or /wlans/1.json
   def destroy
+	client = Wificlient.find_by(id: @wlan.client_id)
+	client.update(config_change: true)
+	puts "client ID! : #{client.id}"
+	
     @wlan.destroy
 
     respond_to do |format|

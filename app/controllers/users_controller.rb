@@ -33,15 +33,15 @@ include UsersHelper
     #@user = User.new(user_params)
     @user = current_manager.users.build(user_params.except(:zone_list))
 	
-	#parseZones(@user.zone).each do |zone|
-	#	puts "checkpoint! #{zone}" 
-	#	Wlan.where( :zone => zone).find_each do |wlan|
-	#		puts "checkpoint 2!" 
-	#		client = Wificlient.find_by(id: wlan.client_id)
-	#		client.update(update_needed: true)
-	#		puts "client ID! : #{client.id}"
-	#	end 
-	#end
+	(user_params[:zone_list]).each do |zone|
+		puts "checkpoint! #{zone}" 
+		Wlan.where( :zone => zone).find_each do |wlan|
+		puts "checkpoint 2!" 
+			client = Wificlient.find_by(id: wlan.client_id)
+			client.update(pmk_change: true)
+			puts "client ID! : #{client.id}"
+		end 
+	end
 	
 	
 	#client.update(update_needed: true)
@@ -73,12 +73,13 @@ include UsersHelper
 
   # DELETE /users/1 or /users/1.json
   def destroy
-	parseZones(@user.zone).each do |zone|
-		puts "checkpoint! #{zone}" 
+	(Userzone.where(:user_id => @user.id)).find_each do |user|
+		
+		zone = user.zone_id
 		Wlan.where( :zone => zone).find_each do |wlan|
 			puts "checkpoint 2!" 
 			client = Wificlient.find_by(id: wlan.client_id)
-			client.update(update_needed: true)
+			client.update(pmk_change: true)
 			puts "client ID! : #{client.id}"
 		end 
 	end

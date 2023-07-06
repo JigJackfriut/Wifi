@@ -28,7 +28,7 @@ module WlansHelper
 		client = Wificlient.find_by(:name => arr).id
 		puts "SHOW: #{client}"
 		client = client.to_s
-		s = s + '<%= link_to "'+ arr +'", "http://138.28.72.190:3000/wificlients/'+client+'" %> </br>' 
+		s = s + '<%= link_to "'+ arr +'", "/wificlients/'+client+'" %> </br>' 
 			#s = s + '<input type = "checkbox" id="' + n +'" name="' +n +'" value="Bike"> <label for="' + n +'">' + n +'</label><br>'
 		puts "Result: #{s}"
 		
@@ -61,14 +61,27 @@ module WlansHelper
 	
 	def wlanUpdate(wlan, wlan_params)
 	
-		if (wlan_params[:enabled] != wlan.enabled and wlan_params[:enabled]!=nil)
+		if ((wlan_params[:enabled] != wlan.enabled and wlan_params[:enabled]!=nil) or (wlan_params[:mode] != wlan.mode and wlan_params[:mode]!=nil))
 			puts "params: #{wlan_params[:enabled]} old: #{wlan.enabled}"
+			puts "params: #{wlan_params[:mode]} old: #{wlan.mode}"
 			puts "wlan id! #{wlan.id} client id! #{wlan.client_id}"
 			client = Wificlient.find_by(id: wlan.client_id)
-			client.update(update_needed: true)
+			client.update(config_change: true)
 			puts "update needed!" 
 		else
 			puts "update not needed!" 
 		end 
+		
+		if ((wlan_params[:selected_g]!= parseChannels(wlan.selected_g) and wlan_params[:selected_g] !=nil ) or (wlan_params[:selected_a]!= parseChannels(wlan.selected_a) and wlan_params[:selected_a] !=nil))
+			puts "TESTING G IF NEW EQUALS OLD #{wlan_params[:selected_g]!= parseChannels(wlan.selected_g)}, TESTING G IF NIL #{wlan_params[:selected_g]==nil}"
+			puts "params: #{wlan_params[:selected_g]} old: #{parseChannels(wlan.selected_g)}"
+			puts "params: #{wlan_params[:selected_a]} old: #{wlan.selected_a}"
+			puts "update needed!" 
+			client = Wificlient.find_by(id: wlan.client_id)
+			client.update(config_change: true)
+		else
+			puts "update not needed!"
+		end
+		
 	end 
 end

@@ -19,12 +19,7 @@
           <td><%= user.name %></td>  
           <td><%= user.user_type %></td>
           <td><%= user.passphrase %></td>
-          <td>
-		  <% parseZones(user.zone).each do |zone|%>
-				<% puts "zone here: #{zone}" %> 
-				<%obj= Zone.find_by(id: zone)%>
-				<%= obj.name + ", "%> 
-				<%end%> </td>
+          <td>	 </td>
 		  <td><%= user.manager_id %></td>
           <td class="justify-content-around">
   			<%= link_to user, style: "text-decoration:none" do %>

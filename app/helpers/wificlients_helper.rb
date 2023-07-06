@@ -1,19 +1,12 @@
 module WificlientsHelper
-	def parseWLAN(arr)
-		require 'json'
-		require 'erb'
-		if arr == nil 
-			return 
-		end 
-		stringparse = arr
-		b = JSON.parse(stringparse) 
+	def parseWLAN(wificlient)
 		s=""
 		first = true
-		b.each do |n|
-			wlan = Wlan.find_by(:id => n).name
-			puts wlan
-			n = n.to_s
-			s = s + '<%= link_to "'+ wlan +'", "http://138.28.72.190:3000/wlans/'+n+'" %> </br>' 
+		Wlan.where(:client_id => wificlient.id).find_each do |wlan|
+			wlanName = wlan.name 
+			puts "HERE IT IS!!! #{wlan.name}"
+			n = (wlan.id).to_s						
+			s = s + '<%= link_to "'+ wlanName +'", "/wlans/'+n+'" %> </br>' 
 			#s = s + '<input type = "checkbox" id="' + n +'" name="' +n +'" value="Bike"> <label for="' + n +'">' + n +'</label><br>'
 			first=false
 		end 
