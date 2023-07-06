@@ -61,7 +61,7 @@ include UsersHelper
   def update
 	userUpdate(@user, user_params)
     respond_to do |format|
-      if @user.update(user_params)
+      if @user.update(user_params.except(:zone_list))
         format.html { redirect_to user_url(@user), notice: "User was successfully updated." }
         format.json { render :show, status: :ok, location: @user }
       else
