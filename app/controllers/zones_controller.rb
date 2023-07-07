@@ -58,6 +58,10 @@ class ZonesController < ApplicationController
 
   # DELETE /zones/1 or /zones/1.json
   def destroy
+	(Userzone.where(:zone_id => @zone.id)).find_each do |zone|
+	  zone.destroy 
+	end
+  
     @zone.destroy
 
     respond_to do |format|
