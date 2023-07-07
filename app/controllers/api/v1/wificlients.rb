@@ -124,21 +124,40 @@ def process_config(params)
 	#puts hash
 	#config_json << hash.to_json
 	#end
-	
+	radios = Array.new
 	Wlan.where(client_id: client.id).find_each do |wlan|
 		zone_array.append(wlan.zone)
+		wlan_hash = {}
+		zone = Zone.find_by(id: wlan.zone)
+
+		puts "BEFORE WLAN"
 		if wlan.enabled
-			
-			
+			#puts "BREAK IN SUCCESS"
+			hostapd_hash = {}
+			if wlan.mode == "A"
+				channels = wlan.selected_a
+			else
+				channels = wlan.selected_g
+			end
+			hostapd_hash.merge!({ "ssid": zone.ssid, "interface": wlan.wlan, "channel": "Ask Professor Skon", "hw_mode": wlan.mode, "open": zone.open_ap, "channel_list": channels })
+			#puts "HOSTAPD #{hostapd_hash}"
+			conf_hash ={}
+			conf_hash.merge!({ "mode": "AP", "hostapd": hostapd_hash})
+			#puts "CONF #{conf_hash}"
+			wlan_hash.merge!({ "wlan": wlan.wlan, "config": conf_hash})
+			#puts "WLAN #{wlan_hash}"
+		else 
+			wlan_hash.merge!({ "wlan": wlan.wlan, "status": "OFF"})
 		end
+		radios.append()
 	end
 	pmk = Array.new
 	zone_array.each do |zoneID|
 		Zone.find_by(id: zoneID)
 		Userzone.where(zone_id: zoneID).find_each do |uz| 
-			data_hash = {}
-			data_hash.merge!({ "pmk": uz.pmk, "user_id": uz.user_id})
-			pmk.append(data_hash)
+			pmk_hash = {}
+			pmk_hash.merge!({ "pmk": uz.pmk, "user_id": uz.user_id})
+			pmk.append(pmk_hash)
 		end	
 	end
 	puts "PMK ARRAY: #{pmk}"
