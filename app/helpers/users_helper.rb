@@ -1,5 +1,5 @@
+include UserzonesHelper
 module UsersHelper
-
 	def parseZones(arr)
 		if arr == nil 
 			return 
@@ -17,12 +17,16 @@ module UsersHelper
   
 
 	def userUpdate(user, user_params)
-		if (user_params[:passphrase] != user.passphrase) or (user_params[:name] != user.name)
+		if (user_params[:passphrase] != user.passphrase and user_params[:passphrase]!=nil)
 			puts "NEW PASSPHRASE: #{user_params[:passphrase]} OLD PASSPHRASE: #{user.passphrase} NEW NAME: #{user_params[:name]} OLD NAME: #{user.name}"
+			
 			(Userzone.where(:user_id => user.id)).find_each do |us|
 				puts "YPPPPPPPPPPPPPPPPHGP LOOOKKSNNSN"
-				zone = us.zone_id
-				Wlan.where( :zone => zone).find_each do |wlan|
+				zone = Zone.find_by(id: us.zone_id) 
+				zoneID = zone.id
+				genpmk(user_params[:passphrase], zone.ssid, us.id)
+				
+				Wlan.where( :zone => zoneID).find_each do |wlan|
 					puts "checkpoint 2!" 
 					client = Wificlient.find_by(id: wlan.client_id)
 					client.update(pmk_change: true)
@@ -44,7 +48,9 @@ module UsersHelper
 		puts "zoneList: #{zoneList}"
 		zoneList.each do |zoneID|
 			zone = Zone.find_by(id: zoneID)
-			Userzone.create(user_id: user.id, zone_id: zone.id)
+			userzone = Userzone.create(user_id: user.id, zone_id: zone.id)
+			genpmk(user.passphrase, zone.ssid, userzone.id)
+			
 		end
 	end 
 	

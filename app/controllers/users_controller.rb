@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 include UsersHelper
+include UserzonesHelper
   before_action :set_user, only: %i[ show edit update destroy ]
   before_action :prepare_zones
   before_action :authenticate_manager!
@@ -75,6 +76,7 @@ include UsersHelper
   def destroy
 	(Userzone.where(:user_id => @user.id)).find_each do |user|
 		
+		
 		zone = user.zone_id
 		Wlan.where( :zone => zone).find_each do |wlan|
 			puts "checkpoint 2!" 
@@ -82,7 +84,12 @@ include UsersHelper
 			client.update(pmk_change: true)
 			puts "client ID! : #{client.id}"
 		end 
+		
+	  user.destroy 
 	end
+	
+	
+
 	
 	@user.destroy
 	

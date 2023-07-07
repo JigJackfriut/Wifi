@@ -1,3 +1,4 @@
+include UserzonesHelper
 module ZonesHelper
 	def displayArray(arr)
 		if arr == nil 
@@ -19,6 +20,12 @@ module ZonesHelper
   def zoneUpdate(zone, zone_params)
 		if (zone_params[:ssid] != zone.ssid and zone_params[:ssid] != nil)
 			puts "NEW SSID #{zone_params[:ssid]} OLD SSID #{zone.ssid}"
+			
+			(Userzone.where(:zone_id => zone.id)).find_each do |us|
+				user = User.find_by(id: us.user_id) 
+				genpmk(user.passphrase, zone_params[:ssid], us.id)
+			end
+			
 			Wlan.where( :zone => zone).find_each do |wlan|
 					puts "checkpoint 2!" 
 					client = Wificlient.find_by(id: wlan.client_id)
