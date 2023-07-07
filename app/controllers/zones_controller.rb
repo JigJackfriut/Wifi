@@ -61,6 +61,11 @@ class ZonesController < ApplicationController
 	(Userzone.where(:zone_id => @zone.id)).find_each do |zone|
 	  zone.destroy 
 	end
+	
+	Wlan.where(zone: @zone.id).find_each do |wlan|
+			puts "checkpoint!" 
+			wlan.update(zone: nil)
+		end 
   
     @zone.destroy
 
