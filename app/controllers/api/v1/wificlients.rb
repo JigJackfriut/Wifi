@@ -37,7 +37,7 @@ module API
 		end
 		
 		route :post, 'get_config' do 
-			#process_config(params)
+			process_config(params)
 			
 			#pmktest = genpmk('password', '123')
 			#puts "TEST PMK!!!!! #{pmktest}"
@@ -111,29 +111,37 @@ end
 def process_config(params)
 	client = Wificlient.find_by(mac:params[:mac])
 	
-	config = config.map {|k,v| {label: k, values: v}}
+	#config = config.map {|k,v| {label: k, values: v}}
 	
-	config_json = [] 
+	#config_json = ["status": "success"] 
 	zone_array = [] 
 	
-	Wlan.where(client_id => client.id).find_each do |wlan|
+	#for Userzones.each do |uz|
+	#	uz.user_id 
+	#	uz.pmk
+	#end
+	#config.each do |hash|
+	#puts hash
+	#config_json << hash.to_json
+	#end
+	
+	Wlan.where(client_id: client.id).find_each do |wlan|
 		zone_array.append(wlan.zone)
-		
 		if wlan.enabled
 			
 			
 		end
 	end
+	pmk = Array.new
 	zone_array.each do |zoneID|
 		Zone.find_by(id: zoneID)
-		ssid = zone.ssid 
-		
-		
-		
-	end 
-		
-		
-	
+		Userzone.where(zone_id: zoneID).find_each do |uz| 
+			data_hash = {}
+			data_hash.merge!({ "pmk": uz.pmk, "user_id": uz.user_id})
+			pmk.append(data_hash)
+		end	
+	end
+	puts "PMK ARRAY: #{pmk}"
 	#client.wlan_name 
 	
 	
