@@ -1,6 +1,7 @@
 require 'json'
 require 'openssl'
 require 'base64'
+include WlansHelper
 module API
   module V1
     class Wificlients < Grape::API
@@ -110,20 +111,9 @@ end
 
 def process_config(params)
 	client = Wificlient.find_by(mac:params[:mac])
-	
-	#config = config.map {|k,v| {label: k, values: v}}
-	
-	#config_json = ["status": "success"] 
+
 	zone_array = [] 
-	
-	#for Userzones.each do |uz|
-	#	uz.user_id 
-	#	uz.pmk
-	#end
-	#config.each do |hash|
-	#puts hash
-	#config_json << hash.to_json
-	#end
+
 	radios = Array.new
 	Wlan.where(client_id: client.id).find_each do |wlan|
 		zone_array.append(wlan.zone)
@@ -132,25 +122,26 @@ def process_config(params)
 
 		puts "BEFORE WLAN"
 		if wlan.enabled
-			#puts "BREAK IN SUCCESS"
+			puts "BREAK IN SUCCESS"
 			hostapd_hash = {}
 			if wlan.mode == "A"
 				channels = wlan.selected_a
 			else
 				channels = wlan.selected_g
 			end
-			hostapd_hash.merge!({ "ssid": zone.ssid, "interface": wlan.wlan, "channel": "Ask Professor Skon", "hw_mode": wlan.mode, "open": zone.open_ap, "channel_list": channels })
-			#puts "HOSTAPD #{hostapd_hash}"
+			hostapd_hash.merge!({ "ssid": zone.ssid, "interface": wlan.wlan, "channel": "Ask Professor Skon", "hw_mode": wlan.mode, "open": zone.open_ap, "channel_list": parseArray(channels) })
+			puts "HOSTAPD #{hostapd_hash}"
 			conf_hash ={}
 			conf_hash.merge!({ "mode": "AP", "hostapd": hostapd_hash})
-			#puts "CONF #{conf_hash}"
+			puts "CONF #{conf_hash}"
 			wlan_hash.merge!({ "wlan": wlan.wlan, "config": conf_hash})
-			#puts "WLAN #{wlan_hash}"
+			puts "WLAN #{wlan_hash}"
 		else 
 			wlan_hash.merge!({ "wlan": wlan.wlan, "status": "OFF"})
 		end
-		radios.append()
+		radios.append(wlan_hash)
 	end
+	puts "RADIOS #{radios}"
 	pmk = Array.new
 	zone_array.each do |zoneID|
 		Zone.find_by(id: zoneID)
@@ -162,6 +153,14 @@ def process_config(params)
 	end
 	puts "PMK ARRAY: #{pmk}"
 	#client.wlan_name 
-	
-	
+	config_json = {}
+	if client.pmk_change && client.config_change
+		config_json.merge!({"status": "success", "pmk": pmk, "config": radios})
+	elsif client.pmk_change
+		config_json.merge!({"status": "success", "pmk": pmk})
+	elsif client.config_change
+		config_json.merge!({"status": "success", "config": radios})
+	end
+	puts "FINAL RESULT: #{config_json}"
+	render json: config_json
 end
