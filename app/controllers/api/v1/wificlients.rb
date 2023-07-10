@@ -67,7 +67,7 @@ def process_hello(params)
 			client.update(ipaddress:  params[:ipaddress], version:  params[:version], os: params[:os], model: params[:model])
 		end
 	else 
-		client = Wificlient.create(mac:params[:mac],os:params[:os],version:params[:version],serial:params[:serial],model:params[:model], lastseen: Time.new, dateadded:Time.new, update_needed: false)
+		client = Wificlient.create(mac:params[:mac],os:params[:os],version:params[:version],serial:params[:serial],model:params[:model], lastseen: Time.new, dateadded:Time.new, pmk_change: false, config_change: false)
 	end
 	
 	wlans = params[:wlans] # we gat params from JSON
