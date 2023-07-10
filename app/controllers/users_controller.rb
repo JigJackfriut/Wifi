@@ -61,6 +61,8 @@ include UserzonesHelper
   # PATCH/PUT /users/1 or /users/1.json
   def update
 	userUpdate(@user, user_params)
+	userAddZone(@user, user_params)
+	puts "WE ARRRREE UPDATINGGG"
     respond_to do |format|
       if @user.update(user_params.except(:zone_list))
         format.html { redirect_to user_url(@user), notice: "User was successfully updated." }

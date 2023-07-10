@@ -19,7 +19,7 @@
           <td><%= user.name %></td>  
           <td><%= user.user_type %></td>
           <td><%= user.passphrase %></td>
-          <td>	 </td>
+          <td><%= parseZones(user) %> </td>
 		  <td><%= user.manager_id %></td>
           <td class="justify-content-around">
   			<%= link_to user, style: "text-decoration:none" do %>

@@ -1,18 +1,30 @@
 include UserzonesHelper
 module UsersHelper
-	def parseZones(arr)
-		if arr == nil 
-			return 
-		end 
-		stringparse = arr
-		b = JSON.parse(stringparse) 
-		s= [] 
-		b.each do |n|
-			s.append(n)
+	def parseZones(user)
+		s=""
+		Userzone.where(:user_id => user.id).find_each do |uz|
+			zoneID = uz.zone_id 
+			puts "HERE IT IS!!! #{zoneID}"
+			zone = Zone.find_by(id: zoneID)
+			puts "THE ZZONE!! #{zone}"
+			zoneID = (zoneID).to_s
+			zoneName = zone.name
+			puts "HERE NAMEE #{zoneName}"				
+			s = s + '<%= link_to "'+ zoneName +'", "/zones/'+zoneID+'" %> </br>' 
+			#s = s + '<input type = "checkbox" id="' + n +'" name="' +n +'" value="Bike"> <label for="' + n +'">' + n +'</label><br>'
 		end 
 		puts "Result: #{s}"
-		return s 
-	
+		
+		#<%= link_to wlan_path(wlan), data: {turbo_method: :delete, }, style: "text-decoration:none" %>
+		
+		#return s 
+		#return '<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> <label for="vehicle1"> I have a bike</label><br>'.html_safe
+		#return s.html_safe
+		
+		html = ERB.new(s).result(binding)
+		
+		return html.html_safe
+		
 	end
   
 
@@ -48,7 +60,7 @@ module UsersHelper
 		puts "zoneList: #{zoneList}"
 		zoneList.each do |zoneID|
 			zone = Zone.find_by(id: zoneID)
-			userzone = Userzone.create(user_id: user.id, zone_id: zone.id)
+			userzone = Userzone.create(user_id: user.id, zone_id: zone.id, manager_id: current_manager.id)
 			genpmk(user.passphrase, zone.ssid, userzone.id)
 			
 		end

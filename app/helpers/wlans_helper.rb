@@ -29,15 +29,7 @@ module WlansHelper
 		puts "SHOW: #{client}"
 		client = client.to_s
 		s = s + '<%= link_to "'+ arr +'", "/wificlients/'+client+'" %> </br>' 
-			#s = s + '<input type = "checkbox" id="' + n +'" name="' +n +'" value="Bike"> <label for="' + n +'">' + n +'</label><br>'
 		puts "Result: #{s}"
-		
-		#<%= link_to wlan_path(wlan), data: {turbo_method: :delete, }, style: "text-decoration:none" %>
-		
-		#return s 
-		#return '<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"> <label for="vehicle1"> I have a bike</label><br>'.html_safe
-		#return s.html_safe
-		
 		html = ERB.new(s).result(binding)
 		
 		return html.html_safe
@@ -57,6 +49,22 @@ module WlansHelper
 		puts "Result: #{s}"
 		return s 
 	
+	end
+	
+	def parseZone(arr)
+		require 'erb'
+		if arr == nil 
+			return 
+		end 
+		s=""
+		zone = Zone.find_by(:id => arr).name
+		puts "SHOW: #{zone}"
+		zone = zone.to_s
+		s = s + '<%= link_to "'+ zone +'", "/zones/'+arr+'" %> </br>' 
+		puts "RESULT: #{s}"
+		html = ERB.new(s).result(binding)
+		
+		return html.html_safe
 	end
 	
 	def wlanUpdate(wlan, wlan_params)
