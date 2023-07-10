@@ -115,52 +115,61 @@ def process_config(params)
 	zone_array = [] 
 
 	radios = Array.new
-	Wlan.where(client_id: client.id).find_each do |wlan|
-		zone_array.append(wlan.zone)
-		wlan_hash = {}
-		zone = Zone.find_by(id: wlan.zone)
-
-		puts "BEFORE WLAN"
-		if wlan.enabled
-			puts "BREAK IN SUCCESS"
-			hostapd_hash = {}
-			if wlan.mode == "A"
-				channels = wlan.selected_a
-			else
-				channels = wlan.selected_g
+	#The Status of the Wificlient
+	
+	if client.enabled
+		Wlan.where(client_id: client.id).find_each do |wlan|
+			zone_array.append(wlan.zone)
+			wlan_hash = {}
+			zone = Zone.find_by(id: wlan.zone)
+			puts "BEFORE WLAN"
+			if wlan.enabled
+				puts "BREAK IN SUCCESS"
+				hostapd_hash = {}
+				if wlan.mode == "A"
+					channels = wlan.selected_a
+				else
+					channels = wlan.selected_g
+				end
+				hostapd_hash.merge!({ "ssid": zone.ssid, "interface": wlan.wlan, "channel": JSON.parse(channels).first, "hw_mode": wlan.mode, "open": zone.open_ap, "channel_list": parseArray(channels) })
+				puts "HOSTAPD #{hostapd_hash}"
+				conf_hash ={}
+				conf_hash.merge!({ "mode": "AP", "hostapd": hostapd_hash})
+				puts "CONF #{conf_hash}"
+				wlan_hash.merge!({ "wlan": wlan.wlan, "config": conf_hash})
+				puts "WLAN #{wlan_hash}"
+			else 
+				wlan_hash.merge!({ "wlan": wlan.wlan,"config":{ "mode": "OFF"}})
 			end
-			hostapd_hash.merge!({ "ssid": zone.ssid, "interface": wlan.wlan, "channel": "Ask Professor Skon", "hw_mode": wlan.mode, "open": zone.open_ap, "channel_list": parseArray(channels) })
-			puts "HOSTAPD #{hostapd_hash}"
-			conf_hash ={}
-			conf_hash.merge!({ "mode": "AP", "hostapd": hostapd_hash})
-			puts "CONF #{conf_hash}"
-			wlan_hash.merge!({ "wlan": wlan.wlan, "config": conf_hash})
-			puts "WLAN #{wlan_hash}"
-		else 
-			wlan_hash.merge!({ "wlan": wlan.wlan, "status": "OFF"})
+			radios.append(wlan_hash)
 		end
-		radios.append(wlan_hash)
+		puts "RADIOS #{radios}"
+	
+		pmk = Array.new
+		zone_array.each do |zoneID|
+			Zone.find_by(id: zoneID)
+			Userzone.where(zone_id: zoneID).find_each do |uz| 
+				pmk_hash = {}
+				pmk_hash.merge!({ "pmk": uz.pmk, "user_id": uz.user_id})
+				pmk.append(pmk_hash)
+			end	
+		end
+		puts "PMK ARRAY: #{pmk}"
+	
+		config_json = {"status": "success"}
+		if client.pmk_change && client.config_change
+			config_json.merge!({"status": "success", "pmk": pmk, "radios": radios})
+		elsif client.pmk_change
+			config_json.merge!({"status": "OFF", "pmk": pmk})
+		elsif client.config_change
+			config_json.merge!({"status": "success", "radios": radios})
+		end
+	else 
+		config_json = {"status": "OFF"}
 	end
-	puts "RADIOS #{radios}"
-	pmk = Array.new
-	zone_array.each do |zoneID|
-		Zone.find_by(id: zoneID)
-		Userzone.where(zone_id: zoneID).find_each do |uz| 
-			pmk_hash = {}
-			pmk_hash.merge!({ "pmk": uz.pmk, "user_id": uz.user_id})
-			pmk.append(pmk_hash)
-		end	
-	end
-	puts "PMK ARRAY: #{pmk}"
-	#client.wlan_name 
-	config_json = {}
-	if client.pmk_change && client.config_change
-		config_json.merge!({"status": "success", "pmk": pmk, "config": radios})
-	elsif client.pmk_change
-		config_json.merge!({"status": "success", "pmk": pmk})
-	elsif client.config_change
-		config_json.merge!({"status": "success", "config": radios})
-	end
+	
+	#the status of the wlans
+	
 	puts "FINAL RESULT: #{config_json}"
 	render json: config_json
 end

@@ -24,13 +24,12 @@ module WificlientsHelper
 		
 	end
 	
-	def wificlientUpdate(wificlient, wificlient_params)
-	puts "we are in"                                                                                          
-	if (wificlient_params[:enabled] != wificlient.enabled and wificlient_params[:enabled]!=nil) or (wificlient_params[:wlan_name] != wificlient.wlan_name) or (wificlient_params[:country] != wificlient.country)
-	wificlient.update(update_needed: true)
-	puts "UUUUUUUUUUUUUUUUUUUUUUUUUUpdate needed!"
-	else
-	puts "update not needed!"
-	end	
+	def wificlientUpdate(wificlient, wificlient_params)                                                                                         
+		if (wificlient_params[:enabled] != wificlient.enabled and wificlient_params[:enabled]!=nil) or (wificlient_params[:wlan_name] != wificlient.wlan_name) or (wificlient_params[:country] != wificlient.country)
+			wificlient.update(config_change: true)
+			puts "update needed!"
+		else
+			puts "update not needed!"
+		end	
 	end
 end
