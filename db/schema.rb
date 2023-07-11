@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_07_162122) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_11_195557) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -66,6 +66,30 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_07_162122) do
     t.string "state"
     t.string "zip"
     t.string "ownertype"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "station_logs", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.string "AP"
+    t.string "station"
+    t.string "interface"
+    t.integer "channel"
+    t.integer "rx_bytes"
+    t.integer "tx_bytes"
+    t.integer "tx_retries"
+    t.integer "tx_failed"
+    t.string "signal"
+    t.string "signal_avg"
+    t.string "tx_bitrate"
+    t.string "rx_bitrate"
+    t.string "expected_throughput"
+    t.string "associated"
+    t.integer "vid"
+    t.string "ssid"
+    t.integer "user_id"
+    t.string "event"
+    t.string "mac"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

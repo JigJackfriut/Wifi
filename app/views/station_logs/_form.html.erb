@@ -1,0 +1,112 @@
+<%= form_with(model: station_log) do |form| %>
+  <% if station_log.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(station_log.errors.count, "error") %> prohibited this station_log from being saved:</h2>
+
+      <ul>
+        <% station_log.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :AP, style: "display: block" %>
+    <%= form.text_field :AP %>
+  </div>
+
+  <div>
+    <%= form.label :station, style: "display: block" %>
+    <%= form.text_field :station %>
+  </div>
+
+  <div>
+    <%= form.label :interface, style: "display: block" %>
+    <%= form.text_field :interface %>
+  </div>
+
+  <div>
+    <%= form.label :channel, style: "display: block" %>
+    <%= form.number_field :channel %>
+  </div>
+
+  <div>
+    <%= form.label :rx_bytes, style: "display: block" %>
+    <%= form.number_field :rx_bytes %>
+  </div>
+
+  <div>
+    <%= form.label :tx_bytes, style: "display: block" %>
+    <%= form.number_field :tx_bytes %>
+  </div>
+
+  <div>
+    <%= form.label :tx_retries, style: "display: block" %>
+    <%= form.number_field :tx_retries %>
+  </div>
+
+  <div>
+    <%= form.label :tx_failed, style: "display: block" %>
+    <%= form.number_field :tx_failed %>
+  </div>
+
+  <div>
+    <%= form.label :signal, style: "display: block" %>
+    <%= form.text_field :signal %>
+  </div>
+
+  <div>
+    <%= form.label :signal_avg, style: "display: block" %>
+    <%= form.text_field :signal_avg %>
+  </div>
+
+  <div>
+    <%= form.label :tx_bitrate, style: "display: block" %>
+    <%= form.text_field :tx_bitrate %>
+  </div>
+
+  <div>
+    <%= form.label :rx_bitrate, style: "display: block" %>
+    <%= form.text_field :rx_bitrate %>
+  </div>
+
+  <div>
+    <%= form.label :expected_throughput, style: "display: block" %>
+    <%= form.text_field :expected_throughput %>
+  </div>
+
+  <div>
+    <%= form.label :associated, style: "display: block" %>
+    <%= form.text_field :associated %>
+  </div>
+
+  <div>
+    <%= form.label :vid, style: "display: block" %>
+    <%= form.number_field :vid %>
+  </div>
+
+  <div>
+    <%= form.label :ssid, style: "display: block" %>
+    <%= form.text_field :ssid %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :event, style: "display: block" %>
+    <%= form.text_field :event %>
+  </div>
+
+  <div>
+    <%= form.label :mac, style: "display: block" %>
+    <%= form.text_field :mac %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

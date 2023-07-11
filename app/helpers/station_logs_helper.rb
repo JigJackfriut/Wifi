@@ -1,0 +1,2 @@
+module StationLogsHelper
+end

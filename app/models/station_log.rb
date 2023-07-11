@@ -1,0 +1,2 @@
+class StationLog < ApplicationRecord
+end

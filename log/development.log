@@ -48838,3 +48838,13 @@ Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.2
   ↳ app/controllers/api/v1/wificlients.rb:172:in `process_config'
   [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
   ↳ app/controllers/api/v1/wificlients.rb:172:in `process_config'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('7809574894674996555', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateStationLogs (20230711195557)
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE `station_logs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `AP` varchar(255), `station` varchar(255), `interface` varchar(255), `channel` int, `rx_bytes` int, `tx_bytes` int, `tx_retries` int, `tx_failed` int, `signal` varchar(255), `signal_avg` varchar(255), `tx_bitrate` varchar(255), `rx_bitrate` varchar(255), `expected_throughput` varchar(255), `associated` varchar(255), `vid` int, `ssid` varchar(255), `user_id` int, `event` varchar(255), `mac` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230711195557')[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m

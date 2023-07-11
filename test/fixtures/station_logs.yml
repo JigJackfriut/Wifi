@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  AP: MyString
+  station: MyString
+  interface: MyString
+  channel: 1
+  rx_bytes: 1
+  tx_bytes: 1
+  tx_retries: 1
+  tx_failed: 1
+  signal: MyString
+  signal_avg: MyString
+  tx_bitrate: MyString
+  rx_bitrate: MyString
+  expected_throughput: MyString
+  associated: MyString
+  vid: 1
+  ssid: MyString
+  user_id: 1
+  event: MyString
+  mac: MyString
+
+two:
+  AP: MyString
+  station: MyString
+  interface: MyString
+  channel: 1
+  rx_bytes: 1
+  tx_bytes: 1
+  tx_retries: 1
+  tx_failed: 1
+  signal: MyString
+  signal_avg: MyString
+  tx_bitrate: MyString
+  rx_bitrate: MyString
+  expected_throughput: MyString
+  associated: MyString
+  vid: 1
+  ssid: MyString
+  user_id: 1
+  event: MyString
+  mac: MyString

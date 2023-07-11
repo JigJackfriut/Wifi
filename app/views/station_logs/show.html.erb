@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @station_log %>
+
+<div>
+  <%= link_to "Edit this station log", edit_station_log_path(@station_log) %> |
+  <%= link_to "Back to station logs", station_logs_path %>
+
+  <%= button_to "Destroy this station log", @station_log, method: :delete %>
+</div>
