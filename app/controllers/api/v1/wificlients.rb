@@ -157,7 +157,7 @@ def process_config(params)
 		puts "PMK ARRAY: #{pmk}"
 	
 		config_json = {"status": "success"}
-		if client.pmk_change && client.config_change
+		if (client.pmk_change && client.config_change) or (start == 1) or (!client.pmk_change && !client.config_change) 
 			config_json.merge!({"status": "success", "pmk": pmk, "radios": radios})
 		elsif client.pmk_change
 			config_json.merge!({"status": "OFF", "pmk": pmk})
