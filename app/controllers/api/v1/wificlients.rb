@@ -195,4 +195,6 @@ def alive(params)
 	else
 		alive_config={"status" => "fail"} 
 	end
+	
+	render json: alive_config
 end 
