@@ -48318,3 +48318,46 @@ Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.2
   ↳ app/controllers/api/v1/wificlients.rb:150:in `block in process_config'
   [1m[36mUserzone Load (0.4ms)[0m  [1m[34mSELECT `userzones`.* FROM `userzones` WHERE `userzones`.`zone_id` = 15 ORDER BY `userzones`.`id` ASC LIMIT 1000[0m
   ↳ app/controllers/api/v1/wificlients.rb:151:in `block in process_config'
+Started POST "/api/v1/wificlients/alive" for 138.28.151.182 at 2023-07-11 14:14:28 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:179:in `alive'
+Started POST "/api/v1/wificlients/alive" for 138.28.151.182 at 2023-07-11 14:14:29 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:179:in `alive'
+Started GET "/" for 138.28.151.182 at 2023-07-11 14:14:50 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 27.9ms | Allocations: 11277)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 614)
+  Rendered layout layouts/application.html.erb (Duration: 85.3ms | Allocations: 44354)
+Completed 200 OK in 100ms (Views: 86.4ms | ActiveRecord: 2.0ms | Allocations: 49605)
+
+
+Started POST "/api/v1/wificlients/alive" for 138.28.151.182 at 2023-07-11 14:15:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:179:in `alive'
+Started POST "/api/v1/wificlients/alive" for 138.28.151.182 at 2023-07-11 14:16:12 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.3ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9bt' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:179:in `alive'
+  
+NoMethodError (undefined method `pmk_change' for nil:NilClass):
+  
+app/controllers/api/v1/wificlients.rb:181:in `alive'
+app/controllers/api/v1/wificlients.rb:48:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/alive" for 138.28.151.182 at 2023-07-11 14:16:30 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:179:in `alive'
+Started POST "/api/v1/wificlients/alive" for 138.28.151.182 at 2023-07-11 14:23:37 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mWificlient Load (0.4ms)[0m  [1m[34mSELECT `wificlients`.* FROM `wificlients` WHERE `wificlients`.`mac` = 'dc:a6:32:ab:0e:9bt' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:179:in `alive'
