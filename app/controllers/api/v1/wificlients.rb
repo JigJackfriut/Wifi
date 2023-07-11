@@ -111,7 +111,7 @@ end
 
 def process_config(params)
 	client = Wificlient.find_by(mac:params[:mac])
-
+	start = params[:start]
 	zone_array = [] 
 
 	radios = Array.new
