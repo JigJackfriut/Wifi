@@ -172,6 +172,7 @@ def process_config(params)
 	
 	puts "FINAL RESULT: #{config_json}"
 	render json: config_json
+	client.update(pmk_change: false, config_change: false)
 end
 
 
