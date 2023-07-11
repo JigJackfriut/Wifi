@@ -18,7 +18,7 @@ module UserzonesHelper
 		end
 		puts " "
 
-		pmkey = Base64.encode64(key)
+		pmkey = Base64.encode64(key).strip
 		puts "PMK Text Key: #{pmkey}"
 		
 		userzone = Userzone.find_by(id: userzoneid) 

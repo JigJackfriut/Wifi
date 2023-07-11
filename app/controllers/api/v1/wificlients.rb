@@ -150,7 +150,7 @@ def process_config(params)
 			Zone.find_by(id: zoneID)
 			Userzone.where(zone_id: zoneID).find_each do |uz| 
 				pmk_hash = {}
-				pmk_hash.merge!({ "pmk": uz.pmk, "user_id": uz.user_id})
+				pmk_hash.merge!({"pmk": uz.pmk, "user_id": uz.user_id})
 				pmk.append(pmk_hash)
 			end	
 		end
