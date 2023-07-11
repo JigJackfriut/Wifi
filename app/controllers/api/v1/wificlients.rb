@@ -169,10 +169,10 @@ def process_config(params)
 	end
 	
 	#the status of the wlans
-	
+	client.update(pmk_change: false, config_change: false)
 	puts "FINAL RESULT: #{config_json}"
 	render json: config_json
-	client.update(pmk_change: false, config_change: false)
+	
 end
 
 
