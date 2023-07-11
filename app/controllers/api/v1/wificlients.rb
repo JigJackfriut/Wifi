@@ -178,9 +178,9 @@ end
 def alive(params) 
 	client = Wificlient.find_by(mac:params[:mac])
 	 
-	if client != nil and (client.pmk_change or client.config_change)
+	if client != nil and (client.pmk_change or client.config_change) and client.enabled
 		alive_config={"status" => "update"}
-	elsif client != nil and (!client.pmk_change and !client.config_change)
+	elsif client != nil and (!client.pmk_change and !client.config_change) and client.enabled
 		alive_config={"status" => "success"}
 	else
 		alive_config={"status" => "fail"} 
