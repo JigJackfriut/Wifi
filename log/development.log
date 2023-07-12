@@ -48848,3 +48848,237 @@ Migrating to CreateStationLogs (20230711195557)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('7809574894674996555')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:22:12 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant Station_log):
+  
+app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:22:38 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.4ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'eventL' for StationLog.):
+  
+app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:23:10 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+  [1m[36mStationLog Create (0.8ms)[0m  [1m[32mINSERT INTO `station_logs` (`AP`, `station`, `interface`, `channel`, `rx_bytes`, `tx_bytes`, `tx_retries`, `tx_failed`, `signal`, `signal_avg`, `tx_bitrate`, `rx_bitrate`, `expected_throughput`, `associated`, `vid`, `ssid`, `user_id`, `event`, `mac`, `created_at`, `updated_at`) VALUES (NULL, '{\"f8:ff:c2:22:1b:e4\"=>{\"interface\"=>\"wlan1\", \"channel\"=>\"6\", \"inactive time\"=>\"16 ms\", \"rx bytes\"=>\"763540\", \"rx packets\"=>\"5760\", \"tx bytes\"=>\"929082\", \"tx packets\"=>\"4526\", \"tx retries\"=>\"2570\", \"tx failed\"=>\"115\", \"rx drop misc\"=>\"7\", \"signal\"=>\"-31 [-31, -38] dBm\", \"signal avg\"=>\"-30 [-30, -37] dBm\", \"tx bitrate\"=>\"130.0 MBit/s MCS 15\", \"tx duration\"=>\"609391 us\", \"rx bitrate\"=>\"24.0 MBit/s\", \"rx duration\"=>\"262801 us\", \"airtime weight\"=>\"256\", \"expected throughput\"=>\"44.219Mbps\", \"authorized\"=>\"yes\", \"authenticated\"=>\"yes\", \"associated\"=>\"yes\", \"preamble\"=>\"short\", \"WMM/WME\"=>\"yes\", \"MFP\"=>\"no\", \"TDLS peer\"=>\"no\", \"DTIM period\"=>\"2\", \"connected time\"=>\"203 seconds\", \"associated at [boottime]\"=>\"241260.986s\", \"associated at\"=>\"1688578101396 ms\", \"current time\"=>\"1688578303725 ms\", \"event\"=>\"assoc\", \"time\"=>\"Wed Jul  5 18:28:21 2023\", \"mac\"=>\"F8:FF:C2:22:1B:E4\", \"pmk\"=>\"ro3Gz0cVSQ8aWSjWGo9ADxCP5Rvxort6VC2dT4DrmXw=\", \"vid\"=>0, \"ssid\"=>\"cloudwifi\", \"user_id\"=>\"1\"}, \"04:6c:59:0c:f2:f1\"=>{\"interface\"=>\"wlan1\", \"channel\"=>\"6\", \"inactive time\"=>\"292 ms\", \"rx bytes\"=>\"244245\", \"rx packets\"=>\"991\", \"tx bytes\"=>\"80483\", \"tx packets\"=>\"564\", \"tx retries\"=>\"167\", \"tx failed\"=>\"1\", \"rx drop misc\"=>\"0\", \"signal\"=>\"-39 [-40, -44] dBm\", \"signal avg\"=>\"-40 [-41, -45] dBm\", \"tx bitrate\"=>\"130.0 MBit/s MCS 15\", \"tx duration\"=>\"141403 us\", \"rx bitrate\"=>\"6.0 MBit/s\", \"rx duration\"=>\"75025 us\", \"airtime weight\"=>\"256\", \"expected throughput\"=>\"45.226Mbps\", \"authorized\"=>\"yes\", \"authenticated\"=>\"yes\", \"associated\"=>\"yes\", \"preamble\"=>\"short\", \"WMM/WME\"=>\"yes\", \"MFP\"=>\"no\", \"TDLS peer\"=>\"no\", \"DTIM period\"=>\"2\", \"connected time\"=>\"170 seconds\", \"associated at [boottime]\"=>\"241293.163s\", \"associated at\"=>\"1688578133573 ms\", \"current time\"=>\"1688578303725 ms\", \"event\"=>\"assoc\", \"time\"=>\"Wed Jul  5 18:28:53 2023\", \"mac\"=>\"04:6C:59:0C:F2:F1\", \"pmk\"=>\"ro3Gz0cVSQ8aWSjWGo9ADxCP5Rvxort6VC2dT4DrmXw=\", \"vid\"=>0, \"ssid\"=>\"cloudwifi\", \"user_id\"=>\"2\"}}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'dc:a6:32:ab:0e:9b', '2023-07-11 20:23:10.187041', '2023-07-11 20:23:10.187041')[0m
+  ↳ app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+  
+ActiveRecord::ValueTooLong (Mysql2::Error: Data too long for column 'station' at row 1):
+  
+app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:24:27 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:27:09 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/wificlients.rb:224:in `[]'
+app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:27:36 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+  [1m[36mStationLog Create (0.3ms)[0m  [1m[32mINSERT INTO `station_logs` (`AP`, `station`, `interface`, `channel`, `rx_bytes`, `tx_bytes`, `tx_retries`, `tx_failed`, `signal`, `signal_avg`, `tx_bitrate`, `rx_bitrate`, `expected_throughput`, `associated`, `vid`, `ssid`, `user_id`, `event`, `mac`, `created_at`, `updated_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-11 20:27:36.530817', '2023-07-11 20:27:36.530817')[0m
+  ↳ app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'eventL' for StationLog.):
+  
+app/controllers/api/v1/wificlients.rb:219:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:27:50 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+  [1m[36mStationLog Create (0.5ms)[0m  [1m[32mINSERT INTO `station_logs` (`AP`, `station`, `interface`, `channel`, `rx_bytes`, `tx_bytes`, `tx_retries`, `tx_failed`, `signal`, `signal_avg`, `tx_bitrate`, `rx_bitrate`, `expected_throughput`, `associated`, `vid`, `ssid`, `user_id`, `event`, `mac`, `created_at`, `updated_at`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-11 20:27:50.335457', '2023-07-11 20:27:50.335457')[0m
+  ↳ app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/wificlients.rb:219:in `block in update_wireless_clients'
+  [1m[36mStationLog Update (0.8ms)[0m  [1m[33mUPDATE `station_logs` SET `station_logs`.`station` = '{\"f8:ff:c2:22:1b:e4\"=>{\"interface\"=>\"wlan1\", \"channel\"=>\"6\", \"inactive time\"=>\"16 ms\", \"rx bytes\"=>\"763540\", \"rx packets\"=>\"5760\", \"tx bytes\"=>\"929082\", \"tx packets\"=>\"4526\", \"tx retries\"=>\"2570\", \"tx failed\"=>\"115\", \"rx drop misc\"=>\"7\", \"signal\"=>\"-31 [-31, -38] dBm\", \"signal avg\"=>\"-30 [-30, -37] dBm\", \"tx bitrate\"=>\"130.0 MBit/s MCS 15\", \"tx duration\"=>\"609391 us\", \"rx bitrate\"=>\"24.0 MBit/s\", \"rx duration\"=>\"262801 us\", \"airtime weight\"=>\"256\", \"expected throughput\"=>\"44.219Mbps\", \"authorized\"=>\"yes\", \"authenticated\"=>\"yes\", \"associated\"=>\"yes\", \"preamble\"=>\"short\", \"WMM/WME\"=>\"yes\", \"MFP\"=>\"no\", \"TDLS peer\"=>\"no\", \"DTIM period\"=>\"2\", \"connected time\"=>\"203 seconds\", \"associated at [boottime]\"=>\"241260.986s\", \"associated at\"=>\"1688578101396 ms\", \"current time\"=>\"1688578303725 ms\", \"event\"=>\"assoc\", \"time\"=>\"Wed Jul  5 18:28:21 2023\", \"mac\"=>\"F8:FF:C2:22:1B:E4\", \"pmk\"=>\"ro3Gz0cVSQ8aWSjWGo9ADxCP5Rvxort6VC2dT4DrmXw=\", \"vid\"=>0, \"ssid\"=>\"cloudwifi\", \"user_id\"=>\"1\"}, \"04:6c:59:0c:f2:f1\"=>{\"interface\"=>\"wlan1\", \"channel\"=>\"6\", \"inactive time\"=>\"292 ms\", \"rx bytes\"=>\"244245\", \"rx packets\"=>\"991\", \"tx bytes\"=>\"80483\", \"tx packets\"=>\"564\", \"tx retries\"=>\"167\", \"tx failed\"=>\"1\", \"rx drop misc\"=>\"0\", \"signal\"=>\"-39 [-40, -44] dBm\", \"signal avg\"=>\"-40 [-41, -45] dBm\", \"tx bitrate\"=>\"130.0 MBit/s MCS 15\", \"tx duration\"=>\"141403 us\", \"rx bitrate\"=>\"6.0 MBit/s\", \"rx duration\"=>\"75025 us\", \"airtime weight\"=>\"256\", \"expected throughput\"=>\"45.226Mbps\", \"authorized\"=>\"yes\", \"authenticated\"=>\"yes\", \"associated\"=>\"yes\", \"preamble\"=>\"short\", \"WMM/WME\"=>\"yes\", \"MFP\"=>\"no\", \"TDLS peer\"=>\"no\", \"DTIM period\"=>\"2\", \"connected time\"=>\"170 seconds\", \"associated at [boottime]\"=>\"241293.163s\", \"associated at\"=>\"1688578133573 ms\", \"current time\"=>\"1688578303725 ms\", \"event\"=>\"assoc\", \"time\"=>\"Wed Jul  5 18:28:53 2023\", \"mac\"=>\"04:6C:59:0C:F2:F1\", \"pmk\"=>\"ro3Gz0cVSQ8aWSjWGo9ADxCP5Rvxort6VC2dT4DrmXw=\", \"vid\"=>0, \"ssid\"=>\"cloudwifi\", \"user_id\"=>\"2\"}}', `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b', `station_logs`.`updated_at` = '2023-07-11 20:27:50.340299' WHERE `station_logs`.`id` = 2[0m
+  ↳ app/controllers/api/v1/wificlients.rb:219:in `block in update_wireless_clients'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/wificlients.rb:219:in `block in update_wireless_clients'
+  
+ActiveRecord::ValueTooLong (Mysql2::Error: Data too long for column 'station' at row 1):
+  
+app/controllers/api/v1/wificlients.rb:219:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:28:04 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/wificlients.rb:224:in `[]'
+app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:29:41 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/wificlients.rb:225:in `[]'
+app/controllers/api/v1/wificlients.rb:225:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:30:16 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/wificlients.rb:225:in `[]'
+app/controllers/api/v1/wificlients.rb:225:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:31:30 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.4ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/wificlients.rb:225:in `[]'
+app/controllers/api/v1/wificlients.rb:225:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:31:53 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`mac` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/wificlients.rb:224:in `[]'
+app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-11 20:33:01 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`AP` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/wificlients.rb:224:in `[]'
+app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'
+Started GET "/" for 138.28.151.182 at 2023-07-12 13:12:47 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (Duration: 24.1ms | Allocations: 14122)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 614)
+  Rendered layout layouts/application.html.erb (Duration: 74.8ms | Allocations: 47703)
+Completed 200 OK in 89ms (Views: 75.2ms | ActiveRecord: 2.4ms | Allocations: 52989)
+
+
+Started DELETE "/managers/sign_out" for 138.28.151.182 at 2023-07-12 13:12:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mManager Load (0.4ms)[0m  [1m[34mSELECT `managers`.* FROM `managers` WHERE `managers`.`id` = 29 ORDER BY `managers`.`id` ASC LIMIT 1[0m
+Redirected to http://138.28.72.137:3000/
+Completed 303 See Other in 7ms (ActiveRecord: 0.4ms | Allocations: 3318)
+
+
+Started GET "/" for 138.28.151.182 at 2023-07-12 13:12:55 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 397)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2675)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2985)
+
+
+Started GET "/wlans" for 138.28.151.182 at 2023-07-12 13:13:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by WlansController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 373)
+
+
+Started GET "/managers/sign_in" for 138.28.151.182 at 2023-07-12 13:13:05 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 736)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3246)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5592)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 6825)
+
+
+Started POST "/api/v1/wificlients/update_wireless_clients" for 138.28.151.182 at 2023-07-12 13:16:30 +0000
+Cannot render console from 138.28.151.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mStationLog Load (0.3ms)[0m  [1m[34mSELECT `station_logs`.* FROM `station_logs` WHERE `station_logs`.`AP` = 'dc:a6:32:ab:0e:9b' LIMIT 1[0m
+  ↳ app/controllers/api/v1/wificlients.rb:209:in `update_wireless_clients'
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/v1/wificlients.rb:224:in `[]'
+app/controllers/api/v1/wificlients.rb:224:in `block in update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:212:in `each'
+app/controllers/api/v1/wificlients.rb:212:in `update_wireless_clients'
+app/controllers/api/v1/wificlients.rb:52:in `block (2 levels) in <class:Wificlients>'

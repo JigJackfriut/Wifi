@@ -47,6 +47,10 @@ module API
 		route :post, 'alive' do 
 			alive(params)
 		end 
+		
+		route :post, 'update_wireless_clients' do 
+			update_wireless_clients(params)
+		end 
       
     end
     
@@ -199,3 +203,31 @@ def alive(params)
 	
 	render json: alive_config
 end 
+
+
+def update_wireless_clients(params)
+	ap = StationLog.find_by(AP:params[:mac])
+	
+	stations = params[:stations]
+	stations.each do |station|
+		if ap
+		if ap.station != params[:stations] or station.interface != params[:interface] or station.channel != params[:channel] or
+		station.rx_bytes != params[:rx_bytes] or station.tx_bytes != params[:tx_bytes] or station.tx_retries != params[:tx_retries] or station.tx_failed != params[:tx_failed] or 
+		station.signal != params[:signal] or station.signal_avg != params[:signal_avg] or client.tx_bitrate != params[:tx_bitrate] or station.rx_bitrate != params[:rx_bitrate] or 
+		station.expected_throughput != params[:expected_throughput] or station.associated != params[:associated] or station.vid != params[:vid] or station.ssid != params[:ssid] or 
+		station.user_id != params[:user_id] or station.event != params[:event] or station.mac != params[:mac] 
+			ap.update(AP: params[:AP], station: params[:stations], interface: params[:interface],channel: params[:channel], rx_bytes: params[:rx_bytes], tx_bytes: params[:tx_bytes], tx_retries: params[:tx_retries],tx_failed: params[:tx_failed], 
+							signal: params[:signal], signal_avg: params[:signal_avg], tx_bitrate: params[:tx_bitrate], rx_bitrate: params[:rx_bitrate], expected_throughput: params[:expected_throughput], associated: params[:associated], vid: params[:vid], ssid: params[:ssid],
+							user_id: params[:user_id], event: params[:event], mac: params[:mac])
+		end
+	else 
+		puts "LOOOOOOOOKKK #{station['stations']}"
+		ap = StationLog.create(AP: params['AP'], station: station['stations'], interface: station['interface'],channel: station['channel'], rx_bytes: station['rx_bytes'], tx_bytes: station['tx_bytes'], tx_retries: station['tx_retries'],tx_failed: station['tx_failed'], 
+							signal: station['signal'], signal_avg: station['signal_avg'], tx_bitrate: station['tx_bitrate'], rx_bitrate: station['rx_bitrate'], expected_throughput: station['expected_throughput'], associated: station['associated'], vid: station['vid'], ssid: station['ssid'],
+							user_id: station['user_id'], event: station['event'], mac: station['mac'])
+	end
+		
+	
+	end
+	
+end
