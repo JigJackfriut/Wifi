@@ -25,10 +25,12 @@ module WlansHelper
 			return 
 		end 
 		s=""
-		client = Wificlient.find_by(:name => arr).id
+		client = Wificlient.find_by(:id => arr).name
 		puts "SHOW: #{client}"
 		client = client.to_s
-		s = s + '<%= link_to "'+ arr +'", "/wificlients/'+client+'" %> </br>' 
+		arr = arr.to_s
+		
+		s = s + '<%= link_to "'+ client +'", "/wificlients/'+arr+'" %> </br>' 
 		puts "Result: #{s}"
 		html = ERB.new(s).result(binding)
 		
