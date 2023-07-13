@@ -83,8 +83,9 @@ include UserzonesHelper
 		Wlan.where( :zone => zone).find_each do |wlan|
 			puts "checkpoint 2!" 
 			client = Wificlient.find_by(id: wlan.client_id)
-			client.update(pmk_change: true)
-			puts "client ID! : #{client.id}"
+			if client 
+				client.update(pmk_change: true)
+			end
 		end 
 		
 	  user.destroy 

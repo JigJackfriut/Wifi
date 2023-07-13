@@ -60,9 +60,11 @@ module UsersHelper
 		puts "zoneList: #{zoneList}"
 		zoneList.each do |zoneID|
 			zone = Zone.find_by(id: zoneID)
+			userzone = Userzone.find_by(user_id: user, zone_id: zone)
+			if !userzone
 			userzone = Userzone.create(user_id: user.id, zone_id: zone.id, manager_id: current_manager.id)
 			genpmk(user.passphrase, zone.ssid, userzone.id)
-			
+			end
 		end
 	end 
 	
