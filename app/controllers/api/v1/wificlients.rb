@@ -215,7 +215,7 @@ def update_wireless_clients(params)
 	stations.each do |station|
 		stationParams = station[1]
 		puts "THIS IS WHAT STATION MAC LOOKS LIKE #{stationParams}"
-		stationTest = StationLog.find_by(mac: stationParams[:mac].downcase)
+		stationTest = StationLog.find_by(mac: stationParams['mac'].downcase)
 		#puts "#{ap} AND lowercase mac #{station[:mac].downcase}"
 	 
 	if stationTest

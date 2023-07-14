@@ -62,10 +62,26 @@ module UsersHelper
 			zone = Zone.find_by(id: zoneID)
 			userzone = Userzone.find_by(user_id: user, zone_id: zone)
 			if !userzone
-			userzone = Userzone.create(user_id: user.id, zone_id: zone.id, manager_id: current_manager.id)
-			genpmk(user.passphrase, zone.ssid, userzone.id)
+				userzone = Userzone.create(user_id: user.id, zone_id: zone.id, manager_id: current_manager.id)
+				genpmk(user.passphrase, zone.ssid, userzone.id)
 			end
 		end
+		
+		Userzone.where(user_id: user).find_each do |uz|
+		puts "does #{zoneList} include #{uz.zone_id}? #{zoneList.include?(uz.zone_id)}"
+			if !zoneList.include?(uz.zone_id.to_s)
+				puts "zone no longer selected! delete! #{uz.id}"
+				uz.destroy
+			else 
+				puts "no userzones need to be cleared!"
+			end
+		end 
+		
+		
+		
+		
+		
+		
 	end 
 	
 	
