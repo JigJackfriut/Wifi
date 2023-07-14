@@ -214,25 +214,14 @@ def update_wireless_clients(params)
 	puts "HERE HERE THIS IS WHAT STATION MAC LOOKS LIKE #{stations}"
 	stations.each do |station|
 		stationParams = station[1]
-		puts "THIS IS WHAT STATION MAC LOOKS LIKE #{stationParams}"
-		stationTest = StationLog.find_by(mac: stationParams['mac'].downcase)
+		mac = station[0]
+		#puts "THIS IS WHAT STATION MAC LOOKS LIKE #{stationParams}"
+		#stationTest = StationLog.find_by(mac: stationParams['mac'].downcase)
 		#puts "#{ap} AND lowercase mac #{station[:mac].downcase}"
 	 
-	if stationTest
-		if stationTest.station != stationParams['mac'].downcase or stationTest.interface != stationParams['interface'] or stationTest.channel != stationParams['channel'] or
-		stationTest.rx_bytes != stationParams['rx bytes'] or stationTest.tx_bytes != stationParams['tx bytes'] or stationTest.tx_retries != stationParams['tx retries'] or stationTest.tx_failed != stationParams['tx failed'] or 
-		stationTest.signal != stationParams['signal'] or stationTest.signal_avg != stationParams['signal avg'] or stationTest.tx_bitrate != stationParams['tx bitrate'] or stationTest.rx_bitrate != stationParams['rx bitrate'] or 
-		stationTest.expected_throughput != stationParams['expected throughput'] or stationTest.associated != stationParams['associated'] or stationTest.vid != stationParams['vid'] or stationTest.ssid != stationParams['ssid'] or 
-		stationTest.user_id != stationParams['user_id'] or stationTest.event != stationParams['event'] or stationTest.mac != stationParams['mac'] 
-			stationTest.update(AP: apMac, station: stationParams['mac'].downcase, interface: stationParams['interface'],channel: stationParams['channel'], rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], tx_retries: stationParams['tx retries'],tx_failed: stationParams['tx failed'], 
-							signal: stationParams['signal'], signal_avg: stationParams['signal avg'], tx_bitrate: stationParams['tx bitrate'], rx_bitrate: stationParams['rx bitrate'], expected_throughput: stationParams['expected throughput'], associated: stationParams['associated'], vid: stationParams[:vid], ssid: stationParams['ssid'],
-							user_id: stationParams['user_id'], event: stationParams['event'], mac: stationParams['mac'].downcase)
-		end
-	else 
-		#puts "LOOOOOOOOKKK #{station['stations']}"
-		stationTest = StationLog.create(AP: apMac, station: stationParams['mac'].downcase, interface: stationParams['interface'],channel: stationParams['channel'], rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], tx_retries: stationParams['tx retries'],tx_failed: stationParams['tx failed'], 
+		stationTest = StationLog.create(AP: apMac, station: mac.downcase, interface: stationParams['interface'],channel: stationParams['channel'], rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], tx_retries: stationParams['tx retries'],tx_failed: stationParams['tx failed'], 
 							signal: stationParams['signal'], signal_avg: stationParams['signal avg'], tx_bitrate: stationParams['tx bitrate'], rx_bitrate: stationParams['rx bitrate'], expected_throughput: stationParams['expected throughput'], associated: stationParams['associated'], vid: stationParams['vid'], ssid: stationParams['ssid'],
-							user_id: stationParams['user_id'], event: stationParams['event'], mac: stationParams['mac'].downcase)
+							user_id: stationParams['user_id'], event: stationParams['event'])
 	end
 		
 	
