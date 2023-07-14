@@ -215,11 +215,8 @@ def update_wireless_clients(params)
 	stations.each do |station|
 		stationParams = station[1]
 		mac = station[0]
-		#puts "THIS IS WHAT STATION MAC LOOKS LIKE #{stationParams}"
-		#stationTest = StationLog.find_by(mac: stationParams['mac'].downcase)
-		#puts "#{ap} AND lowercase mac #{station[:mac].downcase}"
-	 
-		stationTest = StationLog.create(AP: apMac, station: mac.downcase, interface: stationParams['interface'],channel: stationParams['channel'], rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], tx_retries: stationParams['tx retries'],tx_failed: stationParams['tx failed'], 
+	 	puts "Here is the MAC #{mac}"
+		stationTest = StationLog.create(AP: apMac, mac: mac.downcase, interface: stationParams['interface'],channel: stationParams['channel'], rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], tx_retries: stationParams['tx retries'],tx_failed: stationParams['tx failed'], 
 							signal: stationParams['signal'], signal_avg: stationParams['signal avg'], tx_bitrate: stationParams['tx bitrate'], rx_bitrate: stationParams['rx bitrate'], expected_throughput: stationParams['expected throughput'], associated: stationParams['associated'], vid: stationParams['vid'], ssid: stationParams['ssid'],
 							user_id: stationParams['user_id'], event: stationParams['event'])
 	end
