@@ -225,6 +225,5 @@ def update_wireless_clients(params)
 	end
 		
 	
-	end
 	
 end
