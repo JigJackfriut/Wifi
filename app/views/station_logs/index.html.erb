@@ -5,6 +5,8 @@
     <tr>
       <th scope="col">ID</th>
       <th scope="col">AP Mac</th>
+	  <th scope="col">Username</th>
+	  <th scope="col">Station Mac</th>
       <th scope="col">Interface</th>
        <th scope="col">rx bytes</th>
 	  <th scope="col">tx bytes</th>
@@ -14,11 +16,13 @@
   </thead>
 
   <tbody>
-  <% StationLog.group(:mac).order(:created_at).find_each do |station_log| %>
-	
+  <% StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;') do |station_log| %>
+
    <tr>
           <td><%= station_log.id %></td>  
           <td><%= station_log.ap_mac %></td>
+		  <td><%= User.find_by(id: station_log.user_id).name %> </td>
+		  <td><%= station_log.mac %></td>
           <td><%= station_log.interface %></td>
           <td><%= station_log.rx_bytes %> </td>
 		  <td><%= station_log.tx_bytes %></td>
