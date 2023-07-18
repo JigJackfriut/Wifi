@@ -4,14 +4,16 @@ class StationLogsController < ApplicationController
   # GET /station_logs or /station_logs.json
   def index
     #@station_logs = StationLog.all
-	
+	stationList = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')
+
     if params[:sort] == "Username"
-      @station_logs = StationLog.all.sort_by{|station_log| User.find_by(id: station_log.user_id).name}
+      @station_logs = stationList.sort_by{|station_log| User.find_by(id: station_log.user_id).name}
 	elsif params[:sort] == "rx_bytes"
-      @station_logs = StationLog.find_by_sql('SELECT * FROM station_logs ORDER BY rx_bytes ASC')
+      @station_logs = stationList.sort_by{|station_log| station_log.rx_bytes}
 	  puts "sort attempted" 
     else
-      @station_logs = StationLog.all
+      @station_logs = stationList
+
 	  puts "else triggered, oops?"
     end
   end
