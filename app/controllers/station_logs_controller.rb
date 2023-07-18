@@ -3,7 +3,17 @@ class StationLogsController < ApplicationController
 
   # GET /station_logs or /station_logs.json
   def index
-    @station_logs = StationLog.all
+    #@station_logs = StationLog.all
+	
+    if params[:sort] == "Username"
+      @station_logs = StationLog.all.sort_by{|station_log| User.find_by(id: station_log.user_id).name}
+	elsif params[:sort] == "rx_bytes"
+      @station_logs = StationLog.find_by_sql('SELECT * FROM station_logs ORDER BY rx_bytes ASC')
+	  puts "sort attempted" 
+    else
+      @station_logs = StationLog.all
+	  puts "else triggered, oops?"
+    end
   end
 
   # GET /station_logs/1 or /station_logs/1.json
