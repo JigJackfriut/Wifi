@@ -21,7 +21,7 @@
 
   <tbody>
   <% @station_logs.each do |station_log| %>
-
+	<% if station_log.manager == current_manager%>
    <tr>
 		  <td><%= User.find_by(id: station_log.user_id).name %> </td>
 		  <td><%= station_log.ssid %></td>  
@@ -62,7 +62,7 @@
     	</td>
   	</tr>
   	<% end %>
-  	
+  	<% end %>
    </tbody>
 </table>
 

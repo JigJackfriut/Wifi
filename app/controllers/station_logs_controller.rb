@@ -1,5 +1,7 @@
 class StationLogsController < ApplicationController
   before_action :set_station_log, only: %i[ show edit update destroy ]
+  before_action :authenticate_manager!
+  before_action :current_manager, only: [:edit, :update, :destroy]
 
   # GET /station_logs or /station_logs.json
   def index
@@ -31,9 +33,17 @@ class StationLogsController < ApplicationController
   def edit
   end
 
+  def correct_manager
+  	@station_log = current_manager.station_logs.find_by(id: params[:id])
+  	redirect_to station_logs_path, notice: "Not Authorized To Edit This StationLog" if @station_log.nil?
+  end
+  
+  
   # POST /station_logs or /station_logs.json
   def create
-    @station_log = StationLog.new(station_log_params)
+    #@station_log = StationLog.new(station_log_params)
+	@station_log = current_manager.station_logs.build(station_log_params)
+
 
     respond_to do |format|
       if @station_log.save

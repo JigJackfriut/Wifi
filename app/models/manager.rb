@@ -9,4 +9,5 @@ class Manager < ApplicationRecord
          has_many :users
          has_many :zones
          has_many :userzones
+		 has_many :station_logs
 end
