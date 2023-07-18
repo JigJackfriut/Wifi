@@ -221,7 +221,7 @@ def update_wireless_clients(params)
 	 
 		stationTest = StationLog.create(ap_mac: apMac, mac: mac.downcase, interface: stationParams['interface'],channel: stationParams['channel'], rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], tx_retries: stationParams['tx retries'],tx_failed: stationParams['tx failed'], 
 							signal: stationParams['signal'], signal_avg: stationParams['signal avg'], tx_bitrate: stationParams['tx bitrate'], rx_bitrate: stationParams['rx bitrate'], expected_throughput: stationParams['expected throughput'], associated: stationParams['associated'], vid: stationParams['vid'], ssid: stationParams['ssid'],
-							user_id: stationParams['user_id'], event: stationParams['event'])
+							user_id: stationParams['user_id'], event: stationParams['event'], connected_time: stationParams['connected time'])
 	end
 		
 	

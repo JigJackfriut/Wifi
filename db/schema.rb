@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_14_181058) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_18_141704) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -94,6 +94,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_14_181058) do
     t.integer "manager_id"
     t.integer "rx_packets"
     t.integer "tx_packets"
+    t.string "connected_time"
     t.index ["manager_id"], name: "index_station_logs_on_manager_id"
   end
 
