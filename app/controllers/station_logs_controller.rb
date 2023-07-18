@@ -6,20 +6,29 @@ class StationLogsController < ApplicationController
   # GET /station_logs or /station_logs.json
   def index
     #@station_logs = StationLog.all
-	stationList = StationLog.find_by_sql('select *  from station_logs t inner join (select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')
+	stationList = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')
+		
+		
+	sort_order = cookies[:sort_order] || 'asc'
+	
+
 
     if params[:sort] == "Username"
-      @station_logs = stationList.sort_by{|station_log| User.find_by(id: station_log.user_id).name} 
+      @station_logs = stationList.sort_by{|station_log| User.find_by(id: station_log.user_id).name}
 	elsif params[:sort] == "rx_bytes"
-      @station_logs = stationList.sort_by{|station_log| station_log.rx_bytes.to_i}
+	  if sort_order == 'desc'
+		@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes}.reverse
+	  elsif sort_order == 'asc'
+		@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes}
+
+	  end 
 	  puts "sort attempted" 
-	elsif params[:sort] == "tx_bytes"
-      @station_logs = stationList.sort_by{|station_log| station_log.tx_bytes.to_i}
     else
       @station_logs = stationList
 
 	  puts "else triggered, oops?"
     end
+	cookies[:sort_order] = sort_order == 'asc' ? 'desc' : 'asc'
   end
 
   # GET /station_logs/1 or /station_logs/1.json
