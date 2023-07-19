@@ -6,29 +6,35 @@ class StationLogsController < ApplicationController
   # GET /station_logs or /station_logs.json
   def index
     #@station_logs = StationLog.all
-	stationList = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')
+	stationList = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')	
 		
-		
-	sort_order = cookies[:sort_order] || 'asc'
-	
-
+	sort_order_username = cookies[:sort_order_username] || 'asc' 
+	sort_order_rx_bytes = cookies[:sort_order_rx_bytes] || 'asc' 
 
     if params[:sort] == "Username"
       @station_logs = stationList.sort_by{|station_log| User.find_by(id: station_log.user_id).name}
 	elsif params[:sort] == "rx_bytes"
-	  if sort_order == 'desc'
-		@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes}.reverse
-	  elsif sort_order == 'asc'
-		@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes}
-
-	  end 
-	  puts "sort attempted" 
+	  	if sort_order_rx_bytes == 'desc'
+			@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes.to_i}.reverse
+		elsif sort_order_rx_bytes == 'asc'
+			@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes.to_i}
+		end 
+	puts "sort attempted" 
     else
       @station_logs = stationList
-
 	  puts "else triggered, oops?"
     end
-	cookies[:sort_order] = sort_order == 'asc' ? 'desc' : 'asc'
+	cookies[:sort_order_username] = sort_order_username == 'asc' ? 'desc' : 'asc'
+	cookies[:sort_order_rx_bytes] = sort_order_rx_bytes == 'asc' ? 'desc' : 'asc'
+	
+	#puts "LOOKKK AT THE STATION LOGGS #{@station_logs.pluck(:id)}" # [380, 407, 522, 606, 401, 602, 601]
+	#arr = @station_logs.pluck(:id)
+	#puts "LOOKKK INSIDEE THE STATION LOGGS #{arr.map { |x| x.id }}" 
+	#@stat_logs = stationList.where(id: arr.map(&:id))
+	#@pagy, @stat_logs = pagy(@stat_logs)
+	#@station_logs = stationList.where(id: @station_logs.pluck(:id))
+#	Model.where(id: results.pluck(:id))
+
   end
 
   # GET /station_logs/1 or /station_logs/1.json
