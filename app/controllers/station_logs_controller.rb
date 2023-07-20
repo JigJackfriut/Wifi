@@ -6,8 +6,8 @@ class StationLogsController < ApplicationController
   # GET /station_logs or /station_logs.json
   def index
     #@station_logs = StationLog.all
-	stationList = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')	
-		
+	stationList_array = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')	
+	stationList = StationLog.where(id: stationList_array.map(&:id))
 	sort_order_username = cookies[:sort_order_username] || 'asc' 
 	sort_order_rx_bytes = cookies[:sort_order_rx_bytes] || 'asc' 
 
@@ -31,7 +31,7 @@ class StationLogsController < ApplicationController
 	#arr = @station_logs.pluck(:id)
 	#puts "LOOKKK INSIDEE THE STATION LOGGS #{arr.map { |x| x.id }}" 
 	#@stat_logs = stationList.where(id: arr.map(&:id))
-	#@pagy, @stat_logs = pagy(@stat_logs)
+	#@pagy, @station_logs = pagy(@station_logs)
 	#@station_logs = stationList.where(id: @station_logs.pluck(:id))
 #	Model.where(id: results.pluck(:id))
 
