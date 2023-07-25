@@ -1,3 +1,4 @@
+require 'will_paginate/array'
 class StationLogsController < ApplicationController
   before_action :set_station_log, only: %i[ show edit update destroy ]
   before_action :authenticate_manager!
@@ -7,8 +8,9 @@ class StationLogsController < ApplicationController
   def index
     #@station_logs = StationLog.all
 	puts "NEW SORT ATTEMPTED WEE WOO WEE WOO ENTERING INDEX"
-	stationList_array = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')	
-	stationList = StationLog.where(id: stationList_array.map(&:id))
+	stationList = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')	
+	
+	#stationList = StationLog.where(id: stationList_array.map(&:id))
 	#puts "sort username!: #{sort_order_username}"
 	
 	#puts "sort rx_bytes!: #{sort_order_rx_bytes}"
@@ -124,7 +126,7 @@ class StationLogsController < ApplicationController
     end
 
 
-	
+	@station_logs = @station_logs.paginate(:page => params[:page], :per_page => 5)
 	
 	
 	#puts "LOOKKK AT THE STATION LOGGS #{@station_logs.pluck(:id)}" # [380, 407, 522, 606, 401, 602, 601]
