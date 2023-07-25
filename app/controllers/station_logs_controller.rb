@@ -13,26 +13,112 @@ class StationLogsController < ApplicationController
 	
 	#puts "sort rx_bytes!: #{sort_order_rx_bytes}"
 	
-    if params[:sort] == "UsernameASC"
+    if params[:sort] == "Username_asc"
 	  sort_order_username = cookies[:sort_order_username] || 'asc' 
 	  if sort_order_username == 'asc'
 			cookies[:sort_order_username] = sort_order_username == 'asc' ? 'desc' : 'asc'
 	  end
 	  @station_logs = stationList.sort_by{|station_log| User.find_by(id: station_log.user_id).name}
-	elsif params[:sort] == "UsernameDESC"
+	elsif params[:sort] == "Username_desc"
 	  sort_order_username = cookies[:sort_order_username] || 'asc' 
 	  if sort_order_username == 'desc'
 			cookies[:sort_order_username] = sort_order_username == 'asc' ? 'desc' : 'asc'
 	  end
 	  @station_logs = stationList.sort_by{|station_log| User.find_by(id: station_log.user_id).name}.reverse
-	elsif params[:sort] == "rx_bytes"
+	  
+	elsif params[:sort] == "Rx_bytes_asc"
+		sort_order_rx_bytes = cookies[:sort_order_rx_bytes] || 'asc' 
+	  	if sort_order_rx_bytes == 'asc'
+	  		cookies[:sort_order_rx_bytes] = sort_order_rx_bytes == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes.to_i}
+	elsif params[:sort] == "Rx_bytes_desc"
 		sort_order_rx_bytes = cookies[:sort_order_rx_bytes] || 'asc' 
 	  	if sort_order_rx_bytes == 'desc'
-			@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes.to_i}.reverse
-		elsif sort_order_rx_bytes == 'asc'
-			@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes.to_i}
-		end 
-		cookies[:sort_order_rx_bytes] = sort_order_rx_bytes == 'asc' ? 'desc' : 'asc'
+	  		cookies[:sort_order_rx_bytes] = sort_order_rx_bytes == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes.to_i}.reverse
+	
+	elsif params[:sort] == "Tx_bytes_asc"
+		sort_order_tx_bytes = cookies[:sort_order_tx_bytes] || 'asc' 
+	  	if sort_order_tx_bytes == 'asc'
+	  		cookies[:sort_order_rx_bytes] = sort_order_tx_bytes == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.tx_bytes.to_i}
+	elsif params[:sort] == "Tx_bytes_desc"
+		sort_order_tx_bytes = cookies[:sort_order_tx_bytes] || 'asc' 
+	  	if sort_order_rx_bytes == 'desc'
+	  		cookies[:sort_order_tx_bytes] = sort_order_tx_bytes == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.tx_bytes.to_i}.reverse
+	
+	
+	elsif params[:sort] == "Signal_asc"
+		sort_order_signal = cookies[:sort_order_signal] || 'asc' 
+	  	if sort_order_signal == 'asc'
+	  		cookies[:sort_order_signal] = sort_order_signal == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.signal.to_i}
+	elsif params[:sort] == "Signal_desc"
+		sort_order_signal = cookies[:sort_order_signal] || 'asc' 
+	  	if sort_order_signal == 'desc'
+	  		cookies[:sort_order_signal] = sort_order_signal == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.signal.to_i}.reverse
+		
+	elsif params[:sort] == "Tx_failed_asc"
+		sort_order_tx_failed = cookies[:sort_order_tx_failed] || 'asc' 
+	  	if sort_order_tx_failed == 'asc'
+	  		cookies[:sort_order_rx_failed] = sort_order_tx_failed == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.tx_failed.to_i}
+	elsif params[:sort] == "Tx_failed_desc"
+		sort_order_tx_failed = cookies[:sort_order_tx_failed] || 'asc' 
+	  	if sort_order_rx_failed == 'desc'
+	  		cookies[:sort_order_tx_failed] = sort_order_tx_failed == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.tx_failed.to_i}.reverse
+		
+	elsif params[:sort] == "T_connected_asc"
+		sort_order_t_connected = cookies[:sort_order_t_connected] || 'asc' 
+	  	if sort_order_t_connected == 'asc'
+	  		cookies[:sort_order_t_connected] = sort_order_t_connected == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.connected_time.to_i}
+	elsif params[:sort] == "T_connected_desc"
+		sort_order_t_connected = cookies[:sort_order_t_connected] || 'asc' 
+	  	if sort_order_t_connected == 'desc'
+	  		cookies[:sort_order_t_connected] = sort_order_t_connected == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.connected_time.to_i}.reverse
+		
+	elsif params[:sort] == "T_connected_asc"
+		sort_order_t_connected = cookies[:sort_order_t_connected] || 'asc' 
+	  	if sort_order_t_connected == 'asc'
+	  		cookies[:sort_order_t_connected] = sort_order_t_connected == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.connected_time.to_i}
+	elsif params[:sort] == "T_connected_desc"
+		sort_order_t_connected = cookies[:sort_order_t_connected] || 'asc' 
+	  	if sort_order_t_connected == 'desc'
+	  		cookies[:sort_order_t_connected] = sort_order_t_connected == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.connected_time.to_i}.reverse
+	
+	elsif params[:sort] == "Connected_at_asc"
+		sort_order_connected_at = cookies[:sort_order_connected_at] || 'asc' 
+	  	if sort_order_connected_at == 'asc'
+	  		cookies[:sort_order_connected_at] = sort_order_connected_at == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.created_at.to_i}
+	elsif params[:sort] == "Connected_at_desc"
+		sort_order_connected_at = cookies[:sort_order_connected_at] || 'asc' 
+	  	if sort_order_connected_at == 'desc'
+	  		cookies[:sort_order_connected_at] = sort_order_connected_at == 'asc' ? 'desc' : 'asc'
+		end
+		@station_logs = stationList.sort_by{|station_log| station_log.created_at.to_i}.reverse
+		
+		sort_order_connected_at
     else
       @station_logs = stationList
     end
