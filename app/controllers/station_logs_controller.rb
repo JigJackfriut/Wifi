@@ -42,12 +42,12 @@ class StationLogsController < ApplicationController
 	elsif params[:sort] == "Tx_bytes_asc"
 		sort_order_tx_bytes = cookies[:sort_order_tx_bytes] || 'asc' 
 	  	if sort_order_tx_bytes == 'asc'
-	  		cookies[:sort_order_rx_bytes] = sort_order_tx_bytes == 'asc' ? 'desc' : 'asc'
+	  		cookies[:sort_order_tx_bytes] = sort_order_tx_bytes == 'asc' ? 'desc' : 'asc'
 		end
 		@station_logs = stationList.sort_by{|station_log| station_log.tx_bytes.to_i}
 	elsif params[:sort] == "Tx_bytes_desc"
 		sort_order_tx_bytes = cookies[:sort_order_tx_bytes] || 'asc' 
-	  	if sort_order_rx_bytes == 'desc'
+	  	if sort_order_tx_bytes == 'desc'
 	  		cookies[:sort_order_tx_bytes] = sort_order_tx_bytes == 'asc' ? 'desc' : 'asc'
 		end
 		@station_logs = stationList.sort_by{|station_log| station_log.tx_bytes.to_i}.reverse
@@ -69,12 +69,12 @@ class StationLogsController < ApplicationController
 	elsif params[:sort] == "Tx_failed_asc"
 		sort_order_tx_failed = cookies[:sort_order_tx_failed] || 'asc' 
 	  	if sort_order_tx_failed == 'asc'
-	  		cookies[:sort_order_rx_failed] = sort_order_tx_failed == 'asc' ? 'desc' : 'asc'
+	  		cookies[:sort_order_tx_failed] = sort_order_tx_failed == 'asc' ? 'desc' : 'asc'
 		end
 		@station_logs = stationList.sort_by{|station_log| station_log.tx_failed.to_i}
 	elsif params[:sort] == "Tx_failed_desc"
 		sort_order_tx_failed = cookies[:sort_order_tx_failed] || 'asc' 
-	  	if sort_order_rx_failed == 'desc'
+	  	if sort_order_tx_failed == 'desc'
 	  		cookies[:sort_order_tx_failed] = sort_order_tx_failed == 'asc' ? 'desc' : 'asc'
 		end
 		@station_logs = stationList.sort_by{|station_log| station_log.tx_failed.to_i}.reverse
@@ -123,6 +123,8 @@ class StationLogsController < ApplicationController
       @station_logs = stationList
     end
 
+
+	
 	
 	
 	#puts "LOOKKK AT THE STATION LOGGS #{@station_logs.pluck(:id)}" # [380, 407, 522, 606, 401, 602, 601]
