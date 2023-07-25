@@ -55,10 +55,11 @@ module UsersHelper
 	end
 	
 	def userAddZone(user, user_params)
-		puts "params: #{user_params}"
+	
 		zoneList = user_params[:zone_list]
-		puts "zoneList: #{zoneList}"
-		zoneList.each do |zoneID|
+		
+		if zoneList != nil
+			zoneList.each do |zoneID|
 			zone = Zone.find_by(id: zoneID)
 			userzone = Userzone.find_by(user_id: user, zone_id: zone)
 			if !userzone
@@ -66,9 +67,8 @@ module UsersHelper
 				genpmk(user.passphrase, zone.ssid, userzone.id)
 			end
 		end
-		
+	
 		Userzone.where(user_id: user).find_each do |uz|
-		puts "does #{zoneList} include #{uz.zone_id}? #{zoneList.include?(uz.zone_id)}"
 			if !zoneList.include?(uz.zone_id.to_s)
 				puts "zone no longer selected! delete! #{uz.id}"
 				uz.destroy
@@ -76,13 +76,6 @@ module UsersHelper
 				puts "no userzones need to be cleared!"
 			end
 		end 
-		
-		
-		
-		
-		
-		
+		end
 	end 
-	
-	
 end

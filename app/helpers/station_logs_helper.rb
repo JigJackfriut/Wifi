@@ -10,6 +10,7 @@ class Array
     raise 'Element class is not ApplicationRecord and as such cannot be converted' unless clazz.ancestors.include? ApplicationRecord
 
     clazz.where(id: self.collect(&:id))
-  end
+  	end
+  
 end
 end
