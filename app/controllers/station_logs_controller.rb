@@ -6,26 +6,38 @@ class StationLogsController < ApplicationController
   # GET /station_logs or /station_logs.json
   def index
     #@station_logs = StationLog.all
+	puts "NEW SORT ATTEMPTED WEE WOO WEE WOO ENTERING INDEX"
 	stationList_array = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate;')	
 	stationList = StationLog.where(id: stationList_array.map(&:id))
-	sort_order_username = cookies[:sort_order_username] || 'asc' 
-	sort_order_rx_bytes = cookies[:sort_order_rx_bytes] || 'asc' 
-
-    if params[:sort] == "Username"
-      @station_logs = stationList.sort_by{|station_log| User.find_by(id: station_log.user_id).name}
+	#puts "sort username!: #{sort_order_username}"
+	
+	#puts "sort rx_bytes!: #{sort_order_rx_bytes}"
+	
+    if params[:sort] == "UsernameASC"
+	  sort_order_username = cookies[:sort_order_username] || 'asc' 
+	  if sort_order_username == 'asc'
+			cookies[:sort_order_username] = sort_order_username == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| User.find_by(id: station_log.user_id).name}
+	elsif params[:sort] == "UsernameDESC"
+	  sort_order_username = cookies[:sort_order_username] || 'asc' 
+	  if sort_order_username == 'desc'
+			cookies[:sort_order_username] = sort_order_username == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| User.find_by(id: station_log.user_id).name}.reverse
 	elsif params[:sort] == "rx_bytes"
+		sort_order_rx_bytes = cookies[:sort_order_rx_bytes] || 'asc' 
 	  	if sort_order_rx_bytes == 'desc'
 			@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes.to_i}.reverse
 		elsif sort_order_rx_bytes == 'asc'
 			@station_logs = stationList.sort_by{|station_log| station_log.rx_bytes.to_i}
 		end 
-	puts "sort attempted" 
+		cookies[:sort_order_rx_bytes] = sort_order_rx_bytes == 'asc' ? 'desc' : 'asc'
     else
       @station_logs = stationList
-	  puts "else triggered, oops?"
     end
-	cookies[:sort_order_username] = sort_order_username == 'asc' ? 'desc' : 'asc'
-	cookies[:sort_order_rx_bytes] = sort_order_rx_bytes == 'asc' ? 'desc' : 'asc'
+
+	
 	
 	#puts "LOOKKK AT THE STATION LOGGS #{@station_logs.pluck(:id)}" # [380, 407, 522, 606, 401, 602, 601]
 	#arr = @station_logs.pluck(:id)
