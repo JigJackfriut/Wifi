@@ -19,14 +19,8 @@ def secondsToTime(connectedTime)
 	if !connectedTime.nil?
 		arrayString = connectedTime.split(" ")
 		seconds = arrayString[0].to_i
-		time = [seconds / 3600, seconds / 60 % 60, seconds % 60].map { |t| t.to_s.rjust(2,'0') }.join(':')
-	else 
-		time = "N/A"
+		time = [seconds / 86400 ,(seconds - (seconds / 86400 ) * 86400) / 3600, seconds / 60 % 60, seconds % 60].map { |t| t.to_s.rjust(2,'0') }.join(':')
 	end 
-	
 	return time
 end
-
-
-
 end #end of module
