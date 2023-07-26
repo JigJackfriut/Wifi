@@ -24,6 +24,7 @@
 	  <th scope="col">Station Mac</th>
 	  <th scope="col">AP Mac</th>
       <th scope="col">WLAN</th>
+	  <th scope="col">Channel</th>
 	  <th scope="col">VLAN</th>
 	  <th> <% if cookies[:sort_order_rx_bytes] == 'asc'or cookies[:sort_order_rx_bytes] == nil %> 
 			<%= link_to "station_logs?sort=Rx_bytes_asc", style: "text-decoration:none; color:white" do %>
@@ -132,6 +133,7 @@
 		  <td><%= station_log.mac %></td>
 		  <td><%= Wificlient.find_by(mac: station_log.ap_mac).name %></td>
           <td><%= station_log.interface %></td>
+		  <td><%= station_log.channel %></td>
 		  <td><%= station_log.vid %></td>
           <td><%= station_log.rx_bytes %> </td>
 		  <td><%= station_log.tx_bytes %></td>
