@@ -187,7 +187,6 @@ def alive(params)
 	wlanEnabled = false 
 	
 	if client != nil
-		
 		Wlan.where(client_id: client.id).find_each do |wlan|
 			if wlan.enabled	
 				wlanEnabled = true
@@ -215,17 +214,16 @@ def update_wireless_clients(params)
 	stations.each do |station|
 		stationParams = station[1]
 		mac = station[0]
-		#puts "THIS IS WHAT STATION MAC LOOKS LIKE #{stationParams}"
-		#stationTest = StationLog.find_by(mac: stationParams['mac'].downcase)
-		#puts "#{ap} AND lowercase mac #{station[:mac].downcase}"
 	 
 		stationTest = StationLog.create(ap_mac: apMac, mac: mac.downcase, interface: stationParams['interface'],channel: stationParams['channel'], rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], tx_retries: stationParams['tx retries'],tx_failed: stationParams['tx failed'], 
 							signal: stationParams['signal'], signal_avg: stationParams['signal avg'], tx_bitrate: stationParams['tx bitrate'], rx_bitrate: stationParams['rx bitrate'], expected_throughput: stationParams['expected throughput'], associated: stationParams['associated'], vid: stationParams['vid'], ssid: stationParams['ssid'],
-							user_id: stationParams['user_id'], event: stationParams['event'], connected_time: stationParams['connected time'], manager_id: User.find_by(id: stationParams['user_id']).manager_id)
+							user_id: stationParams['user_id'], event: stationParams['event'], connected_time: stationParams['connected time'])
+		if !stationParams['user_id'].nil?
+			stationTest.update(manager_id: User.find_by(id: stationParams['user_id']).manager_id)
+		else
+			stationTest.update(manager_id: Wificlient.find_by(mac: apMac).manager_id)
+		end
 		#userManID = User.find_by(id: station_log_params[:user_id]).manager_id
 		#@station_log.update(manager_id: User.find_by(id:station_log_params[:user_id]).manager_id)
 	end
-		
-	
-	
 end
