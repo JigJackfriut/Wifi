@@ -126,7 +126,7 @@ class StationLogsController < ApplicationController
     end
 
 
-	@station_logs = @station_logs.paginate(:page => params[:page], :per_page => 5)
+	@station_logs = @station_logs.paginate(:page => params[:page], :per_page => 30)
 	
 	
 	#puts "LOOKKK AT THE STATION LOGGS #{@station_logs.pluck(:id)}" # [380, 407, 522, 606, 401, 602, 601]
