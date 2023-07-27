@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_18_141704) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_27_171350) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -22,8 +22,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_141704) do
     t.string "state"
     t.string "zip"
     t.string "accounttype"
-    t.datetime "created_at", default: -> { "current_timestamp(6)" }, null: false
-    t.datetime "updated_at", default: -> { "current_timestamp(6)" }, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "admin", default: false
   end
 
@@ -179,8 +179,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_141704) do
     t.string "wlan"
     t.string "phy"
     t.string "txpower"
-    t.string "a"
-    t.string "g"
+    t.text "a"
+    t.text "g"
     t.datetime "lastseen"
     t.datetime "dateadded"
     t.integer "channel"
