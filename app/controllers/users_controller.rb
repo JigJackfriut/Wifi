@@ -34,6 +34,7 @@ include UserzonesHelper
     #@user = User.new(user_params)
     @user = current_manager.users.build(user_params.except(:zone_list))
 	
+	if !user_params[:zone_list].nil?
 	(user_params[:zone_list]).each do |zone|
 		puts "checkpoint! #{zone}" 
 		Wlan.where( :zone => zone).find_each do |wlan|
@@ -42,6 +43,7 @@ include UserzonesHelper
 			client.update(pmk_change: true)
 			puts "client ID! : #{client.id}"
 		end 
+	end
 	end
 	
 	
