@@ -70,10 +70,10 @@ def process_hello(params)
 	if client
 		client.update(lastseen: Time.new)
 		if client.ipaddress != params[:ipaddress] or client.version != params[:version] or client.os != params[:os] or client.model != params[:model]
-			client.update(ipaddress:  params[:ipaddress], version:  params[:version], os: params[:os], model: params[:model])
+			client.update(status: "Turned On", ipaddress:  params[:ipaddress], version:  params[:version], os: params[:os], model: params[:model])
 		end
 	else 
-		client = Wificlient.create(mac:params[:mac],os:params[:os],version:params[:version],serial:params[:serial],model:params[:model], lastseen: Time.new, dateadded:Time.new, pmk_change: false, config_change: false)
+		client = Wificlient.create(mac:params[:mac], status: "Turned On", os:params[:os],version:params[:version],serial:params[:serial],model:params[:model], lastseen: Time.new, dateadded:Time.new, pmk_change: false, config_change: false)
 	end
 	
 	wlans = params[:wlans] # we gat params from JSON
@@ -196,10 +196,13 @@ def alive(params)
 	 
 	if client != nil and (client.pmk_change or client.config_change) and client.enabled and wlanEnabled
 		alive_config={"status" => "update"}
+		client.update(status: "Running")
 	elsif client != nil and (!client.pmk_change and !client.config_change) and client.enabled and wlanEnabled
 		alive_config={"status" => "success"}
+		client.update(status: "Running")
 	else
-		alive_config={"status" => "fail"} 
+		alive_config={"status" => "fail"}
+		client.update(status: "In error state")
 	end
 	
 	render json: alive_config

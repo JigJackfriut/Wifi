@@ -1,5 +1,7 @@
 class WificlientsController < ApplicationController
 	include WificlientsHelper
+	after_initialize :set_defaults
+ 
   before_action :set_wificlient, only: %i[ show edit update destroy ]
   before_action :authenticate_manager!
   before_action :current_manager, only: [:edit, :update, :destroy]
@@ -100,6 +102,9 @@ class WificlientsController < ApplicationController
     def set_wificlient
       @wificlient = Wificlient.find(params[:id])
     end
+    def set_defaults
+    	status = "Turned Off"
+  	end
 
     # Only allow a list of trusted parameters through.
     def wificlient_params
