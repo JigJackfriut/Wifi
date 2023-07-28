@@ -76,9 +76,8 @@ def process_hello(params)
 		client = Wificlient.create(mac:params[:mac], status: "Turned On", os:params[:os],version:params[:version],serial:params[:serial],model:params[:model], lastseen: Time.new, dateadded:Time.new, pmk_change: false, config_change: false)
 	end
 	
-	wlans = params[:wlans] # we gat params from JSON
+	wlans = params[:wlans] 
 	a = Array.new
-	w = Array.new
 	wlans.each do |wlan|
 		thiswlan = Wlan.find_by(mac:wlan['mac']) 
 		a.push(wlan['mac'])
@@ -88,11 +87,11 @@ def process_hello(params)
 			thiswlan.update(lastseen: Time.new)
 			if !band2.nil?
 				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.a != wlan["band2"]["channels"] or thiswlan.client_id != client.id
-					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: wlan["band2"]["channels"], client_id: client.id) 
+					thiswlan.update(wlan: wlan["wlan"],status: "Turned On" ,phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: wlan["band2"]["channels"], client_id: client.id) 
 				end
 			else 
 				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.client_id != client.id
-					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], client_id: client.id) 
+					thiswlan.update(wlan: wlan["wlan"], status: "Turned On",phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], client_id: client.id) 
 				end
 			end
 		else 
@@ -105,13 +104,9 @@ def process_hello(params)
 		
 		Wlan.where(:client_id => client.id).find_each do |wlan|
 			if !a.include?(wlan.mac)
-				wlan.update(client_id: nil)
-			end
-			if !w.include?(wlan.id)
-			w.push(wlan.id)
+				wlan.update(client_id: nil, status: "Turned Off")
 			end
 		end
-	client.update(wlan_name: w)
 	end
 end
 
@@ -190,6 +185,7 @@ def alive(params)
 		Wlan.where(client_id: client.id).find_each do |wlan|
 			if wlan.enabled	
 				wlanEnabled = true
+				wlan.update(status: "Running")
 			end
 		end 
 	 end
