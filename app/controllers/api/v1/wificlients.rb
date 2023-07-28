@@ -87,7 +87,7 @@ def process_hello(params)
 			thiswlan.update(lastseen: Time.new)
 			if !band2.nil?
 				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.a != wlan["band2"]["channels"] or thiswlan.client_id != client.id
-					thiswlan.update(wlan: wlan["wlan"],status: "Turned On" ,phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: wlan["band2"]["channels"], client_id: client.id) 
+					thiswlan.update(wlan: wlan["wlan"],status: "Turned On" ,phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: parseA(wlan["band2"]["channels"]), client_id: client.id) 
 				end
 			else 
 				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.client_id != client.id
@@ -96,7 +96,7 @@ def process_hello(params)
 			end
 		else 
 			if !band2.nil?
-				Wlan.create(mac: wlan["mac"],wlan:wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlan["band1"]["channels"], a:wlan["band2"]["channels"],client_id: client.id, lastseen: Time.new, selected_g:wlan["band1"]["channels"], selected_a:wlan["band2"]["channels"], dateadded:Time.new, name:wlan["wlan"], mode:"G", manager_id:client.manager_id)
+				Wlan.create(mac: wlan["mac"],wlan:wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlan["band1"]["channels"], a:parseA(wlan["band2"]["channels"]),client_id: client.id, lastseen: Time.new, selected_g:wlan["band1"]["channels"], selected_a:wlan["band2"]["channels"], dateadded:Time.new, name:wlan["wlan"], mode:"G", manager_id:client.manager_id)
 			else 
 				Wlan.create(mac: wlan["mac"],wlan:wlan["wlan"],phy:wlan["phy"],txpower:wlan["txpower"],g:wlan["band1"]["channels"],client_id: client.id, lastseen: Time.new, selected_g:wlan["band1"]["channels"],  dateadded:Time.new, name:wlan["wlan"], mode:"G", manager_id:client.manager_id)
 			end
@@ -208,7 +208,7 @@ def alive(params)
 		client.update(status: "Running")
 	else
 		alive_config={"status" => "fail"}
-		client.update(status: "Error")
+		#client.update(status: "Error")
 	end
 	
 	render json: alive_config

@@ -69,6 +69,24 @@ module WlansHelper
 		return html.html_safe
 	end
 	
+	def parseA(arr)
+		if arr == nil 
+			return 
+		end 
+		#stringparse = arr
+		#b = JSON.parse(stringparse) 
+		s= [] 
+		arr.each do |n|
+			if n.to_i <= 169 and n.to_i >= 36
+				s.append(n)
+			end
+		end 
+		puts "Result: #{s}"
+		return s 
+	
+	end
+	
+	
 	def wlanUpdate(wlan, wlan_params)
 	
 		if ((wlan_params[:enabled] != wlan.enabled and wlan_params[:enabled]!=nil) or (wlan_params[:mode] != wlan.mode and wlan_params[:mode]!=nil))
