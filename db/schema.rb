@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_27_171350) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_28_133029) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -116,7 +116,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_27_171350) do
     t.string "version"
     t.string "os"
     t.string "model"
-    t.string "status"
+    t.string "status", default: "Turned Off"
     t.decimal "pollrate", precision: 10
     t.datetime "lastseen"
     t.string "note"
