@@ -1,6 +1,6 @@
 class WificlientsController < ApplicationController
 	include WificlientsHelper
-	after_initialize :set_defaults
+	after_action :set_defaults
  
   before_action :set_wificlient, only: %i[ show edit update destroy ]
   before_action :authenticate_manager!
