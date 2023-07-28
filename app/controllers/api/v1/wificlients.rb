@@ -119,6 +119,7 @@ def process_config(params)
 	#The Status of the Wificlient
 	
 	if client.enabled
+		client.update(status: "Config")
 		Wlan.where(client_id: client.id).find_each do |wlan|
 			zone_array.append(wlan.zone)
 			wlan_hash = {}
@@ -179,8 +180,7 @@ end
 
 def alive(params) 
 	client = Wificlient.find_by(mac:params[:mac])
-	wlanEnabled = false 
-	
+	wlanEnabled = false 	
 	if client != nil
 		Wlan.where(client_id: client.id).find_each do |wlan|
 			if wlan.enabled	
@@ -190,6 +190,16 @@ def alive(params)
 		end 
 	 end
 	 
+	 if !client.enabled and client.lastseen <= 10.minutes.ago(Time.now)
+	 	client.update(status: "Offline")
+	 elsif !client.enabled 
+	 	client.update(status: "Online") 
+	 	
+	 elsif client.lastseen <= 10.minutes.ago(Time.now)
+	 	client.update(status: "Offline")
+	 end
+	 
+	 
 	if client != nil and (client.pmk_change or client.config_change) and client.enabled and wlanEnabled
 		alive_config={"status" => "update"}
 		client.update(status: "Running")
@@ -198,7 +208,7 @@ def alive(params)
 		client.update(status: "Running")
 	else
 		alive_config={"status" => "fail"}
-		client.update(status: "In error state")
+		client.update(status: "Error")
 	end
 	
 	render json: alive_config
