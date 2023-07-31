@@ -8,8 +8,8 @@ class StationLogsController < ApplicationController
   def index
     #@station_logs = StationLog.all
 	puts "NEW SORT ATTEMPTED WEE WOO WEE WOO ENTERING INDEX"
-	
-	stationList = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate and t.created_at > DATE_SUB(NOW(), INTERVAL 10 MINUTE)')
+	managerID = current_manager.id.to_s 
+	stationList = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate and t.manager_id = '+ managerID+ ' and t.created_at > DATE_SUB(NOW(), INTERVAL 10 MINUTE)')
 	
 	#stationList = StationLog.where(id: stationList_array.map(&:id))
 	#puts "sort username!: #{sort_order_username}"
