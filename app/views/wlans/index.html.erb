@@ -41,7 +41,11 @@
 		  <td><%= wlan.selected_a %></td>
 		  <td><%= wlan.selected_g %></td>
 		  <td><%= form_with(model: wlan) do |form| %>
-		  <%= form.check_box :enabled, checked: wlan.enabled, onchange: "this.form.requestSubmit();" %>
+			<% if !wlan.zone.nil? %>
+				<%= form.check_box :enabled, checked: wlan.enabled, onchange: "this.form.requestSubmit();" %>
+			<% else %>
+				<%= "Zone Needed" %>
+			<%end%>
 		  <%end%>
 		  </td>
 		   <td><%= parseZone(wlan.zone) %></td>
