@@ -135,8 +135,8 @@
           <td><%= station_log.interface %></td>
 		  <td><%= station_log.channel %></td>
 		  <td><%= station_log.vid %></td>
-          <td><%= station_log.rx_bytes %> </td>
-		  <td><%= station_log.tx_bytes %></td>
+          <td><%= bytes_conversion(station_log.rx_bytes) %> </td>
+		  <td><%= bytes_conversion(station_log.tx_bytes) %></td>
 		  <td><%= station_log.signal %></td>
 		  <td><%= station_log.tx_failed %></td>
 		  <td><%= secondsToTime(station_log.connected_time) %></td>
