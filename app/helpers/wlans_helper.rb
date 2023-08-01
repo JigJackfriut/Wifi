@@ -88,7 +88,7 @@ module WlansHelper
 	
 	
 	def wlanUpdate(wlan, wlan_params)
-	
+	  if !wlan.client_id.nil?
 		if ((wlan_params[:enabled] != wlan.enabled and wlan_params[:enabled]!=nil) or (wlan_params[:mode] != wlan.mode and wlan_params[:mode]!=nil))
 			puts "params: #{wlan_params[:enabled]} old: #{wlan.enabled}"
 			puts "params: #{wlan_params[:mode]} old: #{wlan.mode}"
@@ -110,6 +110,6 @@ module WlansHelper
 		else
 			puts "update not needed!"
 		end
-		
+	end 
 	end 
 end
