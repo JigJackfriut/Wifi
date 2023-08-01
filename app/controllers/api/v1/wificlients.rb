@@ -87,11 +87,11 @@ def process_hello(params)
 			thiswlan.update(lastseen: Time.new)
 			if !band2.nil?
 				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.a != wlan["band2"]["channels"] or thiswlan.client_id != client.id
-					thiswlan.update(wlan: wlan["wlan"],status: "Turned On" ,phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: parseA(wlan["band2"]["channels"]), client_id: client.id) 
+					thiswlan.update(wlan: wlan["wlan"],phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], a: parseA(wlan["band2"]["channels"]), client_id: client.id) 
 				end
 			else 
 				if thiswlan.wlan != wlan["wlan"] or thiswlan.phy != wlan["phy"] or thiswlan.txpower != wlan["txpower"] or thiswlan.g != wlan["band1"]["channels"] or thiswlan.client_id != client.id
-					thiswlan.update(wlan: wlan["wlan"], status: "Turned On",phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], client_id: client.id) 
+					thiswlan.update(wlan: wlan["wlan"], phy: wlan["phy"], txpower: wlan["txpower"] , g: wlan["band1"]["channels"], client_id: client.id) 
 				end
 			end
 		else 
@@ -113,8 +113,7 @@ end
 def process_config(params)
 	client = Wificlient.find_by(mac:params[:mac])
 	start = params[:start]
-	zone_array = [] 
-
+	zone_array = []
 	radios = Array.new
 	#The Status of the Wificlient
 	
@@ -168,6 +167,7 @@ def process_config(params)
 		end
 	else 
 		config_json = {"status": "OFF"}
+		client.update(status: "Disabled")
 	end
 	
 	#the status of the wlans
@@ -178,7 +178,7 @@ def process_config(params)
 end
 
 
-def alive(params) 
+def alive(params)
 	client = Wificlient.find_by(mac:params[:mac])
 	wlanEnabled = false 	
 	if client != nil
@@ -191,15 +191,13 @@ def alive(params)
 	 end
 	 
 	 if !client.enabled and client.lastseen <= 10.minutes.ago(Time.now)
-	 	client.update(status: "Offline")
+	 	client.update(status: "Disabled")
 	 elsif !client.enabled 
-	 	client.update(status: "Online") 
-	 	
+	 	client.update(status: "Disabled") 
 	 elsif client.lastseen <= 10.minutes.ago(Time.now)
 	 	client.update(status: "Offline")
 	 end
-	 
-	 
+	
 	if client != nil and (client.pmk_change or client.config_change) and client.enabled and wlanEnabled
 		alive_config={"status" => "update"}
 		client.update(status: "Running")
@@ -208,10 +206,10 @@ def alive(params)
 		client.update(status: "Running")
 	else
 		alive_config={"status" => "fail"}
-		#client.update(status: "Error")
+		client.update(status: "Error")
 	end
-	
 	render json: alive_config
+	
 end 
 
 
