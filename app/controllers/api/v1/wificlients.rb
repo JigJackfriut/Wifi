@@ -104,7 +104,7 @@ def process_hello(params)
 		
 		Wlan.where(:client_id => client.id).find_each do |wlan|
 			if !a.include?(wlan.mac)
-				wlan.update(client_id: nil, status: "Turned Off")
+				wlan.update(client_id: nil, status: "Not present", channel: nil)
 			end
 		end
 	end
@@ -136,8 +136,13 @@ def process_config(params)
 				wlan_hash.merge!({ "wlan": wlan.wlan, "config": conf_hash})
 			else 
 				wlan_hash.merge!({ "wlan": wlan.wlan,"config":{ "mode": "OFF"}})
+				wlan.update(status: "Con-Disabled", channel: nil)
 			end
 			radios.append(wlan_hash)
+			
+			if wlan.zone.nil?
+				wlan.update(status: "Con-NoZone")		
+			end
 		end
 	
 		pmk = Array.new
@@ -173,18 +178,12 @@ end
 
 def alive(params)
 	client = Wificlient.find_by(mac:params[:mac])
-	channels = params[:channels]
-	channels.each do |wlans|
-		wlan = Wlan.where(client_id: client.id, wlan: wlans[0])
-		wlan.update(channel: wlans[1])
-	end
-	
 	wlanEnabled = false 	
 	if client != nil
 		Wlan.where(client_id: client.id).find_each do |wlan|
 			if wlan.enabled	
 				wlanEnabled = true
-				wlan.update(status: "Running")
+				wlan.update(status: "Run-Enabled")
 			end
 		end 
 	 end
@@ -227,7 +226,5 @@ def update_wireless_clients(params)
 		else
 			stationTest.update(manager_id: Wificlient.find_by(mac: apMac).manager_id)
 		end
-		#userManID = User.find_by(id: station_log_params[:user_id]).manager_id
-		#@station_log.update(manager_id: User.find_by(id:station_log_params[:user_id]).manager_id)
 	end
 end
