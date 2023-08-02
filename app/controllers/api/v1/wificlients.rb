@@ -123,9 +123,7 @@ def process_config(params)
 			zone_array.append(wlan.zone)
 			wlan_hash = {}
 			zone = Zone.find_by(id: wlan.zone)
-			puts "BEFORE WLAN"
 			if wlan.enabled
-				puts "BREAK IN SUCCESS"
 				hostapd_hash = {}
 				if wlan.mode == "A"
 					channels = wlan.selected_a
@@ -133,18 +131,14 @@ def process_config(params)
 					channels = wlan.selected_g
 				end
 				hostapd_hash.merge!({ "ssid": zone.ssid, "interface": wlan.wlan, "channel": JSON.parse(channels).first, "hw_mode": wlan.mode, "open": zone.open_ap, "channel_list": parseArray(channels) })
-				puts "HOSTAPD #{hostapd_hash}"
 				conf_hash ={}
 				conf_hash.merge!({ "mode": "AP", "hostapd": hostapd_hash})
-				puts "CONF #{conf_hash}"
 				wlan_hash.merge!({ "wlan": wlan.wlan, "config": conf_hash})
-				puts "WLAN #{wlan_hash}"
 			else 
 				wlan_hash.merge!({ "wlan": wlan.wlan,"config":{ "mode": "OFF"}})
 			end
 			radios.append(wlan_hash)
 		end
-		puts "RADIOS #{radios}"
 	
 		pmk = Array.new
 		zone_array.each do |zoneID|
@@ -155,7 +149,6 @@ def process_config(params)
 				pmk.append(pmk_hash)
 			end	
 		end
-		puts "PMK ARRAY: #{pmk}"
 	
 		config_json = {"status": "success"}
 		if (client.pmk_change && client.config_change) or (start == 1) or (!client.pmk_change && !client.config_change) 
@@ -167,7 +160,7 @@ def process_config(params)
 		end
 	else 
 		config_json = {"status": "OFF"}
-		client.update(status: "Disabled")
+		client.update(status: "Reg-Disabled")
 	end
 	
 	#the status of the wlans
@@ -190,12 +183,10 @@ def alive(params)
 		end 
 	 end
 	 
-	 if !client.enabled and client.lastseen <= 10.minutes.ago(Time.now)
-	 	client.update(status: "Disabled")
-	 elsif !client.enabled 
-	 	client.update(status: "Disabled") 
+	if !client.enabled 
+	 	client.update(status: "Alive-Disabled") 
 	 elsif client.lastseen <= 10.minutes.ago(Time.now)
-	 	client.update(status: "Offline")
+	 	client.update(status: "No contact")
 	 end
 	
 	if client != nil and (client.pmk_change or client.config_change) and client.enabled and wlanEnabled
