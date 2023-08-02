@@ -173,6 +173,12 @@ end
 
 def alive(params)
 	client = Wificlient.find_by(mac:params[:mac])
+	channels = params[:channels]
+	channels.each do |wlans|
+		wlan = Wlan.where(client_id: client.id, wlan: wlans[0])
+		wlan.update(channel: wlans[1])
+	end
+	
 	wlanEnabled = false 	
 	if client != nil
 		Wlan.where(client_id: client.id).find_each do |wlan|
