@@ -166,8 +166,9 @@ def process_config(params)
 		config_json = {"status": "OFF"}
 		client.update(status: "Reg-Disabled")
 		Wlan.where(client_id: client.id).find_each do |wlan|
-		if !wlan.enabled
-			wlan.update(status: "Con-Disabled")
+			if !wlan.enabled
+				wlan.update(status: "Con-Disabled")
+			end
 		end
 		end
 	end
