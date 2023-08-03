@@ -169,6 +169,7 @@ def process_config(params)
 		if !wlan.enabled
 			wlan.update(status: "Con-Disabled")
 		end
+		end
 	end
 	
 	#the status of the wlans

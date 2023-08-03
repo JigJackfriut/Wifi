@@ -21,11 +21,11 @@
           <td><%= zone.name %></td>  
           <td><%= zone.description %></td>
           <td><%= zone.ssid %></td>
-          <td><%= form_with(model: zone) do |form| %>
+          <td class = "center"><%= form_with(model: zone) do |form| %>
           <%= form.check_box :open_ap, checked: zone.open_ap, onchange: "this.form.requestSubmit();" %><%end%></td>
 		  <td><%= zone.manager_id %></td>
 		 
-          <td class="justify-content-around">
+          <td class="center">
   			<%= link_to zone, style: "text-decoration:none" do %>
   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
   			<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
@@ -57,3 +57,10 @@
 </table>
 
 <%= link_to "New zone", new_zone_path %>
+
+<style>
+.center {
+    vertical-align: middle;
+    justify-content: center;
+}
+</style>

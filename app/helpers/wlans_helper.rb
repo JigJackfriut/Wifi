@@ -55,15 +55,13 @@ module WlansHelper
 	
 	def parseZone(arr)
 		require 'erb'
-		if arr == nil 
+		if arr == nil or arr ==""
 			return 
 		end 
 		s=""
 		zone = Zone.find_by(:id => arr).name
-		puts "SHOW: #{zone}"
 		zone = zone.to_s
 		s = s + '<%= link_to "'+ zone +'", "/zones/'+arr+'" %> </br>' 
-		puts "RESULT: #{s}"
 		html = ERB.new(s).result(binding)
 		
 		return html.html_safe

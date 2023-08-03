@@ -26,11 +26,11 @@
           <td><%= wificlient.ipaddress %></td> 
           <td><%= wificlient.version %></td>
 		  <td><%= wificlient.lastseen %></td>
-		  <td><%= form_with(model: wificlient) do |form| %>
+		  <td class = "center"><%= form_with(model: wificlient) do |form| %>
 		  <%= form.check_box :enabled, checked: wificlient.enabled, onchange: "this.form.requestSubmit();" %>
 		  <%end%>
 		  </td>
-		  <td><%if wificlient.status == "No contact" %>
+		  <td class = "center"><%if wificlient.status == "No contact" %>
 		  <div class="d-flex justify-content-center" >
 		  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-exclamation-triangle-fill" viewBox="0 0 16 16">
   			<path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
@@ -63,16 +63,16 @@
 		  </td>
 		   <td><%= parseWLAN(wificlient) %></td>
           
-          <td class="justify-content-around">
+          <td class="center">
   			<%= link_to wificlient, style: "text-decoration:none" do %>
-  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
+  			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
   			<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
   			<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
 			</svg>
   			<% end %>
   			
          	<%= link_to edit_wificlient_path(wificlient), style: "text-decoration:none" do %> 
-  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+  			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
   			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
   			0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 
   			0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 
@@ -83,7 +83,7 @@
   			<% end %> 
   			
   			<%= link_to wificlient_path(wificlient), data: {turbo_method: :delete, }, style: "text-decoration:none" do %>
-  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+  			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
   			<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
 			</svg>
   			<% end %>
@@ -97,5 +97,10 @@
 <br>
 <%= link_to "Add Wi-Fi Client", new_wificlient_path, class: "btn btn-primary" %>
 
-
+<style>
+.center {
+    vertical-align: middle;
+    justify-content: center;
+}
+</style>
 
