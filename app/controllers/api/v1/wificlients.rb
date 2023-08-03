@@ -170,7 +170,6 @@ def process_config(params)
 				wlan.update(status: "Con-Disabled")
 			end
 		end
-		end
 	end
 	
 	#the status of the wlans

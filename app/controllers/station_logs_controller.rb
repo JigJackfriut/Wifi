@@ -122,7 +122,85 @@ class StationLogsController < ApplicationController
 		@station_logs = stationList.sort_by{|station_log| station_log.created_at.to_i}.reverse
 		
 		sort_order_connected_at
-    else
+		
+	elsif params[:sort] == "Ssid_asc"
+	  sort_order_ssid = cookies[:sort_order_ssid] || 'asc' 
+	  if sort_order_ssid== 'asc'
+			cookies[:sort_order_ssid] = sort_order_ssid == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.ssid}
+	elsif params[:sort] == "Ssid_desc"
+	  sort_order_ssid = cookies[:sort_order_ssid] || 'asc' 
+	  if sort_order_ssid == 'desc'
+			cookies[:sort_order_ssid] = sort_order_ssid == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.ssid}.reverse
+	
+	elsif params[:sort] == "Station_mac_asc"
+	  sort_order_station_mac = cookies[:sort_order_station_mac] || 'asc' 
+	  if sort_order_station_mac == 'asc'
+			cookies[:sort_order_station_mac] = sort_order_station_mac == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.mac}
+	elsif params[:sort] == "Station_mac_desc"
+	  sort_order_station_mac = cookies[:sort_order_station_mac] || 'asc' 
+	  if sort_order_station_mac == 'desc'
+			cookies[:sort_order_station_mac] = sort_order_station_mac == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.mac}.reverse
+    
+	elsif params[:sort] == "Ap_asc"
+	  sort_order_ap = cookies[:sort_order_ap] || 'asc' 
+	  if sort_order_ap == 'asc'
+			cookies[:sort_order_ap] = sort_order_ap == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.ap_mac}
+	elsif params[:sort] == "Ap_desc"
+	  sort_order_ap = cookies[:sort_order_ap] || 'asc' 
+	  if sort_order_ap == 'desc'
+			cookies[:sort_order_ap] = sort_order_ap == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.ap_mac}.reverse
+	
+	 elsif params[:sort] == "Wlan_asc"
+	  sort_order_wlan = cookies[:sort_order_wlan] || 'asc' 
+	  if sort_order_wlan == 'asc'
+			cookies[:sort_order_wlan] = sort_order_wlan == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.ap_mac}.sort_by{|station_log| station_log.interface}
+	elsif params[:sort] == "Wlan_desc"
+	  sort_order_wlan = cookies[:sort_order_wlan] || 'asc' 
+	  if sort_order_wlan == 'desc'
+			cookies[:sort_order_wlan] = sort_order_wlan == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.interface}.sort_by{|station_log| station_log.ap_mac}.reverse
+
+	elsif params[:sort] == "Channel_asc"
+	  sort_order_channel = cookies[:sort_order_channel] || 'asc' 
+	  if sort_order_channel == 'asc'
+			cookies[:sort_order_channel] = sort_order_channel == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.channel}
+	elsif params[:sort] == "Channel_desc"
+	  sort_order_channel = cookies[:sort_order_channel] || 'asc' 
+	  if sort_order_channel == 'desc'
+			cookies[:sort_order_channel] = sort_order_channel == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.channel}.reverse
+	
+	elsif params[:sort] == "Vlan_asc"
+	  sort_order_vlan = cookies[:sort_order_vlan] || 'asc' 
+	  if sort_order_vlan == 'asc'
+			cookies[:sort_order_vlan] = sort_order_vlan == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.vid}
+	elsif params[:sort] == "Vlan_desc"
+	  sort_order_vlan = cookies[:sort_order_vlan] || 'asc' 
+	  if sort_order_vlan == 'desc'
+			cookies[:sort_order_vlan] = sort_order_vlan == 'asc' ? 'desc' : 'asc'
+	  end
+	  @station_logs = stationList.sort_by{|station_log| station_log.vid}.reverse
+	else
       @station_logs = stationList
     end
 
