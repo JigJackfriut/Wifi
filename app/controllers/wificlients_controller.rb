@@ -31,22 +31,20 @@ class WificlientsController < ApplicationController
 
   # POST /wificlients or /wificlients.json
   def create
-    #@wificlient = Wificlient.new(wificlient_params)
-	#@wificlient = current_manager.wificlients.build(wificlient_params)
-	client = Wificlient.find_by(mac:wificlient_params[:mac])
+	client = Wificlient.find_by(mac:wificlient_params[:mac]) #check that we client in the database
 	check = false
-	if client && client.manager_id.nil?
+	if client && client.manager_id.nil? # checking if there is a client and manager is nil for whether its is 
 		check = true
 	end
 
 	unique = false
 	if !Wificlient.find_by(name:wificlient_params[:name]) && check
-	unique = true
-	client.update(name: wificlient_params[:name])
-	client.update(manager_id: current_manager.id)
-	Wlan.where(:client_id => client.id).find_each do |wlan|
-	wlan.update(manager_id: current_manager.id, client_name:client.name)
-	end
+		unique = true
+		client.update(name: wificlient_params[:name])
+		client.update(manager_id: current_manager.id)
+		Wlan.where(:client_id => client.id).find_each do |wlan|
+			wlan.update(manager_id: current_manager.id, client_name:client.name)
+		end
 	end 
 
     respond_to do |format|

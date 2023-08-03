@@ -10,4 +10,9 @@ class Manager < ApplicationRecord
          has_many :zones
          has_many :userzones
 		 has_many :station_logs
+		 
+	def self.authenticate(username, password)
+    	manager = Manager.find_for_authentication(:username => username)
+    	manager&.valid_password?(password) ? manager : nil
+  	end
 end

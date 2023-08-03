@@ -115,7 +115,6 @@ def process_config(params)
 	start = params[:start]
 	zone_array = []
 	radios = Array.new
-	#The Status of the Wificlient
 	
 	if client.enabled
 		client.update(status: "Config")
@@ -166,6 +165,10 @@ def process_config(params)
 	else 
 		config_json = {"status": "OFF"}
 		client.update(status: "Reg-Disabled")
+		Wlan.where(client_id: client.id).find_each do |wlan|
+		if !wlan.enabled
+			wlan.update(status: "Con-Disabled")
+		end
 	end
 	
 	#the status of the wlans
@@ -178,6 +181,11 @@ end
 
 def alive(params)
 	client = Wificlient.find_by(mac:params[:mac])
+	channels = params[:channels]
+	channels.each do |wlans|
+		wlan = Wlan.where(client_id: client.id, wlan: wlans[0])
+		wlan.update(channel: wlans[1])
+	end
 	wlanEnabled = false 	
 	if client != nil
 		Wlan.where(client_id: client.id).find_each do |wlan|
