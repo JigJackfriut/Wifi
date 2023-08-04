@@ -9,7 +9,6 @@
       <th scope="col">Description</th>
       <th scope="col">SSID</th>
        <th scope="col">Open</th>
-	  <th scope="col">Manager ID</th>
 	  <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -23,7 +22,6 @@
           <td><%= zone.ssid %></td>
           <td class = "center"><%= form_with(model: zone) do |form| %>
           <%= form.check_box :open_ap, checked: zone.open_ap, onchange: "this.form.requestSubmit();" %><%end%></td>
-		  <td><%= zone.manager_id %></td>
 		 
           <td class="center">
   			<%= link_to zone, style: "text-decoration:none" do %>

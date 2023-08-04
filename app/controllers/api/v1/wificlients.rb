@@ -103,6 +103,7 @@ def process_hello(params)
 		end
 		
 		Wlan.where(:client_id => client.id).find_each do |wlan|
+		puts "LOOOOKKKK A #{a}"
 			if !a.include?(wlan.mac)
 				wlan.update(client_id: nil, status: "Not present", channel: nil)
 			end
@@ -111,6 +112,7 @@ def process_hello(params)
 end
 
 def process_config(params)
+	puts "PROCESSING CONFIG"
 	client = Wificlient.find_by(mac:params[:mac])
 	start = params[:start]
 	zone_array = []
@@ -163,14 +165,13 @@ def process_config(params)
 			config_json.merge!({"status": "success", "radios": radios})
 		end
 	else 
-		config_json = {"status": "OFF"}
 		client.update(status: "Reg-Disabled")
 		Wlan.where(client_id: client.id).find_each do |wlan|
 			if !wlan.enabled
 				wlan.update(status: "Con-Disabled")
 			end
 		end
-		end
+		config_json = {"status": "OFF"}
 	end
 	
 	#the status of the wlans
@@ -223,7 +224,6 @@ def update_wireless_clients(params)
 	apMac = params['AP']
 	
 	stations = params['Stations']
-	puts "HERE HERE THIS IS WHAT STATION MAC LOOKS LIKE #{stations}"
 	stations.each do |station|
 		stationParams = station[1]
 		mac = station[0]

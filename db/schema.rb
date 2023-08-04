@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_28_133029) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_04_132748) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -109,6 +109,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_28_133029) do
     t.integer "zone_id"
     t.integer "client_id"
     t.integer "vlan_id", default: 0
+    t.boolean "enabled"
     t.index ["client_id"], name: "index_users_on_client_id"
     t.index ["manager_id"], name: "index_users_on_manager_id"
     t.index ["zone_id"], name: "index_users_on_zone_id"

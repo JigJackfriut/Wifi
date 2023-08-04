@@ -7,7 +7,8 @@
       <th scope="col">User Type</th>
       <th scope="col">Passphrase</th>
        <th scope="col">Zones</th>
-	  <th scope="col">Manager ID</th>
+	   <th scope="col">VLAN ID</th>
+	    <th scope="col">Enabled</th>
 	  <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -20,7 +21,11 @@
           <td><%= user.user_type %></td>
           <td><%= user.passphrase %></td>
           <td><%= parseZones(user) %> </td>
-		  <td><%= user.manager_id %></td>
+		  <td><%= user.vlan_id %></td>
+		    <td><%= form_with(model: user) do |form| %>
+				<%= form.check_box :enabled, checked: user.enabled, onchange: "this.form.requestSubmit();" %>
+				<%end%>
+		  </td>
           <td class="center">
   			<%= link_to user, style: "text-decoration:none" do %>
   			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
