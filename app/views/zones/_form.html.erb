@@ -11,26 +11,31 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+<% if zone.manager == current_manager%>
+
+  <div class = "form-group mb-3">
+    <label>Name</label>
+    <%= form.text_field :name, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+  <div class = "form-group mb-3">
+    <label>Description</label>
+    <%= form.text_field :description, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :ssid, style: "display: block" %>
-    <%= form.text_field :ssid %>
+  <div class = "form-group mb-3">
+	<label>SSID</label>
+    <%= form.text_field :ssid, class:"form-control" %>
   </div>
 
 	<div>
     <%= form.number_field :manager_id, id: :zone_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class ="form-group mb-3">
+    <%= form.submit "Update Zone", class:"btn btn-primary" %>
   </div>
+ <% else %>
+	<h2> "You are not allowed to access this page." </h2>
+ <% end %>
 <% end %>

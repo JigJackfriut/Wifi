@@ -2,8 +2,11 @@
 
 <div>
 
-  <%= link_to "Back to WiFi Clients", wificlients_path, class: "btn btn-secondary" %>
-  
+  <%= link_to "Edit this Wi-Fi Client", edit_wificlient_path(@wificlient), class:"btn btn-secondary" %> |
+  <%= link_to "Back to Wi-Fi Clients", wificlient_path, class:"btn btn-outline-secondary" %>
+  <br> <br>
+
+  <%= button_to "Destroy this Wi-Fi Client", @wificlient, method: :delete, class: "btn btn-danger" %>
  
 </div>
 

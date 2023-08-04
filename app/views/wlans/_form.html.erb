@@ -10,25 +10,27 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
-  <br>
   
+<% if wlan.manager == current_manager%>
+  
+   <div class="form-group mb-3">
+	<label>Name</label>
+    <%= form.text_field :name, class: "form-control" %>
+   </div>
+
+  <div class="form-group mb-3">
+	<label>Description</label>
+    <%= form.text_field :description, class: "form-control" %>
+  </div>
+ 
+ 
   <% if wlan.mode == "A" and form.object.a %> 
-		<div class="field">
-			<%= form.label :selected_a, style: "display: block" %>
-			<%= form.select(:selected_a, options=parseChannels(form.object.a), html_options = {:include_hidden => false, :include_blank => false, class: "dropdown"}, { :multiple => true} ) %>  <br/>
+		<div class="form-group mb-3">
+		<label>Selected A</label> <br>
+			<%= form.select(:selected_a, options=parseChannels(form.object.a), html_options = {:include_hidden => false, :include_blank => false, class: "dropdown"}, { :multiple => true} )%>  <br/>
 				<em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
 
-	   <br/>
+	   <br>
 			<em> <%= form.label :a, "Available A Channels: #{parseArray(form.object.a)}", style: "display: block" %> </em>
 		</div>
 		<br>
@@ -36,20 +38,20 @@
 		<p style="color: red"> No A channels. Please switch modes. </p>
   <% elsif wlan.mode == "G" %>
   
-		<div class="field">
-			<%= form.label :selected_g, style: "display: block" %>
+		<div class="form-group mb-3">
+			<label>Selected G</label> <br>
 			<%= form.select(:selected_g, options=parseChannels(form.object.g), html_options = {:include_hidden => false, :include_blank => false, class: "dropdown"}, {:multiple => true} ) %>  <br/>
 				<em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
 
-	   <br/>
+	   <br> 
 		<div>
 			<em> <%= form.label :g, "Available G Channels: #{parseArray(form.object.g)}", style: "display: block" %> </em>
 		</div>
 		<br>
   <% end %>
   
-  <div class="field">
-  <%= form.label :zone, style: "display: block" %>
+  <div class="form-group mb-3">
+	<label>Zone</label><br>
   <%= form.collection_select(:zone, Zone.where(manager_id: current_manager.id), :id, :name, options = {include_hidden: false, include_blank: "no zone" }, html_options = {class: "dropdown"}) %>  <br/>
 <br/>
   <div>
@@ -61,6 +63,8 @@
    <div class="form-group mb-3">
     <%= form.submit "Update WLAN", class: "btn btn-primary" %>
   </div>
-  
+ <%else%>
+	<h2> "You are not allowed to access this page." </h2>
+ <% end %>
 <% end %>
 

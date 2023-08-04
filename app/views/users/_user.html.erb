@@ -15,13 +15,8 @@
   </p>
 
   <p>
-    <strong>Manager:</strong>
-    <%= user.manager_id %>
-  </p>
-
-  <p>
-    <strong>Zone:</strong>
-    <%= user.zone %>
+    <strong>Zone(s):</strong> <br>
+    <%= parseZones(user) %>
   </p>
 
 </div>

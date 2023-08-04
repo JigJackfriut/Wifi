@@ -10,34 +10,42 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+<% if user.manager == current_manager%>
+  <div class ="form-group mb-3">
+	<label>Name</label>
+    <%= form.text_field :name, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :user_type, style: "display: block" %>
-    <%= form.text_field :user_type %>
+  <div class ="form-group mb-3">
+	<label>User Type</label>
+    <%= form.text_field :user_type, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.label :passphrase, style: "display: block" %>
-    <%= form.text_field :passphrase %>
-	
-
+  <div class ="form-group mb-3">
+    <label>Passphrase</label>
+    <%= form.text_field :passphrase, class:"form-control" %>
   </div>
 
-  <div>
+  <div class = "form-group mb-3">
     <%= form.number_field :manager_id, id: :user_manager_id, class: "form-control", value: current_manager.id, type: :hidden %>
   </div>
   
-  <div class="field">
-  <%= form.label :zone_list, style: "display: block" %>
+  <div class="form-group mb-3">
+  <label>Zones</label> <br>
   <%= form.collection_select(:zone_list, Zone.where(:manager_id => current_manager.id), :id, :name, options = {include_hidden: false, include_blank: "no zone" }, html_options = {multiple: "true",class: "dropdown"}) %>  <br/>
   <em>(Hold down the Ctrl (PC) or Command (Mac) key for multiple selections.)</em> 
-<br/>
-  <div>
-    <%= form.submit %>
+<br> <br>
+	
+  <div class = "form-group mb-3">
+  <label>VLAN</label>
+    <%= form.number_field :vlan_id, class: "form-control" %>
   </div>
+
+
+  <div class="form-group mb-3">
+    <%= form.submit "Edit User", class: "btn btn-primary" %>
+  </div>
+<%else%>
+	<h2> "You are not allowed to access this page." </h2>
+<% end %>
 <% end %>
