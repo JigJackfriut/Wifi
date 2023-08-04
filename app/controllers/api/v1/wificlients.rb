@@ -165,13 +165,13 @@ def process_config(params)
 			config_json.merge!({"status": "success", "radios": radios})
 		end
 	else 
+		config_json = {"status": "OFF"}
 		client.update(status: "Reg-Disabled")
 		Wlan.where(client_id: client.id).find_each do |wlan|
 			if !wlan.enabled
 				wlan.update(status: "Con-Disabled")
 			end
 		end
-		config_json = {"status": "OFF"}
 	end
 	
 	#the status of the wlans

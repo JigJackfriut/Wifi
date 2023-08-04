@@ -9,7 +9,6 @@
 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
   			<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
 			</svg>
-			<% puts "ascending" %> 
   			<% end %>
 		<% elsif cookies[:sort_order_username] == 'desc'%>
 			<%= link_to "station_logs?sort=Username_desc", style: "text-decoration:none; color:white" do %>
@@ -17,15 +16,98 @@
 			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
   			<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
 			</svg>
-			<% puts "descending" %> 
   		<% end %>
 		<% end %> </th>
-      <th scope="col">SSID</th>
-	  <th scope="col">Station Mac</th>
-	  <th scope="col">AP Mac</th>
-      <th scope="col">WLAN</th>
-	  <th scope="col">Channel</th>
-	  <th scope="col">VLAN</th>
+      <th><% if cookies[:sort_order_ssid] == 'asc' or cookies[:sort_order_ssid] == nil%> 
+			<%= link_to "station_logs?sort=Ssid_asc", style: "text-decoration:none; color:white" do %>
+			<%= "SSID" %> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  			<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+			</svg>
+  			<% end %>
+		<% elsif cookies[:sort_order_ssid] == 'desc'%>
+			<%= link_to "station_logs?sort=Ssid_desc", style: "text-decoration:none; color:white" do %>
+			<%= "SSID"%> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+  			<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+			</svg>
+  		<% end %>
+		<% end %> </th>
+	   <th><% if cookies[:sort_order_station_mac] == 'asc' or cookies[:sort_order_station_mac] == nil%> 
+			<%= link_to "station_logs?sort=Station_mac_asc", style: "text-decoration:none; color:white" do %>
+			<%= "Station Mac" %> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  			<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+			</svg> 
+  			<% end %>
+		<% elsif cookies[:sort_order_station_mac] == 'desc'%>
+			<%= link_to "station_logs?sort=Station_mac_desc", style: "text-decoration:none; color:white" do %>
+			<%= "Station Mac"%> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+  			<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+			</svg>
+  		<% end %>
+		<% end %> </th>
+	     <th><% if cookies[:sort_order_ap] == 'asc' or cookies[:sort_order_ap] == nil%> 
+			<%= link_to "station_logs?sort=Ap_asc", style: "text-decoration:none; color:white" do %>
+			<%= "AP" %> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  			<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+			</svg>
+  			<% end %>
+		<% elsif cookies[:sort_order_ap] == 'desc'%>
+			<%= link_to "station_logs?sort=Ap_desc", style: "text-decoration:none; color:white" do %>
+			<%= "AP"%> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+  			<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+			</svg>
+  		<% end %>
+		<% end %> </th>
+        <th><% if cookies[:sort_order_wlan] == 'asc' or cookies[:sort_order_wlan] == nil%> 
+			<%= link_to "station_logs?sort=Wlan_asc", style: "text-decoration:none; color:white" do %>
+			<%= "WLAN" %> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  			<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+			</svg> 
+  			<% end %>
+		<% elsif cookies[:sort_order_wlan] == 'desc'%>
+			<%= link_to "station_logs?sort=Wlan_desc", style: "text-decoration:none; color:white" do %>
+			<%= "WLAN"%> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+  			<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+			</svg>
+  		<% end %>
+		<% end %> </th>
+	    <th><% if cookies[:sort_order_channel] == 'asc' or cookies[:sort_order_channel] == nil%> 
+			<%= link_to "station_logs?sort=Channel_asc", style: "text-decoration:none; color:white" do %>
+			<%= "Channel" %> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  			<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+			</svg>
+  			<% end %>
+		<% elsif cookies[:sort_order_channel] == 'desc'%>
+			<%= link_to "station_logs?sort=Channel_desc", style: "text-decoration:none; color:white" do %>
+			<%= "Channel"%> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+  			<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+			</svg>
+  		<% end %>
+		<% end %> </th>
+	  <th><% if cookies[:sort_order_vlan] == 'asc' or cookies[:sort_order_vlan] == nil%> 
+			<%= link_to "station_logs?sort=Vlan_asc", style: "text-decoration:none; color:white" do %>
+			<%= "VLAN" %> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+  			<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+			</svg>
+  			<% end %>
+		<% elsif cookies[:sort_order_vlan] == 'desc'%>
+			<%= link_to "station_logs?sort=Vlan_desc", style: "text-decoration:none; color:white" do %>
+			<%= "VLAN"%> 
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+  			<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+			</svg>
+  		<% end %>
+		<% end %> </th>
 	  <th> <% if cookies[:sort_order_rx_bytes] == 'asc'or cookies[:sort_order_rx_bytes] == nil %> 
 			<%= link_to "station_logs?sort=Rx_bytes_asc", style: "text-decoration:none; color:white" do %>
 			<%= "RX Bytes" %> 
