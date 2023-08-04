@@ -116,6 +116,6 @@ include UserzonesHelper
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:name, :user_type, :passphrase, :manager_id, [:zone_list => []], :zone_id, :client_id, :vlan_id)
+      params.require(:user).permit(:name, :user_type, :passphrase, :manager_id, [:zone_list => []], :zone_id, :client_id, :vlan_id, :enabled)
     end
 end

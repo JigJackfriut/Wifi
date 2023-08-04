@@ -12,9 +12,8 @@
 	  <th scope="col">Mode</th>
       <th scope="col">Channel</th>
       <th scope="col">Enabled</th>
-	  <th scope = "col">Zone </th>
-      <th scope="col">Last seen</th>
-      <th scope="col">Date Added</th>
+	  <th scope = "col">Zone</th>
+      <th scope="col">Last Seen</th>
 	  <th scope="col">Associated Wi-Fi Client</th>
 	  <th scope="col">Actions</th>
     </tr>
@@ -70,7 +69,6 @@
 		  </td>
 		   <td><%= parseZone(wlan.zone) %></td>
 		  <td><%= wlan.lastseen %></td>
-		  <td><%= wlan.dateadded %></td>
 		  <td><%= parseWifiClient(wlan.client_id) %></td>
 		 
           <td class="center">
