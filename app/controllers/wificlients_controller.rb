@@ -1,7 +1,7 @@
 class WificlientsController < ApplicationController
 	include WificlientsHelper
 	after_action :set_defaults
- 
+
   before_action :set_wificlient, only: %i[ show edit update destroy ]
   before_action :authenticate_manager!
   before_action :current_manager, only: [:edit, :update, :destroy]
@@ -98,6 +98,7 @@ class WificlientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_wificlient
+      print "SKON\n"
       @wificlient = Wificlient.find(params[:id])
     end
     def set_defaults

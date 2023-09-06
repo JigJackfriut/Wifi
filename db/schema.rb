@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_04_132748) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_06_154320) do
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -22,8 +22,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_04_132748) do
     t.string "state"
     t.string "zip"
     t.string "accounttype"
-    t.datetime "created_at", default: -> { "current_timestamp(6)" }, null: false
-    t.datetime "updated_at", default: -> { "current_timestamp(6)" }, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "admin", default: false
   end
 
@@ -74,8 +74,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_04_132748) do
     t.string "ap_mac"
     t.string "interface"
     t.integer "channel"
-    t.integer "rx_bytes"
-    t.integer "tx_bytes"
+    t.bigint "rx_bytes"
+    t.bigint "tx_bytes"
     t.integer "tx_retries"
     t.integer "tx_failed"
     t.string "signal"
@@ -151,25 +151,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_04_132748) do
     t.boolean "config_change"
     t.boolean "pmk_change"
     t.index ["manager_id"], name: "index_wificlients_on_manager_id"
-  end
-
-  create_table "wlanclients", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
-    t.string "location"
-    t.string "ipaddress"
-    t.string "clientversion"
-    t.string "osversion"
-    t.string "hwmodel"
-    t.string "status"
-    t.decimal "pollrate", precision: 10
-    t.datetime "lastseen"
-    t.string "note"
-    t.string "name"
-    t.datetime "dateadded"
-    t.string "confighash"
-    t.decimal "ownerid", precision: 10
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean "enabled"
   end
 
   create_table "wlans", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
