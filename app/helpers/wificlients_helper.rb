@@ -4,7 +4,7 @@ module WificlientsHelper
 		first = true
 		Wlan.where(:client_id => wificlient.id).find_each do |wlan|
 			wlanName = wlan.name 
-			puts "HERE IT IS!!! #{wlan.name}"
+			#puts "HERE IT IS!!! #{wlan.name}"
 			n = (wlan.id).to_s						
 			s = s + '<%= link_to "'+ wlanName +'", "/wlans/'+n+'" %> </br>' 
 			#s = s + '<input type = "checkbox" id="' + n +'" name="' +n +'" value="Bike"> <label for="' + n +'">' + n +'</label><br>'
