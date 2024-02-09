@@ -3,11 +3,11 @@
 A project to create cloud managedenterprise wifi with low cost hardware
 
 # Setup
-`sudo apt-get install libmysqlclient-dev`
-`bundle update`
-`bundle install --gemfile /home/skon/cloudwifi/Gemfile`
-`ALTER USER 'root'@'localhost' IDENTIFIED BY 'Kenyon2023`
-`rake db:create && rake db:schema:load`
+ 1. `sudo apt-get install libmysqlclient-dev`
+ 2. `bundle update`
+ 3. `bundle install --gemfile /home/skon/cloudwifi/Gemfile`
+ 4. `ALTER USER 'root'@'localhost' IDENTIFIED BY 'Kenyon2023`
+ 5. `rake db:create && rake db:schema:load`
 
 
 
