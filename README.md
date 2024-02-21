@@ -8,7 +8,8 @@ A project to create cloud managedenterprise wifi with low cost hardware
  3. `bundle install --gemfile /home/skon/cloudwifi/Gemfile`
  4. `ALTER USER 'root'@'localhost' IDENTIFIED BY 'Kenyon2023`
  5. `rake db:create && rake db:schema:load`
- 6. Run `crontab -e`. Then add: `* * * * * /home/skon/cloudwifi/checkpuma.sh`
+ 6. To run automatically: Run `crontab -e`. Then add: `* * * * * /home/skon/cloudwifi/checkpuma.sh`
+ 7. To run manually (for development): `rails s -b 0.0.0.0 -p 3002`  where port is what you are using.
 
 
 
