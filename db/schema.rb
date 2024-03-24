@@ -153,6 +153,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_06_154320) do
     t.index ["manager_id"], name: "index_wificlients_on_manager_id"
   end
 
+  create_table "wlanclients", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.string "location"
+    t.string "ipaddress"
+    t.string "clientversion"
+    t.string "osversion"
+    t.string "hwmodel"
+    t.string "status"
+    t.decimal "pollrate", precision: 10
+    t.datetime "lastseen"
+    t.string "note"
+    t.string "name"
+    t.datetime "dateadded"
+    t.string "confighash"
+    t.decimal "ownerid", precision: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "enabled"
+  end
+
   create_table "wlans", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "mac"
     t.string "name"
