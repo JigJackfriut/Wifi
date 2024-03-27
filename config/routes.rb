@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :station_logs
+  # I write middle and end
+  resources :station_logs do
+    get 'find_device_type', on: :collection
+  end
+# I stop
   resources :jsontests
   resources :userzones
   resources :zones
@@ -18,4 +22,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # I write
+
+
 end
