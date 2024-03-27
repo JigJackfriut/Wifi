@@ -223,7 +223,7 @@
 		  <td><%= station_log.tx_failed %></td>
 		  <td><%= secondsToTime(station_log.connected_time) %></td>
 		  <td><%= station_log.created_at %></td>
-		  <!-- write  here -->     <td><%= link_to "Find Device Type", find_device_type_path(mac: station_log.mac), remote: true %></td>
+		  <!-- write  here -->     <td><%= link_to "Find Device Type", find_device_type(mac: station_log.mac), remote: true %></td>
 
 
 
