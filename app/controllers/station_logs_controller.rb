@@ -287,4 +287,40 @@ class StationLogsController < ApplicationController
     def station_log_params
       params.require(:station_log).permit(:AP, :station, :interface, :channel, :rx_bytes, :tx_bytes, :tx_retries, :tx_failed, :signal, :signal_avg, :tx_bitrate, :rx_bitrate, :expected_throughput, :associated, :vid, :ssid, :user_id, :event, :mac)
     end
+	require 'net/http'
+require 'json'
+
+def get_mac_info(mac_address)
+  api_key = '01hqsavvxq5xxn9p3ety9wyegj01hqsawhy2r371sf4avah4y1fffsnvtkb2hp8b'
+  api_endpoint = "https://api.maclookup.app/v2/macs/#{mac_address}?apiKey=#{api_key}"
+
+  uri = URI(api_endpoint)
+  response = Net::HTTP.get_response(uri)
+
+  if response.code.to_i == 200
+    return JSON.parse(response.body)
+  else
+    puts "Error: #{response.body}"
+    return nil
+  end
+rescue => e
+  puts "Error: #{e.message}"
+  return nil
+end
+
+def find_device_type(mac)
+  mac_address_to_lookup = mac
+  mac_info = get_mac_info(mac_address_to_lookup)
+
+  if mac_info
+    return mac_info['companyName']
+  else
+    return "Error: Failed to retrieve"
+  end
+end
+
+  
+  
+
+
 end
