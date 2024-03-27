@@ -223,6 +223,8 @@
 		  <td><%= station_log.tx_failed %></td>
 		  <td><%= secondsToTime(station_log.connected_time) %></td>
 		  <td><%= station_log.created_at %></td>
+		  <!-- write  here --> <td><%= find_device_type(station_log.mac) %></td>
+
   	</tr>
   	<% end %>
   	<% end %>
