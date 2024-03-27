@@ -308,7 +308,7 @@ rescue => e
   return nil
 end
 
-def find_device_type(mac)
+def findDeviceType(mac)
   mac_address_to_lookup = mac
   mac_info = get_mac_info(mac_address_to_lookup)
 
