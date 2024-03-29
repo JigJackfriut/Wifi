@@ -222,7 +222,7 @@ end
 
 #Im changing the code here
 
-=begin
+
 def update_wireless_clients(params)
 	apMac = params['AP']
 	
@@ -243,7 +243,7 @@ def update_wireless_clients(params)
 end
 
 
-=end
+=begin
 
 def update_wireless_clients(params)
     apMac = params['AP']
@@ -277,4 +277,4 @@ def update_wireless_clients(params)
         end
     end
 end
-
+=end
