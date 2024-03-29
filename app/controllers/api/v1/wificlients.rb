@@ -256,7 +256,7 @@ def update_wireless_clients(params)
         
         if existing_record.nil? || existing_record.tx_bytes < stationParams['tx bytes'] || existing_record.rx_bytes < stationParams['rx bytes']
             # Create a new record if no existing record found or if the new data has higher TX or RX bytes
-            StationLog.create(ap_mac: apMac, mac: mac.downcase, interface: stationParams['interface'], channel: stationParams['channel'], 
+            stationTest= StationLog.create(ap_mac: apMac, mac: mac.downcase, interface: stationParams['interface'], channel: stationParams['channel'], 
                               rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], tx_retries: stationParams['tx retries'], 
                               tx_failed: stationParams['tx failed'], signal: stationParams['signal'], signal_avg: stationParams['signal avg'], 
                               tx_bitrate: stationParams['tx bitrate'], rx_bitrate: stationParams['rx bitrate'], 
