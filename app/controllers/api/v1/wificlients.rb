@@ -278,13 +278,7 @@ def update_wireless_clients(params)
                                     connected_time: stationParams['connected time'])
         end
 
-	#i add 
-        if !stationParams['user_id'].nil?
-              stationTest.update(manager_id: User.find_by(id: stationParams['user_id']).manager_id)
-        elsif 
-               stationTest.update(manager_id: Wificlient.find_by(mac: apMac).manager_id)
-        end
-	#end
+	
 
     end
 end
