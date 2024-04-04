@@ -254,7 +254,7 @@ def update_wireless_clients(params)
         stationParams = station[1]
         mac = station[0]
         
-        existing_record = StationLog.find_by(ap_mac: apMac, mac: mac.downcase) #interface: stationParams['interface'])
+        existing_record = StationLog.find_by(ap_mac: apMac, mac: mac.downcase, interface: stationParams['interface'])
         
         if existing_record.nil? || existing_record.tx_bytes > stationParams['tx bytes'].to_i || existing_record.rx_bytes > stationParams['rx bytes'].to_i
 
