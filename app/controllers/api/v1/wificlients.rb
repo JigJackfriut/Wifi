@@ -245,40 +245,36 @@ end
 
 =end
 
-User
+
 def update_wireless_clients(params)
-    apMac = params['AP']
-    stations = params['Stations']
+  ap_mac = params['AP']
+  stations = params['Stations']
+  
+  stations.each do |station|
+    station_params = station[1]
+    mac = station[0]
     
-    stations.each do |station|
-        stationParams = station[1]
-        mac = station[0]
-        
-        existing_record = StationLog.find_by(ap_mac: apMac, mac: mac.downcase, interface: stationParams['interface'])
-        
-        if existing_record.nil? || existing_record.tx_bytes > stationParams['tx bytes'].to_i || existing_record.rx_bytes > stationParams['rx bytes'].to_i
-
-            # Create a new record if no existing record found or if the new data has higher TX or RX bytes
-            stationTest= StationLog.create(ap_mac: apMac, mac: mac.downcase, interface: stationParams['interface'], channel: stationParams['channel'], 
-                              rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], tx_retries: stationParams['tx retries'], 
-                              tx_failed: stationParams['tx failed'], signal: stationParams['signal'], signal_avg: stationParams['signal avg'], 
-                              tx_bitrate: stationParams['tx bitrate'], rx_bitrate: stationParams['rx bitrate'], 
-                              expected_throughput: stationParams['expected throughput'], associated: stationParams['associated'], 
-                              vid: stationParams['vid'], ssid: stationParams['ssid'], user_id: stationParams['user_id'], 
-                              event: stationParams['event'], connected_time: stationParams['connected time'])
-        else
-            # Update existing record if the new data has higher TX or RX bytes
-            existing_record.update(rx_bytes: stationParams['rx bytes'], tx_bytes: stationParams['tx bytes'], 
-                                    tx_retries: stationParams['tx retries'], tx_failed: stationParams['tx failed'], 
-                                    signal: stationParams['signal'], signal_avg: stationParams['signal avg'], 
-                                    tx_bitrate: stationParams['tx bitrate'], rx_bitrate: stationParams['rx bitrate'], 
-                                    expected_throughput: stationParams['expected throughput'], 
-                                    associated: stationParams['associated'], vid: stationParams['vid'], ssid: stationParams['ssid'], 
-                                    user_id: stationParams['user_id'], event: stationParams['event'], 
-                                    connected_time: stationParams['connected time'])
-        end
-
-	
-
+    existing_record = StationLog.find_by(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'])
+    
+    if existing_record.nil? || existing_record.tx_bytes < station_params['tx bytes'].to_i || existing_record.rx_bytes < station_params['rx bytes'].to_i
+      # Create a new record if no existing record found or if the new data has higher TX or RX bytes
+      StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'], 
+                        rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'], 
+                        tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'], 
+                        tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'], 
+                        expected_throughput: station_params['expected throughput'], associated: station_params['associated'], 
+                        vid: station_params['vid'], ssid: station_params['ssid'], user_id: station_params['user_id'], 
+                        event: station_params['event'], connected_time: station_params['connected time'])
+    else
+      # Update existing record if the new data has higher TX or RX bytes
+      existing_record.update(rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], 
+                             tx_retries: station_params['tx retries'], tx_failed: station_params['tx failed'], 
+                             signal: station_params['signal'], signal_avg: station_params['signal avg'], 
+                             tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'], 
+                             expected_throughput: station_params['expected throughput'], 
+                             associated: station_params['associated'], vid: station_params['vid'], ssid: station_params['ssid'], 
+                             user_id: station_params['user_id'], event: station_params['event'], 
+                             connected_time: station_params['connected time'])
     end
+  end
 end
