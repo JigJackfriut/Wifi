@@ -208,8 +208,8 @@
 
   <tbody>
   <% @station_logs.each do |station_log| %>
-    <% station_log['connected_time'] = station_log['connected_time'].chop(3) %>
-    <% timestamp_seconds = station_log['connected_time'].to_i / 1000 %>
+    <% station_log['current_time'] = station_log['current_time'].chop(3) %>
+    <% timestamp_seconds = station_log['current_time'].to_i / 1000 %>
     <% timestamp_time = Time.at(timestamp_seconds) %>
     <% current_time = Time.now %>
     <% difference_in_seconds = (current_time - timestamp_time).to_i %>
