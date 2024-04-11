@@ -258,13 +258,13 @@ def update_wireless_clients(params)
 
     if existing_record.nil?
       # Create a new record if no existing record found
-       StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
-                        rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
-                        tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
-                        tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
-                        expected_throughput: station_params['expected throughput'], associated: station_params['associated'],
-                        vid: station_params['vid'], ssid: station_params['ssid'], user_id: station_params['user_id'],
-                        event: station_params['event'], connected_time: station_params['connected time'], current_time: station_params['current time'])
+      StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
+                         rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
+                         tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
+                         tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
+                         expected_throughput: station_params['expected throughput'], associated: station_params['associated'],
+                         vid: station_params['vid'], ssid: station_params['ssid'], user_id: station_params['user_id'],
+                         event: station_params['event'], connected_time: station_params['connected time'], current_time: station_params['current time'])
     else
       # Update existing record only if the new data has higher TX or RX bytes
       if existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i
@@ -279,7 +279,5 @@ def update_wireless_clients(params)
       
       end
     end
-
   end
 end
-
