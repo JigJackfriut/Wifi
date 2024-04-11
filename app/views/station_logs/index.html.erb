@@ -209,11 +209,10 @@
   <tbody>
   <% @station_logs.each do |station_log| %>
     <% station_log['current_time'] = station_log['current_time'].chop(3) %>
-    <% timestamp_seconds = station_log['current_time'].to_i / 1000 %>
+    <% timestamp_seconds = station_log['current_time'].to_i %>
     <% timestamp_time = Time.at(timestamp_seconds) %>
-    <% current_time = Time.now %>
-    <% difference_in_seconds = (current_time - timestamp_time).to_i %>
-    <% if difference_in_seconds < 180 && station_log['user_id'].present? %>
+    <% difference_in_seconds = (@current_time - timestamp_time).to_i %>
+    <% if difference_in_seconds < 180000 && station_log['user_id'].present? %>
       <tr>
         <% if User.find_by(id: station_log['user_id']) %>
           <td><%= User.find_by(id: station_log['user_id']).name %></td>
