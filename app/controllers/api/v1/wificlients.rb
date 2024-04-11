@@ -287,16 +287,7 @@ def update_wireless_clients(params)
 	      
       end
     end
-    timestamp_seconds = station_params['connected time'].to_i / 1000
-    timestamp_time = Time.at(timestamp_seconds)
-    current_time = Time.now
-    difference_in_seconds = (current_time - timestamp_time).to_i
-    if difference_in_seconds < 180 && station_params['user_id'].present?
-          stationTest.update(manager_id: User.find_by(id: station_params['user_id'])&.manager_id)
-    else 
-	   stationTest.destroy if stationTest.present? 
-    end
-    
+
   end
 end
 
