@@ -212,7 +212,7 @@
     <% timestamp_time = Time.at(timestamp_seconds) %>
     <% current_time = Time.now %>
     <% difference_in_seconds = (current_time - timestamp_time).to_i %>
-    <% if difference_in_seconds < 180 && station_log['user_id'].present? %>
+    <% if difference_in_seconds < 18000000 && station_log['user_id'].present? %>
       <tr>
         <% if User.find_by(id: station_log['user_id']) %>
           <td><%= User.find_by(id: station_log['user_id']).name %></td>
