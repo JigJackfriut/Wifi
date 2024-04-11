@@ -258,7 +258,7 @@ def update_wireless_clients(params)
 
     if existing_record.nil?
       # Create a new record if no existing record found
-      stationTest= StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
+       StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
                         rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
                         tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
                         tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
@@ -268,7 +268,7 @@ def update_wireless_clients(params)
     else
       # Update existing record only if the new data has higher TX or RX bytes
       if existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i
-       stationTest= existing_record.update(rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'],
+        existing_record.update(rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'],
                                tx_retries: station_params['tx retries'], tx_failed: station_params['tx failed'],
                                signal: station_params['signal'], signal_avg: station_params['signal avg'],
                                tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
@@ -277,7 +277,7 @@ def update_wireless_clients(params)
                                user_id: station_params['user_id'], event: station_params['event'],
                                connected_time: station_params['connected time'])
       else
-	           stationTest= StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
+	            StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
                         rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
                         tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
                         tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
