@@ -283,4 +283,3 @@ def update_wireless_clients(params)
   end
 end
 
-def update_managers
