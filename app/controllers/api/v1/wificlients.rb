@@ -279,14 +279,23 @@ def update_wireless_clients(params)
       end
     end
     
-    if station_params['user_id'].present?
-      timestamp_seconds = station_params['connected time'].to_i / 1000
-      timestamp_time = Time.at(timestamp_seconds)
-      current_time = Time.now
-      difference_in_seconds = (current_time - timestamp_time).to_i
-      if difference_in_seconds < 180
-        stationTest.update(manager_id: User.find_by(id: station_params['user_id']).manager_id)
-      end
+  end
+end
+
+def update_manager_ids_for_recently_connected_stations
+  StationLog.all.each do |station_log|
+    next unless station_log.user_id.present?
+
+    timestamp_seconds = station_log.connected_time.to_i / 1000
+    timestamp_time = Time.at(timestamp_seconds)
+    current_time = Time.now
+    difference_in_seconds = (current_time - timestamp_time).to_i
+
+    if difference_in_seconds < 180
+      stationTest.update(manager_id: User.find_by(id: station_log.user_id)&.manager_id)
+    else
+      stationTest.destroy if stationTest.present?  # Assuming stationTest is the instance to be deleted
     end
   end
 end
+
