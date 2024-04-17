@@ -9,7 +9,8 @@ class StationLogsController < ApplicationController
 
   StationLog.find_each do |record|
     real_time = (Time.now.to_f * 1000).to_i
-    current_time= current_time.slice(0...-3)
+    current_time= record.current_time
+	current_time= current_time.slice(0...-3)
     current_time= current_time.to_i
     comp_time= real_time-current_time
     if comp_time > 180000
