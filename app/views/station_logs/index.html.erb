@@ -207,21 +207,21 @@
   </thead>
 
   <tbody>
-  <% @station_logs.each do |station_log| %>
-       <% if station_log['associated'] == 'yes' %>
+<% @active_users.each do |user| %>
+   
       <tr>
-        <td><%= station_log['ssid'] %></td>
-        <td><%= station_log['mac'] %></td>
-        <td><%= Wificlient.find_by(mac: station_log['ap_mac']).name %></td>
-        <td><%= station_log['interface'] %></td>
-        <td><%= station_log['channel'] %></td>
-        <td><%= station_log['vid'] %></td>
-        <td><%= bytes_conversion(station_log['rx_bytes']) %></td>
-        <td><%= bytes_conversion(station_log['tx_bytes']) %></td>
-        <td><%= station_log['signal'] %></td>
-        <td><%= station_log['tx_failed'] %></td>
-        <td><%= secondsToTime(station_log['connected_time']) %></td>
-        <td><%= station_log['created_at'] %></td>
+        <td><%= user.ssid %></td>
+        <td><%= user.mac %></td>
+        <td><%= Wificlient.find_by(mac: user.ap_mac).name %></td>
+        <td><%= user.interface %></td>
+        <td><%= user.channel %></td>
+        <td><%= user.vid %></td>
+        <td><%= bytes_conversion(user.rx_bytes) %></td>
+        <td><%= bytes_conversion(user.'tx_bytes) %></td>
+        <td><%= user.signal %></td>
+        <td><%= user.tx_failed %></td>
+        <td><%= secondsToTime(user.connected_time) %></td>
+        <td><%= user.created_at %></td>
       </tr>
     <% end %>
   <% end %>
