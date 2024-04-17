@@ -6,6 +6,17 @@ class StationLogsController < ApplicationController
 
   # GET /station_logs or /station_logs.json
   def index
+
+  StationLog.find_each do |record|
+    real_time = Time.now.in_milliseconds
+    current_time= current_time.slice(0...-3)
+    current_time= current_time.to_i
+    comp_time= real_time-current_time
+    if comp_time > 180000
+      record.update(associated: 'no')
+    end
+  end
+
     #@station_logs = StationLog.all
 	puts "NEW SORT ATTEMPTED WEE WOO WEE WOO ENTERING INDEX"
 	managerID = current_manager.id.to_s 
