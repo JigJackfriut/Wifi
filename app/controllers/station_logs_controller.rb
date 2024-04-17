@@ -16,6 +16,7 @@ class StationLogsController < ApplicationController
       record.update(associated: 'no')
     end
   end
+	@active_users = StationLog.where(associated: 'yes')
 
     #@station_logs = StationLog.all
 	puts "NEW SORT ATTEMPTED WEE WOO WEE WOO ENTERING INDEX"
