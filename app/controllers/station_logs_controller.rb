@@ -9,6 +9,7 @@ class StationLogsController < ApplicationController
 
   StationLog.find_each do |record|
     real_time = (Time.now.to_f * 1000).to_i
+   if record.current_time
     current_time= record.current_time
 	current_time= current_time.slice(0...-3)
     current_time= current_time.to_i
@@ -17,6 +18,7 @@ class StationLogsController < ApplicationController
       record.update(associated: 'no')
     end
   end
+end
 	@active_users = StationLog.where(associated: 'yes')
 
     #@station_logs = StationLog.all
