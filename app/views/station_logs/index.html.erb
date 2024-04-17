@@ -208,15 +208,8 @@
 
   <tbody>
   <% @station_logs.each do |station_log| %>
-    <% station_log['current_time'] = station_log['current_time'].chop(3) %>
-    <% timestamp_seconds = station_log['current_time'].to_i %>
-    <% timestamp_time = Time.at(timestamp_seconds) %>
-    <% difference_in_seconds = (@current_time - timestamp_time).to_i %>
-    <% if difference_in_seconds < 180000 && station_log['user_id'].present? %>
+       <% if station_log['associated'] == 'yes' %>
       <tr>
-        <% if User.find_by(id: station_log['user_id']) %>
-          <td><%= User.find_by(id: station_log['user_id']).name %></td>
-        <% end %>
         <td><%= station_log['ssid'] %></td>
         <td><%= station_log['mac'] %></td>
         <td><%= Wificlient.find_by(mac: station_log['ap_mac']).name %></td>
