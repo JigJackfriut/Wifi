@@ -254,7 +254,7 @@ def update_wireless_clients(params)
     station_params = station[1]
     mac = station[0]
 
-    existing_record = StationLog.find_by(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'])
+existing_record = StationLog.where(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface']).order(updated_at: :desc).first # so it returns the last record.
 
     if existing_record.nil?
       StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
@@ -264,8 +264,8 @@ def update_wireless_clients(params)
                          expected_throughput: station_params['expected throughput'], associated: station_params['associated'],
                          vid: station_params['vid'], ssid: station_params['ssid'], user_id: station_params['user_id'],
                          event: station_params['event'], connected_time: station_params['connected time'], current_time: station_params['current time'])
-    else
-      if existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i
+    else 
+      if (existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i) && existing_record.connected_time.to_i < station_params['connected time'].to_i  # felt like connected AT TO BE Better parameter. Also if the pi was slow it wont work right with connected time
         existing_record.update(rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'],
                                tx_retries: station_params['tx retries'], tx_failed: station_params['tx failed'],
                                signal: station_params['signal'], signal_avg: station_params['signal avg'],
@@ -274,6 +274,14 @@ def update_wireless_clients(params)
                                associated: station_params['associated'], vid: station_params['vid'], ssid: station_params['ssid'],
                                user_id: station_params['user_id'], event: station_params['event'],
                                connected_time: station_params['connected time'], current_time: station_params['current time'])
+      else 
+	StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
+                         rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
+                         tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
+                         tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
+                         expected_throughput: station_params['expected throughput'], associated: station_params['associated'],
+                         vid: station_params['vid'], ssid: station_params['ssid'], user_id: station_params['user_id'],
+                         event: station_params['event'], connected_time: station_params['connected time'], current_time: station_params['current time']) 
       end
     end
   end
