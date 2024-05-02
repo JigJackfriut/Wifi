@@ -277,7 +277,8 @@ def update_wireless_clients(params)
       end
     elsif station_params['event'] != nil && station_params['event'] != 'assoc'
       existing_record.update(associated: 'no', event: 'diassoc')
-    elsif (existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i) && existing_record.connected_time.to_i < station_params['connected time'].to_i
+    elsif
+	    if (existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i) && existing_record.connected_time.to_i < station_params['connected time'].to_i
         existing_record.update(rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'],
                                tx_retries: station_params['tx retries'], tx_failed: station_params['tx failed'],
                                signal: station_params['signal'], signal_avg: station_params['signal avg'],
