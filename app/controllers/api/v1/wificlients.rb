@@ -254,10 +254,14 @@ def update_wireless_clients(params)
   stations.each do |station|
     station_params = station[1]
     mac = station[0]
-
+     
     existing_record = StationLog.where(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface']).order(updated_at: :desc).first
-
-    if existing_record.nil?
+    if station_params['event'] != nil && station_params['event'] != 'assoc'
+	 diss_record= StationLog.where(ap_mac: ap_mac, mac: mac.downcase).order(updated_at: :desc).first  
+	 diss_record.update(associated: 'no', event: 'diassoc')
+    
+     
+    elsif existing_record.nil?
       new_record = StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
                                      rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
                                      tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
@@ -273,8 +277,7 @@ def update_wireless_clients(params)
       end
     elsif station_params['event'] != nil && station_params['event'] != 'assoc'
       existing_record.update(associated: 'no', event: 'diassoc')
-    else
-      if (existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i) && existing_record.connected_time.to_i < station_params['connected time'].to_i
+    elsif (existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i) && existing_record.connected_time.to_i < station_params['connected time'].to_i
         existing_record.update(rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'],
                                tx_retries: station_params['tx retries'], tx_failed: station_params['tx failed'],
                                signal: station_params['signal'], signal_avg: station_params['signal avg'],
