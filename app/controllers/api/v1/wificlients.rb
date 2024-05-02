@@ -246,6 +246,7 @@ end
 =end
 
 
+
 def update_wireless_clients(params)
   ap_mac = params['AP']
   stations = params['Stations']
@@ -254,18 +255,26 @@ def update_wireless_clients(params)
     station_params = station[1]
     mac = station[0]
 
-existing_record = StationLog.where(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface']).order(updated_at: :desc).first # so it returns the last record.
+    existing_record = StationLog.where(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface']).order(updated_at: :desc).first
 
     if existing_record.nil?
-      StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
-                         rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
-                         tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
-                         tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
-                         expected_throughput: station_params['expected throughput'], associated: station_params['associated'],
-                         vid: station_params['vid'], ssid: station_params['ssid'], user_id: station_params['user_id'],
-                         event: station_params['event'], connected_time: station_params['connected time'], current_time: station_params['current time'])
-    else 
-      if (existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i) && existing_record.connected_time.to_i < station_params['connected time'].to_i  # felt like connected AT TO BE Better parameter. Also if the pi was slow it wont work right with connected time
+      new_record = StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
+                                     rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
+                                     tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
+                                     tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
+                                     expected_throughput: station_params['expected throughput'], associated: station_params['associated'],
+                                     vid: station_params['vid'], ssid: station_params['ssid'], user_id: station_params['user_id'],
+                                     event: station_params['event'], connected_time: station_params['connected time'], current_time: station_params['current time'])
+      
+      if !station_params['user_id'].nil?
+        new_record.update(manager_id: User.find_by(id: station_params['user_id']).manager_id)
+      else
+        new_record.update(manager_id: Wificlient.find_by(mac: ap_mac).manager_id)
+      end
+    elsif station_params['event'] != nil && station_params['event'] != 'assoc'
+      existing_record.update(associated: 'no', event: 'diassoc')
+    else
+      if (existing_record.tx_bytes.to_i <= station_params['tx bytes'].to_i || existing_record.rx_bytes.to_i <= station_params['rx bytes'].to_i) && existing_record.connected_time.to_i < station_params['connected time'].to_i
         existing_record.update(rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'],
                                tx_retries: station_params['tx retries'], tx_failed: station_params['tx failed'],
                                signal: station_params['signal'], signal_avg: station_params['signal avg'],
@@ -274,14 +283,26 @@ existing_record = StationLog.where(ap_mac: ap_mac, mac: mac.downcase, interface:
                                associated: station_params['associated'], vid: station_params['vid'], ssid: station_params['ssid'],
                                user_id: station_params['user_id'], event: station_params['event'],
                                connected_time: station_params['connected time'], current_time: station_params['current time'])
+
+        if !station_params['user_id'].nil?
+          existing_record.update(manager_id: User.find_by(id: station_params['user_id']).manager_id)
+        else
+          existing_record.update(manager_id: Wificlient.find_by(mac: ap_mac).manager_id)
+        end
       else 
-	StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
-                         rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
-                         tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
-                         tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
-                         expected_throughput: station_params['expected throughput'], associated: station_params['associated'],
-                         vid: station_params['vid'], ssid: station_params['ssid'], user_id: station_params['user_id'],
-                         event: station_params['event'], connected_time: station_params['connected time'], current_time: station_params['current time']) 
+        new_record = StationLog.create(ap_mac: ap_mac, mac: mac.downcase, interface: station_params['interface'], channel: station_params['channel'],
+                                       rx_bytes: station_params['rx bytes'], tx_bytes: station_params['tx bytes'], tx_retries: station_params['tx retries'],
+                                       tx_failed: station_params['tx failed'], signal: station_params['signal'], signal_avg: station_params['signal avg'],
+                                       tx_bitrate: station_params['tx bitrate'], rx_bitrate: station_params['rx bitrate'],
+                                       expected_throughput: station_params['expected throughput'], associated: station_params['associated'],
+                                       vid: station_params['vid'], ssid: station_params['ssid'], user_id: station_params['user_id'],
+                                       event: station_params['event'], connected_time: station_params['connected time'], current_time: station_params['current time']) 
+
+        if !station_params['user_id'].nil?
+          new_record.update(manager_id: User.find_by(id: station_params['user_id']).manager_id)
+        else
+          new_record.update(manager_id: Wificlient.find_by(mac: ap_mac).manager_id)
+        end
       end
     end
   end
