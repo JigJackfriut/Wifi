@@ -14,7 +14,7 @@ class StationLogsController < ApplicationController
 	current_time= current_time.slice(0...-3)
     current_time= current_time.to_i
     comp_time= real_time-current_time
-    if comp_time < 180000
+    if (comp_time < 180000) && (record.event == 'assoc')
       record.update(associated: 'yes')
     else
       record.update(associated: 'no')
@@ -24,7 +24,6 @@ end
 	@active_users = StationLog.where(associated: 'yes')
 
     #@station_logs = StationLog.all
-	puts "NEW SORT ATTEMPTED WEE WOO WEE WOO ENTERING INDEX"
 	managerID = current_manager.id.to_s 
 	stationList = StationLog.find_by_sql('select * from station_logs t inner join ( select mac, max(created_at) as MaxDate from station_logs where user_id IS NOT NULL group by mac ) tm on t.mac = tm.mac and t.created_at = tm.MaxDate and t.manager_id = '+ managerID+ ' and t.created_at > DATE_SUB(NOW(), INTERVAL 10 MINUTE)')
 	
