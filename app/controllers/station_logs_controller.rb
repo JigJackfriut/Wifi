@@ -294,6 +294,15 @@ end
       format.json { head :no_content }
     end
   end
+
+  def update_name
+    @user = User.find_by(mac: params[:mac])
+    if @user.update(name_params)
+      redirect_to active_users_path, notice: 'Name updated successfully.'
+    else
+      redirect_to active_users_path, alert: 'Failed to update name.'
+    end
+  end
 	
 
   private
