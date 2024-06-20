@@ -296,7 +296,7 @@ end
   end
 
   def update_name
-    @user = User.find_by(mac: params[:mac])
+    @user = StationLog.find_by(mac: params[:mac])
     if @user.update(name_params)
       redirect_to active_users_path, notice: 'Name updated successfully.'
     else
