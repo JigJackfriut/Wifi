@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  patch 'update_name', to: 'users#update_name'
+  resources :station_logs
   # I write middle and end
   resources :station_logs do
     get 'find_device_type', on: :collection
