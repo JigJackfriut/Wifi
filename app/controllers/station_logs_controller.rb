@@ -3,6 +3,8 @@ class StationLogsController < ApplicationController
   before_action :set_station_log, only: %i[ show edit update destroy ]
   before_action :authenticate_manager!
   before_action :current_manager, only: [:edit, :update, :destroy]
+  validates :name, presence: true, length: { maximum: 50 }
+
 
   # GET /station_logs or /station_logs.json
   def index
@@ -302,6 +304,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def station_log_params
-      params.require(:station_log).permit(:AP, :station, :interface, :channel, :rx_bytes, :tx_bytes, :tx_retries, :tx_failed, :signal, :signal_avg, :tx_bitrate, :rx_bitrate, :expected_throughput, :associated, :vid, :ssid, :user_id, :event, :mac)
+      params.require(:station_log).permit(:AP, :station, :interface, :channel, :rx_bytes, :tx_bytes, :tx_retries, :tx_failed, :signal, :signal_avg, :tx_bitrate, :rx_bitrate, :expected_throughput, :associated, :vid, :ssid, :user_id, :event, :mac,:name)
     end
 end
