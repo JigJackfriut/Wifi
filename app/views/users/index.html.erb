@@ -7,6 +7,9 @@
       <th scope="col">User Type</th>
       <th scope="col">Passphrase</th>
        <th scope="col">Zones</th>
+       <th scope="col">Maximum<br/>Devices</th>
+       <th scope="col">Max Up</th>
+       <th scope="col">Max Down</th>
 	   <th scope="col">VLAN ID</th>
 	    <th scope="col">Enabled</th>
 	  <th scope="col">Actions</th>
@@ -21,6 +24,21 @@
           <td><%= user.user_type %></td>
           <td><%= user.passphrase %></td>
           <td><%= parseZones(user) %> </td>
+           <% if user.maxdev!=0 %>
+          <td><%= user.maxdev %></td>
+          <% else %>
+          <td></td>
+          <% end %>
+          <% if user.upmax!=0 %>
+          <td><%= user.upmax %> mb/s</td>
+          <% else %>
+          <td></td>
+          <% end %>
+          <% if user.downmax!=0 %>
+          <td><%= user.downmax %> mb/s</td>
+          <% else %>
+          <td></td>
+          <% end %> 
 		  <td><%= user.vlan_id %></td>
 		    <td><%= form_with(model: user) do |form| %>
 				<%= form.check_box :enabled, checked: user.enabled, onchange: "this.form.requestSubmit();" %>
@@ -52,10 +70,56 @@
   			<% end %>
     	</td>
   	</tr>
-  	<% end %>
-  	 <% end %>
-   </tbody>
-</table>
+  	 <tr id="dropdown<%= user.id %>" class="dropdown-table">
+        <td colspan="7">
+          <table>
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>SSID</th>
+                <th>MAC</th>
+                <th>AP Name</th>
+                <th>Interface</th>
+                <th>Channel</th>
+                <th>VID</th>
+                <th>RX Bytes</th>
+                <th>TX Bytes</th>
+                <th>Signal</th>
+                <th>TX Failed</th>
+                <th>Connected Time</th>
+                <th>Created At</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @active_users.each do |station_log| %>
+                <% if station_log.manager == current_manager && User.find_by(id: station_log.user_id)&.id == user.id %>
+                  <tr>
+                    <td><%= User.find_by(id: station_log.user_id)&.name || 'Unknown' %></td>
+                    <td><%= station_log.ssid %></td>
+                    <td><%= station_log.mac %></td>
+                    <td>
+                      <%= link_to Wificlient.find_by(mac: station_log.ap_mac).name, wificlient_path(Wificlient.find_by(mac: station_log.ap_mac)), style: "text-decoration:none" %>
+                    </td>
+                    <td><%= station_log.interface %></td>
+                    <td><%= station_log.channel %></td>
+                    <td><%= station_log.vid %></td>
+                    <td><%= bytes_conversion(station_log.rx_bytes) %></td>
+                    <td><%= bytes_conversion(station_log.tx_bytes) %></td>
+                    <td><%= station_log.signal %></td>
+                    <td><%= station_log.tx_failed %></td>
+                    <td><%= secondsToTime(station_log.connected_time) %></td>
+                    <td><%= station_log.created_at %></td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    <% end %>
+  <% end %>
+</tbody>
+
 
 <%= link_to "New user", new_user_path %>
 
