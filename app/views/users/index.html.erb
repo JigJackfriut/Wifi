@@ -70,7 +70,7 @@
   			<% end %>
     	</td>
   	</tr>
-  	 <tr id="dropdown<%= user.id %>" class="dropdown-table">
+  	 <tr id="dropdown<%= user.id %>" class="dropdown-table"> <a href="javascript:void(0);" onclick="toggleSubtable('<%= user.id %>');"><%= user.name %></a>
         <td colspan="7">
           <table>
             <thead>
