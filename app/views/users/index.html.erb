@@ -16,112 +16,86 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="users_table">
   <% @users.each do |user| %>
-	<% if user.manager == current_manager%>
+	<% if user.manager_id == current_manager.id%>
    <tr>
-          <td><%= user.name %></td>  
+          <td><a class="btn btn-link" role = "button" data-bs-toggle="collapse" href="#collapse<%= user.id %>" aria-expanded="false" aria-controls="collapse<%= user.id %>">
+              <%= user.name %>
+            </a></td>  
           <td><%= user.user_type %></td>
           <td><%= user.passphrase %></td>
           <td><%= parseZones(user) %> </td>
-           <% if user.maxdev!=0 %>
-          <td><%= user.maxdev %></td>
-          <% else %>
-          <td></td>
-          <% end %>
-          <% if user.upmax!=0 %>
-          <td><%= user.upmax %> mb/s</td>
-          <% else %>
-          <td></td>
-          <% end %>
-          <% if user.downmax!=0 %>
-          <td><%= user.downmax %> mb/s</td>
-          <% else %>
-          <td></td>
-          <% end %> 
+          <td><%= eval_parameter_nums(user.maxdev) %> </td>
+          <td><%= eval_parameter_nums(user.upmax) %> </td>
+          <td><%= eval_parameter_nums(user.downmax) %> </td>
 		  <td><%= user.vlan_id %></td>
 		    <td><%= form_with(model: user) do |form| %>
 				<%= form.check_box :enabled, checked: user.enabled, onchange: "this.form.requestSubmit();" %>
 				<%end%>
 		  </td>
-          <td class="center">
-  			<%= link_to user, style: "text-decoration:none" do %>
-  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" >
-  			<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-  			<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-			</svg>
-  			<% end %>
-  			
-         	<%= link_to edit_user_path(user), style: "text-decoration:none" do %> 
-  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-  			<path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 
-  			0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 
-  			0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 
-  			7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 
-  			0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 
-  			0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-			</svg>
-  			<% end %> 
-  			
-  			<%= link_to user_path(user), data: {turbo_method: :delete, }, style: "text-decoration:none" do %>
-  			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-  			<path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-			</svg>
-  			<% end %>
-    	</td>
+      <td class="center">
+        <div class="d-flex justify-content-center">
+        <%= user_action_links(user) %>
+        </div>
+    </td>
   	</tr>
-  	 <tr id="dropdown<%= user.id %>" class="dropdown-table"> <a href="javascript:void(0);" onclick="toggleSubtable('<%= user.id %>');"><%= user.name %></a>
-        <td colspan="7">
-          <table>
-            <thead>
-              <tr>
-                <th>User Name</th>
-                <th>SSID</th>
-                <th>MAC</th>
-                <th>AP Name</th>
-                <th>Interface</th>
-                <th>Channel</th>
-                <th>VID</th>
-                <th>RX Bytes</th>
-                <th>TX Bytes</th>
-                <th>Signal</th>
-                <th>TX Failed</th>
-                <th>Connected Time</th>
-                <th>Created At</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @active_users.each do |station_log| %>
-                <% if station_log.manager == current_manager && User.find_by(id: station_log.user_id)&.id == user.id %>
-                  <tr>
-                    <td><%= User.find_by(id: station_log.user_id)&.name || 'Unknown' %></td>
-                    <td><%= station_log.ssid %></td>
-                    <td><%= station_log.mac %></td>
-                    <td>
-                      <%= link_to Wificlient.find_by(mac: station_log.ap_mac).name, wificlient_path(Wificlient.find_by(mac: station_log.ap_mac)), style: "text-decoration:none" %>
-                    </td>
-                    <td><%= station_log.interface %></td>
-                    <td><%= station_log.channel %></td>
-                    <td><%= station_log.vid %></td>
-                    <td><%= bytes_conversion(station_log.rx_bytes) %></td>
-                    <td><%= bytes_conversion(station_log.tx_bytes) %></td>
-                    <td><%= station_log.signal %></td>
-                    <td><%= station_log.tx_failed %></td>
-                    <td><%= secondsToTime(station_log.connected_time) %></td>
-                    <td><%= station_log.created_at %></td>
-                  </tr>
-                <% end %>
-              <% end %>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    <% end %>
-  <% end %>
-</tbody>
-
+    <tr>
+          <td colspan="14">
+            <div class="collapse" id="collapse<%= user.id %>">
+              <div class="card card-body">
+                <strong>Active Users</strong>
+                <div>
+                  <table class="table table-striped table-bordered table-hover">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">SSID</th>
+                        <th scope="col">Station Mac</th>
+                        <th scope="col">AP</th>
+                        <th scope="col">WLAN</th>
+                        <th scope="col">Channel</th>
+                        <th scope="col">VLAN</th>
+                        <th scope="col">Rx Bytes</th>
+                        <th scope="col">Tx Bytes</th>
+                        <th scope="col">Signal</th>
+                        <th scope="col">Tx Fail</th>
+                        <th scope="col">Time Connected</th>
+                        <th scope="col">Connected At</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% @active_users.each do |station_log| %>
+                        <% if station_log.user_id == user.id %>
+                          <tr>          
+                      <td><%= station_log.ssid %></td>
+                      <td><%= station_log.mac %></td>
+                      <td><%= link_to Wificlient.find_by(mac: station_log.ap_mac).name, wificlient_path(Wificlient.find_by(mac: station_log.ap_mac)), style: "text-decoration:none" %></td>
+                      <td><%= station_log.interface %></td>
+                      <td><%= station_log.channel %></td>
+                      <td><%= station_log.vid %></td>
+                      <td><%= bytes_conversion(station_log.rx_bytes) %></td>
+                      <td><%= bytes_conversion(station_log.tx_bytes) %></td>
+                      <td><%= station_log.signal %></td>
+                      <td><%= station_log.tx_failed %></td>
+                      <td><%= secondsToTime(station_log.connected_time) %></td>
+                      <td><%= station_log.created_at %></td>
+                          </tr>
+                        <% end %>
+                      <% end %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+  	<% end %>
+  	 <% end %>
+   </tbody>
+</table>
 
 <%= link_to "New user", new_user_path %>
+
 
 <style>
 .center {
