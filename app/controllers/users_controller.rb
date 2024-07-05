@@ -8,6 +8,8 @@ include UserzonesHelper
   # GET /users or /users.json
   def index
     @users = User.all
+@active_users = StationLog.where(assoc: true) # or however you define active users
+
   end
 
   # GET /users/1 or /users/1.json
